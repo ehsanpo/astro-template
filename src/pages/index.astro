@@ -1,0 +1,36 @@
+---
+import '../styles/index.css';
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/hero/Hero.astro';
+import SelectedWork from '../components/sections/SelectedWork.astro';
+import Testimonials from '../components/sections/Testimonials.astro';
+import Awards from '../components/sections/Awards.astro';
+import Certificates from '../components/sections/Certificates.astro';
+import ClientMarquee from '../components/clients/ClientMarquee.astro';
+import { getPortfolioData } from '../utils/data';
+
+const { contact } = await getPortfolioData();
+---
+
+<Layout title="Portfolio - Home">
+  <Hero 
+    title={`Hi, I'm ${contact.name}`}
+    subtitle={contact.description}
+    fullHeight={true}
+    actions={{
+      primary: {
+        text: "View My Work",
+        href: "/portfolio"
+      },
+      secondary: {
+        text: "Get in Touch",
+        href: "/contact"
+      }
+    }}
+  />
+  <ClientMarquee />
+  <SelectedWork />
+  <Certificates />
+  <Testimonials />
+  <Awards />
+</Layout>

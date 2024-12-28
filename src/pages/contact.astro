@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHero from '../components/hero/PageHero.astro';
+import ContactForm from '../components/contact/ContactForm.astro';
+import ContactInfo from '../components/contact/ContactInfo.astro';
+---
+
+<Layout title="Contact">
+  <PageHero 
+    title="Get in Touch" 
+    subtitle="Have a project in mind? Let's discuss how we can work together."
+  />
+  
+  <div class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <ContactForm />
+          </div>
+          <div>
+            <ContactInfo />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

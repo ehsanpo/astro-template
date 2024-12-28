@@ -1,0 +1,17 @@
+---
+interface Props {
+  clients: string[];
+}
+
+const { clients } = Astro.props;
+---
+
+<div class="flex items-center gap-12 px-4">
+  {clients.map(client => (
+    <div class="flex-shrink-0">
+      <span class="text-lg font-medium text-gray-600 dark:text-gray-400 whitespace-nowrap">
+        {client}
+      </span>
+    </div>
+  ))}
+</div>

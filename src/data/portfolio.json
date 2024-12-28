@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "title": "Portfolio",
+    "description": "Professional portfolio showcasing my work and expertise",
+    "author": "Ehsan",
+    "social": {
+      "github": "https://github.com/ehsan",
+      "twitter": "https://twitter.com/ehsan",
+      "linkedin": "https://linkedin.com/in/ehsan"
+    }
+  },
+  "navigation": {
+    "main": [
+      { "href": "/", "text": "Home" },
+      { "href": "/portfolio", "text": "Work" },
+      { "href": "/skills", "text": "Skills" },
+      { "href": "/services", "text": "Services" },
+      { "href": "/about", "text": "About" },
+      { "href": "/contact", "text": "Contact" }
+    ],
+    "footer": [
+      { "href": "/", "text": "Home" },
+      { "href": "/portfolio", "text": "Work" },
+      { "href": "/skills", "text": "Skills" },
+      { "href": "/services", "text": "Services" },
+      { "href": "/about", "text": "About" },
+      { "href": "/contact", "text": "Contact" }
+    ]
+  },
+  "contact": {
+    "name": "Ehsan",
+    "role": "Software Developer",
+    "website": "https://example.com",
+    "linkedin": "https://linkedin.com/in/ehsan",
+    "location": "Malmö, Sweden",
+    "profilePic": "/img/profile/ehsan.jpg",
+    "yearsOfExperience": "8",
+    "socialLinks": {
+      "github": "https://github.com/ehsan",
+      "twitter": "https://twitter.com/ehsan",
+      "linkedin": "https://linkedin.com/in/ehsan"
+    },
+    "description": "Crafting digital experiences with modern web technologies and creative design solutions."
+  },
+  "education": [
+    {
+      "degree": "Master of Science in Computer Science",
+      "school": "Lund University",
+      "year": "2015 - 2017",
+      "description": "Specialized in Software Engineering and Distributed Systems"
+    },
+    {
+      "degree": "Bachelor of Science in Computer Engineering",
+      "school": "Malmö University",
+      "year": "2012 - 2015",
+      "description": "Focus on Web Development and Software Architecture"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Developer",
+      "company": "Tech Company",
+      "period": "2020 - Present",
+      "description": "Leading development of web applications using modern technologies."
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "Digital Agency",
+      "period": "2018 - 2020",
+      "description": "Built and maintained client websites and applications."
+    },
+    {
+      "title": "Frontend Developer",
+      "company": "Startup",
+      "period": "2016 - 2018",
+      "description": "Developed responsive user interfaces and implemented new features."
+    }
+  ],
+  "services": [
+    {
+      "title": "Web Development",
+      "description": "Building modern, responsive websites with cutting-edge technologies",
+      "icon": "💻",
+      "features": [
+        "Custom website development",
+        "Progressive Web Apps (PWA)",
+        "Responsive design",
+        "Performance optimization",
+        "SEO-friendly structure"
+      ]
+    },
+    {
+      "title": "UI/UX Design",
+      "description": "Creating intuitive and beautiful user interfaces that engage users",
+      "icon": "🎨",
+      "features": [
+        "User interface design",
+        "User experience optimization",
+        "Wireframing & prototyping",
+        "Design systems",
+        "Interactive animations"
+      ]
+    },
+    {
+      "title": "Technical Consulting",
+      "description": "Expert advice on technology solutions and architecture decisions",
+      "icon": "📊",
+      "features": [
+        "Architecture planning",
+        "Technology stack selection",
+        "Performance audits",
+        "Security assessment",
+        "Best practices guidance"
+      ]
+    },
+    {
+      "title": "Mobile Development",
+      "description": "Native and cross-platform mobile application development",
+      "icon": "📱",
+      "features": [
+        "iOS and Android apps",
+        "Cross-platform solutions",
+        "App store optimization",
+        "Mobile UI/UX design",
+        "Performance optimization"
+      ]
+    },
+    {
+      "title": "API Development",
+      "description": "Building robust and scalable APIs for your applications",
+      "icon": "🔌",
+      "features": [
+        "RESTful APIs",
+        "GraphQL APIs",
+        "API documentation",
+        "Authentication & security",
+        "Performance optimization"
+      ]
+    },
+    {
+      "title": "Cloud Solutions",
+      "description": "Cloud infrastructure setup and management",
+      "icon": "☁️",
+      "features": [
+        "Cloud architecture",
+        "Serverless solutions",
+        "Database management",
+        "DevOps automation",
+        "Scalability planning"
+      ]
+    }
+  ],
+  "skills": {
+    "levels": [
+      { "range": "1–3", "description": "I've experimented and built something basic for personal use." },
+      { "range": "4–6", "description": "I've worked with it professionally and deployed it to production." },
+      { "range": "7–9", "description": "I have several years of experience, regularly working with it in production environments." },
+      { "range": "10", "description": "I'm highly confident, capable of mentoring others, and comfortable making architectural decisions." }
+    ]
+  },
+  "awards": [
+    {
+      "name": "Svenska design",
+      "description": "Gold Category Digital Design",
+      "images": "/img/awards/svenskadesign.png",
+      "link": "portfolio/malmo-saluhall"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Asger Bjerre-Nielsen",
+      "title": "Developer At Bredeband2",
+      "img": "img/testimonial/asger.jpg",
+      "short": "Ehsan and I have worked closely together on a variety of projects, each differing in size and complexity. Besides his excellent ability to break down tasks and problems and provide high quality code to efficiently solve even the most demanding task we have had.",
+      "desc": "Having worked in the industry for only a handful of years, I consider the opportunity to have worked with Ehsan as extremely rewarding. Even though we started out in different teams, Ehsan has always been open to discussing both problems and solutions."
+    }
+  ],
+  "stacks": [
+    {
+      "slug": "Front-end",
+      "labels": ["React", "Gatsby", "Next.js", "TypeScript", "Sass"],
+      "icon": "/img/stacks/front-end.svg",
+      "data": ["10", "10", "8", "7", "10"]
+    }
+  ],
+  "charts": [
+    {
+      "slug": "Overall",
+      "labels": ["Front-End", "Backend", "Database", "Design", "Cloud", "Devop"],
+      "data": ["10", "9", "8", "8", "6", "7"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Introduction to Cybersecurity",
+      "img": "cybersecurity.png",
+      "year": "2022"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Visual Studio Code",
+      "icon": "/img/tools/vscode.svg",
+      "description": "Primary code editor with extensive customization and plugin support",
+      "proficiency": 9
+    }
+  ]
+}

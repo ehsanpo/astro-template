@@ -1,0 +1,22 @@
+---
+import { getPortfolioData } from '../../utils/data';
+import SectionTitle from '../ui/SectionTitle.astro';
+import CertificateCard from '../certificates/CertificateCard.astro';
+
+const { certifications } = await getPortfolioData();
+---
+
+<section class="py-20 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <SectionTitle 
+      title="Certifications"
+      subtitle="Professional achievements and qualifications"
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {certifications.map((cert) => (
+        <CertificateCard {...cert} />
+      ))}
+    </div>
+  </div>
+</section>

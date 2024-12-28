@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPortfolioData } from '../utils/data';
+import PageHero from '../components/hero/PageHero.astro';
+import SkillsGrid from '../components/skills/SkillsGrid.astro';
+import ToolsList from '../components/skills/ToolsList.astro';
+import Stats from '../components/sections/Stats.astro';
+import SkillsExplanation from '../components/skills/SkillsExplanation.astro';
+
+const { stacks } = await getPortfolioData();
+---
+
+<Layout title="Skills & Tools">
+  <PageHero 
+    title="Skills & Tools" 
+    subtitle="My technical expertise and proficiency across different technologies"
+  />
+  
+  <div class="py-20">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center gap-3 mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Technical Skills</h2>
+        <SkillsExplanation />
+      </div>
+      
+      <section class="mb-16">
+        <SkillsGrid stacks={stacks} />
+      </section>
+
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Tools & Software</h2>
+        <ToolsList />
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Skill Overview</h2>
+        <Stats />
+      </section>
+    </div>
+  </div>
+</Layout>

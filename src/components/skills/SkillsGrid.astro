@@ -1,0 +1,33 @@
+---
+import type { Stack } from '../../types';
+
+interface Props {
+  stacks: Stack[];
+}
+
+const { stacks } = Astro.props;
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {stacks.map(stack => (
+    <div>
+      <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">{stack.slug}</h3>
+      <div class="space-y-4">
+        {stack.labels.map((label, index) => (
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{label}</span>
+              <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{stack.data[index]}/10</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
+              <div 
+                class="bg-primary-600 h-2 rounded-full" 
+                style={`width: ${stack.data[index] * 10}%`}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
