@@ -5,38 +5,55 @@
 /* Base Styles */
 @layer base {
   html {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', sans-serif;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Poppins", sans-serif;
   }
 }
 
 /* Custom Animations */
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Custom Utility Classes */
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
-
+/* 
 .gradient-text {
   @apply bg-clip-text text-transparent;
   background-image: linear-gradient(45deg, theme('colors.primary.600'), theme('colors.primary.400'));
   background-size: 200% 200%;
   animation: gradient 6s ease infinite;
-}
+} */
 .gradient-text {
   background: var(--gradient-color);
   background-clip: text;
@@ -44,15 +61,18 @@
   -webkit-text-fill-color: transparent;
 }
 
-:root{
-
-  --gradient-color: linear-gradient(90deg,#fd7702 0%,#ff0066 100%);
+:root {
+  --gradient-color: linear-gradient(
+    90deg,
+    theme("colors.primary.500") 0%,
+    theme("colors.secondary.500") 100%
+  );
 }
 
 /* Smooth Scrolling */
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 /* Custom Selection Color */
 ::selection {
@@ -84,4 +104,245 @@ html {
 /* Image Loading Animation */
 .image-loading {
   @apply animate-pulse bg-gray-200 dark:bg-gray-700;
+}
+
+/* Base styles */
+.content-wrap {
+  display: grid;
+  place-items: center;
+  grid-template-areas: "main";
+  margin-bottom: 30vmax;
+}
+
+.content {
+  grid-area: main;
+  display: grid;
+  place-items: center;
+  line-height: 1.2;
+  grid-template-areas: "content";
+}
+
+.content--layout {
+  grid-template-areas:
+    "title-up title-down"
+    "img img"
+    "text text";
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/* Image styles */
+.content__img {
+  grid-area: img;
+  height: auto;
+}
+
+.content__img--1 {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.content__img--2 {
+  width: 60vw;
+}
+
+.content__img--3 {
+  width: 30vw;
+  align-self: center;
+}
+
+.content__img--4 {
+  width: 100%;
+  align-self: center;
+}
+
+.content__img--5 {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.content__img--6 {
+  max-width: 100%;
+}
+
+.content__img--7 {
+  width: 100%;
+  align-self: center;
+}
+
+/* Title styles */
+.title-wrap {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  padding-top: 0.3em;
+  line-height: 0.525;
+  font-size: clamp(2rem, 15vw, 9rem);
+  font-family: system-ui, -apple-system, sans-serif;
+  position: relative;
+  z-index: 100;
+  text-indent: -0.1em;
+  display: block;
+}
+
+.title--up {
+  grid-area: title-up;
+  font-style: italic;
+}
+
+.title--down {
+  grid-area: title-down;
+  font-weight: 500;
+}
+
+/* Text styles */
+.content__text {
+  grid-area: text;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.content--layout-2 .content__text {
+  align-self: start;
+  justify-self: start;
+  max-width: 400px;
+}
+
+.content--layout-1 .content__text {
+  max-width: 250px;
+  text-align: right;
+  justify-self: end;
+  align-self: end;
+}
+
+.content--layout-3 .content__text {
+  column-count: 2;
+  column-gap: 4vw;
+  max-width: 590px;
+  text-align: justify;
+}
+.content--layout-4 .content__text {
+  text-align: center;
+  max-width: 400px;
+  margin-top: 3rem;
+}
+
+.content--layout-5 .content__text {
+  max-width: 250px;
+  text-align: right;
+  justify-self: end;
+  align-self: end;
+}
+
+.content--layout-6 .content__text {
+  max-width: 250px;
+  justify-self: end;
+  align-self: end;
+  text-align: right;
+}
+
+.content--layout-7 .content__text {
+  max-width: 250px;
+  justify-self: start;
+  align-self: start;
+  text-align: right;
+}
+
+.content--layout-2 .title--up {
+  justify-self: start;
+}
+
+.content--layout-2 .title--down {
+  justify-self: end;
+  align-self: start;
+  margin-top: -0.1em;
+}
+
+.content--layout-3 .title--down {
+  align-self: center;
+}
+
+/* Layout variations */
+@media screen and (min-width: 53em) {
+  .content--layout-1 {
+    grid-template-areas:
+      "title-up img ..."
+      "text img title-down";
+    grid-template-columns: 30% auto 30%;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 2vw;
+  }
+
+  .content--layout-2 {
+    grid-template-areas:
+      "title-up ..."
+      "img img"
+      "text title-down";
+    grid-template-columns: auto auto;
+    justify-content: center;
+    row-gap: 3vh;
+  }
+
+  .content--layout-3 {
+    grid-template-areas:
+      "title-up img title-down"
+      "text text text";
+    grid-template-columns: 20vw auto 20vw;
+    grid-template-rows: auto auto;
+    row-gap: 10vh;
+    column-gap: 2vw;
+    justify-content: center;
+    align-content: center;
+  }
+  .content--layout-4 {
+    width: 100%;
+    grid-template-areas:
+      "title-up"
+      "img"
+      "title-down"
+      "text";
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 4vh;
+  }
+
+  .content--layout-5 {
+    grid-template-areas:
+      "title-up img ..."
+      "text img title-down";
+    grid-template-columns: 30% auto 30%;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 3vw;
+  }
+
+  .content--layout-6 {
+    grid-template-areas:
+      "title-up img"
+      "title-down img"
+      "text img";
+    grid-template-columns: 1fr 50%;
+    grid-template-rows: auto auto 1fr;
+    column-gap: 3vw;
+    row-gap: 0;
+  }
+
+  .content--layout-7 {
+    width: 100%;
+    grid-template-areas:
+      "img img img img"
+      "... text title-up ..."
+      "... text title-down ...";
+    grid-template-columns: 10vw 1fr 1fr 10vw;
+    justify-content: center;
+    row-gap: 4vh;
+  }
 }

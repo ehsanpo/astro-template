@@ -1,31 +1,42 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
+          50: "#fff9ec",
+          100: "#fff2d3",
+          200: "#ffe2a6",
+          300: "#ffcc6e",
+          400: "#ffaa33",
+          500: "#ff8f0c",
+          600: "#fd7702",
+          700: "#ca5704",
+          800: "#a0430c",
+          900: "#81390d",
+          950: "#461a04",
+        },
+        secondary: {
+          50: "#ffeff3",
+          100: "#ffe0e9",
+          200: "#ffc6d8",
+          300: "#ff97b8",
+          400: "#ff5d93",
+          500: "#ff2474",
+          600: "#ff0066",
+          700: "#d70056",
+          800: "#b40051",
+          900: "#99024b",
+          950: "#570024",
         },
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        poppins: ['Poppins', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-  ],
-}
+  plugins: [require("@tailwindcss/typography")],
+};

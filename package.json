@@ -13,10 +13,12 @@
   "dependencies": {
     "@astrojs/react": "^3.0.10",
     "@astrojs/tailwind": "^5.1.0",
+    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "framer-motion": "^10.18.0",
+    "gsap": "^3.12.5",
     "photoswipe": "^5.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

@@ -1,33 +1,73 @@
 ---
-import '../styles/index.css';
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/hero/Hero.astro';
-import SelectedWork from '../components/sections/SelectedWork.astro';
-import Testimonials from '../components/sections/Testimonials.astro';
-import Awards from '../components/sections/Awards.astro';
-import Certificates from '../components/sections/Certificates.astro';
-import ClientMarquee from '../components/clients/ClientMarquee.astro';
-import { getPortfolioData } from '../utils/data';
+import "../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero/Hero.astro";
+import SelectedWork from "../components/sections/SelectedWork.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
+import Awards from "../components/sections/Awards.astro";
+import Certificates from "../components/sections/Certificates.astro";
+import ClientMarquee from "../components/clients/ClientMarquee.astro";
+import { getPortfolioData } from "../utils/data";
+import React from "react";
 
 const { contact } = await getPortfolioData();
 ---
 
 <Layout title="Portfolio - Home">
-  <Hero 
-    title={`Hi, I'm ${contact.name}`}
-    subtitle={contact.description}
+  <Hero
+    title={contact.name}
+    subtitle={contact.role}
+    subtitleText={contact.description}
     fullHeight={true}
-    actions={{
-      primary: {
-        text: "View My Work",
-        href: "/portfolio"
-      },
-      secondary: {
-        text: "Get in Touch",
-        href: "/contact"
-      }
-    }}
-  />
+    text="Hey! ✌️ I'm"
+  >
+    <React.Fragment>
+      <div class="flex gap-4">
+        <a
+          href="/portfolio"
+          class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
+        >
+          View My Work
+        </a>
+        <a
+          href="/contact"
+          class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
+        >
+          Get in Touch
+        </a>
+      </div>
+      <div>
+        <ul class="mt-4 flex align-items-start">
+          <li class="hero-info-item">
+            <div class="flex align-items-center">
+              <h3 class="text-4xl font-bold">
+                <span class="font-bold gradient-text"
+                  >{contact.yearsOfExperience}</span
+                >
+              </h3>
+              <h6
+                class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
+              >
+                Years <br />of Experience
+              </h6>
+            </div>
+          </li>
+          <li class="hero-info-item ml-8">
+            <div class="flex align-items-center">
+              <h3 class="text-4xl">
+                <span class="font-bold gradient-text">110</span>
+              </h3>
+              <h6
+                class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
+              >
+                Projects <br />Completed
+              </h6>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </React.Fragment>
+  </Hero>
   <ClientMarquee />
   <SelectedWork />
   <Certificates />

@@ -1,66 +1,65 @@
 ---
-import { Heading } from '../ui/heading';
+import type React from "react";
+import { Heading } from "../ui/heading";
+import { Children } from "react";
 
 interface Props {
+  text?: string;
   title: string;
   subtitle?: string;
+  subtitleText?: string;
+  children?: React.ReactNode;
   fullHeight?: boolean;
-  actions?: {
-    primary?: {
-      text: string;
-      href: string;
-    };
-    secondary?: {
-      text: string;
-      href: string;
-    };
-  };
 }
 
-const { 
-  title, 
-  subtitle, 
+const {
+  title,
+  subtitle,
+  text,
+  subtitleText,
   fullHeight = false,
-  actions 
+  children,
 } = Astro.props;
 ---
 
-<section class={`bg-gray-50 dark:bg-gray-800 ${fullHeight ? 'min-h-screen' : 'py-20'} flex items-center`}>
+<section
+  class={`bg-gray-50 dark:bg-gray-800 ${fullHeight ? "min-h-screen" : "py-20"} flex items-center`}
+>
   <div class="container mx-auto px-4">
-    <div class="max-w-3xl mx-auto text-center">
-      <Heading 
+    <div class="mx-auto">
+      {
+        text && (
+          <Heading level="h6" class={` text-xl  mb-4`}>
+            {text}
+          </Heading>
+        )
+      }
+
+      <Heading
         level="h1"
         gradient
         shadow
-        class={`${fullHeight ? 'text-5xl md:text-7xl' : 'text-4xl md:text-5xl'} mb-4`}
+        class={`${fullHeight ? "text-5xl md:text-7xl" : "text-4xl md:text-5xl"} mb-4`}
       >
         {title}
       </Heading>
-      {subtitle && (
-        <p class={`${fullHeight ? 'text-xl md:text-2xl' : 'text-xl'} text-gray-600 dark:text-gray-400 ${actions ? 'mb-8' : ''}`}>
-          {subtitle}
-        </p>
-      )}
-      {actions && (
-        <div class="flex justify-center gap-4">
-          {actions.primary && (
-            <a
-              href={actions.primary.href}
-              class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              {actions.primary.text}
-            </a>
-          )}
-          {actions.secondary && (
-            <a
-              href={actions.secondary.href}
-              class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
-            >
-              {actions.secondary.text}
-            </a>
-          )}
-        </div>
-      )}
+      {
+        subtitle && (
+          <p
+            class={`${fullHeight ? "font-bold text-xl md:text-2xl" : "text-xl"} text-black dark:text-white mb-2 `}
+          >
+            {subtitle}
+          </p>
+        )
+      }
+      {
+        subtitleText && (
+          <p class={` text-gray-600 dark:text-gray-400 max-w-sm mb-6`}>
+            {subtitleText}
+          </p>
+        )
+      }
+      <slot />
     </div>
   </div>
 </section>

@@ -1,0 +1,65 @@
+[
+  {
+    "titleUp": "Tool",
+    "titleDown": "Pool",
+    "imageSrc": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    "text": "My journey began in the world of industrial automation, where I discovered the fascinating intersection of hardware and software.",
+    "layout": 1,
+    "imageWidth": 896,
+    "imageHeight": 1344
+  },
+  {
+    "titleUp": "Mekon",
+    "titleDown": "omen",
+    "imageSrc": "https://images.unsplash.com/photo-1555212697-194d092e3b8f",
+    "text": "Seeking to blend creativity with technical precision, I dove into the world of music production.",
+    "layout": 2,
+    "imageWidth": 1000,
+    "imageHeight": 450
+  },
+  {
+    "titleUp": "Digital",
+    "titleDown": "World",
+    "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "text": "The digital realm opened new possibilities, where code became the medium for creating immersive experiences.",
+    "layout": 3,
+    "imageWidth": 1000,
+    "imageHeight": 560
+  },
+  {
+    "titleUp": "Digital",
+    "titleDown": "World",
+    "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "text": "The digital realm opened new possibilities, where code became the medium for creating immersive experiences.",
+    "layout": 4,
+    "imageWidth": 1000,
+    "imageHeight": 560
+  },
+  {
+    "titleUp": "Digital",
+    "titleDown": "World",
+    "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "text": "The digital realm opened new possibilities, where code became the medium for creating immersive experiences.",
+    "layout": 5,
+    "imageWidth": 1000,
+    "imageHeight": 560
+  },
+  {
+    "titleUp": "Digital",
+    "titleDown": "World",
+    "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "text": "The digital realm opened new possibilities, where code became the medium for creating immersive experiences.",
+    "layout": 6,
+    "imageWidth": 1000,
+    "imageHeight": 560
+  },
+  {
+    "titleUp": "Digital",
+    "titleDown": "World",
+    "imageSrc": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+    "text": "The digital realm opened new possibilities, where code became the medium for creating immersive experiences.",
+    "layout": 7,
+    "imageWidth": 1000,
+    "imageHeight": 560
+  }
+]

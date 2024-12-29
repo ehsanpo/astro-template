@@ -1,6 +1,6 @@
 ---
-import type { HeadingLevel } from './types';
-import { getHeadingClass } from './utils';
+import type { HeadingLevel } from "./types";
+import { getHeadingClass } from "./utils";
 
 interface Props {
   level?: HeadingLevel;
@@ -10,18 +10,18 @@ interface Props {
   class?: string;
 }
 
-const { 
-  level = 'h2',
+const {
+  level = "h2",
   gradient = false,
   shadow = false,
   floating = false,
-  class: className = ''
+  class: className = "",
 } = Astro.props;
 
 const Tag = level;
 const headingClass = getHeadingClass({ gradient, shadow, floating });
 ---
 
-<Tag class:list={[headingClass, className]}>
-  <slot />
+<Tag>
+  <span class:list={[headingClass, className]}><slot /></span>
 </Tag>

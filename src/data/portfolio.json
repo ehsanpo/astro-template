@@ -2,7 +2,7 @@
   "meta": {
     "title": "Portfolio",
     "description": "Professional portfolio showcasing my work and expertise",
-    "author": "Ehsan",
+    "author": "Ehsan Pourhadi",
     "social": {
       "github": "https://github.com/ehsan",
       "twitter": "https://twitter.com/ehsan",
@@ -28,13 +28,13 @@
     ]
   },
   "contact": {
-    "name": "Ehsan",
-    "role": "Software Developer",
+    "name": "Ehsan Pourhadi",
+    "role": "Full-stack Developer",
     "website": "https://example.com",
     "linkedin": "https://linkedin.com/in/ehsan",
     "location": "Malmö, Sweden",
     "profilePic": "/img/profile/ehsan.jpg",
-    "yearsOfExperience": "8",
+    "yearsOfExperience": "12",
     "socialLinks": {
       "github": "https://github.com/ehsan",
       "twitter": "https://twitter.com/ehsan",
@@ -152,10 +152,22 @@
   ],
   "skills": {
     "levels": [
-      { "range": "1–3", "description": "I've experimented and built something basic for personal use." },
-      { "range": "4–6", "description": "I've worked with it professionally and deployed it to production." },
-      { "range": "7–9", "description": "I have several years of experience, regularly working with it in production environments." },
-      { "range": "10", "description": "I'm highly confident, capable of mentoring others, and comfortable making architectural decisions." }
+      {
+        "range": "1–3",
+        "description": "I've experimented and built something basic for personal use."
+      },
+      {
+        "range": "4–6",
+        "description": "I've worked with it professionally and deployed it to production."
+      },
+      {
+        "range": "7–9",
+        "description": "I have several years of experience, regularly working with it in production environments."
+      },
+      {
+        "range": "10",
+        "description": "I'm highly confident, capable of mentoring others, and comfortable making architectural decisions."
+      }
     ]
   },
   "awards": [
@@ -187,7 +199,14 @@
   "charts": [
     {
       "slug": "Overall",
-      "labels": ["Front-End", "Backend", "Database", "Design", "Cloud", "Devop"],
+      "labels": [
+        "Front-End",
+        "Backend",
+        "Database",
+        "Design",
+        "Cloud",
+        "Devop"
+      ],
       "data": ["10", "9", "8", "8", "6", "7"]
     }
   ],
