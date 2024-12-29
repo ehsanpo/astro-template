@@ -1,42 +1,50 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/hero/Hero.astro';
-import { getPortfolioData } from '../utils/data';
-import ExperienceTimeline from '../components/about/ExperienceTimeline.astro';
-import Education from '../components/about/Education.astro';
-import Skills from '../components/about/Skills.astro';
-import CertificateCard from '../components/certificates/CertificateCard.astro';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero/Hero.astro";
+import { getPortfolioData } from "../utils/data";
+import ExperienceTimeline from "../components/about/ExperienceTimeline.astro";
+import Education from "../components/about/Education.astro";
+import Skills from "../components/about/Skills.astro";
+import CertificateCard from "../components/certificates/CertificateCard.astro";
+import { TimelineSection } from "../components/timeline/TimelineSection";
+import { ParallaxProvider } from "react-scroll-parallax";
+import { useParallax } from "react-scroll-parallax";
+import TimelineAbout from "../components/timeline/TimelineAbout";
 
 const { contact, certifications } = await getPortfolioData();
+// const { ref } = useParallax<HTMLDivElement>({ speed: 10 });
 ---
 
 <Layout title="About">
-  <Hero 
-    title="About Me" 
-    subtitle={contact.description}
-  />
-  
+  <Hero title="About Me" subtitle={contact.description} />
+  <TimelineAbout client:load />
   <div class="py-20">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
-        <section class="mb-16">
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Education</h2>
+        111
+
+        <!-- <section class="mb-16">
+          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+            Education
+          </h2>
           <Education />
         </section>
 
         <section class="mb-16">
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Certifications</h2>
+          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+            Certifications
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {certifications.map((cert) => (
-              <CertificateCard {...cert} />
-            ))}
+            {certifications.map((cert) => <CertificateCard {...cert} />)}
           </div>
         </section>
 
         <section>
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">Experience</h2>
+          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
+            Experience
+          </h2>
           <ExperienceTimeline />
-        </section>
+        </section> -->
       </div>
     </div>
   </div>

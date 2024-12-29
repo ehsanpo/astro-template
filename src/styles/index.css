@@ -346,3 +346,26 @@
     row-gap: 4vh;
   }
 }
+
+.service-details-container {
+  height: calc(100vh - 99px);
+  background: var(--light-color);
+  overflow: hidden;
+}
+.image-right .service-detail-image-hold {
+  left: 50%;
+}
+.service-detail-image-hold {
+  background: var(--black);
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+}
+.parallax-img img {
+  width: 100%;
+  height: 120% !important;
+  object-fit: cover;
+}

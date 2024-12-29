@@ -1,20 +1,22 @@
 ---
-import '../styles/index.css';
-import Layout from '../layouts/Layout.astro';
-import PageHero from '../components/hero/PageHero.astro';
-import ServiceList from '../components/services/ServiceList.astro';
+import "../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/hero/PageHero.astro";
+import ServiceList from "../components/services/ServiceList.astro";
+import ServiceDetails from "../components/FullScroll";
 ---
 
 <Layout title="Services">
-  <PageHero 
-    title="Services" 
+  <PageHero
+    title="Services"
     subtitle="Comprehensive solutions tailored to your needs"
   />
-  
+
   <div class="py-20">
     <div class="container mx-auto px-4">
+      <ServiceDetails client:load />
       <ServiceList />
-      
+
       <div class="mt-20 text-center">
         <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">
           Ready to start your project? Let's create something amazing together.
@@ -24,8 +26,17 @@ import ServiceList from '../components/services/ServiceList.astro';
           class="inline-flex items-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors"
         >
           Get in Touch
-          <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          <svg
+            class="w-4 h-4 ml-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
           </svg>
         </a>
       </div>

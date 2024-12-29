@@ -1,4 +1,6 @@
 ---
+import { Heading } from "../ui/heading";
+
 interface Props {
   title: string;
   tagline: string;
@@ -11,25 +13,56 @@ const { title, tagline, client, agency, tags } = Astro.props;
 ---
 
 <header class="max-w-4xl mx-auto px-4 py-12">
-  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">{title}</h1>
+  <div class="container">
+    <div class="columns-2">
+      <div class="">
+        <Heading class="text-4xl md:text-5xl mb-4" level="h1">{title}</Heading>
+      </div>
+
+      <div>
+        <img
+          src="https://placehold.co/800x600"
+          alt="Project Image"
+          class="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+        <img
+          src="https://placehold.co/800x600"
+          alt="Project Image"
+          class="w-full h-full object-cover rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </div>
+
+  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+    {title}
+  </h1>
   <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{tagline}</p>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
     <div>
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Client</h3>
+      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+        Client
+      </h3>
       <p class="mt-1 text-lg text-gray-900 dark:text-white">{client}</p>
     </div>
     <div>
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Agency</h3>
+      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+        Agency
+      </h3>
       <p class="mt-1 text-lg text-gray-900 dark:text-white">{agency}</p>
     </div>
     <div class="col-span-2">
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Technologies</h3>
+      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
+        Technologies
+      </h3>
       <div class="mt-1 flex flex-wrap gap-2">
-        {tags.map(tag => (
-          <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full">
-            {tag}
-          </span>
-        ))}
+        {
+          tags.map((tag) => (
+            <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full">
+              {tag}
+            </span>
+          ))
+        }
       </div>
     </div>
   </div>

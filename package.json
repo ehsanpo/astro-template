@@ -19,9 +19,11 @@
     "@types/react-dom": "^18.2.18",
     "framer-motion": "^10.18.0",
     "gsap": "^3.12.5",
+    "lucide-react": "^0.469.0",
     "photoswipe": "^5.4.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@astrojs/mdx": "^2.1.1",
