@@ -9,14 +9,11 @@ const ServiceDetails = () => {
   const serviceWrappersRef = useRef([]);
   const headerRef = useRef(null);
 
-  console.log("E", 1, serviceWrappersRef);
-
   useEffect(() => {
     const headerHeight = 64;
-    console.log("efffect", 2);
+
     serviceWrappersRef.current.forEach((serviceBlock, index) => {
       if (serviceBlock) {
-        console.log("opp", serviceBlock, 1);
         ScrollTrigger.create({
           trigger: serviceBlock,
           start: `top ${headerHeight}`,
@@ -29,7 +26,6 @@ const ServiceDetails = () => {
           invalidateOnRefresh: true,
         });
       }
-      console.log("loop2", serviceBlock, 1);
     });
 
     // Cleanup
@@ -106,7 +102,6 @@ const ServiceDetails = () => {
     },
   ];
   const updateServiceWrappersRef = (el, index) => {
-    console.log("opp", el, 1);
     serviceWrappersRef.current[index] = el;
   };
 

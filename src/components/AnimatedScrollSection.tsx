@@ -68,13 +68,10 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
     )
       return;
 
-    console.log(1);
-
     const flipstate = Flip.getState([titleUpRef.current, titleDownRef.current]);
 
     const content = contentWrapRef.current.querySelector(".content--layout");
     if (content) {
-      console.log(2);
       content.prepend(titleUpRef.current, titleDownRef.current);
     }
 

@@ -1,68 +1,114 @@
 ---
 import { Heading } from "../ui/heading";
+import { Image } from "astro:assets";
 
 interface Props {
-  title: string;
-  tagline: string;
-  client: string;
-  agency: string;
-  tags: string[];
+  item: {
+    title: string;
+    tagline: string;
+    client: string;
+    agency: string;
+    tag: string[];
+    category: string[];
+    logo: any;
+    background_image: any;
+    permalink: string;
+    images: any;
+    case_link_url?: string;
+    content: any;
+  };
 }
 
-const { title, tagline, client, agency, tags } = Astro.props;
+const {
+  title,
+  tagline,
+  client,
+  agency,
+  tag,
+  logo,
+  background_image,
+  images,
+  category,
+} = Astro.props.item as Props["item"];
 ---
 
-<header class="max-w-4xl mx-auto px-4 py-12">
-  <div class="container">
-    <div class="columns-2">
-      <div class="">
+<header class="max-w-6xl mx-auto px-4 py-12">
+  <div class="container relative">
+    <div class="grid grid-cols-2">
+      <div class="self-center">
         <Heading class="text-4xl md:text-5xl mb-4" level="h1">{title}</Heading>
+        <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{tagline}</p>
+        <div class="flex flex-col gap-6">
+          <div class="flex gap-4">
+            <h3 class="w-14 font-medium text-gray-500 dark:text-gray-400">
+              Client
+            </h3>
+            <p class="text-gray-900 dark:text-white">{client}</p>
+          </div>
+          <div class="flex gap-4">
+            <h3 class="w-14 font-medium text-gray-500 dark:text-gray-400">
+              Agency
+            </h3>
+            <p class="text-gray-900 dark:text-white">{agency}</p>
+          </div>
+          <div class="flex gap-4 items-center">
+            <h3 class="w-14 font-medium text-gray-500 dark:text-gray-400">
+              Role
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                category.map((tag) => (
+                  <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full">
+                    {tag}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+          <div class="flex gap-4 items-center">
+            <h3 class="w-14 font-medium text-gray-500 dark:text-gray-400">
+              Tech
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {
+                tag.map((tag) => (
+                  <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full">
+                    {tag}
+                  </span>
+                ))
+              }
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <img
-          src="https://placehold.co/800x600"
-          alt="Project Image"
-          class="w-full h-full object-cover rounded-lg shadow-lg"
-        />
-        <img
-          src="https://placehold.co/800x600"
-          alt="Project Image"
-          class="w-full h-full object-cover rounded-lg shadow-lg"
-        />
-      </div>
-    </div>
-  </div>
-
-  <h1 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-    {title}
-  </h1>
-  <p class="text-xl text-gray-600 dark:text-gray-400 mb-8">{tagline}</p>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-    <div>
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-        Client
-      </h3>
-      <p class="mt-1 text-lg text-gray-900 dark:text-white">{client}</p>
-    </div>
-    <div>
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-        Agency
-      </h3>
-      <p class="mt-1 text-lg text-gray-900 dark:text-white">{agency}</p>
-    </div>
-    <div class="col-span-2">
-      <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">
-        Technologies
-      </h3>
-      <div class="mt-1 flex flex-wrap gap-2">
-        {
-          tags.map((tag) => (
-            <span class="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full">
-              {tag}
-            </span>
-          ))
-        }
+      <div class="relative flex-1">
+        <div class="portfolio-hero-image">
+          <Image
+            height={images[0].height}
+            width={images[0].width}
+            src={images[0]}
+            alt="Portfolio Image"
+            class="portfolio-hero-box porfolio-hero-large mr-4 rounded-lg"
+          />
+        </div>
+        <div class="portfolio-hero-image">
+          <Image
+            height={background_image.height}
+            width={background_image.width}
+            src={background_image}
+            alt="Portfolio Image"
+            class="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg"
+          />
+        </div>
+        <div class="portfolio-hero-image">
+          <Image
+            height={logo.height}
+            width={logo.width}
+            src={logo}
+            alt="Portfolio Image"
+            class="portfolio-hero-box porfolio-hero-small rounded-lg"
+          />
+        </div>
       </div>
     </div>
   </div>

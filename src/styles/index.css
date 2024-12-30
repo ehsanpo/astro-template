@@ -369,3 +369,19 @@
   height: 120% !important;
   object-fit: cover;
 }
+
+.portfolio-hero-box {
+  width: 100%;
+}
+.portfolio-hero-box.porfolio-hero-medium {
+  width: 40%;
+  position: absolute;
+  top: 70%;
+  right: 0;
+}
+.portfolio-hero-box.porfolio-hero-small {
+  width: 25%;
+  position: absolute;
+  top: 10%;
+  left: -10%;
+}
