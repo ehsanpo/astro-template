@@ -37,14 +37,6 @@
       "linkedin": "https://linkedin.com/in/ehsan"
     }
   },
-  "education": [
-    {
-      "title": "Master of Science in Computer Science",
-      "school": "Lund University",
-      "year": "2015 - 2017",
-      "description": "Specialized in Software Engineering and Distributed Systems"
-    }
-  ],
   "experience": [
     {
       "type": "education",

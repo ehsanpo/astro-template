@@ -382,34 +382,6 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           xmlnsXlink="http://www.w3.org/1999/xlink"
           viewBox={`0 0 ${imageWidth} ${imageHeight}`}
         >
-          {/* <defs>
-            <filter id={`displacementFilter${layout}`}>
-              <feTurbulence
-                type="fractalNoise"
-                baseFrequency="0.03"
-                numOctaves="3"
-                result="noise"
-              />
-              <feDisplacementMap
-                in="SourceGraphic"
-                in2="noise"
-                scale="50"
-                xChannelSelector="R"
-                yChannelSelector="G"
-              />
-            </filter>
-            <mask id={`circleMask${layout}`}>
-              <circle
-                ref={maskRef}
-                cx="50%"
-                cy="50%"
-                r="0"
-                fill="white"
-                className="mask"
-                style={{ filter: `url(#displacementFilter${layout})` }}
-              />
-            </mask>
-          </defs> */}
           {Filters[layout - 1]}
           <image
             ref={imageRef}
