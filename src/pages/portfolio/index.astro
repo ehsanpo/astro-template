@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import PageHero from "../../components/hero/PageHero.astro";
 import { getPortfolioItems } from "../../utils/data";
 import { Image } from "astro:assets";
+import SelectedWork from "../../components/sections/SelectedWork.astro";
 
 const portfolioItems = await getPortfolioItems();
 const sortedItems = portfolioItems.sort((a, b) => {
@@ -16,7 +17,7 @@ const sortedItems = portfolioItems.sort((a, b) => {
     title="Portfolio"
     subtitle="A showcase of my selected works and projects"
   />
-
+  <SelectedWork />
   <div class="py-20">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

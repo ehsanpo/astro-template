@@ -1,6 +1,7 @@
 import React from "react";
 import type { HeadingLevel } from "./types";
 import { getHeadingClass } from "./utils";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 interface Props {
   level?: HeadingLevel;
@@ -25,12 +26,19 @@ const Heading: React.FC<Props> = ({
   const headingClass = getHeadingClass({ gradient, shadow, floating });
 
   return (
-    <>
-      {backplate && (
-        <div className="absolute left-0 top-[-20%] w-full  text-8xl">xxx</div>
-      )}
-      <Tag className={`relative ${headingClass} ${className}`}>{children}</Tag>
-    </>
+    <ParallaxProvider>
+      <Tag className={`relative ${className} ${backplate ? "mb-4" : ""}`}>
+        {backplate && (
+          <Parallax
+            speed={1.1}
+            className="absolute font-bold left-0 top-[-100%] w-full opacity-10 text-9xl"
+          >
+            <div>{children}</div>
+          </Parallax>
+        )}
+        <span className={`${headingClass} `}>{children}</span>
+      </Tag>
+    </ParallaxProvider>
   );
 };
 

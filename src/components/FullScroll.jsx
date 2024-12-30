@@ -8,10 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const ServiceDetails = () => {
   const serviceWrappersRef = useRef([]);
-  const headerRef = useRef(null);
   const { services } = getPortfolioData();
 
-  console.log(services);
   useEffect(() => {
     const headerHeight = 64;
 

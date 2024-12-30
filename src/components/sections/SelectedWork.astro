@@ -4,10 +4,17 @@ import { getPortfolioItems } from "../../utils/data";
 import { AnimatedScrollSection } from "../AnimatedScrollSection";
 const portfolioItems = await getPortfolioItems();
 const filteredItems = portfolioItems.filter((item) => item.onHome);
-const splitString = (str) => [
-  str.slice(0, Math.ceil(str.length / 2)),
-  str.slice(Math.ceil(str.length / 2)),
-];
+const splitString = (str) => {
+  const words = str.trim().split(/\s+/); // Split by whitespace
+  if (words.length > 1) {
+    let remainder = str.slice(words[0].length).trim();
+    if (remainder.startsWith("- ")) {
+      remainder = remainder.slice(2).trim();
+    }
+    return [words[0], remainder];
+  }
+  return [str];
+};
 ---
 
 <section class="py-20 bg-white dark:bg-gray-800">
@@ -18,6 +25,7 @@ const splitString = (str) => [
       floating
       backplate
       className="text-4xl text-center mb-12"
+      client:idle
     >
       Selected Work
     </Heading>

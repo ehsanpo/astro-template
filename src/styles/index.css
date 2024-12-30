@@ -1,4 +1,18 @@
-/* Base Styles */
+@font-face {
+  font-family: "Basement";
+  src: url("/fonts/basement.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   html {
     font-family: "Inter", sans-serif;
@@ -10,7 +24,7 @@ body {
   h4,
   h5,
   h6 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Basement", sans-serif;
   }
 }
 
@@ -186,6 +200,7 @@ body {
   z-index: 100;
   text-indent: -0.1em;
   display: block;
+  font-family: "Basement";
 }
 
 .title--up {

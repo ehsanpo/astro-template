@@ -1,34 +1,29 @@
-import type { PortfolioData } from '../types/portfolio';
+import type { PortfolioData } from "../types/portfolio";
 
 export const initialData: PortfolioData = {
   meta: {
-    title: '',
-    description: '',
-    author: '',
-    social: {
-      github: '',
-      twitter: '',
-      linkedin: ''
-    }
+    title: "",
+    description: "",
+    author: "",
   },
   navigation: {
     main: [],
-    footer: []
+    footer: [],
   },
   contact: {
-    name: '',
-    description: '',
-    role: '',
-    website: '',
-    linkedin: '',
-    location: '',
-    profilePic: '',
-    yearsOfExperience: '',
+    name: "",
+    description: "",
+    role: "",
+    website: "",
+    linkedin: "",
+    location: "",
+    profilePic: "",
+    yearsOfExperience: "",
     socialLinks: {
-      github: '',
-      twitter: '',
-      linkedin: ''
-    }
+      github: "",
+      twitter: "",
+      linkedin: "",
+    },
   },
   experience: [],
   services: [],
@@ -38,5 +33,5 @@ export const initialData: PortfolioData = {
   charts: [],
   certifications: [],
   awards: [],
-  tools: []
+  tools: [],
 };
