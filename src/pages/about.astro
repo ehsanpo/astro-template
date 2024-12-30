@@ -10,33 +10,4 @@ const { contact } = await getPortfolioData();
 <Layout title="About">
   <Hero title="About Me" subtitle={contact.description} />
   <TimelineAbout client:load />
-
-  <div class="py-20">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <!-- <section class="mb-16">
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-            Education
-          </h2>
-          <Education />
-        </section>
-
-        <section class="mb-16">
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-            Certifications
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {certifications.map((cert) => <CertificateCard {...cert} />)}
-          </div>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold mb-8 text-gray-900 dark:text-white">
-            Experience
-          </h2>
-          <ExperienceTimeline />
-        </section> -->
-      </div>
-    </div>
-  </div>
 </Layout>
