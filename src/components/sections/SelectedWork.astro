@@ -1,7 +1,13 @@
 ---
 import { Heading } from "../ui/heading";
 import { getPortfolioItems } from "../../utils/data";
+import { AnimatedScrollSection } from "../AnimatedScrollSection";
 const portfolioItems = await getPortfolioItems();
+const filteredItems = portfolioItems.filter((item) => item.onHome);
+const splitString = (str) => [
+  str.slice(0, Math.ceil(str.length / 2)),
+  str.slice(Math.ceil(str.length / 2)),
+];
 ---
 
 <section class="py-20 bg-white dark:bg-gray-800">
@@ -10,30 +16,26 @@ const portfolioItems = await getPortfolioItems();
       level="h2"
       gradient
       floating
-      className="text-3xl text-center mb-12"
+      backplate
+      className="text-4xl text-center mb-12"
     >
       Selected Work
     </Heading>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {
-        portfolioItems.map((item) => (
-          <a href={`/portfolio/${item.slug}`} class="group">
-            <div class="relative overflow-hidden rounded-lg">
-              <img
-                src={item.background_image[0]}
-                alt={item.title}
-                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span class="text-white text-xl font-semibold">
-                  {item.title}
-                </span>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
+    {
+      filteredItems.map((item, index) => (
+        <AnimatedScrollSection
+          titleUp={splitString(item.title)[0]}
+          titleDown={splitString(item.title)[1]}
+          imageSrc={item.logo.src}
+          text={item.tagline}
+          layout={index + 1}
+          imageWidth={300}
+          imageHeight={400}
+          client:load
+        />
+      ))
+    }
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </div>
 </section>

@@ -361,10 +361,13 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
     <div className="content-wrap" ref={contentWrapRef}>
       <div className="content">
         <div className="title-wrap" ref={titleWrapRef}>
-          <span className="title title--up" ref={titleUpRef}>
+          <span className="title title--up whitespace-nowrap" ref={titleUpRef}>
             {titleUp}
           </span>
-          <span className="title title--down" ref={titleDownRef}>
+          <span
+            className="title title--down whitespace-nowrap"
+            ref={titleDownRef}
+          >
             {titleDown}
           </span>
         </div>

@@ -9,6 +9,7 @@ interface Props {
   floating?: boolean;
   className?: string;
   children?: React.ReactNode;
+  backplate?: boolean;
 }
 
 const Heading: React.FC<Props> = ({
@@ -18,11 +19,19 @@ const Heading: React.FC<Props> = ({
   floating = false,
   className = "",
   children,
+  backplate,
 }) => {
   const Tag = level as keyof JSX.IntrinsicElements; // Ensures Tag is a valid HTML heading element
   const headingClass = getHeadingClass({ gradient, shadow, floating });
 
-  return <Tag className={`${headingClass} ${className}`}>{children}</Tag>;
+  return (
+    <>
+      {backplate && (
+        <div className="absolute left-0 top-[-20%] w-full  text-8xl">xxx</div>
+      )}
+      <Tag className={`relative ${headingClass} ${className}`}>{children}</Tag>
+    </>
+  );
 };
 
 export default Heading;
