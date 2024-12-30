@@ -23,13 +23,16 @@ const overallStats = charts.find((chart) => chart.slug === "Overall");
         overallStats?.labels.map((label, index) => (
           <div class="text-center">
             <div class="relative mb-2">
-              <svg class="w-24 h-24 mx-auto" viewBox="0 0 36 36">
+              <svg
+                class="w-24 h-24 mx-auto stroke-secondary-500 text-primary-500"
+                viewBox="0 0 36 36"
+              >
                 <path
                   d="M18 2.0845
                   a 15.9155 15.9155 0 0 1 0 31.831
                   a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
-                  stroke="#E5E7EB"
+                  stroke=""
                   stroke-width="3"
                 />
                 <path
@@ -37,7 +40,7 @@ const overallStats = charts.find((chart) => chart.slug === "Overall");
                   a 15.9155 15.9155 0 0 1 0 31.831
                   a 15.9155 15.9155 0 0 1 0 -31.831"
                   fill="none"
-                  stroke="#3B82F6"
+                  stroke="currentColor"
                   stroke-width="3"
                   stroke-dasharray={`${Number(overallStats?.data[index]) * 10}, 100`}
                 />

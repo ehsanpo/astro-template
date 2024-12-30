@@ -51,11 +51,11 @@ const ServiceDetails = () => {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className={`pin-spacer flex w-full bg-black/80`}
+            className={`pin-spacer flex w-full dark:bg-gray-900 `}
             ref={(el) => updateServiceWrappersRef(el, index)}
           >
             <div
-              className={`service-details-container position-relative p-0 d-flex flex-column justify-content-center container mx-auto px-4 ${
+              className={`service-details-container relative p-0 flex flex-col flex-wrap justify-content-center container mx-auto px-4 ${
                 index % 2 === 0 ? "image-right" : "image-left"
               } ${service.isLast ? "last" : ""}`}
               style={{ width: "100%" }}
@@ -69,26 +69,19 @@ const ServiceDetails = () => {
                   }}
                 />
               </div>
-              <div className="container">
-                <div className="row">
-                  <div
-                    className={`col-md-6 ${
-                      service.imageAlignment === "image-left"
-                        ? "offset-md-6"
-                        : "offset-md-0"
-                    }`}
-                  >
-                    <div className="service-details-box position-relative d-flex flex-column">
-                      <div className="service-details-box-body animate-child trigger">
-                        <h2 className="outline mb-1">{`0${service.id}.`}</h2>
-                        <h3>{service.title}</h3>
-                        <p>{service.description}</p>
-                        <ul className="services-list d-flex flex-wrap">
-                          {service.features.map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                          ))}
-                        </ul>
-                      </div>
+              <div className="w-1/2 h-full flex items-center">
+                <div className={` ${index % 2 === 0 ? "" : "ml-6"}`}>
+                  <div className="service-details-box position-relative d-flex flex-column">
+                    <div className="service-details-box-body animate-child trigger">
+                      <h2 className=" font-bold text-9xl mb-1">{`0${service.id}.`}</h2>
+
+                      <h3 className="text-5xl mb-2">{service.title}</h3>
+                      <p>{service.description}</p>
+                      <ul className="services-list-ul mt-3">
+                        {service.features.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>

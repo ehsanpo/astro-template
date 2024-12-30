@@ -1,23 +1,21 @@
 ---
-import { getPortfolioData } from '../../utils/data';
+import { getPortfolioData } from "../../utils/data";
 const { contact } = await getPortfolioData();
 const year = new Date().getFullYear();
 ---
 
 <div>
-  <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Contact</h3>
-  <address class="not-italic text-gray-600 dark:text-gray-400">
+  <h3 class="text-lg font-semibold mb-4">Contact</h3>
+  <address class="not-italic">
     <p>{contact.location}</p>
     <p class="mt-2">
-      <a 
-        href={`mailto:${contact.website}`}
-        class="hover:text-primary-600 dark:hover:text-primary-500"
-      >
+      <a href={`mailto:${contact.website}`}>
         {contact.website}
       </a>
     </p>
   </address>
-  <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
-    © {year} {contact.name}. All rights reserved.
+  <p class="mt-4 text-sm">
+    © {year}
+    {contact.name}. All rights reserved.
   </p>
 </div>

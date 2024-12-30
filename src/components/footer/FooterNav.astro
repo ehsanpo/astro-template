@@ -1,20 +1,19 @@
 ---
-import { getPortfolioData } from '../../utils/data';
+import { getPortfolioData } from "../../utils/data";
 const { navigation } = await getPortfolioData();
 ---
 
 <div>
-  <h3 class="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Navigation</h3>
+  <h3 class="text-lg font-semibold mb-4 text-white">Navigation</h3>
   <ul class="space-y-2">
-    {navigation.footer.map(link => (
-      <li>
-        <a 
-          href={link.href}
-          class="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-500"
-        >
-          {link.text}
-        </a>
-      </li>
-    ))}
+    {
+      navigation.footer.map((link) => (
+        <li>
+          <a href={link.href} class="text-gray-100 hover:text-gray-200 ">
+            {link.text}
+          </a>
+        </li>
+      ))
+    }
   </ul>
 </div>

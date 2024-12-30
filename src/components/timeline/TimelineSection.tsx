@@ -72,7 +72,9 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 
               <TechTags technologies={technologies} />
 
-              {project && <Project {...project} />}
+              {project && Object.keys(project).length > 0 && (
+                <Project {...project} />
+              )}
 
               {awards && awards.length > 0 && (
                 <div className="space-y-2 mb-4">

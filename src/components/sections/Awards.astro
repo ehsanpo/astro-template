@@ -1,31 +1,37 @@
 ---
-import { getPortfolioData } from '../../utils/data';
-import SectionTitle from '../ui/SectionTitle.astro';
+import { getPortfolioData } from "../../utils/data";
+import SectionTitle from "../ui/SectionTitle.astro";
 
 const { awards } = await getPortfolioData();
 ---
 
 <section class="py-20 bg-white dark:bg-gray-800">
   <div class="container mx-auto px-4">
-    <SectionTitle 
+    <SectionTitle
       title="Awards & Recognition"
       subtitle="Achievements and accolades"
     />
-    
+
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {awards.map((award) => (
-        <a href={award.link} class="group">
-          <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg transition-transform hover:-translate-y-1">
-            <img 
-              src={award.images} 
-              alt={award.name}
-              class="w-full h-48 object-cover rounded-lg mb-4"
-            />
-            <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">{award.name}</h3>
-            <p class="text-gray-600 dark:text-gray-400">{award.description}</p>
-          </div>
-        </a>
-      ))}
+      {
+        awards.map((award) => (
+          <a href={award.link} class="group">
+            <div class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg transition-transform hover:-translate-y-1">
+              <img
+                src={award.images}
+                alt={award.name}
+                class=" rounded-lg mb-4"
+              />
+              <h3 class="font-semibold text-lg text-gray-900 dark:text-white mb-2">
+                {award.name}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                {award.description}
+              </p>
+            </div>
+          </a>
+        ))
+      }
     </div>
   </div>
 </section>

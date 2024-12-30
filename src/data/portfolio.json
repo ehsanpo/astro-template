@@ -41,7 +41,7 @@
   "experience": [
     {
       "type": "education",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Ruby on Rails",
       "description": "Completed an intensive Ruby on Rails course at BredBand2, gaining proficiency in building robust web applications.",
       "org": "BredBand2",
@@ -53,7 +53,7 @@
     },
     {
       "type": "education",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Linux Academy / A Cloud Guru",
       "description": "Earned the AWS Certified Solutions Architect certification through rigorous training from Linux Academy, demonstrating expertise in architecting scalable and reliable cloud solutions.",
       "org": "Linux Academy / A Cloud Guru",
@@ -65,7 +65,7 @@
     },
     {
       "type": "education",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Hermods",
       "description": "Successfully completed a comprehensive Programming A and Database Management course at Hermods, mastering essential programming and database administration skills.",
       "org": "Hermods",
@@ -83,7 +83,7 @@
       "org": "Glokala Folkshögskola",
       "year": "2009",
       "tags": [],
-      "image": "/img/experience/education.jpg",
+      "image": "/img/music.jpeg",
       "awards": [],
       "project": {}
     },
@@ -95,7 +95,7 @@
       "org": "Universitetsholmen's High School",
       "year": "2008",
       "tags": [],
-      "image": "/img/experience/education.jpg",
+      "image": "/img/0_2.png",
       "awards": [],
       "project": {}
     },
@@ -107,7 +107,7 @@
       "org": "Telavox",
       "year": "2023 - Present",
       "tags": ["React", "Java", "ElectronJs"],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/0_23.png",
       "awards": [],
       "project": {}
     },
@@ -119,7 +119,7 @@
       "org": "Bredband2",
       "year": "2020 - 2023",
       "tags": ["Gatsby", "NextJs", "Ruby on Rails"],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/bb2.jpeg",
       "awards": [],
       "project": {
         "title": "Bredband2 Project",
@@ -133,7 +133,7 @@
     },
     {
       "type": "experience",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Software Developer with Front-end Focus at Skymill",
       "description": "Lead front-end development efforts by working with React and creating comprehensive end-to-end tests to ensure optimal user experiences.",
       "org": "Skymill",
@@ -145,7 +145,7 @@
     },
     {
       "type": "experience",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Freelance Web Developer",
       "description": "Operated as an independent web developer, delivering high-quality responsive websites and web applications to clients.",
       "org": "Freelance",
@@ -163,7 +163,7 @@
       "org": "Guts & Glory",
       "year": "2017 - 2019",
       "tags": [],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/0_31.png",
       "awards": [],
       "project": {}
     },
@@ -175,7 +175,7 @@
       "org": "Whitespace",
       "year": "2013 - 2017",
       "tags": [],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/0_0.png",
       "awards": [],
       "project": {}
     },
@@ -187,13 +187,13 @@
       "org": "The Fan Club",
       "year": "2012 - 2013",
       "tags": [],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/bg5-7.jpg",
       "awards": [],
       "project": {}
     },
     {
       "type": "experience",
-      "highlighted": true,
+      "highlighted": false,
       "title": "Freelance Web Developer",
       "description": "Pioneered a year-long freelance endeavor focused on assisting local businesses through innovative web solutions.",
       "org": "Freelance",
@@ -211,16 +211,18 @@
       "org": "Next Generation Design",
       "year": "2011 - 2010",
       "tags": [],
-      "image": "/img/experience/tech-company.jpg",
+      "image": "/img/0_3.png",
       "awards": [],
       "project": {}
     }
   ],
   "services": [
     {
+      "id": 1,
       "title": "Web Development",
       "description": "Building modern, responsive websites with cutting-edge technologies.",
       "icon": "💻",
+      "image": "/img/110_1.png",
       "features": [
         "Custom website development",
         "Responsive design",
@@ -228,10 +230,48 @@
       ]
     },
     {
+      "id": 2,
+      "title": "Application Development",
+      "description": "Creating cross-platform applications with modern frameworks.",
+      "icon": "📱",
+      "image": "/img/110_2.png",
+      "features": [
+        "Cross-platform app development",
+        "Tailwind and Vite integration",
+        "React Native mobile apps"
+      ]
+    },
+    {
+      "id": 3,
       "title": "UI/UX Design",
       "description": "Designing intuitive and engaging user interfaces.",
       "icon": "🎨",
+      "image": "/img/110_3_3.png",
       "features": ["Wireframing", "Prototyping", "User Research"]
+    },
+    {
+      "id": 4,
+      "title": "Technical Consulting",
+      "description": "Providing expert guidance on system architecture and development strategies.",
+      "icon": "🛠️",
+      "image": "/img/110_8.png",
+      "features": [
+        "Codebase reviews and optimizations",
+        "Cloud and database strategy",
+        "Technical team mentorship"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Music Production",
+      "description": "Producing high-quality music with professional tools and techniques.",
+      "icon": "🎵",
+      "image": "/img/110_31.png",
+      "features": [
+        "Music production with Reason Studios and Logic Pro",
+        "Beat creation and MIDI programming",
+        "Sound design and mastering"
+      ]
     }
   ],
   "skills": [
@@ -375,57 +415,57 @@
   "certifications": [
     {
       "name": "Introduction to Cybersecurity",
-      "img": "cybersecurity.png",
+      "img": "/img/cert/cybersecurity.png",
       "year": "2022"
     },
     {
       "name": "AWS Cloud Certification",
-      "img": "AWS.png",
+      "img": "/img/cert/AWS.png",
       "year": "2017"
     },
     {
       "name": "Scrum Foundation Professional Certificate (SFPC)",
-      "img": "SFPC.png",
+      "img": "/img/cert/SFPC.png",
       "year": "2022"
     },
     {
       "name": "Remote Work and Virtual Collaboration Certificate (RWVCPC)",
-      "img": "RWVCPC.png",
+      "img": "/img/cert/RWVCPC.png",
       "year": "2022"
     },
     {
       "name": "UI Components I: Basic",
-      "img": "ui-basic.png",
+      "img": "/img/cert/ui-basic.png",
       "year": "2022"
     },
     {
       "name": "UI Components II: Advanced",
-      "img": "ui-adv.png",
+      "img": "/img/cert/ui-adv.png",
       "year": "2022"
     },
     {
       "name": "Design Composition",
-      "img": "design-composition.png",
+      "img": "/img/cert/design-composition.png",
       "year": "2022"
     },
     {
       "name": "Design Accessibility",
-      "img": "accessibility.png",
+      "img": "/img/cert/accessibility.png",
       "year": "2022"
     },
     {
       "name": "Advanced Google Analytics",
-      "img": "GAA.png",
+      "img": "/img/cert/GAA.png",
       "year": "2022"
     },
     {
       "name": "Google Tag Manager Fundamentals",
-      "img": "GTM.png",
+      "img": "/img/cert/GTM.png",
       "year": "2022"
     },
     {
       "name": "Google Analytics for Beginners",
-      "img": "GA.png",
+      "img": "/img/cert/GA.png",
       "year": "2022"
     }
   ],

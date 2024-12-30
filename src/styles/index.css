@@ -70,6 +70,9 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.gradient-bg {
+  background: var(--gradient-color);
+}
 
 :root {
   --gradient-color: linear-gradient(
@@ -363,13 +366,13 @@ body {
   overflow: hidden;
 }
 .image-right .service-detail-image-hold {
-  left: 50%;
+  order: 2;
 }
 .service-detail-image-hold {
   background: var(--black);
   width: 50%;
   height: 100%;
-  position: absolute;
+
   top: 0;
   overflow: hidden;
   z-index: 2;
@@ -394,4 +397,11 @@ body {
   position: absolute;
   top: 10%;
   left: -10%;
+}
+
+.services-list-ul li::before {
+  content: "\f560";
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-right: 8px;
 }

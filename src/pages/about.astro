@@ -2,17 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
 import { getPortfolioData } from "../utils/data";
-import ExperienceTimeline from "../components/about/ExperienceTimeline.astro";
-import Education from "../components/about/Education.astro";
-import Skills from "../components/about/Skills.astro";
-import CertificateCard from "../components/certificates/CertificateCard.astro";
-import { TimelineSection } from "../components/timeline/TimelineSection";
-import { ParallaxProvider } from "react-scroll-parallax";
-import { useParallax } from "react-scroll-parallax";
 import TimelineAbout from "../components/timeline/TimelineAbout";
 
-const { contact, certifications } = await getPortfolioData();
-// const { ref } = useParallax<HTMLDivElement>({ speed: 10 });
+const { contact } = await getPortfolioData();
 ---
 
 <Layout title="About">

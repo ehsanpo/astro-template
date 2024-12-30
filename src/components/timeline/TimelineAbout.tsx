@@ -9,11 +9,14 @@ const { experience } = await getPortfolioData();
 const experienceHighlight = experience.filter(
   (item) => item.highlighted === true
 );
+const sortetExperience = experienceHighlight.sort(
+  (a, b) => parseInt(a.year) - parseInt(b.year)
+);
 
 const TimelineAbout: React.FC<Props> = () => {
   return (
     <ParallaxProvider>
-      {experienceHighlight.map((item, index) => (
+      {sortetExperience.map((item, index) => (
         <TimelineSection
           key={index}
           year={item.year}
