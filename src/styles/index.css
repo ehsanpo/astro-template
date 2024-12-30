@@ -186,7 +186,6 @@
   padding-top: 0.3em;
   line-height: 0.525;
   font-size: clamp(2rem, 15vw, 9rem);
-  font-family: system-ui, -apple-system, sans-serif;
   position: relative;
   z-index: 100;
   text-indent: -0.1em;

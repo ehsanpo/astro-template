@@ -7,7 +7,8 @@ interface Props {
   gradient?: boolean;
   shadow?: boolean;
   floating?: boolean;
-  class?: string;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 const {
@@ -15,7 +16,8 @@ const {
   gradient = false,
   shadow = false,
   floating = false,
-  class: className = "",
+  className = "",
+  children,
 } = Astro.props;
 
 const Tag = level;

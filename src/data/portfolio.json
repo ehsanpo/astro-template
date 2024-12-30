@@ -2,12 +2,7 @@
   "meta": {
     "title": "Portfolio",
     "description": "Professional portfolio showcasing my work and expertise",
-    "author": "Ehsan Pourhadi",
-    "social": {
-      "github": "https://github.com/ehsan",
-      "twitter": "https://twitter.com/ehsan",
-      "linkedin": "https://linkedin.com/in/ehsan"
-    }
+    "author": "Ehsan Pourhadi"
   },
   "navigation": {
     "main": [
@@ -29,6 +24,7 @@
   },
   "contact": {
     "name": "Ehsan Pourhadi",
+    "description": "Crafting digital experiences with modern web technologies and creative design solutions.",
     "role": "Full-stack Developer",
     "website": "https://example.com",
     "linkedin": "https://linkedin.com/in/ehsan",
@@ -39,41 +35,70 @@
       "github": "https://github.com/ehsan",
       "twitter": "https://twitter.com/ehsan",
       "linkedin": "https://linkedin.com/in/ehsan"
-    },
-    "description": "Crafting digital experiences with modern web technologies and creative design solutions."
+    }
   },
   "education": [
     {
-      "degree": "Master of Science in Computer Science",
+      "title": "Master of Science in Computer Science",
       "school": "Lund University",
       "year": "2015 - 2017",
       "description": "Specialized in Software Engineering and Distributed Systems"
-    },
-    {
-      "degree": "Bachelor of Science in Computer Engineering",
-      "school": "Malmö University",
-      "year": "2012 - 2015",
-      "description": "Focus on Web Development and Software Architecture"
     }
   ],
   "experience": [
     {
+      "type": "education",
+      "highlighted": true,
+      "title": "Master of Science in Computer Science",
+      "description": "Specialized in Software Engineering and Distributed Systems",
+      "org": "Lund University",
+      "year": "2015 - 2017",
+      "tags": ["React", "Node.js", "TypeScript", "GraphQL"],
+      "image": "/img/experience/tech-company.jpg",
+      "awards": [],
+      "project": {
+        "title": "Electronic Music Album",
+        "description": "Produced and released a full-length electronic music album, handling everything from composition to final mastering. The project involved complex audio processing and innovative sound design techniques.",
+        "technologies": [
+          "Ableton Live",
+          "Pro Tools",
+          "Sound Design",
+          "Digital Audio Processing"
+        ],
+        "link": {
+          "href": "https://soundcloud.com/your-music",
+          "title": "Listen on SoundCloud"
+        }
+      }
+    },
+    {
+      "type": "experience",
+      "highlighted": true,
       "title": "Senior Software Developer",
-      "company": "Tech Company",
-      "period": "2020 - Present",
-      "description": "Leading development of web applications using modern technologies."
-    },
-    {
-      "title": "Full Stack Developer",
-      "company": "Digital Agency",
-      "period": "2018 - 2020",
-      "description": "Built and maintained client websites and applications."
-    },
-    {
-      "title": "Frontend Developer",
-      "company": "Startup",
-      "period": "2016 - 2018",
-      "description": "Developed responsive user interfaces and implemented new features."
+      "description": "Leading development of web applications using modern technologies.",
+      "org": "Tech Company",
+      "year": "2020 - Present",
+      "tags": ["React", "Node.js", "TypeScript", "GraphQL"],
+      "image": "/img/experience/tech-company.jpg",
+      "awards": [
+        "Guldägget: Gold in PR & Silver in Digital",
+        "Cannes Lions: Silver Lion in Promo & Activation",
+        "Cannes Lions: Bronze Lion in Cyber"
+      ],
+      "project": {
+        "title": "Electronic Music Album",
+        "description": "Produced and released a full-length electronic music album, handling everything from composition to final mastering. The project involved complex audio processing and innovative sound design techniques.",
+        "technologies": [
+          "Ableton Live",
+          "Pro Tools",
+          "Sound Design",
+          "Digital Audio Processing"
+        ],
+        "link": {
+          "href": "https://soundcloud.com/your-music",
+          "title": "Listen on SoundCloud"
+        }
+      }
     }
   ],
   "services": [
@@ -81,6 +106,7 @@
       "title": "Web Development",
       "description": "Building modern, responsive websites with cutting-edge technologies",
       "icon": "💻",
+      "image": "/img/services/web-development.jpg",
       "features": [
         "Custom website development",
         "Progressive Web Apps (PWA)",
@@ -92,6 +118,7 @@
     {
       "title": "UI/UX Design",
       "description": "Creating intuitive and beautiful user interfaces that engage users",
+      "image": "/img/services/web-development.jpg",
       "icon": "🎨",
       "features": [
         "User interface design",
@@ -104,6 +131,7 @@
     {
       "title": "Technical Consulting",
       "description": "Expert advice on technology solutions and architecture decisions",
+      "image": "/img/services/web-development.jpg",
       "icon": "📊",
       "features": [
         "Architecture planning",
@@ -116,6 +144,7 @@
     {
       "title": "Mobile Development",
       "description": "Native and cross-platform mobile application development",
+      "image": "/img/services/web-development.jpg",
       "icon": "📱",
       "features": [
         "iOS and Android apps",
@@ -128,6 +157,7 @@
     {
       "title": "API Development",
       "description": "Building robust and scalable APIs for your applications",
+      "image": "/img/services/web-development.jpg",
       "icon": "🔌",
       "features": [
         "RESTful APIs",
@@ -140,6 +170,7 @@
     {
       "title": "Cloud Solutions",
       "description": "Cloud infrastructure setup and management",
+      "image": "/img/services/web-development.jpg",
       "icon": "☁️",
       "features": [
         "Cloud architecture",
@@ -150,32 +181,22 @@
       ]
     }
   ],
-  "skills": {
-    "levels": [
-      {
-        "range": "1–3",
-        "description": "I've experimented and built something basic for personal use."
-      },
-      {
-        "range": "4–6",
-        "description": "I've worked with it professionally and deployed it to production."
-      },
-      {
-        "range": "7–9",
-        "description": "I have several years of experience, regularly working with it in production environments."
-      },
-      {
-        "range": "10",
-        "description": "I'm highly confident, capable of mentoring others, and comfortable making architectural decisions."
-      }
-    ]
-  },
-  "awards": [
+  "skills": [
     {
-      "name": "Svenska design",
-      "description": "Gold Category Digital Design",
-      "images": "/img/awards/svenskadesign.png",
-      "link": "portfolio/malmo-saluhall"
+      "range": "1–3",
+      "description": "I've experimented and built something basic for personal use."
+    },
+    {
+      "range": "4–6",
+      "description": "I've worked with it professionally and deployed it to production."
+    },
+    {
+      "range": "7–9",
+      "description": "I have several years of experience, regularly working with it in production environments."
+    },
+    {
+      "range": "10",
+      "description": "I'm highly confident, capable of mentoring others, and comfortable making architectural decisions."
     }
   ],
   "testimonials": [
@@ -215,6 +236,14 @@
       "name": "Introduction to Cybersecurity",
       "img": "cybersecurity.png",
       "year": "2022"
+    }
+  ],
+  "awards": [
+    {
+      "name": "Svenska design",
+      "description": "Gold Category Digital Design",
+      "images": "/img/awards/svenskadesign.png",
+      "link": "portfolio/malmo-saluhall"
     }
   ],
   "tools": [

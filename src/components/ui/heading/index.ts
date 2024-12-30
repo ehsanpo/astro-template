@@ -1,2 +1,2 @@
-export { default as Heading } from './Heading.astro';
-export * from './types';
+export { default as Heading } from "./Heading";
+export * from "./types";

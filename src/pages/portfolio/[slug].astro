@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PortfolioHeader from "../../components/portfolio/PortfolioHeader.astro";
+import PortfolioHeader from "../../components/portfolio/PortfolioHeader";
 import Gallery from "../../components/portfolio/Gallery.astro";
 import { getPortfolioItems } from "../../utils/data";
 
@@ -30,12 +30,11 @@ interface PortfolioItem {
 
 const { item } = Astro.props as unknown as { item: PortfolioItem };
 const { Content } = await item.content.render();
-console.log(item);
 ---
 
 <Layout title={`${item.title} - Portfolio`}>
   <article class="min-h-screen bg-white dark:bg-gray-900 pt-4">
-    <PortfolioHeader item={item} />
+    <PortfolioHeader item={item} client:load />
 
     <div class="max-w-6xl mx-auto px-4">
       <div class="max-w-4xl mx-auto prose dark:prose-invert mb-20">

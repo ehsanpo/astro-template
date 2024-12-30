@@ -1,5 +1,5 @@
 ---
-import { getPortfolioData } from '../../utils/data';
+import { getPortfolioData } from "../../utils/data";
 const { skills } = await getPortfolioData();
 ---
 
@@ -15,30 +15,39 @@ const { skills } = await getPortfolioData();
     id="skillsExplanation"
     class="hidden absolute left-0 top-8 w-80 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg z-10"
   >
-    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">Skill Levels Explained</h4>
+    <h4 class="font-semibold mb-2 text-gray-900 dark:text-white">
+      Skill Levels Explained
+    </h4>
     <ul class="space-y-2">
-      {skills.levels.map(({ range, description }) => (
-        <li class="text-sm">
-          <span class="font-medium text-gray-900 dark:text-white">{range}:</span>
-          <span class="text-gray-600 dark:text-gray-400"> {description}</span>
-        </li>
-      ))}
+      {
+        skills.map(({ range, description }) => (
+          <li class="text-sm">
+            <span class="font-medium text-gray-900 dark:text-white">
+              {range}:
+            </span>
+            <span class="text-gray-600 dark:text-gray-400"> {description}</span>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </div>
 
 <script>
-  const button = document.getElementById('skillsInfoButton');
-  const explanation = document.getElementById('skillsExplanation');
+  const button = document.getElementById("skillsInfoButton");
+  const explanation = document.getElementById("skillsExplanation");
 
-  button?.addEventListener('click', () => {
-    explanation?.classList.toggle('hidden');
+  button?.addEventListener("click", () => {
+    explanation?.classList.toggle("hidden");
   });
 
   // Close when clicking outside
-  document.addEventListener('click', (event) => {
-    if (!button?.contains(event.target as Node) && !explanation?.contains(event.target as Node)) {
-      explanation?.classList.add('hidden');
+  document.addEventListener("click", (event) => {
+    if (
+      !button?.contains(event.target as Node) &&
+      !explanation?.contains(event.target as Node)
+    ) {
+      explanation?.classList.add("hidden");
     }
   });
 </script>

@@ -16,6 +16,7 @@ const portfolio = defineCollection({
       background_image: image(),
       logo: image().optional(),
       images: z.array(image()),
+      onHome: z.boolean().optional(),
     }),
 });
 

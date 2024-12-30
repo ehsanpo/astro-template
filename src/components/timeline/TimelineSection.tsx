@@ -38,7 +38,9 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
   reverse = false,
 }) => {
   return (
-    <section className="relative min-h-screen">
+    <section
+      className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
+    >
       <ParallaxBanner
         layers={[
           {
@@ -47,7 +49,8 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
             opacity: [0.8, 1],
           },
         ]}
-        className="aspect-[2/1] h-screen"
+        // className="aspect-[2/1] "
+        className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
       >
         <div className="absolute inset-0 bg-black/50">
           <div
@@ -73,7 +76,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 
               {awards && awards.length > 0 && (
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-amber-400">
+                  <div className="flex items-center gap-2 text-amber-400 mt-4">
                     <Award size={20} />
                     <span className="font-semibold">Awards</span>
                   </div>

@@ -2,7 +2,7 @@ import portfolioData from "../data/portfolio.json";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
-export const getPortfolioData = async () => {
+export const getPortfolioData = () => {
   return portfolioData;
 };
 
