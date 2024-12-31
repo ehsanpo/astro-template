@@ -4,6 +4,7 @@ import PageHero from "../../components/hero/PageHero.astro";
 import { getPortfolioItems } from "../../utils/data";
 import { Image } from "astro:assets";
 import SelectedWork from "../../components/sections/SelectedWork.astro";
+import { Heading } from "../../components/ui/heading";
 
 const portfolioItems = await getPortfolioItems();
 const sortedItems = portfolioItems.sort((a, b) => {
@@ -17,6 +18,7 @@ const sortedItems = portfolioItems.sort((a, b) => {
     title="Portfolio"
     subtitle="A showcase of my selected works and projects"
   />
+
   <SelectedWork />
   <div class="py-20">
     <div class="container mx-auto px-4">
@@ -28,7 +30,7 @@ const sortedItems = portfolioItems.sort((a, b) => {
                 <Image
                   height={item.background_image.height}
                   width={item.background_image.width}
-                  src={item.background_image}
+                  src={item.logo}
                   alt="Portfolio Image"
                   class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />

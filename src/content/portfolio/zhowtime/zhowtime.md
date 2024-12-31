@@ -19,8 +19,7 @@ tag:
 tagline: "How many goals Zlatan Ibrahimovic has scored in the Champions League?"
 background_image: "1.png"
 logo: "zt-w1.png"
-video:
-  - ""
+video: ""
 images:
   - "2.png"
   - "4.jpg"

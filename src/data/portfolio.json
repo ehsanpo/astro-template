@@ -85,7 +85,20 @@
       "tags": [],
       "image": "/img/music.jpeg",
       "awards": [],
-      "project": {}
+      "project": {
+        "title": "Electronic Music Album",
+        "description": "Produced and released a full-length electronic music album, handling everything from composition to final mastering. The project involved complex audio processing and innovative sound design techniques.",
+        "technologies": [
+          "Ableton Live",
+          "Pro Tools",
+          "Sound Design",
+          "Digital Audio Processing"
+        ],
+        "link": {
+          "href": "https://soundcloud.com/your-music",
+          "title": "Listen on SoundCloud"
+        }
+      }
     },
     {
       "type": "education",
@@ -97,24 +110,44 @@
       "tags": [],
       "image": "/img/0_2.png",
       "awards": [],
-      "project": {}
+      "project": {
+        "title": "Automated Assembly Line Controller",
+        "description": "Developed a PLC-based control system for an automated assembly line, implementing safety protocols and optimizing production efficiency. The system reduced production time by 25% while maintaining strict safety standards.",
+        "technologies": [
+          "Siemens S7",
+          "HMI Programming",
+          "Safety PLC",
+          "Industrial Networks"
+        ],
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+      }
     },
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Software Developer at Telavox",
+      "title": "Software Developer",
       "description": "Collaborated on the development of various software projects using React, Java, and ElectronJs.",
       "org": "Telavox",
       "year": "2023 - Present",
       "tags": ["React", "Java", "ElectronJs"],
       "image": "/img/0_23.png",
       "awards": [],
-      "project": {}
+      "project": {
+        "title": "Next-Gen Video Conferencing Platform",
+        "description": "Developing a revolutionary video conferencing solution with AI-powered features, including real-time translation, smart noise cancellation, and adaptive video quality optimization.",
+        "technologies": [
+          "WebRTC",
+          "WebAssembly",
+          "TensorFlow.js",
+          "WebCodecs API"
+        ],
+        "image": "https://images.unsplash.com/photo-1516387938699-a93567ec168e?auto=format&fit=crop&q=80"
+      }
     },
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Software Developer at Bredband2",
+      "title": "Software Developer",
       "description": "Contributed to the implementation of web applications utilizing Gatsby, NextJs, and Ruby on Rails. Also managed projects and team.",
       "org": "Bredband2",
       "year": "2020 - 2023",
@@ -122,19 +155,22 @@
       "image": "/img/bb2.jpeg",
       "awards": [],
       "project": {
-        "title": "Bredband2 Project",
-        "description": "Led the development and deployment of several key features and functionality for Bredband2's web applications.",
-        "technologies": ["Gatsby", "NextJs", "Ruby on Rails"],
-        "link": {
-          "href": "/portfolio/bredband2/",
-          "title": "View Project"
-        }
+        "title": "Customer Service Portal Redesign",
+        "description": "Spearheaded the complete redesign and development of the customer service portal, serving over 100,000 active users. Implemented real-time service monitoring and automated troubleshooting.",
+        "technologies": [
+          "TypeScript",
+          "React",
+          "GraphQL",
+          "Kubernetes",
+          "Prometheus"
+        ],
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
       }
     },
     {
       "type": "experience",
       "highlighted": false,
-      "title": "Software Developer with Front-end Focus at Skymill",
+      "title": "Software Developer",
       "description": "Lead front-end development efforts by working with React and creating comprehensive end-to-end tests to ensure optimal user experiences.",
       "org": "Skymill",
       "year": "2020",
@@ -158,38 +194,78 @@
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Web Developer/Tech Lead at Guts & Glory",
+      "title": "Web Developer/Tech Lead",
       "description": "Served as a technical lead at an advertising agency, offering clients strategic digital communication solutions for expanding their market reach.",
       "org": "Guts & Glory",
       "year": "2017 - 2019",
       "tags": [],
       "image": "/img/0_31.png",
-      "awards": [],
-      "project": {}
+      "awards": ["Svenska Design: Gold in Digital Design"],
+      "project": {
+        "title": "Malmö Saluhall Digital Experience",
+        "description": "Led the development of an immersive digital platform for Malmö's premier food hall, featuring real-time vendor updates, virtual tours, and an innovative booking system.",
+        "technologies": [
+          "Next.js",
+          "GraphQL",
+          "Contentful",
+          "Stripe",
+          "Analytics"
+        ],
+        "link": {
+          "href": "https://www.malmosaluhall.se",
+          "title": "Visit Malmö Saluhall"
+        },
+        "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80"
+      }
     },
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Full Stack Developer at Whitespace",
+      "title": "Fullstack Developer",
       "description": "Managed end-to-end development projects for a global web agency, specializing in UX/UI design, web development, and digital marketing.",
       "org": "Whitespace",
       "year": "2013 - 2017",
       "tags": [],
       "image": "/img/0_0.png",
       "awards": [],
-      "project": {}
+      "project": {
+        "title": "Global Event Management System",
+        "description": "Architected and developed a comprehensive event management platform for a major automotive manufacturer, handling everything from registration to post-event analytics.",
+        "technologies": ["Laravel", "Vue.js", "PostgreSQL", "Redis", "AWS"],
+        "github": "https://github.com/username/event-platform",
+        "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80"
+      }
     },
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Web Developer/Designer at The Fan Club",
+      "title": "Web Developer/Designer",
       "description": "Executed web production tasks at The Fan Club, contributing to the creation of compelling online experiences.",
       "org": "The Fan Club",
       "year": "2012 - 2013",
       "tags": [],
       "image": "/img/bg5-7.jpg",
-      "awards": [],
-      "project": {}
+      "awards": [
+        "Guldägget: Gold in PR & Silver in Digital",
+        "Cannes Lions: Silver Lion in Promo & Activation",
+        "Cannes Lions: Bronze Lion in Cyber"
+      ],
+      "project": {
+        "title": "ToolPool - Community Tool Sharing Platform",
+        "description": "Created an innovative platform that enables neighborhoods to share tools and equipment. The platform features real-time availability tracking, booking system, and social integration.",
+        "technologies": [
+          "React",
+          "Node.js",
+          "MongoDB",
+          "Facebook OAuth",
+          "Google Maps API"
+        ],
+        "link": {
+          "href": "https://www.toolpool.se",
+          "title": "Visit ToolPool"
+        },
+        "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&q=80"
+      }
     },
     {
       "type": "experience",
@@ -206,14 +282,23 @@
     {
       "type": "experience",
       "highlighted": true,
-      "title": "Developer/Designer at Next Generation Design",
+      "title": "Developer/Designer",
       "description": "Managed design and development tasks while overseeing server administration and web hosting operations.",
       "org": "Next Generation Design",
-      "year": "2011 - 2010",
+      "year": "2010 - 2011",
       "tags": [],
       "image": "/img/0_3.png",
       "awards": [],
-      "project": {}
+      "project": {
+        "title": "E-commerce Platform for Local Artisans",
+        "description": "Built a custom WordPress-based e-commerce platform enabling local artisans to sell their crafts online. The platform included custom payment integration and a unique rating system.",
+        "technologies": [
+          "WooCommerce",
+          "Custom WordPress Theme",
+          "Payment Gateway Integration"
+        ],
+        "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80"
+      }
     }
   ],
   "services": [

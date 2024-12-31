@@ -1,15 +1,18 @@
 ---
 import type React from "react";
 import { Heading } from "../ui/heading";
-import { Children } from "react";
+import Tilt from "react-parallax-tilt";
+import BoxReveal from "../ui/box-reveal";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 interface Props {
   text?: string;
   title: string;
-  subtitle?: string;
+  subtitle?: string | React.ReactNode;
   subtitleText?: string;
   children?: React.ReactNode;
   fullHeight?: boolean;
+  img?: string;
 }
 
 const {
@@ -18,15 +21,15 @@ const {
   text,
   subtitleText,
   fullHeight = false,
-  children,
+  img,
 } = Astro.props;
 ---
 
 <section
-  class={`bg-gray-50 dark:bg-gray-800 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
+  class={`bg-gray-50 dark:bg-gray-900 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
 >
-  <div class="container mx-auto px-4">
-    <div class="mx-auto">
+  <div class={`container mx-auto px-4 ${img && "flex"}`}>
+    <div class="mx-auto self-center flex-1">
       {
         text && (
           <Heading level="h6" className={`text-xl  mb-4`}>
@@ -61,5 +64,25 @@ const {
       }
       <slot />
     </div>
+    {
+      img && (
+        <div class="mx-8 flex-1">
+          <Tilt
+            client:load
+            perspective={1000}
+            className="portfolio-hero-image-tilt"
+            glareEnable={true}
+            glareMaxOpacity={0.8}
+            glareColor="#ffffff"
+            glarePosition="bottom"
+            glareBorderRadius="20px"
+          >
+            <div>
+              <img src={img} class="w-full rounded-lg shadow-lg" />
+            </div>
+          </Tilt>
+        </div>
+      )
+    }
   </div>
 </section>

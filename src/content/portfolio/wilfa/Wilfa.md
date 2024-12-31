@@ -22,6 +22,7 @@ client: "Wilfa"
 tagline: ""
 background_image: "bg.jpg"
 logo: "logo.png"
+logo2: "wilfa_rgb_blue.png"
 video:
 images:
   - "0.jpg"

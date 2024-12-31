@@ -1,6 +1,7 @@
 import React from "react";
 import { Heading } from "../ui/heading";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import Tilt from "react-parallax-tilt";
 
 interface Props {
   item: {
@@ -11,6 +12,11 @@ interface Props {
     tag: string[];
     category: string[];
     logo: {
+      height: number;
+      width: number;
+      src: string;
+    };
+    logo2?: {
       height: number;
       width: number;
       src: string;
@@ -39,6 +45,7 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
     agency,
     tag,
     logo,
+    logo2,
     background_image,
     images,
     category,
@@ -106,42 +113,62 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
               </div>
             </div>
             <div className="relative flex-1">
-              <div className="portfolio-hero-image">
-                <Parallax speed={-10}>
-                  <img
-                    height={images[0].height}
-                    width={images[0].width}
-                    src={images[0].src}
-                    alt="Portfolio Image"
-                    className="portfolio-hero-box porfolio-hero-large mr-4 rounded-lg"
-                  />
-                </Parallax>
-              </div>
-              <div className="portfolio-hero-image">
-                <Parallax speed={10}>
-                  <img
-                    height={background_image.height}
-                    width={background_image.width}
-                    src={background_image.src}
-                    alt="Portfolio Image"
-                    className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg"
-                  />
-                </Parallax>
-              </div>
-              <div className="portfolio-hero-image">
-                <Parallax
-                  speed={-10}
-                  className="portfolio-hero-box porfolio-hero-small"
-                >
-                  <img
-                    height={logo.height}
-                    width={logo.width}
-                    src={logo.src}
-                    alt="Portfolio Image"
-                    className=" rounded-lg"
-                  />
-                </Parallax>
-              </div>
+              <Tilt perspective={1000} className="portfolio-hero-image-tilt">
+                <div className="portfolio-hero-image">
+                  <Parallax speed={-10}>
+                    <img
+                      height={logo.height}
+                      width={logo.width}
+                      src={logo.src}
+                      alt="Portfolio Image"
+                      className="portfolio-hero-box  object-cover  porfolio-hero-large mr-4 rounded-lg"
+                    />
+                  </Parallax>
+                </div>
+                <div className="portfolio-hero-image">
+                  <Parallax speed={10}>
+                    <img
+                      height={images[0].height}
+                      width={images[0].width}
+                      src={images[0].src}
+                      alt="Portfolio Image"
+                      className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg h-[20vh] object-cover"
+                    />
+                  </Parallax>
+                </div>
+                {logo2 && (
+                  <div className="portfolio-hero-image">
+                    <Parallax
+                      speed={5}
+                      className="portfolio-hero-box porfolio-hero-small"
+                    >
+                      <img
+                        height={logo2?.height}
+                        width={logo2?.width}
+                        src={logo2?.src}
+                        alt="Portfolio Image"
+                        className=" rounded-lg "
+                      />
+                    </Parallax>
+                  </div>
+                )}
+                {background_image && (
+                  <div className="portfolio-hero-image">
+                    <Parallax
+                      speed={5}
+                      className="portfolio-hero-box porfolio-hero-small--right"
+                    >
+                      <img
+                        height={background_image.height}
+                        width={background_image.width}
+                        src={background_image.src}
+                        alt="Portfolio Image"
+                        className=" rounded-lg"
+                      />
+                    </Parallax>
+                  </div>
+                )}
+              </Tilt>
             </div>
           </div>
         </div>

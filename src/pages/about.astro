@@ -3,11 +3,51 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
 import { getPortfolioData } from "../utils/data";
 import TimelineAbout from "../components/timeline/TimelineAbout";
-
+import BoxReveal from "../components/ui/box-reveal";
 const { contact } = await getPortfolioData();
 ---
 
 <Layout title="About">
-  <Hero title="About Me" subtitle={contact.description} />
+  <Hero fullHeight title="About Me" img="/img/ep.jpg">
+    <div>
+      <BoxReveal
+        boxColor="bg-secondary-500"
+        duration={0.1}
+        delay={0.2}
+        client:load
+      >
+        <p class="text-2xl text-gray-300 mb-5">
+          I'm a passionate full-stack developer with a keen eye for design and a
+          drive for creating exceptional digital experiences.
+        </p>
+      </BoxReveal>
+      <BoxReveal
+        boxColor="bg-primary-500"
+        duration={0.5}
+        delay={0.2}
+        client:load
+      >
+        <p class="text-gray-300 text-xl">
+          With years of experience in web development and design, I combine
+          technical expertise with creative problem-solving to deliver
+          innovative solutions.
+        </p>
+      </BoxReveal>
+      <BoxReveal
+        boxColor="bg-primary-500"
+        duration={0.6}
+        delay={0.3}
+        client:load
+      >
+        <a
+          href="https://www.linkedin.com/in/ehsanp/"
+          target="_blank"
+          class="mt-3 shadow-2xl hover:shadow-primary inline-block bg-primary-500 text-dark font-basement px-8 py-4 rounded-lg hover:bg-primary-500/90 hover:scale-105 duration-300 transition"
+        >
+          Reach me on LinkedIn.
+        </a>
+      </BoxReveal>
+    </div>
+  </Hero>
   <TimelineAbout client:load />
 </Layout>

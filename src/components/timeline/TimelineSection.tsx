@@ -53,6 +53,16 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
         className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
       >
         <div className="absolute inset-0 bg-black/50">
+          <Parallax speed={-25}>
+            <div
+              className={` container mx-auto text-8xl  font-basement text-secondary-500 ${
+                reverse ? "text-left" : "text-right"
+              }`}
+            >
+              {year}
+            </div>
+          </Parallax>
+
           <div
             className={`container mx-auto h-full flex items-center ${
               reverse ? "justify-end" : "justify-start"
@@ -63,9 +73,10 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
                 reverse ? "ml-auto" : "mr-auto"
               } bg-black/40 backdrop-blur-md p-8 rounded-lg text-white border border-white/10`}
             >
-              <div className="text-sm font-mono text-white/60">{year}</div>
-              <h2 className="text-3xl font-bold mb-2">{company}</h2>
-              <h3 className="text-xl text-white/90 mb-4">{title}</h3>
+              <h2 className="text-4xl font-bold mb-1 text-primary-500">
+                {company}
+              </h2>
+              <h3 className="text-2xl text-secondary-500/90 mb-2">{title}</h3>
               <p className="text-white/80 mb-4 leading-relaxed">
                 {description}
               </p>

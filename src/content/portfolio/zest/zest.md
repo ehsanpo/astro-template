@@ -1,7 +1,7 @@
 ---
-onHome: true
+onHome: false
 title: "Zest"
-date: "2019-03-28T12:54:27+00:00"
+date: "2019"
 status: publish
 permalink: zest
 author: Ehsan

@@ -27,10 +27,10 @@ const Heading: React.FC<Props> = ({
 
   return (
     <ParallaxProvider>
-      <Tag className={`relative ${className} ${backplate ? "mb-4" : ""}`}>
+      <Tag className={`relative ${className} ${backplate ? "pb-4" : ""}`}>
         {backplate && (
           <Parallax
-            speed={1.1}
+            speed={2}
             className="absolute font-bold left-0 top-[-100%] w-full opacity-10 text-9xl"
           >
             <div>{children}</div>

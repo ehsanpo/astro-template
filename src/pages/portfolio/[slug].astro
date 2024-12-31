@@ -19,8 +19,21 @@ interface PortfolioItem {
   agency: string;
   category: string[];
   tag: string[];
-  logo: string;
-  background_image: string;
+  logo: {
+    height: number;
+    width: number;
+    src: string;
+  };
+  logo2?: {
+    height: number;
+    width: number;
+    src: string;
+  };
+  background_image: {
+    height: number;
+    width: number;
+    src: string;
+  };
   permalink: string;
   images: string[];
   bilder: string[];
@@ -33,10 +46,18 @@ const { Content } = await item.content.render();
 ---
 
 <Layout title={`${item.title} - Portfolio`}>
-  <article class="min-h-screen bg-white dark:bg-gray-900 pt-4">
+  <article class="min-h-screen bg-white dark:bg-gray-900 pt-4 relative">
+    <!-- <img
+      height={item.background_image.height}
+      height={item.background_image.height}
+      width={item.background_image.width}
+      src={item.background_image.src}
+      alt="Portfolio Image"
+      class="rounded-lg absolute top-0 left-0 w-full h-[50vh] object-cover"
+    /> -->
     <PortfolioHeader item={item} client:load />
 
-    <div class="max-w-6xl mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4 relative z-10 pt-10">
       <div class="max-w-4xl mx-auto prose dark:prose-invert mb-20">
         <slot />
         <Content />

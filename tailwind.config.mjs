@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
+        primary2: {
           50: "#f7ffe5",
           100: "#ecffc7",
           200: "#d9ff96",
@@ -18,7 +18,7 @@ export default {
           900: "#34580f",
           950: "#193102",
         },
-        secondary: {
+        secondary2: {
           50: "#f7f3ff",
           100: "#efe9fe",
           200: "#e2d6fe",
@@ -31,7 +31,7 @@ export default {
           900: "#421d95",
           950: "#2a1065",
         },
-        primary2: {
+        primary: {
           50: "#fff9ec",
           100: "#fff2d3",
           200: "#ffe2a6",
@@ -44,7 +44,7 @@ export default {
           900: "#81390d",
           950: "#461a04",
         },
-        secondary2: {
+        secondary: {
           50: "#ffeff3",
           100: "#ffe0e9",
           200: "#ffc6d8",

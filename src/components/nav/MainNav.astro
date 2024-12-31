@@ -1,12 +1,14 @@
 ---
-import { getPortfolioData } from '../../utils/data';
-import NavLink from './NavLink.astro';
+import { getPortfolioData } from "../../utils/data";
+import NavLink from "./NavLink.astro";
 
 const { navigation } = await getPortfolioData();
 ---
 
-<div class="flex items-center gap-6">
-  {navigation.main.map(link => (
-    <NavLink href={link.href}>{link.text}</NavLink>
-  ))}
+<div class="flex items-center gap-6 font-basement">
+  {
+    navigation.main.map((link) => (
+      <NavLink href={link.href}>{link.text}</NavLink>
+    ))
+  }
 </div>
