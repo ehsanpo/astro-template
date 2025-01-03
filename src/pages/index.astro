@@ -16,7 +16,7 @@ const { contact, stacks } = await getPortfolioData();
 <Layout title="Portfolio - Home">
   <HeroBlock contact={contact} />
   <SelectedWorkBlock stacks={stacks} />
-  <TechStackBlock siez={3} stacks={stacks.slice(0, 3)} />
+  <TechStackBlock stacks={stacks.slice(0, 3)} />
   <Certificates />
   <Testimonials />
   <Awards />
