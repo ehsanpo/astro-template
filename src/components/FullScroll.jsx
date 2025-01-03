@@ -61,7 +61,7 @@ const ServiceDetails = () => {
               } ${service.isLast ? "last" : ""}`}
               style={{ width: "100%" }}
             >
-              <div className="service-detail-image-hold bg-black md:w-1/2 h-[40%] md:h-full top-0 overflow-hidden z-2 ">
+              <div className="service-detail-image-hold relative bg-black md:w-1/2 h-[40%] md:h-full top-0 overflow-hidden z-2 ">
                 <img
                   src={service.image}
                   alt={service.title}

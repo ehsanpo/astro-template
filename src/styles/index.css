@@ -91,6 +91,7 @@ body {
     theme("colors.primary.500") 0%,
     theme("colors.secondary.500") 100%
   );
+  --primary: theme("colors.primary.500");
 }
 
 /* Smooth Scrolling */
@@ -377,18 +378,45 @@ body {
 .image-right .service-detail-image-hold {
   order: 2;
 }
-.service-detail-image-hold {
-  background: var(--black);
-  width: 50%;
-  height: 100%;
 
-  top: 0;
-  overflow: hidden;
-  z-index: 2;
+.clip2 {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0 100%
+  );
 }
-.service-detail-image-hold {
-  position: relative;
+.clip {
+  clip-path: polygon(
+    0 0,
+    25% 0,
+    calc(25% + 9px) 9px,
+    calc(75% - 9px) 9px,
+    75% 0,
+    100% 0,
+    100% 100%,
+    60% 100%,
+    calc(60% - 8px) calc(100% - 8px),
+    calc(40% + 8px) calc(100% - 8px),
+    40% 100%,
+    0 100%
+  );
 }
+.clip3 {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 16px),
+    calc(65% + 16px) calc(100% - 16px),
+    65% 100%,
+    35% 100%,
+    calc(35% - 16px) calc(100% - 16px),
+    0 calc(100% - 16px)
+  );
+}
+
 /*
 .service-detail-image-hold::before {
   transition: 0.45s all cubic-bezier(0.455, 0.03, 0.515, 0.755);

@@ -10,8 +10,10 @@ import ClientMarquee from "../components/clients/ClientMarquee.astro";
 import { getPortfolioData } from "../utils/data";
 import React from "react";
 import { Heading } from "../components/ui/heading";
+import SkillsInfo from "../components/Skillsinfo";
+import StackCard from "../components/StackCard";
 
-const { contact } = await getPortfolioData();
+const { contact, stacks } = await getPortfolioData();
 ---
 
 <Layout title="Portfolio - Home">
@@ -85,6 +87,33 @@ const { contact } = await getPortfolioData();
   </div>
 
   <SelectedWork />
+
+  <!-- Tech Stacks -->
+  <section class="py-20">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-basement mb-12 text-primary text-center">
+        Stacks
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {
+          stacks
+            .slice(0, 3)
+            .map((stack, index) => (
+              <StackCard {...stack} parentIndex={index} client:load />
+            ))
+        }
+      </div>
+      <SkillsInfo />
+      <div class="text-center mt-12">
+        <a
+          href="/skills"
+          class="inline-block text-primary hover:text-white transition-colors font-basement"
+        >
+          View All Skills →
+        </a>
+      </div>
+    </div>
+  </section>
   <Certificates />
 
   <Testimonials />
