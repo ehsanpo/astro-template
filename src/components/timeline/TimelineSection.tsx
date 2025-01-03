@@ -49,13 +49,12 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
             opacity: [0.8, 1],
           },
         ]}
-        // className="aspect-[2/1] "
         className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
       >
         <div className="absolute inset-0 bg-black/50">
           <Parallax speed={-25}>
             <div
-              className={` container mx-auto text-8xl  font-basement text-secondary-500 ${
+              className={`absolute container left-[5%]  right-[5%] text-8xl  font-basement text-secondary-500 ${
                 reverse ? "text-left" : "text-right"
               }`}
             >

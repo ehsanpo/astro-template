@@ -86,16 +86,16 @@
       "image": "/img/music.jpeg",
       "awards": [],
       "project": {
-        "title": "Electronic Music Album",
-        "description": "Produced and released a full-length electronic music album, handling everything from composition to final mastering. The project involved complex audio processing and innovative sound design techniques.",
+        "title": "Music Producer and Event Organizerm",
+        "description": "Produced and released multiple songs, primarily in hip-hop and R&B genres. Organized and hosted an event for Malmö-based artists at Arena 305. Collaborated with various artists and producers, contributing to projects that showcased diverse musical styles and talents.",
         "technologies": [
-          "Ableton Live",
+          "Reason Studios",
           "Pro Tools",
           "Sound Design",
           "Digital Audio Processing"
         ],
         "link": {
-          "href": "https://soundcloud.com/your-music",
+          "href": "https://soundcloud.com/eprumental",
           "title": "Listen on SoundCloud"
         }
       }
@@ -108,16 +108,16 @@
       "org": "Universitetsholmen's High School",
       "year": "2008",
       "tags": [],
-      "image": "/img/0_2.png",
+      "image": "/img/1110_0.png",
       "awards": [],
       "project": {
-        "title": "Automated Assembly Line Controller",
-        "description": "Developed a PLC-based control system for an automated assembly line, implementing safety protocols and optimizing production efficiency. The system reduced production time by 25% while maintaining strict safety standards.",
+        "title": "Automation Technician",
+        "description": "Worked in a high-pressure meat processing plant, repairing critical machinery to minimize downtime and prevent significant financial losses. Completed a project involving the installation and programming of a freezer system using PLCs, setting up sensors to monitor temperature and transmitting data via a network to a central database for real-time control and monitoring.",
         "technologies": [
-          "Siemens S7",
-          "HMI Programming",
-          "Safety PLC",
-          "Industrial Networks"
+          "Industrial Automation",
+          "PLC Programming",
+          "Troubleshooting",
+          "Sensor Installation"
         ],
         "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
       }
@@ -134,7 +134,7 @@
       "awards": [],
       "project": {
         "title": "Next-Gen Video Conferencing Platform",
-        "description": "Developing a revolutionary video conferencing solution with AI-powered features, including real-time translation, smart noise cancellation, and adaptive video quality optimization.",
+        "description": "Developing a video conferencing solution with, including real-time chat, smart noise cancellation, and adaptive video quality optimization.",
         "technologies": [
           "WebRTC",
           "WebAssembly",
@@ -151,20 +151,14 @@
       "description": "Contributed to the implementation of web applications utilizing Gatsby, NextJs, and Ruby on Rails. Also managed projects and team.",
       "org": "Bredband2",
       "year": "2020 - 2023",
-      "tags": ["Gatsby", "NextJs", "Ruby on Rails"],
+      "tags": ["Gatsby", "NextJs", "React", "Ruby on Rails"],
       "image": "/img/bb2.jpeg",
       "awards": [],
       "project": {
         "title": "Customer Service Portal Redesign",
         "description": "Spearheaded the complete redesign and development of the customer service portal, serving over 100,000 active users. Implemented real-time service monitoring and automated troubleshooting.",
-        "technologies": [
-          "TypeScript",
-          "React",
-          "GraphQL",
-          "Kubernetes",
-          "Prometheus"
-        ],
-        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80"
+        "technologies": ["TypeScript", "React", "GraphQL", "Ruby on Rails"],
+        "image": "/img/Bredband2.webp"
       }
     },
     {
@@ -203,7 +197,7 @@
       "awards": ["Svenska Design: Gold in Digital Design"],
       "project": {
         "title": "Malmö Saluhall Digital Experience",
-        "description": "Led the development of an immersive digital platform for Malmö's premier food hall, featuring real-time vendor updates, virtual tours, and an innovative booking system.",
+        "description": "Created a comprehensive digital identity for Malmö's premier food hall, featuring an immersive platform and a dedicated blog.",
         "technologies": [
           "Next.js",
           "GraphQL",
@@ -215,7 +209,7 @@
           "href": "https://www.malmosaluhall.se",
           "title": "Visit Malmö Saluhall"
         },
-        "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80"
+        "image": "/img/saluhall.png"
       }
     },
     {
@@ -229,11 +223,16 @@
       "image": "/img/0_0.png",
       "awards": [],
       "project": {
-        "title": "Global Event Management System",
-        "description": "Architected and developed a comprehensive event management platform for a major automotive manufacturer, handling everything from registration to post-event analytics.",
-        "technologies": ["Laravel", "Vue.js", "PostgreSQL", "Redis", "AWS"],
-        "github": "https://github.com/username/event-platform",
-        "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80"
+        "title": "Job Ad and Application Platform",
+        "description": "We developed a job advertisement platform where companies can post small job ads, manage applications, and handle payments and invoicing seamlessly. Users can sign up, create profiles, and apply for jobs, while companies can review applications and select candidates.",
+        "technologies": [
+          "Drupal",
+          "PHP",
+          "Visma Payment",
+          "jQuery",
+          "Bootstrap"
+        ],
+        "image": "/img/ad0_3.png"
       }
     },
     {
@@ -253,18 +252,12 @@
       "project": {
         "title": "ToolPool - Community Tool Sharing Platform",
         "description": "Created an innovative platform that enables neighborhoods to share tools and equipment. The platform features real-time availability tracking, booking system, and social integration.",
-        "technologies": [
-          "React",
-          "Node.js",
-          "MongoDB",
-          "Facebook OAuth",
-          "Google Maps API"
-        ],
+        "technologies": ["jQuery", "PHP", "Facebook API", "Booking system"],
         "link": {
-          "href": "https://www.toolpool.se",
+          "href": "https://www.malmojarnhandel.se/produkt-kategori/toolpool/",
           "title": "Visit ToolPool"
         },
-        "image": "https://images.unsplash.com/photo-1530124566582-a618bc2615dc?auto=format&fit=crop&q=80"
+        "image": "/img/toolpool-cover.jpg"
       }
     },
     {
@@ -297,7 +290,7 @@
           "Custom WordPress Theme",
           "Payment Gateway Integration"
         ],
-        "image": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80"
+        "image": "/img/w2-transformed.jpeg"
       }
     }
   ],
@@ -321,7 +314,7 @@
       "icon": "📱",
       "image": "/img/110_2.png",
       "features": [
-        "Cross-platform app development",
+        "Cross-platform app development using Electron",
         "Tailwind and Vite integration",
         "React Native mobile apps"
       ]
@@ -353,7 +346,7 @@
       "icon": "🎵",
       "image": "/img/110_31.png",
       "features": [
-        "Music production with Reason Studios and Logic Pro",
+        "Music production with Reason Studios and Logic",
         "Beat creation and MIDI programming",
         "Sound design and mastering"
       ]
