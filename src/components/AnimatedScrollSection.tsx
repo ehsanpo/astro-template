@@ -377,7 +377,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           </span>
         </div>
       </div>
-      <div className={`content content--layout content--layout-${layout}`}>
+      <div className={`content2 content--layout content--layout-${layout}`}>
         <svg
           className={`content__img content__img--${layout}`}
           width={imageWidth}

@@ -31,7 +31,7 @@ const Heading: React.FC<Props> = ({
         {backplate && (
           <Parallax
             speed={2}
-            className="absolute font-bold left-0 top-[-100%] w-full opacity-10 text-9xl"
+            className="blur-sm absolute font-bold left-0 top-[-100%] w-full opacity-10 lg:text-9xl"
           >
             <div>{children}</div>
           </Parallax>

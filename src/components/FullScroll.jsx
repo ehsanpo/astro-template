@@ -56,15 +56,19 @@ const ServiceDetails = () => {
             ref={(el) => updateServiceWrappersRef(el, index)}
           >
             <div
-              className={`service-details-container relative p-0 flex flex-col flex-wrap justify-content-center container mx-auto px-4 ${
+              className={`service-details-container relative overflow-hidden flex-row p-0 flex md:flex-col flex-wrap justify-content-center container mx-auto px-4 ${
                 index % 2 === 0 ? "image-right" : "image-left"
               } ${service.isLast ? "last" : ""}`}
               style={{ width: "100%" }}
             >
-              <div className="service-detail-image-hold   parallax-img">
-                <img src={service.image} alt={service.title} />
+              <div className="service-detail-image-hold bg-black md:w-1/2 h-[40%] md:h-full top-0 overflow-hidden z-2 ">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full  md:h-[120%] !object-cover"
+                />
               </div>
-              <div className="w-1/2 h-full flex items-center">
+              <div className="md:w-1/2 h-full flex md:items-center">
                 <Parallax speed={20}>
                   <div className={` ${index % 2 === 0 ? "" : "ml-6"}`}>
                     <div className="service-details-box position-relative d-flex flex-column">
