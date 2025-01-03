@@ -245,7 +245,7 @@ body {
 }
 
 .content--layout-1 .content__text {
-  max-width: 250px;
+  max-width: 320px;
   text-align: right;
   justify-self: end;
   align-self: end;
@@ -269,14 +269,14 @@ body {
 }
 
 .content--layout-6 .content__text {
-  max-width: 250px;
+  max-width: 320px;
   justify-self: end;
   align-self: end;
   text-align: right;
 }
 
 .content--layout-7 .content__text {
-  max-width: 250px;
+  max-width: 320px;
   justify-self: start;
   align-self: start;
   text-align: right;
@@ -462,6 +462,7 @@ body {
   position: absolute;
   top: 70%;
   right: 0;
+  margin-top: -10%;
 }
 .portfolio-hero-box.porfolio-hero-small {
   width: 25%;
@@ -472,7 +473,7 @@ body {
 .portfolio-hero-box.porfolio-hero-small--right {
   width: 25%;
   position: absolute;
-  top: -20vh;
+  top: -20%;
   left: -10%;
 }
 
@@ -615,4 +616,14 @@ body {
     clip-path: polygon(0 0, 0 0, 0 0, 0 0);
     opacity: 1;
   }
+}
+.btn:hover .glitch-effect {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  animation: glitch-animation 1s linear infinite;
 }

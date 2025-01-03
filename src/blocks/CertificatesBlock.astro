@@ -2,19 +2,23 @@
 import { getPortfolioData } from "@/utils/data";
 import SectionTitle from "@/components/ui/SectionTitle.astro";
 import CertificateCard from "@/components/certificates/CertificateCard.astro";
+import { Heading } from "@/components/ui/heading";
 
 const { certifications } = await getPortfolioData();
 ---
 
 <section class="py-20 bg-gray-50 dark:bg-gray-900">
   <div class="container mx-auto px-4">
-    <SectionTitle
-      title="Certifications"
-      subtitle="Professional achievements and qualifications"
-    />
+    <Heading level="h3" gradient floating backplate client:idle>
+      Certifications
+    </Heading>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {certifications.map((cert) => <CertificateCard {...cert} />)}
+      {
+        certifications.map((cert, index) => (
+          <CertificateCard {...cert} index={index} />
+        ))
+      }
     </div>
   </div>
 </section>

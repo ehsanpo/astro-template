@@ -35,10 +35,15 @@ interface PortfolioItem {
     src: string;
   };
   permalink: string;
-  images: string[];
+  images: {
+    height: number;
+    width: number;
+    src: string;
+  }[];
   bilder: string[];
   case_link_url?: string;
   content: any;
+  date: string;
 }
 
 const { item } = Astro.props as unknown as { item: PortfolioItem };
@@ -47,14 +52,6 @@ const { Content } = await item.content.render();
 
 <Layout title={`${item.title} - Portfolio`}>
   <article class="min-h-screen bg-white dark:bg-gray-900 pt-4 relative">
-    <!-- <img
-      height={item.background_image.height}
-      height={item.background_image.height}
-      width={item.background_image.width}
-      src={item.background_image.src}
-      alt="Portfolio Image"
-      class="rounded-lg absolute top-0 left-0 w-full h-[50vh] object-cover"
-    /> -->
     <PortfolioHeader item={item} client:load />
 
     <div class="max-w-6xl mx-auto px-4 relative z-10 pt-10">

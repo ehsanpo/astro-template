@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
 import Lenis from "@studio-freight/lenis";
+import Link from "./Link";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -399,12 +400,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
         <p ref={textRef} className="content__text">
           {text}
           <br />
-          <a
-            href={link}
-            className="border break-keep inline-block mt-4 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
-          >
-            View Project
-          </a>
+          <Link href={link} text="View Project" className="mt-4" />
         </p>
       </div>
     </div>

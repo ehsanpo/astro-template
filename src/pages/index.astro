@@ -1,9 +1,9 @@
 ---
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
-import Testimonials from "../components/sections/Testimonials.astro";
+import Testimonials from "@/blocks/TestimonialsBlock.astro";
 import Awards from "../components/sections/Awards.astro";
-import Certificates from "@/blocks/Certificates.astro";
+import Certificates from "@/blocks/CertificatesBlock.astro";
 import ClientMarquee from "../components/clients/ClientMarquee.astro";
 import { getPortfolioData } from "../utils/data";
 import HeroBlock from "@/blocks/HeroBlock.astro";
@@ -16,9 +16,9 @@ const { contact, stacks } = await getPortfolioData();
 <Layout title="Portfolio - Home">
   <HeroBlock contact={contact} />
   <SelectedWorkBlock stacks={stacks} />
-  <TechStackBlock stacks={stacks} />
+  <TechStackBlock siez={3} stacks={stacks.slice(0, 3)} />
   <Certificates />
   <Testimonials />
-  <ClientMarquee />
   <Awards />
+  <ClientMarquee />
 </Layout>

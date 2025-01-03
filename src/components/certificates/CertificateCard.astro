@@ -1,19 +1,29 @@
 ---
+import BoxReveal from "../ui/box-reveal";
+
 interface Props {
   name: string;
   img: string;
   year: string;
+  index: number;
 }
 
-const { name, img, year } = Astro.props;
+const { name, img, year, index } = Astro.props;
 ---
 
-<div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
-  <img src={img} alt={name} class="w-full object-cover" />
-  <div class="p-4">
-    <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-      {name}
-    </h3>
-    <p class="text-sm text-gray-600 dark:text-gray-400">Awarded {year}</p>
+<BoxReveal
+  boxColor="bg-primary-400 h-full"
+  duration={0.5}
+  delay={(index % 4) * 0.2}
+  client:idle
+>
+  <div class="rounded-lg overflow-hidden text-center">
+    <img src={img} alt={name} class="w-full object-cover" />
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+        <p class="text-sm text-gray-600 dark:text-gray-400">{year}</p>
+        {name}
+      </h3>
+    </div>
   </div>
-</div>
+</BoxReveal>

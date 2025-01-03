@@ -34,6 +34,7 @@ interface Props {
     }[];
     case_link_url?: string;
     content: any;
+    date: string;
   };
 }
 
@@ -49,131 +50,141 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
     background_image,
     images,
     category,
+    permalink,
+    date,
   } = item;
 
   return (
-    <header className="max-w-6xl mx-auto px-4 py-12">
-      <ParallaxProvider>
-        <div className="container relative">
-          <div className="grid grid-cols-2">
-            <div className="self-center">
-              <Heading
-                className="text-4xl md:text-5xl mb-4"
-                level="h1"
-                gradient
-              >
-                {title}
-              </Heading>
-              <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
-                {tagline}
-              </p>
-              <div className="flex flex-col gap-4">
-                <div className="flex gap-4">
-                  <h3 className="w-14 font-medium text-gray-500 dark:text-gray-400">
-                    Client
-                  </h3>
-                  <p className="text-gray-900 dark:text-white">{client}</p>
-                </div>
-                <div className="flex gap-4">
-                  <h3 className="w-14 font-medium text-gray-500 dark:text-gray-400">
-                    Agency
-                  </h3>
-                  <p className="text-gray-900 dark:text-white">{agency}</p>
-                </div>
-                <div className="flex gap-4 items-center">
-                  <h3 className="w-14 font-medium text-gray-500 dark:text-gray-400">
-                    Role
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {category.map((categoryTag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full"
-                      >
-                        {categoryTag}
-                      </span>
-                    ))}
+    <div className="dark:bg-gray-800 bg-gray-200">
+      <header className="max-w-6xl mx-auto px-4 py-12">
+        <ParallaxProvider>
+          <div className="container relative">
+            <div className="grid md:grid-cols-2 ">
+              <div className="self-center">
+                <Heading className=" mb-4 !text-left" level="h1" gradient>
+                  {title}
+                </Heading>
+                <p className="text-xl mb-4">{tagline}</p>
+                <div className="flex flex-col gap-4">
+                  <div className="flex gap-4">
+                    <h3 className="min-w-20 font-medium text-secondary-600 uppercase ">
+                      Client
+                    </h3>
+                    <p className="text-secondary-600 ">{client}</p>
                   </div>
-                </div>
-                <div className="flex gap-4 items-center">
-                  <h3 className="w-14 font-medium text-gray-500 dark:text-gray-400">
-                    Tech
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {tag.map((techTag, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 rounded-full"
-                      >
-                        {techTag}
-                      </span>
-                    ))}
+                  <div className="flex gap-4">
+                    <h3 className="min-w-20 font-medium text-secondary-600 uppercase ">
+                      Year
+                    </h3>
+                    <p className="text-secondary-600 ">{date}</p>
+                  </div>
+                  {agency && (
+                    <div className="flex gap-4">
+                      <h3 className="min-w-20 font-medium text-yellow-500 uppercase">
+                        Agency
+                      </h3>
+                      <p className="text-yellow-500 ">{agency}</p>
+                    </div>
+                  )}
+
+                  <div className="flex gap-4 ">
+                    <h3 className="min-w-20 font-medium text-primary-400 uppercase">
+                      Role
+                    </h3>
+                    <div className="flex flex-wrap gap-2 ">
+                      {category.map((categoryTag, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 text-sm clip2 border-l-2  text-primary-400 bg-primary-500/20  border-primary-500/30 hover:border-primary transition-all"
+                        >
+                          {categoryTag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <h3 className="min-w-20 font-medium text-gray-500 dark:text-purple-400 uppercase">
+                      Tech
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {tag.map((techTag, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm clip2 border-l-2 border-purple-500/30  hover:border-purple-500 transition-all"
+                        >
+                          {techTag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="relative flex-1">
-              <Tilt perspective={1000} className="portfolio-hero-image-tilt">
-                <div className="portfolio-hero-image">
-                  <Parallax speed={-10}>
-                    <img
-                      height={logo.height}
-                      width={logo.width}
-                      src={logo.src}
-                      alt="Portfolio Image"
-                      className="portfolio-hero-box  object-cover  porfolio-hero-large mr-4 rounded-lg"
-                    />
-                  </Parallax>
-                </div>
-                <div className="portfolio-hero-image">
-                  <Parallax speed={10}>
-                    <img
-                      height={images[0].height}
-                      width={images[0].width}
-                      src={images[0].src}
-                      alt="Portfolio Image"
-                      className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg h-[20vh] object-cover"
-                    />
-                  </Parallax>
-                </div>
-                {logo2 && (
-                  <div className="portfolio-hero-image">
-                    <Parallax
-                      speed={5}
-                      className="portfolio-hero-box porfolio-hero-small"
-                    >
+              <div className="relative flex-1 mt-10">
+                <Tilt
+                  perspective={1000}
+                  className="portfolio-hero-image-tilt relative"
+                >
+                  <div className="portfolio-hero-image ">
+                    <Parallax speed={-10}>
                       <img
-                        height={logo2?.height}
-                        width={logo2?.width}
-                        src={logo2?.src}
+                        height={logo.height}
+                        width={logo.width}
+                        src={logo.src}
                         alt="Portfolio Image"
-                        className=" rounded-lg "
+                        className="portfolio-hero-box  object-cover  porfolio-hero-large mr-4 rounded-lg"
                       />
                     </Parallax>
                   </div>
-                )}
-                {background_image && (
-                  <div className="portfolio-hero-image">
-                    <Parallax
-                      speed={5}
-                      className="portfolio-hero-box porfolio-hero-small--right"
-                    >
+                  <div className="portfolio-hero-image absolute top-[100%] w-full left-0">
+                    <Parallax speed={10}>
                       <img
-                        height={background_image.height}
-                        width={background_image.width}
-                        src={background_image.src}
+                        height={images[0].height}
+                        width={images[0].width}
+                        src={images[0].src}
                         alt="Portfolio Image"
-                        className=" rounded-lg"
+                        className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg max-h-[20vh] object-cover"
                       />
                     </Parallax>
                   </div>
-                )}
-              </Tilt>
+                  {logo2 && (
+                    <div className="portfolio-hero-image absolute top-[100%] w-full left-0">
+                      <Parallax
+                        speed={5}
+                        className="portfolio-hero-box porfolio-hero-small"
+                      >
+                        <img
+                          height={logo2?.height}
+                          width={logo2?.width}
+                          src={logo2?.src}
+                          alt="Portfolio Image"
+                          className=" rounded-lg "
+                        />
+                      </Parallax>
+                    </div>
+                  )}
+                  {background_image && (
+                    <div className="portfolio-hero-image absolute top-[30%] w-full ">
+                      <Parallax
+                        speed={5}
+                        className="portfolio-hero-box porfolio-hero-small--right  absolute top-[10%] w-full left-0"
+                      >
+                        <img
+                          height={background_image.height}
+                          width={background_image.width}
+                          src={background_image.src}
+                          alt="Portfolio Image"
+                          className=" rounded-lg"
+                        />
+                      </Parallax>
+                    </div>
+                  )}
+                </Tilt>
+              </div>
             </div>
           </div>
-        </div>
-      </ParallaxProvider>
-    </header>
+        </ParallaxProvider>
+      </header>
+    </div>
   );
 };
 
