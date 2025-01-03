@@ -1,121 +1,23 @@
 ---
 import "../styles/index.css";
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/hero/Hero.astro";
-import SelectedWork from "../components/sections/SelectedWork.astro";
 import Testimonials from "../components/sections/Testimonials.astro";
 import Awards from "../components/sections/Awards.astro";
-import Certificates from "../components/sections/Certificates.astro";
+import Certificates from "@/blocks/Certificates.astro";
 import ClientMarquee from "../components/clients/ClientMarquee.astro";
 import { getPortfolioData } from "../utils/data";
-import React from "react";
-import { Heading } from "../components/ui/heading";
-import SkillsInfo from "../components/Skillsinfo";
-import StackCard from "../components/StackCard";
+import HeroBlock from "@/blocks/HeroBlock.astro";
+import SelectedWorkBlock from "@/blocks/SelectedWorkBlock.astro";
+import TechStackBlock from "@/blocks/TechStackBlock.astro";
 
 const { contact, stacks } = await getPortfolioData();
 ---
 
 <Layout title="Portfolio - Home">
-  <Hero
-    title={contact.name}
-    subtitle={contact.role}
-    subtitleText={contact.description}
-    fullHeight={true}
-    text="Hey! ✌️ I'm"
-  >
-    <React.Fragment>
-      <div class="flex gap-4">
-        <a
-          href="/portfolio"
-          class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
-        >
-          View My Work
-        </a>
-        <a
-          href="/contact"
-          class="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
-        >
-          Get in Touch
-        </a>
-      </div>
-      <div>
-        <ul class="mt-4 flex align-items-start">
-          <li class="hero-info-item">
-            <div class="flex align-items-center">
-              <h3 class="text-4xl font-bold">
-                <span class="font-bold gradient-text"
-                  >{contact.yearsOfExperience}</span
-                >
-              </h3>
-              <h6
-                class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
-              >
-                Years <br />of Experience
-              </h6>
-            </div>
-          </li>
-          <li class="hero-info-item ml-8">
-            <div class="flex align-items-center">
-              <h3 class="text-4xl">
-                <span class="font-bold gradient-text">110</span>
-              </h3>
-              <h6
-                class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
-              >
-                Projects <br />Completed
-              </h6>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </React.Fragment>
-  </Hero>
-  <div class="dark:bg-gray-800">
-    <div class="container mx-auto px-4">
-      <Heading
-        level="h2"
-        gradient
-        floating
-        backplate
-        className="text-4xl text-center pb-12"
-        client:idle
-      >
-        Selected Work
-      </Heading>
-    </div>
-  </div>
-
-  <SelectedWork />
-
-  <!-- Tech Stacks -->
-  <section class="py-20">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-basement mb-12 text-primary text-center">
-        Stacks
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          stacks
-            .slice(0, 3)
-            .map((stack, index) => (
-              <StackCard {...stack} parentIndex={index} client:load />
-            ))
-        }
-      </div>
-      <SkillsInfo />
-      <div class="text-center mt-12">
-        <a
-          href="/skills"
-          class="inline-block text-primary hover:text-white transition-colors font-basement"
-        >
-          View All Skills →
-        </a>
-      </div>
-    </div>
-  </section>
+  <HeroBlock contact={contact} />
+  <SelectedWorkBlock stacks={stacks} />
+  <TechStackBlock stacks={stacks} />
   <Certificates />
-
   <Testimonials />
   <ClientMarquee />
   <Awards />

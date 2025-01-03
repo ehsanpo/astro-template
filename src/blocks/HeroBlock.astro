@@ -1,0 +1,72 @@
+---
+import React from "react";
+import Hero from "../components/hero/Hero.astro";
+import Link from "@/components/Link.astro";
+
+interface Props {
+  contact: {
+    name: string;
+    description: string;
+    role: string;
+    website: string;
+    linkedin: string;
+    email: string;
+    location: string;
+    profilePic: string;
+    yearsOfExperience: string;
+    socialLinks: {
+      github: string;
+      twitter: string;
+      linkedin: string;
+    };
+  };
+  description?: string;
+}
+
+const { contact } = Astro.props;
+---
+
+<Hero
+  title={contact.name}
+  subtitle={contact.role}
+  subtitleText={contact.description}
+  fullHeight={true}
+  text="Hey! ✌️ I'm"
+>
+  <React.Fragment>
+    <div class="flex gap-4">
+      <Link href="/portfolio" text="View My Work" />
+      <Link href="/contact" text="Get in Touch" />
+    </div>
+    <div>
+      <ul class="mt-4 flex align-items-start">
+        <li class="hero-info-item">
+          <div class="flex align-items-center">
+            <h3 class="text-4xl font-bold">
+              <span class="font-bold gradient-text"
+                >{contact.yearsOfExperience}</span
+              >
+            </h3>
+            <h6
+              class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
+            >
+              Years <br />of Experience
+            </h6>
+          </div>
+        </li>
+        <li class="hero-info-item ml-8">
+          <div class="flex align-items-center">
+            <h3 class="text-4xl">
+              <span class="font-bold gradient-text">110</span>
+            </h3>
+            <h6
+              class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
+            >
+              Projects <br />Completed
+            </h6>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </React.Fragment>
+</Hero>
