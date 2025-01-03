@@ -6,27 +6,26 @@ const portfolioItems = await getPortfolioItems();
 const filteredItems = portfolioItems.filter((item) => item.onHome);
 const splitString = (str) => {
   const words = str.trim().split(/\s+/); // Split by whitespace
-  if (words.length > 1) {
-    let remainder = str.slice(words[0].length).trim();
-    if (remainder.startsWith("- ")) {
-      remainder = remainder.slice(2).trim();
-    }
-    return [words[0], remainder];
+
+  let remainder = str.slice(words[0].length).trim();
+  if (remainder.startsWith("- ")) {
+    remainder = remainder.slice(2).trim();
   }
-  return [str];
+  return [words[0], remainder];
 };
 ---
 
-<section class="py-20 bg-white dark:bg-gray-800">
+<section class="py-20 bg-white dark:bg-gray-800 overflow-hidden">
   <div class="container mx-auto px-4">
     {
       filteredItems.map((item, index) => (
         <AnimatedScrollSection
           titleUp={splitString(item.title)[0]}
-          titleDown={splitString(item.title)[1]}
+          titleDown={splitString(item.title)[1] || item.title2}
           imageSrc={item.logo.src}
-          text={item.tagline}
-          layout={index + 1}
+          text={item.description}
+          link={`/portfolio/${item.permalink}`}
+          layout={index + 2}
           imageWidth={600}
           imageHeight={600}
           client:load

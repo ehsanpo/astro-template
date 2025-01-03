@@ -1,6 +1,8 @@
 ---
 onHome: true
 title: Telavox
+title2: Smart Telephony.
+description: Redesigned Telavox's softphone application with a sleek, modern interface, adding RTL support for Arabic users. Rewrote the application in TypeScript, migrated from MUI4 to Tailwind CSS, and collaborated with UX designers to deliver a scalable, user-friendly solution that boosted performance and engagement.
 date: "2019-03-19T09:44:30+00:00"
 status: publish
 permalink: telavox
@@ -23,7 +25,7 @@ images:
   - "telavox-app.png"
   - "tvx-app.png"
 
-tagline: "Telephony. The right way."
+tagline: "Switchboard, chat, meetings, and contact center"
 case_link_url: "https://www.telavox.com"
 port_date:
   - "2023"

@@ -14,6 +14,7 @@ interface AnimatedScrollSectionProps {
   imageHeight: number;
   text: string;
   layout?: number;
+  link?: string;
 }
 
 export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
@@ -24,6 +25,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
   imageHeight,
   text,
   layout = 1,
+  link,
 }) => {
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const titleWrapRef = useRef<HTMLDivElement>(null);
@@ -101,12 +103,12 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
         imageRef.current,
         {
           transformOrigin: "50% 50%",
-          filter: "brightness(100%)",
+          filter: "brightness(20%)",
         },
         {
           ease: "none",
-          scale: isCircle ? 1.2 : 1,
-          filter: "brightness(150%)",
+          scale: isCircle ? 1.1 : 1,
+          filter: "brightness(100%)",
         },
         0
       );
@@ -396,6 +398,13 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
         </svg>
         <p ref={textRef} className="content__text">
           {text}
+          <br />
+          <a
+            href={link}
+            className="border break-keep inline-block mt-4 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-6 py-3 rounded-lg transition-colors"
+          >
+            View Project
+          </a>
         </p>
       </div>
     </div>

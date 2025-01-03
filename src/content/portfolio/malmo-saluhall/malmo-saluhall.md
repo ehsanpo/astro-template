@@ -1,6 +1,7 @@
 ---
 onHome: true
 title: "Malmö Saluhall"
+description: Malmö Saluhall's award-winning website in collaboration with Guts & Glory, translating its new brand identity into a captivating digital presence.
 date: "2019-03-28T10:26:03+00:00"
 status: publish
 permalink: malmo-saluhall

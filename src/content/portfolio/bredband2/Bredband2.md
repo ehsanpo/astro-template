@@ -1,6 +1,8 @@
 ---
 onHome: true
 title: "Bredband2"
+title2: "Customer Portal"
+description: Redesigned Bredband2's website for a fresh, WCAG-compliant visual identity and developed the "Mitt Bredband2" customer portal, enabling secure self-service and reducing customer support calls.
 date: "2023"
 status: publish
 permalink: bredband2
