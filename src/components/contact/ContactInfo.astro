@@ -1,5 +1,5 @@
 ---
-import { getPortfolioData } from '../../utils/data';
+import { getPortfolioData } from "../../utils/data";
 const { contact } = await getPortfolioData();
 ---
 
@@ -10,25 +10,20 @@ const { contact } = await getPortfolioData();
   </div>
 
   <div>
-    <h3 class="text-lg font-medium text-gray-900 dark:text-white">Email</h3>
-    <a href={`mailto:${contact.website}`} class="mt-2 text-primary-600 hover:text-primary-700 dark:text-primary-500">
-      {contact.website}
-    </a>
-  </div>
-
-  <div>
     <h3 class="text-lg font-medium text-gray-900 dark:text-white">Connect</h3>
     <div class="mt-2 flex gap-4">
-      {Object.entries(contact.socialLinks).map(([platform, url]) => (
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="text-gray-600 hover:text-primary-600 dark:text-gray-400"
-        >
-          <span class="capitalize">{platform}</span>
-        </a>
-      ))}
+      {
+        Object.entries(contact.socialLinks).map(([platform, url]) => (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-600 hover:text-primary-600 dark:text-gray-400"
+          >
+            <span class="capitalize">{platform}</span>
+          </a>
+        ))
+      }
     </div>
   </div>
 </div>
