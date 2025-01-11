@@ -24,6 +24,7 @@ client: "Bredband2"
 tagline: "A smooth and secure digital everyday life for everyone."
 background_image: "bg.jpg"
 logo: "logo.png"
+cover: "211.png"
 video:
 images:
   - "bredband2-v2.png"

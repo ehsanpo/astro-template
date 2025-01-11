@@ -25,15 +25,13 @@ const { title, description = "Developer Portfolio" } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script async defer src="https://scripts.withcabin.com/hello.js"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap&family=Montserrat:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body
-    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-inter"
-  >
+  <body class="bg-white dark:bg-neutral-900 text-gray-900 dark:text-gray-100">
     <Header />
     <main class="min-h-screen">
       <slot />

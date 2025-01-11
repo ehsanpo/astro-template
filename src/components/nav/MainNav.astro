@@ -5,7 +5,7 @@ import NavLink from "./NavLink.astro";
 const { navigation } = await getPortfolioData();
 ---
 
-<div class="flex items-center gap-6 font-basement">
+<div class="items-center gap-6 font-basement hidden md:flex">
   {
     navigation.main.map((link) => (
       <NavLink href={link.href}>{link.text}</NavLink>

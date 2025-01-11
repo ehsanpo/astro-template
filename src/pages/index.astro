@@ -10,11 +10,11 @@ import HeroBlock from "@/blocks/HeroBlock.astro";
 import SelectedWorkBlock from "@/blocks/SelectedWorkBlock.astro";
 import TechStackBlock from "@/blocks/TechStackBlock.astro";
 
-const { contact, stacks } = await getPortfolioData();
+const { stacks } = await getPortfolioData();
 ---
 
 <Layout title="Portfolio - Home">
-  <HeroBlock contact={contact} />
+  <HeroBlock />
   <SelectedWorkBlock stacks={stacks} />
   <TechStackBlock stacks={stacks.slice(0, 3)} />
   <Certificates />

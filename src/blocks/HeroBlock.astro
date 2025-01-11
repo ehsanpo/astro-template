@@ -2,28 +2,10 @@
 import React from "react";
 import Hero from "../components/hero/Hero.astro";
 import Link from "@/components/Link";
+import { getPortfolioData, getPortfolioItems } from "@/utils/data";
 
-interface Props {
-  contact: {
-    name: string;
-    description: string;
-    role: string;
-    website: string;
-    linkedin: string;
-    email: string;
-    location: string;
-    profilePic: string;
-    yearsOfExperience: string;
-    socialLinks: {
-      github: string;
-      twitter: string;
-      linkedin: string;
-    };
-  };
-  description?: string;
-}
-
-const { contact } = Astro.props;
+const { contact } = await getPortfolioData();
+const portfolioItems = await getPortfolioItems();
 ---
 
 <Hero
@@ -57,7 +39,9 @@ const { contact } = Astro.props;
         <li class="hero-info-item ml-8">
           <div class="flex align-items-center">
             <h3 class="text-4xl">
-              <span class="font-bold gradient-text">110</span>
+              <span class="font-bold gradient-text"
+                >{portfolioItems.length}</span
+              >
             </h3>
             <h6
               class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"

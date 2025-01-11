@@ -4,30 +4,32 @@ import { getPortfolioItems } from "../../utils/data";
 import { AnimatedScrollSection } from "../AnimatedScrollSection";
 const portfolioItems = await getPortfolioItems();
 const filteredItems = portfolioItems.filter((item) => item.onHome);
-const splitString = (str) => {
-  const words = str.trim().split(/\s+/); // Split by whitespace
 
-  let remainder = str.slice(words[0].length).trim();
-  if (remainder.startsWith("- ")) {
-    remainder = remainder.slice(2).trim();
+const filteredAndSortedItems = portfolioItems
+  .filter((item) => item.onHome)
+  .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+function incrementAndSkip(index: number) {
+  index += 1;
+  if (index === 3) {
+    index += 1; // Skip the number 3
   }
-  return [words[0], remainder];
-};
+  return index;
+}
 ---
 
-<section class="py-20 bg-white dark:bg-gray-800 overflow-hidden">
-  <div class="container mx-auto px-4">
+<section class="bg-white dark:bg-neutral-800 overflow-hidden">
+  <div class="containerx mx-auto px-4">
     {
-      filteredItems.map((item, index) => (
+      filteredAndSortedItems.map((item, index) => (
         <AnimatedScrollSection
-          titleUp={splitString(item.title)[0]}
-          titleDown={splitString(item.title)[1] || item.title2}
-          imageSrc={item.logo.src}
+          titleUp={item.title}
+          imageSrc={item.cover?.src || item.logo.src}
           text={item.description}
           link={`/portfolio/${item.permalink}`}
-          layout={index + 2}
-          imageWidth={600}
-          imageHeight={600}
+          layout={index}
+          imageWidth={item.cover?.width || item.logo.width}
+          imageHeight={item.cover?.height || item.logo.height}
           client:load
         />
       ))

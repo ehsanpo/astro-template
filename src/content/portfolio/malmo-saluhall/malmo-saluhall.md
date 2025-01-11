@@ -2,7 +2,7 @@
 onHome: true
 title: "Malmö Saluhall"
 description: Malmö Saluhall's award-winning website in collaboration with Guts & Glory, translating its new brand identity into a captivating digital presence.
-date: "2019-03-28T10:26:03+00:00"
+date: "2017"
 status: publish
 permalink: malmo-saluhall
 author: Ehsan
@@ -26,6 +26,7 @@ client: "Malmö Saluhall"
 tagline: "Ett himmelrike för matälskare"
 background_image: malmo-saluhall-bg.jpg
 logo: malmo-saluhall-top.png
+cover: "wsi-imageoptim-5_Malmo_saluhall_2104x1315-2048x1280.jpg"
 images:
   - "malmosaluhall1.jpg"
 port_date:

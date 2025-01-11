@@ -34,7 +34,7 @@ const Heading: React.FC<Props> = ({
   return (
     <ParallaxProvider>
       <Tag
-        className={`relative text-center pt-12 text-5xl ${className} ${
+        className={`relative text-center pt-12 text-7xl ${className} ${
           backplate ? "pb-12" : ""
         }`}
       >

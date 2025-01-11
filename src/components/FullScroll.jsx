@@ -52,7 +52,7 @@ const ServiceDetails = () => {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className={`pin-spacer flex w-full dark:bg-gray-900 `}
+            className={`pin-spacer flex w-full dark:bg-neutral-900 `}
             ref={(el) => updateServiceWrappersRef(el, index)}
           >
             <div

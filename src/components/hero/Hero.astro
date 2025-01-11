@@ -26,13 +26,15 @@ const {
 ---
 
 <section
-  class={`bg-gray-50 dark:bg-gray-900 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
+  class={`bg-gray-50 dark:bg-neutral-900 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
 >
-  <div class={`container mx-auto px-4 ${img && "flex"}`}>
+  <div
+    class={`container mx-auto px-4 ${img && "flex flex-col md:flex-row items-center gap-4"}`}
+  >
     <div class="mx-auto self-center flex-1">
       {
         text && (
-          <Heading level="h6" className={`!text-xl  !pt-0 !text-left  mb-3`}>
+          <Heading level="h6" className={`!text-xl  !pt-0 !text-left  mb-1`}>
             {text}
           </Heading>
         )
@@ -40,16 +42,16 @@ const {
 
       <Heading
         level="h1"
-        gradient
         shadow
-        className={`${fullHeight ? "!text-3xl md:!text-5xl" : "text-4xl md:!text-5xl"} mb-3 !pt-0 !text-left`}
+        gradient
+        className={`${fullHeight ? "!text-4xl md:!text-7xl" : "text-4xl md:!text-5xl"} mb-1 !pt-0 !text-left`}
       >
         {title}
       </Heading>
       {
         subtitle && (
           <p
-            class={`${fullHeight ? "font-bold text-xl md:text-2xl" : "text-xl"} text-black dark:text-white mb-2 `}
+            class={`${fullHeight ? "font-bold text-xl md:text-4xl" : "text-xl"} text-black dark:text-secondary-500 mb-2 `}
           >
             {subtitle}
           </p>
@@ -57,7 +59,7 @@ const {
       }
       {
         subtitleText && (
-          <p class={` text-gray-600 dark:text-gray-400 max-w-sm mb-6`}>
+          <p class={`text-xl  text-gray-600 dark:text-gray-400 max-w-sm mb-6`}>
             {subtitleText}
           </p>
         )

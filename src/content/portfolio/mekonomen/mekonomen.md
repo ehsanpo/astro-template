@@ -3,7 +3,7 @@ onHome: true
 title: Mekonomen
 title2: International
 description: Multi-site WordPress website for Mekonomen, featuring Google Maps integration, shop landing pages, and a booking system with API-based service cost calculation.
-date: "2019-03-23T21:16:56+00:00"
+date: "2016"
 status: publish
 permalink: mekonomen
 author: Ehsan
@@ -29,14 +29,13 @@ client: Mekonomen
 tagline: "Car spare parts, car components & car services online"
 background_image: "bg.jpg"
 logo: "mekonomen-1.png"
+cover: "sailyyko_takuu_NY.jpg"
 video: ""
 images:
   - "4.png"
   - "mekonomen-2.jpg"
   - "mekonomen-3.jpg"
 case_link_url: "https://www.mekonomen.fi/"
-port_date:
-  - "2016"
 ---
 
  <h2>Mekonomen Car Repair Website: A Case Study in Agile Development and Multi-site Implementation</h2>

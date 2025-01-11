@@ -3,7 +3,7 @@ onHome: true
 title: ToolPool
 title2: Handyman Store
 description: Developed the award-winning ToolPool platform, enabling free tool lending via Facebook and a dedicated website to boost Malmö Hardware Store's sales by 25%.
-date: "2019-03-19T09:44:30+00:00"
+date: "2012"
 status: publish
 permalink: toolpool
 author: Ehsan
@@ -21,6 +21,7 @@ tag:
   - PHP
 background_image: "toolpool-top1.jpg"
 logo: "toolpool-4.jpg"
+cover: "toolpool-top.jpg"
 video: "https://www.youtube.com/watch?v=V8zOcBKLfko"
 images:
   - "toolpool-top.jpg"
@@ -30,8 +31,6 @@ images:
 
 tagline: "ToolPool is like a carpool, but with tools and it’s free."
 case_link_url: "https://www.malmojarnhandel.se/ToolPool-Verktygsutl%C3%A5ning"
-port_date:
-  - "2012"
 client: "Malmö Järnhandel"
 ---
 

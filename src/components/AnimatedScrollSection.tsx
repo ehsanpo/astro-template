@@ -9,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger, Flip);
 
 interface AnimatedScrollSectionProps {
   titleUp: string;
-  titleDown: string;
   imageSrc: string;
   imageWidth: number;
   imageHeight: number;
@@ -20,7 +19,6 @@ interface AnimatedScrollSectionProps {
 
 export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
   titleUp,
-  titleDown,
   imageSrc,
   imageWidth,
   imageHeight,
@@ -38,25 +36,25 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
   // const isCircle = [1, 2, 3].includes(layout);
 
   // Initialize smooth scroll
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.1,
-      smoothWheel: true,
-    });
+  // useEffect(() => {
+  //   const lenis = new Lenis({
+  //     lerp: 0.1,
+  //     smoothWheel: true,
+  //   });
 
-    lenis.on("scroll", () => ScrollTrigger.update());
+  //   lenis.on("scroll", () => ScrollTrigger.update());
 
-    const scrollFn = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(scrollFn);
-    };
+  //   const scrollFn = (time: number) => {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(scrollFn);
+  //   };
 
-    requestAnimationFrame(scrollFn);
+  //   requestAnimationFrame(scrollFn);
 
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  //   return () => {
+  //     lenis.destroy();
+  //   };
+  // }, []);
 
   // Setup animations
   useEffect(() => {
@@ -64,18 +62,17 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
       !contentWrapRef.current ||
       !titleWrapRef.current ||
       !titleUpRef.current ||
-      !titleDownRef.current ||
       !maskRef.current ||
       !imageRef.current ||
       !textRef.current
     )
       return;
 
-    const flipstate = Flip.getState([titleUpRef.current, titleDownRef.current]);
+    const flipstate = Flip.getState([titleUpRef.current]);
 
     const content = contentWrapRef.current.querySelector(".content--layout");
     if (content) {
-      content.prepend(titleUpRef.current, titleDownRef.current);
+      content.prepend(titleUpRef.current);
     }
 
     const isCircle = maskRef.current.tagName.toLowerCase() === "circle";
@@ -105,10 +102,11 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
         {
           transformOrigin: "50% 50%",
           filter: "brightness(20%)",
+          scale: isCircle ? 0.3 : 0.1,
         },
         {
           ease: "none",
-          scale: isCircle ? 1.1 : 1,
+          scale: 1,
           filter: "brightness(100%)",
         },
         0
@@ -169,7 +167,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="820"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter1-${layout})` }}
@@ -205,41 +203,14 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="950"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter2-${layout})` }}
         />
       </mask>
     </defs>,
-    <defs>
-      <filter id={`displacementFilter3-${layout}`}>
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.02"
-          numOctaves="3"
-          result="noise"
-        />
-        <feDisplacementMap
-          in="SourceGraphic"
-          in2="noise"
-          scale="80"
-          result="displacement"
-          xChannelSelector="R"
-          yChannelSelector="G"
-        />
-      </filter>
-      <mask id={`circleMask${layout}`}>
-        <path
-          ref={maskRef}
-          d="M 0 280 Q 500 280 1000 280 Q 500 280 0 280"
-          data-value-final="M 0 280 Q 500 800 1000 280 Q 500 -200 0 280"
-          fill="white"
-          className="mask"
-          style={{ filter: `url(#displacementFilter3-${layout})` }}
-        />
-      </mask>
-    </defs>,
+
     <defs>
       <filter id={`displacementFilter4-${layout}`}>
         <feTurbulence
@@ -262,7 +233,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="770"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter4-${layout})` }}
@@ -291,7 +262,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="580"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter5-${layout})` }}
@@ -322,7 +293,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="720"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter6-${layout})` }}
@@ -351,7 +322,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
           cx="50%"
           cy="50%"
           r="0"
-          data-value-final="770"
+          data-value-final={imageWidth}
           fill="white"
           className="mask"
           style={{ filter: `url(#displacementFilter7-${layout})` }}
@@ -361,47 +332,48 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
   ];
 
   return (
-    <div className="content-wrap" ref={contentWrapRef}>
-      <div className="content">
-        <div className="title-wrap" ref={titleWrapRef}>
-          <span
-            className="title title--up whitespace-nowrap text-primary-500"
-            ref={titleUpRef}
-          >
-            {titleUp}
-          </span>
-          <span
-            className="title title--down whitespace-nowrap text-secondary-500"
-            ref={titleDownRef}
-          >
-            {titleDown}
-          </span>
+    <div
+      className={`${layout === 1 ? "bg-neutral-900" : "bg-neutral-700"} p-20 o`}
+    >
+      <div className="content-wrap container mx-auto" ref={contentWrapRef}>
+        <div className="content">
+          <div className="title-wrap" ref={titleWrapRef}>
+            <span
+              className="title title--up whitespace-nowrap text-primary-500"
+              ref={titleUpRef}
+            >
+              {titleUp}
+            </span>
+          </div>
         </div>
-      </div>
-      <div className={`content2 content--layout content--layout-${layout}`}>
-        <svg
-          className={`content__img content__img--${layout}`}
-          width={imageWidth}
-          height={imageHeight}
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          viewBox={`0 0 ${imageWidth} ${imageHeight}`}
-        >
-          {Filters[layout - 1]}
-          <image
-            ref={imageRef}
-            xlinkHref={imageSrc}
+        <div className={`content content--layout content--layout-${layout}`}>
+          <svg
+            className={`content__img content__img--${layout}`}
             width={imageWidth}
             height={imageHeight}
-            mask={`url(#circleMask${layout})`}
-          />
-        </svg>
-        <p ref={textRef} className="content__text">
-          {text}
-          <br />
-          <Link href={link} text="View Project" className="mt-4" />
-        </p>
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlnsXlink="http://www.w3.org/1999/xlink"
+            viewBox={`0 0 ${imageWidth} ${imageHeight}`}
+            preserveAspectRatio="none"
+          >
+            {Filters[layout]}
+            <image
+              ref={imageRef}
+              xlinkHref={imageSrc}
+              x="0" // Ensure the image starts at the top-left corner
+              y="0"
+              width="100%" // Ensures the image fills the container
+              height="100%" // Ensures the image fills the container
+              mask={`url(#circleMask${layout})`}
+            />
+          </svg>
+          <div ref={textRef} className="content__text">
+            {text}
+            <br />
+            <Link href={link} text="View Project" className="mt-4" />
+          </div>
+        </div>
       </div>
     </div>
   );

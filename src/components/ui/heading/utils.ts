@@ -13,7 +13,7 @@ export function getHeadingClass({
   ];
 
   if (gradient) {
-    baseClasses.push("gradient-text");
+    baseClasses.push("dark:!text-primary-500");
   }
 
   if (shadow) {

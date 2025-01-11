@@ -16,6 +16,7 @@ const portfolio = defineCollection({
       tag: z.array(z.string()).optional(),
       case_link_url: z.string().optional(),
       background_image: image(),
+      cover: image().optional(),
       logo: image(),
       logo2: image().optional(),
       images: z.array(image()),

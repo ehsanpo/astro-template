@@ -1,4 +1,4 @@
-import { Card } from '../ui/Card';
+import { Card } from "../ui/Card";
 
 interface SkillCardProps {
   name: string;
@@ -7,7 +7,12 @@ interface SkillCardProps {
   icon?: string;
 }
 
-export function SkillCard({ name, proficiency, description, icon }: SkillCardProps) {
+export function SkillCard({
+  name,
+  proficiency,
+  description,
+  icon,
+}: SkillCardProps) {
   return (
     <Card
       title={name}
@@ -19,9 +24,9 @@ export function SkillCard({ name, proficiency, description, icon }: SkillCardPro
       }
     >
       {description && <p className="mb-4">{description}</p>}
-      <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700">
-        <div 
-          className="bg-primary-600 h-2 rounded-full transition-all duration-300" 
+      <div className="w-full bg-gray-200 rounded-full h-2 dark:bg-neutral-700">
+        <div
+          className="bg-primary-600 h-2 rounded-full transition-all duration-300"
           style={{ width: `${proficiency * 10}%` }}
         />
       </div>
