@@ -72,10 +72,12 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
                 reverse ? "ml-auto" : "mr-auto"
               } bg-black/40 backdrop-blur-md p-8 rounded-lg text-white border border-white/10`}
             >
-              <h2 className="text-4xl font-bold mb-1 text-primary-500">
+              <h2 className="text-xl md:text-4xl font-bold mb-1 text-primary-500">
                 {company}
               </h2>
-              <h3 className="text-2xl text-secondary-500/90 mb-2">{title}</h3>
+              <h3 className="text-base md:text-2xl text-secondary-500/90 mb-2">
+                {title}
+              </h3>
               <p className="text-white/80 mb-4 leading-relaxed">
                 {description}
               </p>
@@ -88,7 +90,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 
               {awards && awards.length > 0 && (
                 <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-amber-400 mt-4">
+                  <div className="flex items-center gap-2 text-amber-400 mt-6">
                     <Award size={20} />
                     <span className="font-semibold">Awards</span>
                   </div>

@@ -37,5 +37,14 @@ const { title, description = "Developer Portfolio" } = Astro.props;
       <slot />
       <Footer />
     </main>
+    <script>
+      document.addEventListener("astro:after-swap", function () {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.classList.toggle("dark", false);
+        } else {
+          document.documentElement.classList.toggle("dark", true);
+        }
+      });
+    </script>
   </body>
 </html>

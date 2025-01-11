@@ -1,6 +1,6 @@
 ---
 import MainNav from "./nav/MainNav.astro";
-import ThemeToggle from "./ThemeToggle.astro";
+import ThemeToggle from "./ThemeToggle";
 import HamburgerMenu from "./ui/Menu";
 ---
 
@@ -14,7 +14,7 @@ import HamburgerMenu from "./ui/Menu";
       >
       <MainNav />
       <HamburgerMenu client:load />
+      <ThemeToggle client:load />
     </nav>
   </div>
-  <ThemeToggle />
 </header>
