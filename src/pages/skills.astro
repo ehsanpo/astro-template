@@ -10,6 +10,7 @@ import ToolsList from "@/components/skills/ToolsList.astro";
 import PageHero from "@/components/hero/PageHero.astro";
 import TechStackBlock from "@/blocks/TechStackBlock.astro";
 import { Heading } from "@/components/ui/heading";
+import { ProcessFlowDiagram } from "@/components/Beams";
 
 const { stacks, charts } = await getPortfolioData();
 ---
@@ -33,6 +34,8 @@ const { stacks, charts } = await getPortfolioData();
 
     <TechStackBlock stacks={stacks} />
     <ToolsList />
+    <Heading>Development Process</Heading>
+    <ProcessFlowDiagram client:load />
     <Certificates />
   </div>
 </Layout>
