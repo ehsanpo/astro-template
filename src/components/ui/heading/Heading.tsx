@@ -2,6 +2,7 @@ import React from "react";
 import type { HeadingLevel } from "./types";
 import { getHeadingClass } from "./utils";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { motion } from "motion/react";
 
 interface Props {
   level?: HeadingLevel;
@@ -41,12 +42,16 @@ const Heading: React.FC<Props> = ({
         {backplate && (
           <Parallax
             speed={5}
-            className="blur-sm absolute font-bold left-0 top-[-10%] w-full opacity-10 lg:text-9xl"
+            className=" z-10 blur-sm absolute font-bold left-0 top-[-10%] w-full opacity-10 lg:text-9xl"
           >
             <div>{children}</div>
           </Parallax>
         )}
-        <span className={`${headingClass} text-center `}>{children}</span>
+
+        <span className={`${headingClass} text-center relative z-20 `}>
+          {children}
+        </span>
+
         {subtitle && (
           <>
             <br />

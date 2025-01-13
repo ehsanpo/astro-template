@@ -2,9 +2,13 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: ["class"],
+
   theme: {
     extend: {
       colors: {
+        white: "#F9F4EA",
+        offwhite: "#DAD3CA",
+        opium: "#8A7F7D",
         primary2: {
           50: "#f7ffe5",
           100: "#ecffc7",
@@ -18,7 +22,7 @@ export default {
           900: "#34580f",
           950: "#193102",
         },
-        secondary2: {
+        secondary: {
           50: "#f7f3ff",
           100: "#efe9fe",
           200: "#e2d6fe",
@@ -44,7 +48,7 @@ export default {
           900: "#81390d",
           950: "#461a04",
         },
-        secondary: {
+        secondary2: {
           50: "#ffeff3",
           100: "#ffe0e9",
           200: "#ffc6d8",

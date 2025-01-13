@@ -4,6 +4,7 @@ import Hero from "../components/hero/Hero.astro";
 import { getPortfolioData } from "../utils/data";
 import TimelineAbout from "../components/timeline/TimelineAbout";
 import BoxReveal from "../components/ui/box-reveal";
+import Link from "@/components/Link";
 const { contact } = await getPortfolioData();
 ---
 
@@ -39,13 +40,15 @@ const { contact } = await getPortfolioData();
         delay={0.3}
         client:load
       >
-        <a
-          href="https://www.linkedin.com/in/ehsanp/"
-          target="_blank"
-          class="mt-3 shadow-2xl hover:shadow-primary inline-block bg-primary-500 text-dark font-basement px-8 py-4 rounded-lg hover:bg-primary-500/90 hover:scale-105 duration-300 transition"
-        >
-          Reach me on LinkedIn.
-        </a>
+        <div>
+          <Link
+            href="https://www.linkedin.com/in/ehsanp/"
+            target="_blank"
+            className="mt-3"
+            text="Reach me on LinkedIn."
+          />
+          <Link href="/cv" className="mt-3" text="Resume" />
+        </div>
       </BoxReveal>
     </div>
   </Hero>

@@ -15,6 +15,7 @@ const { testimonials } = await getPortfolioData();
       gradient
       floating
       backplate
+      client:idle
       subtitle="Testimonials from clients and colleagues"
     >
       What People Say
@@ -23,7 +24,7 @@ const { testimonials } = await getPortfolioData();
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
         testimonials.map((testimonial) => (
-          <TestimonialCard {...testimonial} client:visible />
+          <TestimonialCard {...testimonial} client:idle />
         ))
       }
     </div>

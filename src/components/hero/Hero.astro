@@ -26,7 +26,7 @@ const {
 ---
 
 <section
-  class={`bg-gray-50 dark:bg-neutral-900 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
+  class={`bg-offwhite dark:bg-neutral-900 ${fullHeight ? "min-h-screen" : "pt-24 pb-8"} flex items-center`}
 >
   <div
     class={`container mx-auto px-4 ${img && "flex flex-col md:flex-row items-center gap-4"}`}
@@ -34,7 +34,7 @@ const {
     <div class="mx-auto self-center flex-1">
       {
         text && (
-          <Heading level="h6" className={`!text-xl  !pt-0 !text-left  mb-1`}>
+          <Heading level="h6" className={`!text-xl !pt-0 !text-left  mb-1`}>
             {text}
           </Heading>
         )
@@ -68,7 +68,7 @@ const {
     </div>
     {
       img && (
-        <div class="mx-8 flex-1">
+        <div class="flex-1">
           <Tilt
             client:load
             perspective={1000}

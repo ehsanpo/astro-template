@@ -20,7 +20,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
     <div className="fixed top-16 left-0 right-0 bg-white shadow-md z-50 print:hidden">
       <div className="max-w-4xl mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2">
+          {/* <div className="flex items-center gap-2">
             {colors.map((color) => (
               <button
                 key={color}
@@ -29,7 +29,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
                 style={{ backgroundColor: color }}
               />
             ))}
-          </div>
+          </div> */}
 
           <button
             onClick={() =>

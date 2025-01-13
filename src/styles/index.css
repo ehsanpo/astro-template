@@ -442,6 +442,19 @@ body {
   );
 }
 
+.clip4 {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(75% + 8px) calc(100% - 8px),
+    75% 100%,
+    25% 100%,
+    calc(25% - 8px) calc(100% - 8px),
+    0 calc(100% - 8px)
+  );
+}
+
 /*
 .service-detail-image-hold::before {
   transition: 0.45s all cubic-bezier(0.455, 0.03, 0.515, 0.755);
@@ -505,10 +518,10 @@ body {
 .portfolio-hero-image-tilt {
   transform-style: preserve-3d;
 }
-.portfolio-hero-image-tilt div:first-child {
+.portfolio-hero-image-tilt > div:first-child {
   transform: translateZ(1px);
 }
-.portfolio-hero-image-tilt div:nth-child(2) {
+.portfolio-hero-image-tilt > div:nth-child(2) {
   transform: translateZ(20px);
 }
 .portfolio-hero-image-tilt div:nth-child(3) {

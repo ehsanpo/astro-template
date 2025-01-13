@@ -3,7 +3,6 @@ import { Heading } from "../ui/heading";
 import { getPortfolioItems } from "../../utils/data";
 import { AnimatedScrollSection } from "../AnimatedScrollSection";
 const portfolioItems = await getPortfolioItems();
-const filteredItems = portfolioItems.filter((item) => item.onHome);
 
 const filteredAndSortedItems = portfolioItems
   .filter((item) => item.onHome)
@@ -19,7 +18,7 @@ function incrementAndSkip(index: number) {
 ---
 
 <section class="bg-white dark:bg-neutral-800 overflow-hidden">
-  <div class="containerx mx-auto px-4">
+  <div class="">
     {
       filteredAndSortedItems.map((item, index) => (
         <AnimatedScrollSection
