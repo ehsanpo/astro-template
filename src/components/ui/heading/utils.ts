@@ -8,12 +8,12 @@ export function getHeadingClass({
   const baseClasses = [
     "font-bold",
     "text-gray-900",
-    "dark:text-white",
+    "text-white",
     "transition-all",
   ];
 
   if (gradient) {
-    baseClasses.push("dark:!text-primary-500");
+    baseClasses.push("!text-primary-500");
   }
 
   if (shadow) {

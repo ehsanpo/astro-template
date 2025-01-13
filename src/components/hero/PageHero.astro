@@ -12,7 +12,13 @@ const { title, subtitle } = Astro.props;
 <section class="bg-gray-50 dark:bg-neutral-800 pt-14 pb-8">
   <div class="container mx-auto px-4">
     <div class="max-w-3xl mx-auto text-center">
-      <Heading level="h1" gradient shadow className="text-4xl md:text-5xl mb-4">
+      <Heading
+        level="h1"
+        gradient
+        shadow
+        className="text-4xl md:text-5xl mb-4"
+        client:idle
+      >
         {title}
       </Heading>
       {

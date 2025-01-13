@@ -1,6 +1,7 @@
 ---
 import SelectedWork from "@/components/sections/SelectedWork.astro";
 import { Heading } from "@/components/ui/heading";
+import { motion } from "motion/react";
 ---
 
 <div class="dark:bg-neutral-800">
@@ -11,7 +12,7 @@ import { Heading } from "@/components/ui/heading";
       floating
       backplate
       className="pb-12"
-      client:idle
+      client:load
     >
       Selected Work
     </Heading>

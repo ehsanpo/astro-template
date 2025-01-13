@@ -172,7 +172,7 @@ const timelineData = [
     id: 27,
     name: "Redux",
     icon: "https://icon-widget.codersrank.io/api/redux",
-    duration: "2014-2025",
+    duration: "2019-2025",
   },
   {
     id: 9,

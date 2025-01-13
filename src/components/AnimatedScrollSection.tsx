@@ -333,7 +333,11 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
 
   return (
     <div
-      className={`${layout === 1 ? "bg-neutral-900" : "bg-neutral-700"} p-20 o`}
+      className={`${
+        layout % 2
+          ? "bg-offwhite dark:bg-neutral-900"
+          : "bg-opium dark:bg-neutral-700"
+      } p-20 clip`}
     >
       <div className="content-wrap container mx-auto" ref={contentWrapRef}>
         <div className="content">

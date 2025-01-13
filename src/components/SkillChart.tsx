@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Radar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -35,6 +35,28 @@ interface SkillChartProps {
 
 export default function SkillChart({ data, chartData }: SkillChartProps) {
   const [currentChart, setCurrentChart] = React.useState(chartData);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Initial detection of dark mode
+    const darkModeEnabled = document.documentElement.classList.contains("dark");
+    setIsDarkMode(darkModeEnabled);
+
+    // Watch for changes to the <html> classList
+    const observer = new MutationObserver(() => {
+      const isDark = document.documentElement.classList.contains("dark");
+      setIsDarkMode(isDark);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => {
+      observer.disconnect(); // Cleanup the observer on unmount
+    };
+  }, []);
 
   const chartDatainternal = {
     labels: currentChart.labels,
@@ -42,7 +64,9 @@ export default function SkillChart({ data, chartData }: SkillChartProps) {
       {
         label: "Skills",
         data: currentChart.data,
-        backgroundColor: "rgba(0, 255, 0, 0.2)",
+        backgroundColor: isDarkMode
+          ? "rgba(255, 255, 255, 0.2)"
+          : "rgba(0, 0, 0, 0.1)",
         borderColor: "#00ff00",
         borderWidth: 2,
       },
@@ -55,20 +79,20 @@ export default function SkillChart({ data, chartData }: SkillChartProps) {
       r: {
         beginAtZero: true,
         angleLines: {
-          color: "rgba(255, 255, 255, 0.1)",
+          color: isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)",
         },
         grid: {
-          color: "rgba(255, 255, 255, 0.1)",
+          color: isDarkMode ? "rgba(255, 255, 255, 0.2)" : "rgba(0, 0, 0, 0.1)",
         },
         pointLabels: {
-          color: "#ffffff",
+          color: isDarkMode ? "#ffffff" : "#000000",
           font: {
             size: 16,
             family: "Basement, sans-serif",
           },
         },
         ticks: {
-          color: "#ffffff",
+          color: isDarkMode ? "#ffffff" : "#000000",
           backdropColor: "transparent",
           min: 0,
           max: 10,

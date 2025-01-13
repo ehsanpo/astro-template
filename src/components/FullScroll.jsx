@@ -12,7 +12,7 @@ const ServiceDetails = () => {
   const { services } = getPortfolioData();
 
   useEffect(() => {
-    const headerHeight = 64;
+    const headerHeight = 50;
 
     serviceWrappersRef.current.forEach((serviceBlock, index) => {
       if (serviceBlock) {
@@ -52,14 +52,13 @@ const ServiceDetails = () => {
         {services.map((service, index) => (
           <div
             key={service.id}
-            className={`pin-spacer flex w-full dark:bg-neutral-900 `}
+            className={`pin-spacer flex w-full bg-offwhite/80  dark:bg-neutral-900/80 backdrop-blur-md`}
             ref={(el) => updateServiceWrappersRef(el, index)}
           >
             <div
-              className={`service-details-container relative overflow-hidden flex-row p-0 flex md:flex-col flex-wrap justify-content-center container mx-auto px-4 ${
+              className={`service-details-container w-full relative overflow-hidden flex-row p-0 flex md:flex-col flex-wrap justify-content-center container mx-auto px-4 ${
                 index % 2 === 0 ? "image-right" : "image-left"
               } ${service.isLast ? "last" : ""}`}
-              style={{ width: "100%" }}
             >
               <div className="service-detail-image-hold relative bg-black md:w-1/2 h-[40%] md:h-full top-0 overflow-hidden z-2 ">
                 <img

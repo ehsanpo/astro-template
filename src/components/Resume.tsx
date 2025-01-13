@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ResumeCv: React.FC<Props> = () => {
-  const [mainColor, setMainColor] = useState("#0891b2");
+  const [mainColor, setMainColor] = useState("#4f46e5");
   const [language, setLanguage] = useState<Language>("en");
   const resumeData: Resume = language === "en" ? resumeEn : resumeSv;
 
