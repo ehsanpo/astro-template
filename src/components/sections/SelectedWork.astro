@@ -18,20 +18,18 @@ function incrementAndSkip(index: number) {
 ---
 
 <section class="bg-white dark:bg-neutral-800 overflow-hidden">
-  <div class="">
-    {
-      filteredAndSortedItems.map((item, index) => (
-        <AnimatedScrollSection
-          titleUp={item.title}
-          imageSrc={item.cover?.src || item.logo.src}
-          text={item.description}
-          link={`/portfolio/${item.permalink}`}
-          layout={index}
-          imageWidth={item.cover?.width || item.logo.width}
-          imageHeight={item.cover?.height || item.logo.height}
-          client:load
-        />
-      ))
-    }
-  </div>
+  {
+    filteredAndSortedItems.map((item, index) => (
+      <AnimatedScrollSection
+        titleUp={item.title}
+        imageSrc={item.cover?.src || item.logo.src}
+        text={item.description}
+        link={`/portfolio/${item.permalink}`}
+        layout={index}
+        imageWidth={item.cover?.width || item.logo.width}
+        imageHeight={item.cover?.height || item.logo.height}
+        client:load
+      />
+    ))
+  }
 </section>
