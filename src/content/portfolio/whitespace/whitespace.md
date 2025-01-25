@@ -48,11 +48,6 @@ client: "Whitespace"
   <li><b>PHP:</b> For back-end development and server-side scripting.</li>
 </ul>
 
-<h3>Note:</h3>
-<p>
-  Unfortunately, no images or visuals of this project can be shared due to a Non-Disclosure Agreement (NDA) or lack of media documentation.
-</p>
-
 <h3>Conclusion:</h3>
 <p>
   The Whitespace project successfully combined front-end and back-end development with system administration to deliver a reliable and user-friendly website. This project demonstrates my ability to manage multiple aspects of web development and infrastructure to achieve a seamless digital experience.
