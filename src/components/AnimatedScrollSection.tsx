@@ -336,14 +336,20 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
       className={`${
         layout % 2
           ? "bg-offwhite dark:bg-neutral-900"
-          : "bg-opium dark:bg-neutral-700"
-      } p-20 clip`}
+          : "bg-opium dark:bg-neutral-700 clip -my-2"
+      } p-20 `}
     >
-      <div className="content-wrap container mx-auto" ref={contentWrapRef}>
+      <div
+        className="content-wrap grid place-items-center relative z-10 container mx-auto"
+        ref={contentWrapRef}
+      >
         <div className="content">
-          <div className="title-wrap" ref={titleWrapRef}>
+          <div
+            className="flex gap-4 items-center justify-center"
+            ref={titleWrapRef}
+          >
             <span
-              className="title title--up whitespace-nowrap text-primary-500"
+              className="relative z-[100] block text-[clamp(1rem,7vw,5rem)] font-basement italic [grid-area:title-up] whitespace-nowrap text-primary-500"
               ref={titleUpRef}
             >
               {titleUp}
@@ -372,7 +378,10 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
               mask={`url(#circleMask${layout})`}
             />
           </svg>
-          <div ref={textRef} className="content__text">
+          <div
+            ref={textRef}
+            className="[grid-area:text] text-[1.2rem] max-w-[400px] m-0"
+          >
             {text}
             <br />
             <Link href={link} text="View Project" className="mt-4" />

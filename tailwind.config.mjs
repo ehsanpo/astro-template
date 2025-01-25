@@ -23,6 +23,19 @@ export default {
           950: "#2a1065",
         },
         primary: {
+          50: "#fff1f3",
+          100: "#fee5e8",
+          200: "#fdced6",
+          300: "#fba6b5",
+          400: "#f65c7a",
+          500: "#ef446a",
+          600: "#dc2254",
+          700: "#b91746",
+          800: "#9b1642",
+          900: "#85163e",
+          950: "#4a071d",
+        },
+        primary1: {
           50: "#fff9ec",
           100: "#fff2d3",
           200: "#ffe2a6",
@@ -79,12 +92,7 @@ export default {
         },
       },
       fontFamily: {
-        inter: ["InterVariable", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
         basement: ["Basement", "sans-serif"],
-        aileron: ["Aileron", "sans-serif"],
-        KAUFMANB: ["KAUFMANB", "sans-serif"],
-        Stinger: ["Stinger", "sans-serif"],
         Kabel: ["Kabel", "sans-serif"],
       },
       borderRadius: {

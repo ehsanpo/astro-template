@@ -84,18 +84,8 @@ const { contact } = await getPortfolioData();
       </div>
     </div>
   </section>
-  <section class="bg-color-1 py-10 md:py-20">
+  <section class="bg-color-1 clip dark:bg-neutral-800 py-10 md:py-20">
     <div class="container mx-auto flex flex-col md:flex-row items-center">
-      <h2
-        class="md:w-1/2 font-basement text-2xl md:text-3xl lg:text-6xl mb-6 md:mb-0"
-      >
-        <BoxReveal
-          boxColor="bg-secondary-500 leading-12"
-          duration={0.5}
-          client:idle
-          >Philosophy
-        </BoxReveal>
-      </h2>
       <div class="md:w-1/2">
         <div>
           <ul class="text-base leading-relaxed">
@@ -149,6 +139,17 @@ const { contact } = await getPortfolioData();
           </ul>
         </div>
       </div>
+      <h2
+        class="md:w-1/2 font-basement text-2xl md:text-3xl lg:text-6xl mb-6 md:mb-0"
+      >
+        <BoxReveal
+          boxColor="bg-secondary-500 leading-12  w-full"
+          duration={0.5}
+          client:idle
+          width="100%"
+          ><div class="w-full text-right">Philosophy</div>
+        </BoxReveal>
+      </h2>
     </div>
   </section>
   <section class="bg-color-10 py-10 md:py-20">
@@ -202,16 +203,15 @@ const { contact } = await getPortfolioData();
     </div>
   </section>
   <section class="bg-color-1 py-10 md:py-20">
-    <div class="container mx-auto flex flex-col md:flex-row items-center">
-      <h2
-        class="md:w-1/2 font-basement text-2xl md:text-3xl lg:text-6xl mb-6 md:mb-0"
-      >
-        <BoxReveal boxColor="bg-primary-500" duration={0.5} client:idle
-          >It's Always Time for Tea
-        </BoxReveal>
-      </h2>
-      <div class="md:w-1/2 text-base leading-relaxed">
-        <div>
+    <div class="container mx-auto items-center">
+      <div class="text-base leading-relaxed">
+        <img src="/img/tea.png" alt="Time for Tea" />
+        <h2 class="font-basement text-2xl md:text-3xl lg:text-6xl my-6">
+          <BoxReveal boxColor="bg-primary-500" duration={0.5} client:idle
+            >It's Always Time for Tea
+          </BoxReveal>
+        </h2>
+        <div class="md:w-1/2">
           It's always time for tea" reflects the value of creating space for
           connection and thoughtful collaboration. In tech, it serves as a
           reminder to pause, reflect, and engage with others meaningfully. This

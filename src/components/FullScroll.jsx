@@ -56,7 +56,7 @@ const ServiceDetails = () => {
             ref={(el) => updateServiceWrappersRef(el, index)}
           >
             <div
-              className={`service-details-container w-full relative overflow-hidden flex-row p-0 flex md:flex-col flex-wrap justify-content-center container mx-auto px-4 ${
+              className={`h-[calc(100vh-99px)] w-full relative overflow-hidden flex-row p-0 flex md:flex-col flex-wrap justify-content-center container mx-auto px-4 ${
                 index % 2 === 0 ? "image-right" : "image-left"
               } ${service.isLast ? "last" : ""}`}
             >
