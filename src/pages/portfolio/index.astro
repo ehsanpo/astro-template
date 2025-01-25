@@ -6,6 +6,7 @@ import { Image, Picture } from "astro:assets";
 import SelectedWork from "../../components/sections/SelectedWork.astro";
 import { Heading } from "../../components/ui/heading";
 import { motion } from "framer-motion";
+import PortfolioFilter from "@/components/PortfolioFilter";
 
 const portfolioItems = await getPortfolioItems();
 const sortedItems = portfolioItems.sort((a, b) => {
@@ -20,6 +21,9 @@ const delay = [
   "delay-200",
   "delay-300",
 ];
+const allCategories = [
+  ...new Set(portfolioItems.flatMap((entry) => entry.category)),
+];
 ---
 
 <Layout title="Portfolio - Work">
@@ -29,6 +33,7 @@ const delay = [
   />
   <div class="py-20">
     <div class="container mx-auto px-4">
+      <PortfolioFilter categories={allCategories} category="all" client:load />
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {
           sortedItems.map((item) => (

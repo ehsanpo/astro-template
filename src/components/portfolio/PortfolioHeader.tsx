@@ -67,23 +67,25 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
                 <p className="text-xl mb-4">{tagline}</p>
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-4">
-                    <h3 className="min-w-20 font-medium text-secondary-600 uppercase ">
+                    <h3 className="min-w-20 font-medium text-secondary-500 uppercase ">
                       Client
                     </h3>
-                    <p className="text-secondary-600 ">{client}</p>
+                    <p className="text-secondary-500 font-basement ">
+                      {client}
+                    </p>
                   </div>
                   <div className="flex gap-4">
-                    <h3 className="min-w-20 font-medium text-secondary-600 uppercase ">
+                    <h3 className="min-w-20 font-medium text-secondary-500 uppercase ">
                       Year
                     </h3>
-                    <p className="text-secondary-600 ">{date}</p>
+                    <p className="text-secondary-500 font-basement ">{date}</p>
                   </div>
                   {agency && (
                     <div className="flex gap-4">
                       <h3 className="min-w-20 font-medium text-yellow-500 uppercase">
                         Agency
                       </h3>
-                      <p className="text-yellow-500 ">{agency}</p>
+                      <p className="text-yellow-500 font-basement">{agency}</p>
                     </div>
                   )}
 

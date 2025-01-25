@@ -10,7 +10,7 @@ type: portfolio
 agency: Whitespace
 category:
   - Front-end
-  - Back-end
+  - Backend
 tag:
   - Wordpress
   - PHP

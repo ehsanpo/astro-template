@@ -9,7 +9,7 @@ type: portfolio
 agency: Guts & Glory
 category:
   - Front-end
-  - Web Development
+  - Backend
 tag:
   - WordPress
   - CSS
