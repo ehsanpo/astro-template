@@ -29,7 +29,7 @@ client: Mekonomen
 tagline: "Car spare parts, car components & car services online"
 background_image: "bg.jpg"
 logo: "mekonomen-1.png"
-cover: "web_rahoitus_FI-1170x450.jpg"
+cover: "mekonomen.jpg"
 video: ""
 images:
   - "4.png"

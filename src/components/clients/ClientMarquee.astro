@@ -3,7 +3,10 @@ import { getPortfolioItems } from "../../utils/data";
 import MarqueeContent from "./MarqueeContent.astro";
 
 const portfolioItems = await getPortfolioItems();
-const uniqueClients = [...new Set(portfolioItems.map((item) => item.client))];
+// Get unique clients and not empty
+const uniqueClients = [
+  ...new Set(portfolioItems.map((item) => item.client)),
+].filter(Boolean);
 ---
 
 <div class="bg-white dark:bg-neutral-800 py-12">
@@ -17,7 +20,6 @@ const uniqueClients = [...new Set(portfolioItems.map((item) => item.client))];
 
   <div class="relative overflow-hidden">
     <div class="marquee-container">
-      <MarqueeContent clients={uniqueClients} />
       <MarqueeContent clients={uniqueClients} />
     </div>
   </div>

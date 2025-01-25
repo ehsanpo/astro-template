@@ -1,6 +1,6 @@
 ---
 title: "NGD"
-date: "2019-03-28T10:23:01+00:00"
+date: "2011"
 status: publish
 permalink: ngd
 author: Ehsan
@@ -30,10 +30,10 @@ background_image: "bg.jpg"
 logo: "logo.jpg"
 video:
 images:
+  - "bild1.jpg"
+  - "l2.jpg"
   - "ngd1.jpg"
   - "ngd2.jpg"
   - "ngd3.jpg"
-
-port_date:
-  - "2011"
+  - "p3.jpg"
 ---

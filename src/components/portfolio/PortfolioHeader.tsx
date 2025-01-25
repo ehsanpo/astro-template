@@ -135,17 +135,20 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
                       />
                     </Parallax>
                   </div>
-                  <div className="portfolio-hero-image absolute top-[100%] w-full left-0">
-                    <Parallax speed={10}>
-                      <img
-                        height={images[0].height}
-                        width={images[0].width}
-                        src={images[0].src}
-                        alt="Portfolio Image"
-                        className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg max-h-[20vh] object-cover"
-                      />
-                    </Parallax>
-                  </div>
+                  {images[0] && (
+                    <div className="portfolio-hero-image absolute top-[100%] w-full left-0">
+                      <Parallax speed={10}>
+                        <img
+                          height={images[0].height}
+                          width={images[0].width}
+                          src={images[0].src}
+                          alt="Portfolio Image"
+                          className="portfolio-hero-box porfolio-hero-medium -mr-4 rounded-lg max-h-[20vh] object-cover"
+                        />
+                      </Parallax>
+                    </div>
+                  )}
+
                   {logo2 && (
                     <div className="portfolio-hero-image absolute top-[100%] w-full left-0">
                       <Parallax

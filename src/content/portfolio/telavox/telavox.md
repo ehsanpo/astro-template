@@ -21,7 +21,7 @@ tag:
 background_image: "telavox-top.png"
 logo: "logo1.png"
 logo2: "telavox-logo.png"
-cover: "telavox-top.png"
+cover: "telavoxcv.jpg"
 images:
   - "telavox-app.png"
   - "tvx-app.png"

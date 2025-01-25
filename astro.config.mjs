@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import react from "@astrojs/react";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
   site: "https://ehsanpo.github.io",
   base: process.env.NODE_ENV !== "development" ? "astro-template" : undefined,
@@ -11,5 +13,5 @@ export default defineConfig({
       noExternal: ["gsap"],
     },
   },
-  integrations: [tailwind(), mdx(), react()],
+  integrations: [tailwind(), mdx(), react(), sitemap()],
 });

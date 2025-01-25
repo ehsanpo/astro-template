@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 interface ButtonProps {
   href?: string;
-  text: string | React.ReactNode;
+  text?: string | React.ReactNode;
   className?: string;
   target?: "_blank" | "_self" | "_parent" | "_top";
 }

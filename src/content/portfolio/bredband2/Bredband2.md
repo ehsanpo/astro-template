@@ -24,7 +24,7 @@ client: "Bredband2"
 tagline: "A smooth and secure digital everyday life for everyone."
 background_image: "bg.jpg"
 logo: "logo.png"
-cover: "211.png"
+cover: "bb2.jpg"
 video:
 images:
   - "bredband2-v2.png"
@@ -52,6 +52,9 @@ images:
 <p>The implementation of the customer portal had a significant impact on Bredband2's operations. By empowering users to handle account-related tasks independently, we observed a decrease in calls to the service center, leading to cost savings for the organization. Additionally, I spearheaded the implementation of a feature that enabled users to easily upgrade or downgrade their services directly from the customer portal, reducing the reliance on customer service interventions.</p>
 
 <br />
+
+<h3>Project 3: Implementing Advanced Search with Algolia and Contentful API</h3> <p>Another major initiative I spearheaded at Bredband2 was the implementation of a robust search functionality across the website and customer portal, utilizing Algolia Search, Contentful API, and InstantSearch. This project aimed to improve information retrieval, enabling users to find content quickly and intuitively. </p> <p>Working as the lead developer, I integrated Algolia's powerful search engine with Contentful, the company’s CMS, to create a seamless and efficient search experience. By leveraging InstantSearch, I implemented advanced search features, including:</p> <ul> <li>Real-time search results and filtering based on user input.</li> <li>Autocomplete suggestions to guide users toward relevant content faster.</li> <li>Dynamic ranking algorithms, ensuring the most relevant results appeared first.</li> </ul> <p>The search implementation significantly enhanced the user experience by enabling users to navigate Bredband2’s extensive content library and quickly find solutions to their queries. Furthermore, it streamlined the website’s usability, reduced bounce rates, and contributed to a measurable improvement in customer satisfaction metrics.</p>
+
 <h3>Professional Growth and Accomplishments:</h3>
 
 <p> Throughout my journey at Bredband2, I continually pursued personal and professional development, acquiring new skills and certifications to enhance my capabilities as a versatile developer. Some noteworthy achievements during my time include:</p>

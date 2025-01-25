@@ -1,6 +1,6 @@
 ---
 title: Cottex
-date: "2017"
+date: "2018"
 status: publish
 permalink: cottex
 author: Ehsan

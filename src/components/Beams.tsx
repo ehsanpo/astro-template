@@ -71,12 +71,12 @@ export function ProcessFlowDiagram() {
     IconComponent: React.FC<React.SVGProps<SVGSVGElement>>,
     tooltipText: string
   ) => (
-    <div className="relative group">
+    <div className="relative group flex flex-col items-center gap-2">
       <Circle ref={circleRef}>
         <IconComponent className="h-6 w-6 stroke-secondary-500" />
       </Circle>
       {/* Tooltip that appears on hover */}
-      <div className="pointer-events-none absolute left-1/2 top-full z-20 mt-2 w-max -translate-x-1/2 rounded bg-gray-800 px-2 py-1 text-sm text-white opacity-0 shadow-md transition-opacity group-hover:opacity-100">
+      <div className="pointer-events-none w-max  rounded bg-gray-800 px-2 py-1 text-sm text-white shadow-md transition-opacity ">
         {tooltipText}
       </div>
     </div>
@@ -85,7 +85,7 @@ export function ProcessFlowDiagram() {
   return (
     <div
       ref={containerRef}
-      className="max-w-4xl max m-auto relative flex  w-full items-center justify-between overflow-hidden rounded-lg  bg-background p-10 "
+      className="max-w-4xl max m-auto relative flex w-full items-center justify-between overflow-hidden rounded-lg  bg-background p-10 "
     >
       {/* Inputs on the left */}
       <div className="flex flex-col items-center gap-6">

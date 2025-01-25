@@ -21,7 +21,7 @@ tag:
   - PHP
 background_image: "toolpool-top1.jpg"
 logo: "toolpool-4.jpg"
-cover: "toolpool-top.jpg"
+cover: "toolpool.jpg"
 video: "https://www.youtube.com/watch?v=V8zOcBKLfko"
 images:
   - "toolpool-top.jpg"
