@@ -3,11 +3,27 @@ import React from "react";
 import Hero from "../components/hero/Hero.astro";
 import Link from "@/components/Link";
 import { getPortfolioData, getPortfolioItems } from "@/utils/data";
+import FlickeringGrid from "@/components/ui/flickering-grid";
 
 const { contact } = await getPortfolioData();
 const portfolioItems = await getPortfolioItems();
+let primaryColor = "#ff8f0c";
+primaryColor = "#8b5cf6";
 ---
 
+<div class="w-[99%] z-0 absolute leading-snug">
+  <FlickeringGrid
+    className="z-0 relative inset-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
+    squareSize={4}
+    gridGap={6}
+    color={primaryColor}
+    maxOpacity={0.5}
+    flickerChance={0.1}
+    height={1000}
+    width={1200}
+    client:load
+  />
+</div>
 <Hero
   title={contact.name}
   subtitle={contact.role}

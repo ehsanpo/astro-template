@@ -1,6 +1,5 @@
 import React from "react";
 import { ProjectLink } from "./ProjectLink";
-import { ExternalLink, Github } from "lucide-react";
 import { Parallax } from "react-scroll-parallax";
 
 interface ProjectProps {
@@ -48,20 +47,11 @@ export const Project: React.FC<ProjectProps> = ({
           ))}
         </div>
 
-        <div className="flex gap-4 mb-3">
-          {link && <ProjectLink {...link} />}
-          {github && (
-            <a
-              href={github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/60 hover:text-white/80 transition-colors"
-            >
-              <Github size={16} />
-              <span className="underline">View Code</span>
-            </a>
-          )}
-        </div>
+        {link && (
+          <div className="flex gap-4 mb-3">
+            <ProjectLink {...link} />
+          </div>
+        )}
       </div>
     </Parallax>
   );

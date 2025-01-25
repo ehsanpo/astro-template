@@ -39,7 +39,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 }) => {
   return (
     <section
-      className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
+      className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"}`}
     >
       <ParallaxBanner
         layers={[
@@ -49,7 +49,7 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
             opacity: [0.8, 1],
           },
         ]}
-        className={`relative  ${awards ? "min-h-[900px]" : "min-h-[600px]"}`}
+        className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"}`}
       >
         <div className="absolute inset-0 bg-black/50">
           <Parallax speed={-25}>

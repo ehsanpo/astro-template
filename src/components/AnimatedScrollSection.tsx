@@ -115,8 +115,8 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
     // Create scroll triggers
     ScrollTrigger.create({
       trigger: contentWrapRef.current,
-      start: "clamp(top bottom-=50%)",
-      end: "+=40%",
+      start: "clamp(top bottom-=40%)",
+      end: "+=60%",
       scrub: 1,
       animation: flip,
     });
