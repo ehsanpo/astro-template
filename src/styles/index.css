@@ -81,6 +81,20 @@ body {
 .gradient-bg {
   background: var(--gradient-color);
 }
+.gradient-bg-1 {
+  background: linear-gradient(
+    to right in oklch shorter hue,
+    var(--primary),
+    var(--secondary)
+  );
+}
+.gradient-bg-2 {
+  background-image: linear-gradient(
+    220deg in oklch shorter hue,
+    rgb(45, 51, 66),
+    rgb(4, 12, 27)
+  );
+}
 
 :root {
   --gradient-color: linear-gradient(

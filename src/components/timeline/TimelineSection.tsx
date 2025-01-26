@@ -39,7 +39,9 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
 }) => {
   return (
     <section
-      className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"}`}
+      className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"} ${
+        reverse ? "clip -my-2" : ""
+      }`}
     >
       <ParallaxBanner
         layers={[
