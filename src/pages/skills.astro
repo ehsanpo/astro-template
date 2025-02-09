@@ -20,22 +20,26 @@ const { stacks, charts } = await getPortfolioData();
     title="Skills & Tools"
     subtitle="My technical expertise and proficiency across different technologies"
   />
-  <div class="px-4 py-20">
-    <SkillChart data={stacks} chartData={charts[0]} client:load />
+  <TechStackBlock stacks={stacks} />
+  <Heading level="h2" gradient floating backplate client:idle
+    >Skills Chart</Heading
+  >
 
-    <section class="">
-      <div class="container mx-auto">
-        <Heading level="h2" gradient floating backplate client:idle
-          >Tech Timeline
-        </Heading>
-        <RankTimeline />
-      </div>
-    </section>
+  <SkillChart data={stacks} chartData={charts[0]} client:load />
 
-    <TechStackBlock stacks={stacks} />
-    <ToolsList />
-    <Heading>Development Process</Heading>
-    <ProcessFlowDiagram client:load />
-    <Certificates />
-  </div>
+  <section class="">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle
+        >Tech Timeline
+      </Heading>
+      <RankTimeline />
+    </div>
+  </section>
+
+  <ToolsList />
+  <Heading level="h2" gradient floating backplate client:idle
+    >Development Process</Heading
+  >
+  <ProcessFlowDiagram client:load />
+  <Certificates />
 </Layout>
