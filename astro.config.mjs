@@ -6,8 +6,8 @@ import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://ehsanpo.github.io",
-  base: process.env.NODE_ENV !== "development" ? "astro-template" : undefined,
+  site: "https://ehsan-pourhadi.com/",
+  base: "",
   vite: {
     ssr: {
       noExternal: ["gsap"],
