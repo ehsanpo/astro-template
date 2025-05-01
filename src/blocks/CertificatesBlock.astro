@@ -7,7 +7,9 @@ import { Heading } from "@/components/ui/heading";
 const { certifications } = await getPortfolioData();
 ---
 
-<section class="py-20 bg-gray-50 dark:bg-neutral-900">
+<section
+  class="py-20 bg-gray-50 dark:bg-neutral-900 w-full m-auto overflow-hidden"
+>
   <div class="container mx-auto px-4">
     <Heading level="h3" gradient floating backplate client:idle>
       Certifications

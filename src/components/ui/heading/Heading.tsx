@@ -48,7 +48,7 @@ const Heading: React.FC<Props> = ({
           </Parallax>
         )}
 
-        <span className={`${headingClass} text-center relative z-20 `}>
+        <span className={`${headingClass} text-center1 relative z-20 `}>
           {children}
         </span>
 
