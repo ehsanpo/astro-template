@@ -5,16 +5,22 @@ import clsx from "clsx";
 interface PortfolioFilterProps {
   categories: string[];
   category: string;
+  onCategoryChange?: (category: string) => void;
 }
 
 export default function PortfolioFilter({
   categories,
-  category,
+  category: initialCategory,
+  onCategoryChange
 }: PortfolioFilterProps) {
-  const [selectedCategory, setSelectedCategory] = useState(category);
+  const [selectedCategory, setSelectedCategory] = useState(initialCategory);
 
   const filterPortfolio = (category: string) => {
     setSelectedCategory(category);
+    if (onCategoryChange) {
+      onCategoryChange(category);
+    }
+    
     const portfolioCards = document.querySelectorAll("[data-categories]");
 
     portfolioCards.forEach((card) => {
@@ -42,6 +48,7 @@ export default function PortfolioFilter({
         )}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        aria-label="Show all categories"
       >
         All
       </motion.button>
@@ -57,6 +64,7 @@ export default function PortfolioFilter({
           )}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          aria-label={`Filter by ${category}`}
         >
           {category}
         </motion.button>
