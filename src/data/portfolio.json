@@ -366,6 +366,14 @@
   "testimonials": [
     {
       "id": 1,
+      "name": "Desiré Stigsson",
+      "title": "Software Developer på Telavox",
+      "img": "img/testimonial/desire.jpeg",
+      "short": "I worked with Ehsan during his time as Software Developer at Telavox, and I have never met another colleague with so much drive and passion.",
+      "desc": "I worked with Ehsan during his time as Software Developer at Telavox, and I have never met another colleague with so much drive and passion. Ehsan was a key component to our team, whose contributions extended far beyond his immediate tasks. He was eager to take on responsibilities, prepared and documented multiple discussions across many different topics, would not shy away from solving urgent or complex issues, and often communicating outside the team to discuss solutions. He had a contagious enthusiasm and took responsibility for the overall wellbeing of the team, never hesitating to knock on one’s shoulder to discuss an issue or offering help or support. Working alongside Ehsan was something I really enjoyed, and I wholeheartedly wish him all the best with any and all of his future endeavors!"
+    },
+    {
+      "id": 1,
       "name": "Asger Bjerre-Nielsen",
       "title": "Developer At Bredeband2",
       "img": "img/testimonial/asger.jpg",
