@@ -59,8 +59,6 @@ export function ProjectCard({
     "delay-300",
   ];
 
-  console.log(item);
-
   return (
     <motion.div
       className={cn(

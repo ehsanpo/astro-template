@@ -1,13 +1,86 @@
 ---
 import MainNav from "./nav/MainNav.astro";
-import ThemeToggle from "./ThemeToggle";
+import Toggle from "./Toggle.tsx";
 import HamburgerMenu from "./ui/Menu";
 ---
 
-<header
-  class="clip4 fixed w-full top-0 z-50 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-md"
->
-  <div class="container mx-auto px-4">
+<svg color-interpolation-filters="sRGB" style="display:none">
+  <defs>
+    <filter id="mixed-ui-player-filter">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="2"
+        result="blurred_source"
+      >
+      </feGaussianBlur>
+      <feImage
+        href="/assets/displacement-map-yr2eh1.png"
+        x="0"
+        y="0"
+        width="1200"
+        height="60"
+        result="displacement_map"
+      >
+      </feImage>
+      <feDisplacementMap
+        in="blurred_source"
+        in2="displacement_map"
+        scale="20"
+        xChannelSelector="R"
+        yChannelSelector="G"
+        result="displaced"
+      >
+      </feDisplacementMap>
+      <feColorMatrix
+        in="displaced"
+        type="saturate"
+        result="displaced_saturated"
+        values="5"
+      >
+      </feColorMatrix>
+      <feImage
+        href="/assets/specular-map-ivknpp.png"
+        x="0"
+        y="0"
+        width="1200"
+        height="80"
+        result="specular_layer"
+      >
+      </feImage>
+      <feComposite
+        in="displaced_saturated"
+        in2="specular_layer"
+        operator="in"
+        result="specular_saturated"
+      >
+      </feComposite>
+      <feComponentTransfer in="specular_layer" result="specular_faded">
+        <feFuncA type="linear" slope="0.9"></feFuncA>
+      </feComponentTransfer>
+      <feBlend
+        in="specular_saturated"
+        in2="displaced"
+        mode="normal"
+        result="withSaturation"
+      >
+      </feBlend>
+      <feBlend in="specular_faded" in2="withSaturation" mode="normal"></feBlend>
+    </filter>
+  </defs>
+</svg>
+
+<header class="fixed clip4 w-full top-0 z-50 overflow-hidden">
+  <div
+    class="absolute inset-0 bg-[var(--glass-rgb)]/[var(--glass-bg-alpha)] bg-white/80 dark:bg-neutral-900/80"
+    style="
+      backdrop-filter: url('#mixed-ui-player-filter');
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 19px;
+      --glass-bg-alpha: 60%;
+    "
+  >
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
     <nav class="flex items-center justify-center h-16">
       <a
         href="/"
@@ -41,7 +114,7 @@ import HamburgerMenu from "./ui/Menu";
       </a>
       <MainNav />
       <HamburgerMenu client:load />
-      <ThemeToggle client:load />
+      <Toggle client:load />
     </nav>
   </div>
 </header>
