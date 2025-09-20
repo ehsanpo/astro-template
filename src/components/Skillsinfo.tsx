@@ -28,23 +28,29 @@ const SkillsInfo = ({ show }: { show?: boolean }) => {
           <div className="bg-gray-300 dark:bg-neutral-800 relative p-4 bg-gradient-to-br backdrop-blur-md rounded-2xl border dark:border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]">
             <ul className="space-y-2">
               <li>
-                <span className="text-primary-400 font-basement">1–3</span>:
+                <span className="text-primary-400 font-basement">
+                  Beginner:{" "}
+                </span>
                 I’ve experimented and built something basic for personal use.
               </li>
               <li>
-                <span className="text-primary-400 font-basement">4–6</span>:
+                <span className="text-primary-400 font-basement">
+                  Professional:{" "}
+                </span>
                 I’ve worked with it professionally and deployed it to
                 production.
               </li>
               <li>
-                <span className="text-primary-400 font-basement">7–9</span>: I
-                have several years of experience, regularly working with it in
+                <span className="text-primary-400 font-basement">
+                  Advanced:{" "}
+                </span>
+                I have several years of experience, regularly working with it in
                 production environments.
               </li>
               <li>
-                <span className="text-primary-400 font-basement">10</span>: I’m
-                highly confident, capable of mentoring others, and comfortable
-                making architectural decisions.
+                <span className="text-primary-400 font-basement">Expert: </span>
+                : I’m highly confident, capable of mentoring others, and
+                comfortable making architectural decisions.
               </li>
             </ul>
           </div>
