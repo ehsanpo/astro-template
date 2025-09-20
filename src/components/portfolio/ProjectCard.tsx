@@ -88,7 +88,10 @@ export function ProjectCard({
         <img
           src={item.background_image?.src || `/img/${item.background_image}`}
           alt={item.title}
-          className="clip absolute top-0 z-10 w-full m-auto h-full object-cover transition-all duration-300 group-hover:scale-105 group-hover:filter group-hover:blur-sm group-hover:brightness-75"
+          className="absolute top-0 z-10 w-full m-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          style={{
+            viewTransitionName: `portfolio-image-${item.permalink || item.slug}`,
+          }}
         />
       </div>
 
@@ -119,10 +122,20 @@ export function ProjectCard({
         <div className="flex items-center gap-4 mb-3">
           <div>
             <a href={`/portfolio/${item.permalink || item.slug}`}>
-              <h3 className="text-xl font-basement text-white group-hover:text-primary-500 transition-colors">
+              <h3
+                className="text-xl font-basement text-white group-hover:text-primary-500 transition-colors"
+                style={{
+                  viewTransitionName: `portfolio-title-${item.permalink || item.slug}`,
+                }}
+              >
                 <div className="hover:text-primary-400">{item.title}</div>
               </h3>
-              <p className="text-primary-500 font-kabel leading-tight mb-1">
+              <p
+                className="text-primary-500 font-kabel leading-tight mb-1"
+                style={{
+                  viewTransitionName: `portfolio-tagline-${item.permalink || item.slug}`,
+                }}
+              >
                 {item.tagline || ""}
               </p>
               {item.title2 && (

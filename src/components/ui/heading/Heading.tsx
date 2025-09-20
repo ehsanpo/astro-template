@@ -13,6 +13,7 @@ interface Props {
   className?: string;
   children?: React.ReactNode;
   backplate?: boolean;
+  style?: React.CSSProperties;
 }
 
 const Heading: React.FC<Props> = ({
@@ -24,6 +25,7 @@ const Heading: React.FC<Props> = ({
   className = "",
   children,
   backplate,
+  style,
 }) => {
   const Tag = level as keyof JSX.IntrinsicElements; // Ensures Tag is a valid HTML heading element
   const headingClass = getHeadingClass({
@@ -38,6 +40,7 @@ const Heading: React.FC<Props> = ({
         className={`relative text-center pt-12 text-7xl ${className} ${
           backplate ? "pb-12" : ""
         }`}
+        style={style}
       >
         {backplate && (
           <Parallax

@@ -61,10 +61,24 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
           <div className="container relative">
             <div className="grid md:grid-cols-2 ">
               <div className="self-center">
-                <Heading className=" mb-4 !text-left" level="h1" gradient>
+                <Heading
+                  className=" mb-4 !text-left"
+                  level="h1"
+                  gradient
+                  style={{
+                    viewTransitionName: `portfolio-title-${item.permalink}`,
+                  }}
+                >
                   {title}
                 </Heading>
-                <p className="text-xl mb-4">{tagline}</p>
+                <p
+                  className="text-xl mb-4"
+                  style={{
+                    viewTransitionName: `portfolio-tagline-${item.permalink}`,
+                  }}
+                >
+                  {tagline}
+                </p>
                 <div className="flex flex-col gap-4">
                   <div className="flex gap-4">
                     <h3 className="min-w-20 font-medium text-secondary-500 uppercase ">
@@ -179,6 +193,9 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
                           src={background_image.src}
                           alt="Portfolio Image"
                           className=" rounded-lg"
+                          style={{
+                            viewTransitionName: `portfolio-image-${item.permalink}`,
+                          }}
                         />
                       </Parallax>
                     </div>
