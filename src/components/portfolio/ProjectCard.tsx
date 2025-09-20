@@ -62,7 +62,7 @@ export function ProjectCard({
   return (
     <motion.div
       className={cn(
-        "group block relative clip  overflow-hidden bg-neutral-800 min-h-96 rounded-lg",
+        "group block relative clip overflow-hidden bg-neutral-800 min-h-96 rounded-lg",
         className
       )}
       whileHover={{ scale: 1.02 }}
@@ -86,7 +86,7 @@ export function ProjectCard({
         <img
           src={item.background_image?.src || `/img/${item.background_image}`}
           alt={item.title}
-          className="absolute top-0 z-10 w-full m-auto h-full object-cover transition-transform duration-300 group-hover:scale-105"
+          className="absolute -top-1 z-10 w-full m-auto h-full object-cover transition-all duration-300 group-hover:scale-105  group-hover:filter group-hover:blur-sm group-hover:brightness-75"
           style={{
             viewTransitionName: `portfolio-image-${item.permalink || item.slug}`,
           }}
