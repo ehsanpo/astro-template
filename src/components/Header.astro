@@ -1,6 +1,6 @@
 ---
 import MainNav from "./nav/MainNav.astro";
-import Toggle from "./Toggle.tsx";
+import Toggle from "./Toggle";
 import HamburgerMenu from "./ui/Menu";
 ---
 
@@ -9,7 +9,7 @@ import HamburgerMenu from "./ui/Menu";
     <filter id="mixed-ui-player-filter">
       <feGaussianBlur
         in="SourceGraphic"
-        stdDeviation="2"
+        stdDeviation="5"
         result="blurred_source"
       >
       </feGaussianBlur>

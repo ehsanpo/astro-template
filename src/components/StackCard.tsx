@@ -63,8 +63,6 @@ export default function StackCard({
           {labels.map((label, index) => {
             const timelineMatch = findTimelineMatch(label);
             const yearsOfExperience = timelineMatch?.yearsOfExperience;
-            const stillActive = timelineMatch?.stillActive;
-            console.log(stillActive);
 
             return (
               <div key={label} className="relative group/stat">
@@ -73,7 +71,7 @@ export default function StackCard({
                     <span className="dark:text-gray-300 text-gray-700">
                       <span
                         className={`inline-block mr-1 w-3 h-3 rounded-full ${getExpertiseColor(
-                          stillActive
+                          timelineMatch?.stillActive
                         )}`}
                       ></span>{" "}
                       {label}
