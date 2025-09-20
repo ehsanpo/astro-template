@@ -12,7 +12,6 @@ category:
   - Design
   - Front-end
   - Sysadmin
-  - Tech-Lead
 
 tag:
   - CSS

@@ -13,7 +13,6 @@ id: 103
 category:
   - Backend
   - Front-end
-  - Tech-Lead
 tag:
   - CSS
   - "Google Maps Api"

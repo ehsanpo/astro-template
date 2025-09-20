@@ -8,7 +8,7 @@ type: portfolio
 id: 314
 agency: Freelance
 category:
-  - Frontend
+  - Front-end
   - Lab
 tag:
   - React
