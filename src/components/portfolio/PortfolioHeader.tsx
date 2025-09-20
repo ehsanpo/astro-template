@@ -112,6 +112,9 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
                         <span
                           key={index}
                           className="px-3 py-1 text-sm clip2 border-l-2  text-primary-400 bg-primary-500/20  border-primary-500/30 hover:border-primary transition-all"
+                          style={{
+                            viewTransitionName: `portfolio-category-${item.permalink}-${categoryTag}`,
+                          }}
                         >
                           {categoryTag}
                         </span>

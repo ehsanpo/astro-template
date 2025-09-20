@@ -183,6 +183,9 @@ export function ProjectCard({
             <span
               key={cat}
               className={`overflow-hidden px-3 group-hover:py-1 bg-primary-500/80 text-primary-100 text-sm group-hover:visible group-hover:h-7 invisible h-0 ease-in-out transition-all ${delay[index]}`}
+              style={{
+                viewTransitionName: `portfolio-category-${item.permalink || item.slug}-${cat}`,
+              }}
             >
               {cat}
             </span>
