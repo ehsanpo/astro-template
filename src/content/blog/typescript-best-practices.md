@@ -1,11 +1,11 @@
 ---
 title: "My TypeScript Adventures: Excess Props, `object` vs `{}`, and Why My Code Sometimes Explodess"
-description: "Learn essential TypeScript patterns and best practices that will make your code more maintainable and less prone to bugs."
-date: "2024-03-10"
+description: "Tripped over excess property checks in TypeScript — sharing what I learned so you don’t."
+date: "2025-09-24"
 author: "Ehsan Pourhadi"
 category: ["TypeScript", "Best Practices"]
 tag: ["TypeScript", "JavaScript", "Development", "Code Quality"]
-featured: false
+featured: true
 draft: false
 ---
 

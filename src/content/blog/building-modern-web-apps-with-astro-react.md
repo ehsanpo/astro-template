@@ -1,11 +1,11 @@
 ---
 title: "Building Modern Web Applications with Astro and React"
-description: "Exploring the benefits of static site generation with selective client-side interactivity using Astro and React components."
-date: "2024-03-15"
+description: "Playing with Astro feels like cheating — you get lightning-fast static pages, then just sprinkle in React where you actually want stuff to move."
+date: "2024-12-15"
 author: "Ehsan Pourhadi"
 category: ["Web Development", "Frontend"]
 tag: ["Astro", "React", "SSG", "JavaScript"]
-featured: true
+featured: false
 draft: false
 ---
 

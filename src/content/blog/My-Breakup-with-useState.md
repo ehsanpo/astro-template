@@ -1,7 +1,7 @@
 ---
 title: "My Breakup with useState"
 description: "How a talk by David Khourshid at React Miami completely changed my perspective on state management in React, and why useState might not be the answer to everything."
-date: "2024-09-24"
+date: "2025-03-20"
 author: "Ehsan Pourhadi"
 category: ["React", "Frontend"]
 tag: ["React", "useState", "State Management", "Hooks"]

@@ -1,7 +1,7 @@
 ---
 title: "🤯 Wait… React 19 is gonna kill useMemo and useCallback?!"
 description: "A deep dive into React 19 rumors and what it might mean for our beloved (and sometimes overused) memoization hooks. Spoiler: maybe we've been overthinking performance optimization all along."
-date: "2024-09-23"
+date: "2025-01-03"
 author: "Ehsan Pourhadi"
 category: ["React", "Performance"]
 tag: ["React 19", "useMemo", "useCallback", "Performance", "Hooks"]

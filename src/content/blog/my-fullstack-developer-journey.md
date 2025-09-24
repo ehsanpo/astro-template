@@ -1,7 +1,7 @@
 ---
 title: "My Journey as a Fullstack Developer"
 description: "Reflecting on my career path, the challenges I've faced, and the lessons learned along the way in fullstack development."
-date: "2024-03-05"
+date: "2023-12-05"
 author: "Ehsan Pourhadi"
 category: ["Career", "Personal"]
 tag: ["Career", "Fullstack", "Development", "Journey"]
