@@ -13,6 +13,8 @@ OMG, so you know how you have that one thing you use all the time, even when you
 
 But then I watched this insane talk by David Khourshid at React Miami, called "Goodbye, useState," and my mind was totally blown. Seriously, I went in thinking, "This guy is probably gonna tell me to stop using my favorite hook," and he pretty much did. But in a cool, "hey, let's learn something new" kind of way.
 
+_The spaghetti diagram David showed that blew my mind_
+
 ## The useState Problem
 
 He basically said that `useState` is great for simple stuff, but for anything even a little bit complex, it's a "foot gun." He showed this crazy diagram of how `useState` and `useEffect` can get all tangled up, like a bowl of spaghetti. It becomes this mess where one thing changes, and it triggers a chain reaction of re-renders, and you're just like, "What even is happening?!" It's a nightmare to debug, and I've definitely been there, pulling my hair out trying to figure out why my component is re-rendering for the fifth time.
@@ -59,6 +61,8 @@ const filter = searchParams.get("filter") || "all";
 ### 3. Stop using useState for forms and fetching
 
 I'm so guilty of this. I've been creating a `useState` for every single input on my forms, and then another one for `isLoading`, and `error`, and `data`... it's a mess! David said we should just use native browser APIs for forms and libraries like TanStack Query for data fetching. I'm all about using the right tool for the job, and if a library can handle all that messy stuff better than I can, I'm totally on board.
+
+_Old way vs. new way of handling forms_
 
 ```javascript
 // Instead of this useState nightmare...
@@ -109,8 +113,10 @@ Here's my plan:
 - ✅ Replace unnecessary `useState` with `useRef` for non-UI state
 - ✅ Move filter/search state to URL parameters
 - ✅ Try TanStack Query for data fetching
-- ✅ Use `useReducer` for complex state logic
+- ⏳ Learn `useReducer` for complex state logic
+
+Anyone else had a similar "aha moment" with React hooks? I'd love to hear about your experiences breaking up with old patterns and embracing better alternatives!
 
 ---
 
-_P.S. - If you haven't watched David Khourshid's ["Goodbye, useState"](https://www.youtube.com/watch?v=d3mhZbBOxbE) talk, do yourself a favor and check it out. It's a game-changer!_
+_P.S. - If you haven't watched David Khourshid's "Goodbye, useState" talk, do yourself a favor and check it out. It's a game-changer!_

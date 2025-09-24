@@ -36,7 +36,7 @@ const { title, description = "Developer Portfolio" } = Astro.props;
     <Header />
     <main class="min-h-screen">
       <slot />
-      <Footer />
+      <Footer client:load />
     </main>
     <script>
       document.addEventListener("astro:after-swap", function () {

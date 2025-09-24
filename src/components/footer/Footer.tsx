@@ -461,7 +461,6 @@ export function Footer({
               </div>
             </div>
 
-            {/* Back to Top */}
             <button
               onClick={scrollToTop}
               className="flex items-center gap-2 px-4 py-2 rounded-lg glass-card transition-all duration-300 hover:scale-105 text-sm font-kabel"
@@ -471,7 +470,6 @@ export function Footer({
             </button>
           </div>
 
-          {/* Tech Stack */}
           <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
             <span className="text-xs text-muted-foreground font-kabel mr-2">
               Built with:
