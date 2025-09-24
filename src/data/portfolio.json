@@ -16,6 +16,7 @@
     "footer": [
       { "href": "/", "text": "Home" },
       { "href": "/portfolio", "text": "Work" },
+      { "href": "/blog", "text": "Blog" },
       { "href": "/skills", "text": "Skills" },
       { "href": "/services", "text": "Services" },
       { "href": "/music", "text": "Music" },
@@ -365,7 +366,15 @@
   ],
   "testimonials": [
     {
-      "id": 1,
+      "id": 8,
+      "name": "Lenny Erlesand",
+      "title": "Engineering Manager at Telavox",
+      "img": "img/testimonial/lenny.jpg",
+      "short": "As an engineer, Ehsan consistently takes the lead on the most advanced projects and tasks, translating complex business needs into solid technical designs.",
+      "desc": "have had the pleasure of working with Ehsan as part of my team at Telavox. From day one, he has impressed me with a rare combination of deep technical expertise, a drive to continuously improve, and the leadership skills to help the team grow stronger. As an engineer, Ehsan consistently takes the lead on the most advanced projects and tasks, translating complex business needs into solid technical designs. Beyond his individual contributions, he is deeply engaged in improving how we work together as a team. Ehsan takes initiative in refining our processes, ensuring that we collaborate more effectively and work more sustainably. What I value most is how much Ehsan has helped me grow as well. He provides thoughtful feedback, asks challenging questions, and contributes to discussions with both openness and courage – listening carefully while also expressing divergent opinions. Having someone like Ehsan as a colleague is a privilege. He is not only a strong engineer but also a team player who actively contributes to long-term success."
+    },
+    {
+      "id": 7,
       "name": "Desiré Stigsson",
       "title": "Software Developer på Telavox",
       "img": "img/testimonial/desire.jpeg",
@@ -373,7 +382,7 @@
       "desc": "I worked with Ehsan during his time as Software Developer at Telavox, and I have never met another colleague with so much drive and passion. Ehsan was a key component to our team, whose contributions extended far beyond his immediate tasks. He was eager to take on responsibilities, prepared and documented multiple discussions across many different topics, would not shy away from solving urgent or complex issues, and often communicating outside the team to discuss solutions. He had a contagious enthusiasm and took responsibility for the overall wellbeing of the team, never hesitating to knock on one’s shoulder to discuss an issue or offering help or support. Working alongside Ehsan was something I really enjoyed, and I wholeheartedly wish him all the best with any and all of his future endeavors!"
     },
     {
-      "id": 1,
+      "id": 6,
       "name": "Asger Bjerre-Nielsen",
       "title": "Developer At Bredeband2",
       "img": "img/testimonial/asger.jpg",
@@ -381,7 +390,7 @@
       "desc": "Having worked in the industry for only a handful of years, I consider the opportunity to have worked with Ehsan as extremely rewarding. Even though we started out in different teams, Ehsan has always been open to discussing both problems and solutions. Over the past two years, Ehsan and I have worked closely together on a variety of projects, each differing in size and complexity. Besides his excellent ability to break down tasks and problems and provide high quality code to efficiently solve even the most demanding task we have had, Ehsan also has the ability to convey the essence of a problem and explain both the ‘how’ and the ‘why’ it should be solved to junior devs as well as customers alike. But working with Ehsan is also challenging in the best possible way. He is always on the lookout for new tech and ideas, on how to do things better. This is something from which everyone in our team has benefitted from. Over a great many cups of tea, we have discussed how to approach problems, potential pitfalls and best practices. I’m sure that Ehsan’s knowledge, curiosity and sense of teamwork will be a great asset to any organisation and I envy the next developer who gets to pick his brain. - It’s always time for tea…"
     },
     {
-      "id": 2,
+      "id": 5,
       "name": "Rebecca Löfgren",
       "title": "Senior UX Designer at Bredband2",
       "img": "img/testimonial/rebecca.jpg",
@@ -389,7 +398,7 @@
       "desc": "I had the pleasure of working with Ehsan during my first couple of years at Bredband2 (before he unfortunately moved on to take on new adventures). And let me tell you – I don’t think I’ve ever met someone as passionate and knowledgeable about “everything code” as him! Working with Ehsan means constantly being introduced to new ideas and interesting innovations. It’s about being challenged (in a good way!) in your ways of thinking, to find creative and efficient solutions to complex problems, and being confident that the code your team produces will adhere to best practices. But above all, it’s an absolute blast. Ehsan possesses the ability to see the whole picture, which enables him to produce quality products – even if the brief is a bit fuzzy. He has an eagerness to share his expertise and has, on countless occasions, made both our team and our department better by doing so. He also has a keen eye for design, which has made my job as a designer so much easier. Replacing him in our team will be a struggle, and I do hope our professional paths cross again in the future. To anyone who has the opportunity to work with him: I’m jealous."
     },
     {
-      "id": 3,
+      "id": 4,
       "name": "Timothy Alexis Vass",
       "title": "System Developer at Bredband2",
       "img": "img/testimonial/timmy.jpg",
@@ -397,23 +406,23 @@
       "desc": "Ehsan is intelligent, sociable, helpful and really good at what he does. We worked together in the front-end team when I started at Bredband2, before I changed to backend. Ehsan is a good influence and will contribute. Since he is helpful, curious and kind, he will make an extra effort to participate and investigate an issue even if it is not his primary responsibility. His cheerful attitude is very valuable since he will uplift others, which in combination with his professional qualities makes him a really great and dedicated colleague. We shared many lunches, laughs and interesting conversations together. I definitely recommend Ehsan for these reasons!"
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "Fredrik Månsson",
       "title": "System Developer at Bredband2",
       "img": "img/testimonial/fredrik.jpg",
       "short": "He has a strong ability to quickly grasp the problems that need to be solved and utilize existing knowledge or gather new information to solve them.",
-      "desc": "Under vår tid som kolleger på Bredband2 har jag fått uppleva Ehsans kunskap i programmering och vilja att ligga i framkanten med ny teknik. Jag har haft äran att jobba tillsammans med Ehsan i både stora och små team och projekt. Han har en bra förmåga att snabbt sätta sig in i problemen som skall lösas och använda befintlig eller samla nya kunskaper för att lösa dessa. Vi har haft många bra stunder där vi har diskuterat programmering och problemlösning, nu senast i ett projekt involverat React och NextJS. Sammanfattningsvis anser jag Ehsan som en mycket skicklig och motiverad programmerare. Hans tekniska expertis, engagemang för självförbättring och anmärkningsvärda lagarbete gör dem till en oumbärlig medlem i alla organisationer. Jag tvivlar inte på att Ehsan kommer att fortsätta att ge betydande bidrag och nå stora framgångar i sina framtida ansträngningar. Skulle inte tveka att ha Ehsan som kollega igen i framtiden."
+      "desc": "During our time as colleagues at Bredband2, I have experienced Ehsan’s knowledge in programming and his desire to stay at the forefront of new technology. I have had the honor of working together with Ehsan in both large and small teams and projects. He has a strong ability to quickly grasp the problems that need solving and to use existing or acquire new knowledge to resolve them. We have had many great moments discussing programming and problem-solving, most recently in a project involving React and NextJS. In summary, I consider Ehsan to be a very skilled and motivated programmer. His technical expertise, commitment to self-improvement, and remarkable teamwork make him an indispensable member of any organization. I have no doubt that Ehsan will continue to make significant contributions and achieve great success in his future endeavors. I would not hesitate to have Ehsan as a colleague again in the future."
     },
     {
-      "id": 5,
+      "id": 2,
       "name": "Erfan Shirazi",
       "title": "CIO at Bredband2",
       "img": "img/testimonial/erfan.jpg",
       "short": "He is incredibly competent, knowledgeable, and learns quickly. He is highly regarded by his colleagues and contributes a lot when it comes to various issues related to web development and software engineering in general.",
-      "desc": "Ehsan jobbade som systemutvecklare hos oss på Bredband2 i 3 år, hos oss jobbade han mest med frontend utveckling inom React. Han är otrolig kompetent, kan mycket och lär sig snabbt. Väldigt omtyckt av sina kollegor och har mycket input att komma med när det gäller olika frågor runt webbutveckling och systemutveckling överlag. Jag kan rekommendera Ehsan till det mesta när det kommer till systemutveckling, både backend och frontend. Skulle det vara något han inte kan så kommer han lära sig snabbt. Och han är alltid välkommen tillbaka till oss på Bredband2 i framtiden!"
+      "desc": "Ehsan worked as a system developer with us at Bredband2 for 3 years, mainly focusing on frontend development with React. He is incredibly competent, knowledgeable, and a fast learner. He was very well-liked by his colleagues and contributed a lot of valuable input regarding various aspects of web development and system development in general. I can highly recommend Ehsan for almost anything related to system development, both backend and frontend. If there’s ever something he doesn’t already know, he will learn it quickly. And he is always welcome back to us at Bredband2 in the future!"
     },
     {
-      "id": 6,
+      "id": 1,
       "name": "David Szmak",
       "title": "Front End Developer at Guts & Glory",
       "img": "img/testimonial/david.jpg",
@@ -421,12 +430,12 @@
       "desc": "Few people have the opportunity to code to a Tech Lead Developer who is also a good coach and a great mentor—but I did when I worked with Ehsan. I had the pleasure of working with Ehsan in my two interships at the Guts & Glory, we collaborated on many projects. I was particularly impressed by Ehsan´s ability to handle even the toughest projects effortlessly. That skill often takes years to develop among developers professionals, but it seemed to come perfectly naturally to him. And I still miss working with him! As a team member or a leader, Ehsan earns my highest recommendation."
     },
     {
-      "id": 7,
+      "id": 0,
       "name": "Klas Oskarsson",
       "title": "Account Director",
       "img": "img/testimonial/klas.jpg",
       "short": "As the project manager for the award-winning project TOOLPOOL, I have Ehsan to thank for its significant success.",
-      "desc": "Som projektledare för det Guldäggsbelönade projektet TOOLPOOL har jag Ehsan att tacka för att detta blev så pass framgångsrikt. Hela projektet baserades på en (vid det tillfället) ej tillgänglig funktion på Facebook. Ehsan lyckades inte bara skapa denna funktion och därmed säkra hela leveransen, utan var även högst delaktig i att utforma hela den tekniska aspekten av projektet. Hårt slit under stor tidspress och obefintlig budget var inget hinder för Ehsan. Tack!"
+      "desc": "As project manager for the Golden Egg award-winning project TOOLPOOL, I have Ehsan to thank for its success. The entire project was based on a (at the time) unavailable feature on Facebook. Ehsan not only managed to create this feature and thereby secure the entire delivery, but he was also deeply involved in shaping the entire technical aspect of the project. Hard work under intense time pressure and with a non-existent budget was no obstacle for Ehsan. Thank you!"
     }
   ],
   "stacks": [
