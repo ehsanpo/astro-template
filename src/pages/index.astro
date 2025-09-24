@@ -9,6 +9,7 @@ import { getPortfolioData } from "../utils/data";
 import HeroBlock from "@/blocks/HeroBlock.astro";
 import SelectedWorkBlock from "@/blocks/SelectedWorkBlock.astro";
 import TechStackBlock from "@/blocks/TechStackBlock.astro";
+import BlogBlock from "@/blocks/BlogBlock.astro";
 
 const { stacks } = await getPortfolioData();
 ---
@@ -20,5 +21,6 @@ const { stacks } = await getPortfolioData();
   <Certificates />
   <Testimonials />
   <Awards />
+  <BlogBlock />
   <ClientMarquee />
 </Layout>

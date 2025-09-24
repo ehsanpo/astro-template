@@ -24,6 +24,23 @@ const portfolio = defineCollection({
     }),
 });
 
+const blog = defineCollection({
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string().optional(),
+      date: z.string(),
+      author: z.string().optional(),
+      category: z.array(z.string()).optional(),
+      tag: z.array(z.string()).optional(),
+      cover: image().optional(),
+      featured: z.boolean().optional(),
+      draft: z.boolean().optional(),
+    }),
+});
+
 export const collections = {
   portfolio,
+  blog,
 };

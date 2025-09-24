@@ -19,6 +19,20 @@ export const getPortfolioItems = async () => {
   }));
 };
 
+export const getBlogPosts = async () => {
+  const blogEntries = await getCollection("blog", ({ data }) => {
+    return data.draft !== true;
+  });
+
+  return blogEntries
+    .map((entry: CollectionEntry<"blog">) => ({
+      ...entry.data,
+      slug: entry.slug,
+      content: entry,
+    }))
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+};
+
 // Calculate years of experience from duration string
 export const calculateYearsOfExperience = (duration: string): number => {
   const [startYear, endYear] = duration

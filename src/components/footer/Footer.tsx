@@ -410,7 +410,7 @@ export function Footer({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div className="space-y-2">
                 <div className="text-2xl font-bold font-basement gradient-text">
-                  100+
+                  70+
                 </div>
                 <div className="text-sm text-muted-foreground font-kabel">
                   Projects Completed
