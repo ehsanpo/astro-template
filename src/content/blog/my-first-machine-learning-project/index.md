@@ -6,154 +6,86 @@ author: "Ehsan Pourhadi"
 category: ["Machine Learning", "AI"]
 tag: ["AI", "ML", "Python", "Computer Vision", "TensorFlow", "Learning"]
 featured: false
-draft: true
+draft: false
 cover: "./ml-cover.jpg"
 ---
 
-# My First Machine Learning Project
+Lately, I’ve been diving into AI and ML. Big companies like Google and Microsoft are everywhere with it, and I’ve played with Google Vision for fun. But making my own ML stuff? That felt scary.
 
-I have been reading a lot about AI and machine learning lately. Big companies like Google, Facebook, and Microsoft are already offering ML and AI-related services. I've played around with Google Vision and seen services from Microsoft, but it was hard to start making your own service.
-
-## Background
-
-I'm a self-taught developer working as a "Full stack" developer at an advertising agency [Guts & Glory](http://gutsglory.se/) in Sweden. I often build WordPress sites from designs and create quizzes and competitions. So I'm not a heavy programmer or data scientist, but I love GitHub because you can find a lot of projects with really good READMEs and installation instructions.
-
-Usually, I don't need to understand what every script does line by line - I can clone it, test it, and see if I get the result I want.
-
-## The Learning Challenge
-
-Many people talk about AI taking over jobs, so I got curious about how these systems actually work. I wanted to build something practical to understand the fundamentals of machine learning.
-
-## Finding a Project
-
-The inspiration came from watching Silicon Valley (the TV series), where they had an AI that could detect if an image contains a hotdog or not. I thought: "Why not build something similar as a learning exercise?"
-
-A quick search on GitHub led me to these resources:
-
-- [Hotdog Classification project](https://github.com/hayzamjs/Hotdog-Classification)
-- [Using TensorFlow to classify hotdogs tutorial](https://aboveintelligent.com/using-tensorflow-to-classify-hotdogs-8494fb85d875)
-
-## The Technical Setup Nightmare
-
-Oh... I really didn't know Python well enough! I needed to install:
-
-- Python (correct version)
-- TensorFlow
-- OpenCV
-
-To be honest, it took me about 2 hours just to be able to run the basic script. I had many problems with Python versions and dependency conflicts. But finally, after many "models missing" errors, I got it to run!
-
-## Data Collection Challenges
-
-### The Image Problem
-
-I started collecting training data using Google image search and the Fatkun Batch Chrome extension (as suggested in tutorials) to download images in bulk.
-
-But then I realized a major issue: **I wanted to classify specific objects, not entire images!** Many images had multiple elements, backgrounds, and distractions.
-
-### Face Detection and Cropping
-
-This led me to another learning challenge - I needed to crop and isolate the subjects in my images. I found this helpful project:
-
-- [Face cropping tool](https://github.com/icchi-h/face-cropping)
-
-The README was in another language, but I could see how to run it! After some trial and error with OpenCV and Python versions, it worked like a charm.
-
-However, some images didn't crop properly, so I had to manually clean the dataset by removing corrupted or incorrectly processed images.
-
-## My Learning Process
-
-Here were the steps I took:
-
-1. **Search and collect** training images using Google Images
-2. **Download in bulk** using the Fatkun browser extension (about 100 images per category)
-3. **Crop and prepare** the images using OpenCV-based tools
-4. **Clean the dataset** by removing corrupted or mislabeled images
-5. **Train the model** using the existing TensorFlow scripts
-6. **Test and iterate** with new data
-
-## The Results and Learning
-
-### What Worked Well:
-
-- The basic classification framework was solid
-- Image preprocessing tools were effective
-- The iterative approach of test-and-improve was valuable
-
-### Challenges I Encountered:
-
-- **Data quality matters more than quantity** - having clean, well-labeled data is crucial
-- **Bias in training data** affects results significantly
-- **Model evaluation** requires diverse test sets
-- **Technical setup** can be as challenging as the actual ML work
-
-### Key Insights:
-
-1. **Garbage in, garbage out** - data quality is everything
-2. **Start simple** - basic binary classification before complex models
-3. **Understand your data** - spend time examining your training set
-4. **Test thoroughly** - use data the model has never seen before
-
-## Technical Lessons Learned
-
-### Python Environment Management
-
-- Use virtual environments for different projects
-- Keep track of package versions
-- Document your setup process
-
-### Data Preparation
-
-- Consistent image sizing and format
-- Balanced datasets (equal examples per category)
-- Representative test data
-- Manual data cleaning is often necessary
-
-### Model Training
-
-- Start with pre-trained models when possible
-- Monitor for overfitting
-- Save model checkpoints during training
-- Document your experiments
-
-## What's Next?
-
-This project taught me that machine learning is as much about **data engineering** as it is about algorithms. The actual model training was just one part of a much larger process.
-
-### Future Learning Goals:
-
-- Explore more sophisticated architectures
-- Learn about transfer learning
-- Understand evaluation metrics better
-- Work on more diverse problem types
-
-### Advice for Beginners:
-
-1. **Start with existing code** - don't build from scratch initially
-2. **Focus on understanding the pipeline** - data → model → results
-3. **Expect technical difficulties** - environment setup is often the hardest part
-4. **Document everything** - you'll forget what you did
-5. **Join communities** - the ML community is very helpful
-
-## Reflection
-
-This was my first real dive into machine learning, and it taught me that AI isn't magic - it's sophisticated pattern matching that requires:
-
-- **Quality data**
-- **Proper preprocessing**
-- **Thoughtful evaluation**
-- **Lots of iteration**
-
-The most important takeaway? **You can learn this stuff!** It's 2019 and there are tons of people sharing code and tutorials. Just copy the code, test it, change some lines, and see what happens!
-
-If a self-taught developer like me can figure this out, so can you. You just need patience and persistence.
+I work as a **full-stack developer** at [Guts & Glory](http://gutsglory.se/) in Sweden — mostly building WordPress sites from designs. I’m not a hardcore programmer, but I love GitHub. If there’s a repo with a solid README, I can usually clone it, run it, and tweak things until it works.
 
 ---
 
-_This was my first technical article ever! Thanks to the open-source community for making learning possible. If you're starting your ML journey, feel free to reach out - we're all learning together!_
+## The Crazy Idea 💡
 
-**Special thanks to:**
+Everyone talks about AI taking over jobs… so I thought: _maybe I can build the AI that takes over mine!_
 
-- The creators of the hotdog classification tutorial
-- The face-cropping tool developers
-- The entire Python/ML open-source community
+Step 1: AI looks at a design → slices it into sections → detects elements (text, images, colors, spacing) → uses pre-written HTML/CSS to build a WordPress site.
+
+Step 2: Realize that’s waaaay too ambitious for a first ML project 😅
+
+So I needed a side project to **train on something simpler**. Inspiration hit while watching _Silicon Valley_ — the “hotdog or not” AI. My brain immediately went:
+
+> “I’ll build an AI that rates how hot faces are! Don’t judge me!”
+
+---
+
+## Finding the Code 🐍
+
+I found some Python/TensorFlow/OpenCV repos:
+
+- [Hotdog Classification](https://github.com/hayzamjs/Hotdog-Classification)
+- [Guide on TensorFlow Hotdogs](https://aboveintelligent.com/using-tensorflow-to-classify-hotdogs-8494fb85d875)
+
+Problem: I don’t know Python 😅. Spent ~2 hours fixing versions and missing models. Finally got it running!
+
+---
+
+## Gathering Data 🖼️
+
+First attempt: Google image search for “pretty girls” vs. “ugly girls” and download with **Fatkun Batch**.
+
+Problem: I only want **faces**, not the whole picture.
+
+Solution: Use a face-cropping script:
+
+- [Face Cropping GitHub](https://github.com/icchi-h/face-cropping)
+
+After cleaning up wrong detections, I had ~1,000 “pretty” and ~400 “ugly” faces.
+
+---
+
+## Training & Testing 🏋️
+
+After training, I tested:
+
+- **Kate Upton** → hot 0.96 ✅
+- **Rihanna** → hot 0.99 ✅
+- **Miley Cyrus** → hot 0.72 🤷‍♂️
+- **Hillary Clinton** → hot 0.40 😅
+- **My own face** → hot 0.52 😎
+
+Not perfect, but honestly, I’m kinda impressed for a first try.
+
+---
+
+## Lessons Learned 💡
+
+1. GitHub + good READMEs = life saver
+2. Python + TensorFlow + OpenCV version hell is real
+3. Data quality matters — garbage in, garbage out
+4. Start small, test a lot, embrace happy accidents
+
+---
+
+## Next Steps
+
+I’d love feedback from other devs and eventually try my **dream project**: AI that turns a wireframe/design into a WordPress site automatically.
+
+---
+
+## Just Do It! 🚀
+
+If you want to learn AI or coding: you can. Copy code, run it, tweak it, break it, learn. Patience is everything. If I can do it, you can too.
+
+_P.S. This is my first article ever, so sorry for my English 😅 — writing it helps me learn!_
