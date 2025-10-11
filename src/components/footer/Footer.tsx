@@ -22,6 +22,7 @@ import {
   X,
   Play,
   Pen,
+  Newspaper,
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 
@@ -101,7 +102,7 @@ const navigationSections: { title: string; links: NavigationLink[] }[] = [
       { name: "Music", href: "/music", icon: Music },
       { name: "Resume", href: "/cv", icon: FileText },
       { name: "Contact", href: "/contact", icon: Mail },
-      { name: "Home", href: "/", icon: ExternalLink },
+      { name: "Blog", href: "/blog", icon: Newspaper },
     ],
   },
   {
