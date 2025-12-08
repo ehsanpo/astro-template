@@ -56,7 +56,7 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
 
   return (
     <div className="dark:bg-neutral-800 bg-gray-100">
-      <header className="max-w-6xl mx-auto px-4 py-12">
+      <header className="max-w-6xl mx-auto px-4 py-12 overflow-hidden">
         <ParallaxProvider>
           <div className="container relative">
             <div className="grid md:grid-cols-2 ">
