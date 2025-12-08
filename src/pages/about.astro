@@ -5,7 +5,7 @@ import { getPortfolioData } from "../utils/data";
 import TimelineAbout from "../components/timeline/TimelineAbout";
 import BoxReveal from "../components/ui/box-reveal";
 import Link from "@/components/Link";
-const { contact } = await getPortfolioData();
+import Testimonials from "@/blocks/TestimonialsBlock.astro";
 ---
 
 <Layout title="About">
@@ -53,6 +53,7 @@ const { contact } = await getPortfolioData();
     </div>
   </Hero>
   <TimelineAbout client:load />
+    <Testimonials showAll />
   <section class="py-10 md:py-20">
     <div class="container mx-auto flex flex-col md:flex-row items-center">
       <h2

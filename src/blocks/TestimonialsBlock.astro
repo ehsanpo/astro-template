@@ -1,14 +1,13 @@
 ---
 import { getPortfolioData } from "@/utils/data";
 import TestimonialCard from "@/components/TestimonialCard";
-import SectionTitle from "@/components//ui/SectionTitle.astro";
-import { motion } from "framer-motion";
 import { Heading } from "@/components/ui/heading";
 
 const { testimonials } = await getPortfolioData();
+const { showAll = false } = Astro.props;
 ---
 
-<section class="py-20 bg-white dark:bg-neutral-800">
+<section class="py-20 bg-white dark:bg-neutral-800" id="testimonials">
   <div class="container mx-auto px-4">
     <Heading
       level="h2"
@@ -23,10 +22,18 @@ const { testimonials } = await getPortfolioData();
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
-        testimonials.map((testimonial) => (
+        (showAll ? testimonials : testimonials.sort((a, b) => b.id - a.id).slice(0, 6)).map((testimonial) => (
           <TestimonialCard {...testimonial} client:idle />
         ))
       }
     </div>
-  </div>
+  {showAll ? null : (
+    <div class="mt-12 text-center ">
+      <a
+        href="/about/#testimonials"
+        class="inline-block px-6 py-3 bg-secondary-600 text-white font-semibold rounded hover:bg-secondary-700 transition">
+          View All Testimonials
+        </a>
+    </div>
+    )}
 </section>
