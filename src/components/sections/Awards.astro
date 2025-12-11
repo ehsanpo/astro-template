@@ -1,9 +1,27 @@
 ---
 import { getPortfolioData } from "../../utils/data";
 import Heading from "../ui/heading/Heading";
-import SectionTitle from "../ui/SectionTitle.astro";
+import { Image } from "astro:assets";
+
+// Import award images from assets
+import cannen from "@/assets/awards/cannen.png";
+import guldagg from "@/assets/awards/guldagg.png";
+import svenskadesign from "@/assets/awards/svenskadesign.png";
 
 const { awards } = await getPortfolioData();
+
+// Map image paths to imported assets
+const imageMap: Record<string, any> = {
+  "/img/awards/cannen.png": cannen,
+  "/img/awards/guldagg.png": guldagg,
+  "/img/awards/svenskadesign.png": svenskadesign,
+};
+
+// Replace string paths with imported ImageMetadata
+const awardsWithImages = awards.map((award) => ({
+  ...award,
+  image: imageMap[award.images] || award.images,
+}));
 ---
 
 <section class="py-20 bg-white dark:bg-neutral-800">
@@ -16,15 +34,20 @@ const { awards } = await getPortfolioData();
       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center"
     >
       {
-        awards.map((award) => (
+        awardsWithImages.map((award) => (
           <a
             href={award.link}
             class="group clip bg-opium  dark:bg-neutral-700 p-6 rounded-lg transition-transform hover:-translate-y-1"
           >
             <div class="">
-              <img
-                src={award.images}
+              <Image
+                src={award.image}
                 alt={award.name}
+                widths={[480, 768, 1024]}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                format="webp"
+                quality={80}
+                loading="lazy"
                 class="mx-auto rounded-lg mb-4 group-hover:scale-105 transition-transform"
               />
               <h3 class="font-semibold text-xl  text-yellow-500 mb-2">

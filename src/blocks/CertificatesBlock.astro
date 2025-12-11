@@ -1,10 +1,43 @@
 ---
 import { getPortfolioData } from "@/utils/data";
-import SectionTitle from "@/components/ui/SectionTitle.astro";
 import CertificateCard from "@/components/certificates/CertificateCard.astro";
 import { Heading } from "@/components/ui/heading";
 
+// Import certificate images from assets
+import cybersecurity from "@/assets/cert/cybersecurity.png";
+import AWS from "@/assets/cert/AWS.png";
+import SFPC from "@/assets/cert/SFPC.png";
+import RWVCPC from "@/assets/cert/RWVCPC.png";
+import uiBasic from "@/assets/cert/ui-basic.png";
+import uiAdv from "@/assets/cert/ui-adv.png";
+import designComposition from "@/assets/cert/design-composition.png";
+import accessibility from "@/assets/cert/accessibility.png";
+import GAA from "@/assets/cert/GAA.png";
+import GTM from "@/assets/cert/GTM.png";
+import GA from "@/assets/cert/GA.png";
+
 const { certifications } = await getPortfolioData();
+
+// Map image paths to imported assets
+const imageMap: Record<string, any> = {
+  "/img/cert/cybersecurity.png": cybersecurity,
+  "/img/cert/AWS.png": AWS,
+  "/img/cert/SFPC.png": SFPC,
+  "/img/cert/RWVCPC.png": RWVCPC,
+  "/img/cert/ui-basic.png": uiBasic,
+  "/img/cert/ui-adv.png": uiAdv,
+  "/img/cert/design-composition.png": designComposition,
+  "/img/cert/accessibility.png": accessibility,
+  "/img/cert/GAA.png": GAA,
+  "/img/cert/GTM.png": GTM,
+  "/img/cert/GA.png": GA,
+};
+
+// Replace string paths with imported ImageMetadata
+const certsWithImages = certifications.map((cert) => ({
+  ...cert,
+  image: imageMap[cert.img] || cert.img,
+}));
 ---
 
 <section
@@ -17,7 +50,7 @@ const { certifications } = await getPortfolioData();
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       {
-        certifications.map((cert, index) => (
+        certsWithImages.map((cert, index) => (
           <CertificateCard {...cert} index={index} />
         ))
       }
