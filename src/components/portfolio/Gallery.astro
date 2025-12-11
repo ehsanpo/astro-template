@@ -1,5 +1,6 @@
 ---
 import "photoswipe/style.css";
+import OptimizedImage from "../ui/OptimizedImage.astro";
 
 interface Props {
   images: any;
@@ -18,10 +19,12 @@ const { images, alt } = Astro.props;
         data-pswp-height={image.height}
         class="gallery-item cursor-pointer"
       >
-        <img
-          src={image.src}
+        <OptimizedImage
+          src={image}
           alt={`${alt} - Image ${index + 1}`}
           class="w-full h-64 object-cover rounded-lg transition-transform hover:scale-105"
+          sizes="(max-width: 768px) 100vw, 50vw"
+          widths={[480, 768, 1024, 1200, 1536]}
           loading="lazy"
         />
       </a>
