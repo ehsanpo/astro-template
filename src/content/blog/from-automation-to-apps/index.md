@@ -14,7 +14,7 @@ So… funny story.
 
 A while ago I was playing with **PLCs**. Yep. Industrial stuff. Sensors, relays, ladders, blinking lights. Very *factory-core*. At the time I didn't think much of it — I was just trying to understand how machines think without exploding 💥 (spoiler: they're very unforgiving).
 
-Fast-forward to me learning **React**, sitting in front of my laptop at 2am, coffee cold, brain fried, staring at `useState` like it personally offended me.
+Fast-forward to me learning **React**, sitting in front of my laptop at 2am, te cold, brain fried, staring at `useState` like it personally offended me.
 
 And then…
 💡 *WAIT A SECOND.*
@@ -148,8 +148,6 @@ Let's be real:
 Multiple times.
 
 But that's kinda the point, right?
-
-I'm not an expert.
 I'm just a curious dev smashing concepts together and seeing what survives 🔥
 
 ---
@@ -195,8 +193,6 @@ You learn something.
 Best case?
 You accidentally connect factories to frontends and feel like a wizard 🧙‍♂️✨
 
-Woohoo!
 
 Alright, I'll stop here before this turns into a book.
-Thanks for reading — and sorry for my bad English 😅
-Now go break something and learn 💙
+Thanks for reading, Now go break something and learn 💙
