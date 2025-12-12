@@ -17,6 +17,12 @@ export interface Resume {
     endDate: string;
     description: string[];
     tags: string[];
+    team?: {
+      name: string;
+      role: string;
+      linkedin?: string;
+      img?: string;
+    }[];
   }[];
   education: {
     institution: string;

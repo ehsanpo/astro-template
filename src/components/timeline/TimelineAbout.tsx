@@ -27,6 +27,7 @@ const TimelineAbout: React.FC<Props> = () => {
           technologies={item.tags}
           project={item.project}
           awards={item.awards}
+          team={item.team}
           reverse={index % 2 === 0}
         />
       ))}

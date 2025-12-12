@@ -3,6 +3,7 @@ import { ParallaxBanner, Parallax } from "react-scroll-parallax";
 import { Award } from "lucide-react";
 import { Project } from "./Project";
 import { TechTags } from "./TechTags";
+import TeamSection from "../team/TeamSection";
 
 interface TimelineSectionProps {
   year: string;
@@ -23,6 +24,12 @@ interface TimelineSectionProps {
     technologies: string[];
   };
   awards?: string[];
+  team?: {
+    name: string;
+    role: string;
+    linkedin?: string;
+    img?: string;
+  }[];
   reverse?: boolean;
 }
 
@@ -35,11 +42,12 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
   technologies,
   project,
   awards,
+  team,
   reverse = false,
 }) => {
   return (
     <section
-      className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"} ${
+      className={`relative  ${
         reverse ? "clip -my-2" : ""
       }`}
     >
@@ -51,9 +59,9 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
             opacity: [0.8, 1],
           },
         ]}
-        className={`relative  ${awards ? "min-h-[1000px]" : "min-h-[600px]"}`}
+        className="relative"
       >
-        <div className="absolute inset-0 bg-black/50">
+        <div className="py-16 inset-0 bg-black/50">
           <Parallax speed={-25}>
             <div
               className={`absolute container left-[5%]  right-[5%] text-8xl  font-basement text-secondary-500 ${
@@ -102,6 +110,10 @@ export const TimelineSection: React.FC<TimelineSectionProps> = ({
                     </div>
                   ))}
                 </div>
+              )}
+
+              {team && team.length > 0 && (
+                <TeamSection team={team} />
               )}
             </div>
           </div>

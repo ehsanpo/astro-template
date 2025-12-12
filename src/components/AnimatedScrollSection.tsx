@@ -337,7 +337,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
         layout % 2
           ? "bg-offwhite dark:bg-neutral-900"
           : "bg-opium dark:bg-neutral-700 clip -my-2"
-      } p-20 `}
+      } p-4 lg:p-20`}
     >
       <div
         className="content-wrap grid place-items-center relative z-10 container mx-auto"

@@ -37,7 +37,7 @@ const Heading: React.FC<Props> = ({
   return (
     <ParallaxProvider>
       <Tag
-        className={`relative text-center pt-12 text-7xl ${className} ${
+        className={`relative text-center pt-12 lg:text-7xl text-3xl ${className} ${
           backplate ? "pb-12" : ""
         }`}
         style={style}
@@ -45,7 +45,7 @@ const Heading: React.FC<Props> = ({
         {backplate && (
           <Parallax
             speed={5}
-            className=" z-10 blur-sm absolute font-bold left-0 top-[-10%] w-full opacity-10 lg:text-9xl"
+            className=" z-10 blur-sm absolute font-bold left-0 top-[-10%] w-full opacity-10 lg:text-9xl text-4xl"
           >
             <div>{children}</div>
           </Parallax>
