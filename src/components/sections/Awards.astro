@@ -12,52 +12,46 @@ const { awards } = await getPortfolioData();
 
 // Map image paths to imported assets
 const imageMap: Record<string, any> = {
-  "/img/awards/cannen.png": cannen,
-  "/img/awards/guldagg.png": guldagg,
-  "/img/awards/svenskadesign.png": svenskadesign,
+	"/img/awards/cannen.png": cannen,
+	"/img/awards/guldagg.png": guldagg,
+	"/img/awards/svenskadesign.png": svenskadesign,
 };
 
 // Replace string paths with imported ImageMetadata
 const awardsWithImages = awards.map((award) => ({
-  ...award,
-  image: imageMap[award.images] || award.images,
+	...award,
+	image: imageMap[award.images] || award.images,
 }));
 ---
 
-<section class="py-20 bg-white dark:bg-neutral-800">
-  <div class="container mx-auto px-4">
-    <Heading level="h3" gradient floating backplate client:idle>
-      Awards
-    </Heading>
+<section class="bg-white py-20 dark:bg-neutral-800">
+	<div class="container mx-auto px-4">
+		<Heading level="h3" gradient floating backplate client:idle> Awards </Heading>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center"
-    >
-      {
-        awardsWithImages.map((award) => (
-          <a
-            href={award.link}
-            class="group clip bg-opium  dark:bg-neutral-700 p-6 rounded-lg transition-transform hover:-translate-y-1"
-          >
-            <div class="">
-              <Image
-                src={award.image}
-                alt={award.name}
-                widths={[480, 768, 1024]}
-                sizes="(max-width: 768px) 100vw, 33vw"
-                format="webp"
-                quality={80}
-                loading="lazy"
-                class="mx-auto rounded-lg mb-4 group-hover:scale-105 transition-transform"
-              />
-              <h3 class="font-semibold text-xl  text-yellow-500 mb-2">
-                {award.name}
-              </h3>
-              <p class="dark:text-gray-400">{award.description}</p>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-  </div>
+		<div class="grid grid-cols-1 gap-8 text-center md:grid-cols-2 lg:grid-cols-3">
+			{
+				awardsWithImages.map((award) => (
+					<a
+						href={award.link}
+						class="clip group rounded-lg bg-opium p-6 transition-transform hover:-translate-y-1 dark:bg-neutral-700"
+					>
+						<div class="">
+							<Image
+								src={award.image}
+								alt={award.name}
+								widths={[480, 768, 1024]}
+								sizes="(max-width: 768px) 100vw, 33vw"
+								format="webp"
+								quality={80}
+								loading="lazy"
+								class="mx-auto mb-4 rounded-lg transition-transform group-hover:scale-105"
+							/>
+							<h3 class="mb-2 text-xl font-semibold text-yellow-500">{award.name}</h3>
+							<p class="dark:text-gray-400">{award.description}</p>
+						</div>
+					</a>
+				))
+			}
+		</div>
+	</div>
 </section>

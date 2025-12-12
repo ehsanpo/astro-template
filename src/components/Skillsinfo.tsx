@@ -1,63 +1,50 @@
 import React from "react";
 
 const SkillsInfo = ({ show }: { show?: boolean }) => {
-  return (
-    <div className="flex justify-center ">
-      <div className="relative inline-block group text-left m-auto">
-        <button className="relative px-6 py-3 text-sm font-semibold text-white bg-primary-600/90 rounded-xl hover:bg-primary-700/90 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900 transition-all duration-300 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl group-hover:opacity-75 transition-opacity"></div>
+	return (
+		<div className="flex justify-center">
+			<div className="group relative m-auto inline-block text-left">
+				<button className="relative overflow-hidden rounded-xl bg-primary-600/90 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-700/90 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900">
+					<div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-xl transition-opacity group-hover:opacity-75"></div>
 
-          <span className="relative flex items-center gap-2">
-            <svg
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              fill="none"
-              className="w-4 h-4"
-            >
-              <path
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              ></path>
-            </svg>
-          </span>
-        </button>
+					<span className="relative flex items-center gap-2">
+						<svg viewBox="0 0 24 24" stroke="currentColor" fill="none" className="h-4 w-4">
+							<path
+								d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+								strokeWidth="2"
+								strokeLinejoin="round"
+								strokeLinecap="round"
+							></path>
+						</svg>
+					</span>
+				</button>
 
-        <div className="clip absolute invisible opacity-0 group-hover:visible group-hover:opacity-100 bottom-full left-1/2 -translate-x-1/2  w-[400px] transition-all duration-300 ease-out transform group-hover:translate-y-0 translate-y-2">
-          <div className="bg-gray-300 dark:bg-neutral-800 relative p-4 bg-gradient-to-br backdrop-blur-md rounded-2xl border dark:border-white/10 shadow-[0_0_30px_rgba(79,70,229,0.15)]">
-            <ul className="space-y-2">
-              <li>
-                <span className="text-primary-400 font-basement">
-                  Beginner:{" "}
-                </span>
-                I’ve experimented and built something basic for personal use.
-              </li>
-              <li>
-                <span className="text-primary-400 font-basement">
-                  Professional:{" "}
-                </span>
-                I’ve worked with it professionally and deployed it to
-                production.
-              </li>
-              <li>
-                <span className="text-primary-400 font-basement">
-                  Advanced:{" "}
-                </span>
-                I have several years of experience, regularly working with it in
-                production environments.
-              </li>
-              <li>
-                <span className="text-primary-400 font-basement">Expert: </span>
-                : I’m highly confident, capable of mentoring others, and
-                comfortable making architectural decisions.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+				<div className="clip invisible absolute bottom-full left-1/2 w-[400px] -translate-x-1/2 translate-y-2 transform opacity-0 transition-all duration-300 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+					<div className="relative rounded-2xl border bg-gray-300 bg-gradient-to-br p-4 shadow-[0_0_30px_rgba(79,70,229,0.15)] backdrop-blur-md dark:border-white/10 dark:bg-neutral-800">
+						<ul className="space-y-2">
+							<li>
+								<span className="font-basement text-primary-400">Beginner: </span>
+								I’ve experimented and built something basic for personal use.
+							</li>
+							<li>
+								<span className="font-basement text-primary-400">Professional: </span>
+								I’ve worked with it professionally and deployed it to production.
+							</li>
+							<li>
+								<span className="font-basement text-primary-400">Advanced: </span>I have several
+								years of experience, regularly working with it in production environments.
+							</li>
+							<li>
+								<span className="font-basement text-primary-400">Expert: </span>: I’m highly
+								confident, capable of mentoring others, and comfortable making architectural
+								decisions.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default SkillsInfo;

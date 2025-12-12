@@ -5,17 +5,17 @@ const year = new Date().getFullYear();
 ---
 
 <div class="text-white">
-  <h3 class="text-lg font-semibold mb-4">Contact</h3>
-  <address class="not-italic">
-    <p>{contact.location}</p>
-    <p class="mt-2">
-      <a href={`mailto:${contact.website}`}>
-        {contact.website}
-      </a>
-    </p>
-  </address>
-  <p class="mt-4 text-sm">
-    © {year}
-    {contact.name}. All rights reserved.
-  </p>
+	<h3 class="mb-4 text-lg font-semibold">Contact</h3>
+	<address class="not-italic">
+		<p>{contact.location}</p>
+		<p class="mt-2">
+			<a href={`mailto:${contact.website}`}>
+				{contact.website}
+			</a>
+		</p>
+	</address>
+	<p class="mt-4 text-sm">
+		© {year}
+		{contact.name}. All rights reserved.
+	</p>
 </div>

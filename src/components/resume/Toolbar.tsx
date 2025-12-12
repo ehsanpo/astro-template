@@ -2,25 +2,25 @@ import React from "react";
 import { Download, Languages } from "lucide-react";
 
 interface ToolbarProps {
-  onColorChange: (color: string) => void;
-  onLanguageChange: (lang: "en" | "sv") => void;
-  onExportPDF: () => void;
-  currentLanguage: "en" | "sv";
+	onColorChange: (color: string) => void;
+	onLanguageChange: (lang: "en" | "sv") => void;
+	onExportPDF: () => void;
+	currentLanguage: "en" | "sv";
 }
 
 export const Toolbar: React.FC<ToolbarProps> = ({
-  onColorChange,
-  onLanguageChange,
-  onExportPDF,
-  currentLanguage,
+	onColorChange,
+	onLanguageChange,
+	onExportPDF,
+	currentLanguage,
 }) => {
-  const colors = ["#0891b2", "#4f46e5", "#059669", "#db2777", "#d97706"];
+	const colors = ["#0891b2", "#4f46e5", "#059669", "#db2777", "#d97706"];
 
-  return (
-    <div className="fixed top-16 left-0 right-0 bg-white shadow-md z-50 print:hidden">
-      <div className="max-w-4xl mx-auto px-4 py-2 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          {/* <div className="flex items-center gap-2">
+	return (
+		<div className="fixed left-0 right-0 top-16 z-50 bg-white shadow-md print:hidden">
+			<div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-2">
+				<div className="flex items-center gap-4">
+					{/* <div className="flex items-center gap-2">
             {colors.map((color) => (
               <button
                 key={color}
@@ -31,23 +31,18 @@ export const Toolbar: React.FC<ToolbarProps> = ({
             ))}
           </div> */}
 
-          <button
-            onClick={() =>
-              onLanguageChange(currentLanguage === "en" ? "sv" : "en")
-            }
-            className="p-2 rounded-lg hover:bg-gray-100"
-          >
-            <Languages className="w-5 h-5  text-primary-500" />
-          </button>
-        </div>
+					<button
+						onClick={() => onLanguageChange(currentLanguage === "en" ? "sv" : "en")}
+						className="rounded-lg p-2 hover:bg-gray-100"
+					>
+						<Languages className="h-5 w-5 text-primary-500" />
+					</button>
+				</div>
 
-        <button
-          onClick={onExportPDF}
-          className="p-2 rounded-lg hover:bg-gray-100"
-        >
-          <Download className="w-5 h-5" />
-        </button>
-      </div>
-    </div>
-  );
+				<button onClick={onExportPDF} className="rounded-lg p-2 hover:bg-gray-100">
+					<Download className="h-5 w-5" />
+				</button>
+			</div>
+		</div>
+	);
 };

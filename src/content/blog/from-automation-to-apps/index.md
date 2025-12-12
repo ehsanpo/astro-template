@@ -12,12 +12,12 @@ cover: "cover.jpg"
 
 So… funny story.
 
-A while ago I was playing with **PLCs**. Yep. Industrial stuff. Sensors, relays, ladders, blinking lights. Very *factory-core*. At the time I didn't think much of it — I was just trying to understand how machines think without exploding 💥 (spoiler: they're very unforgiving).
+A while ago I was playing with **PLCs**. Yep. Industrial stuff. Sensors, relays, ladders, blinking lights. Very _factory-core_. At the time I didn't think much of it — I was just trying to understand how machines think without exploding 💥 (spoiler: they're very unforgiving).
 
 Fast-forward to me learning **React**, sitting in front of my laptop at 2am, te cold, brain fried, staring at `useState` like it personally offended me.
 
 And then…
-💡 *WAIT A SECOND.*
+💡 _WAIT A SECOND._
 
 This feels… familiar???
 
@@ -27,10 +27,10 @@ This feels… familiar???
 
 If you've ever touched PLC programming (ladder logic, function blocks, whatever flavor), you know the deal:
 
-* Inputs come in (buttons, sensors, signals)
-* Logic runs every cycle
-* Outputs change based on the current state
-* Everything is **predictable**, **reactive**, and **stateful**
+- Inputs come in (buttons, sensors, signals)
+- Logic runs every cycle
+- Outputs change based on the current state
+- Everything is **predictable**, **reactive**, and **stateful**
 
 Back then I didn't call it "state".
 I called it "why is this motor still ON???" 😭
@@ -90,15 +90,15 @@ and PLCs yell at you by breaking real machines 🫠
 
 In PLC land:
 
-* You store flags
-* You latch bits
-* You remember what happened last cycle
+- You store flags
+- You latch bits
+- You remember what happened last cycle
 
 In React:
 
-* `useState`
-* `useReducer`
-* `useRef` (aka "pls don't re-render" button)
+- `useState`
+- `useReducer`
+- `useRef` (aka "pls don't re-render" button)
 
 Same idea.
 Different syntax.
@@ -108,9 +108,9 @@ Once I stopped treating React state like magic and started treating it like **PL
 
 Like:
 
-* A button click = digital input
-* `setState` = coil energizing
-* Conditional rendering = contacts opening/closing
+- A button click = digital input
+- `setState` = coil energizing
+- Conditional rendering = contacts opening/closing
 
 I felt so smart for like 3 minutes 😂
 
@@ -124,9 +124,9 @@ I built a tiny interactive thing.
 
 An app where:
 
-* Inputs toggle state
-* Logic decides what happens next
-* UI reacts visually
+- Inputs toggle state
+- Logic decides what happens next
+- UI reacts visually
 
 Basically a **PLC simulator disguised as a React app**.
 
@@ -140,10 +140,10 @@ Did I push it to GitHub at 3am with a messy commit message? Absolutely.
 
 Let's be real:
 
-* I broke stuff
-* I misunderstood hooks
-* I forgot dependencies in `useEffect` (don't judge me)
-* I re-rendered the universe by accident
+- I broke stuff
+- I misunderstood hooks
+- I forgot dependencies in `useEffect` (don't judge me)
+- I re-rendered the universe by accident
 
 Multiple times.
 
@@ -169,10 +169,10 @@ Game changer.
 
 If you come from:
 
-* PLCs
-* Arduino
-* Game dev
-* Even Excel formulas 😅
+- PLCs
+- Arduino
+- Game dev
+- Even Excel formulas 😅
 
 You already understand React more than you think.
 
@@ -182,9 +182,9 @@ You already understand React more than you think.
 
 If you're learning React and feel stuck:
 
-* Build weird things
-* Compare it to stuff you already know
-* Don't wait to "feel ready"
+- Build weird things
+- Compare it to stuff you already know
+- Don't wait to "feel ready"
 
 Just do it™️.
 
@@ -192,7 +192,6 @@ Worst case?
 You learn something.
 Best case?
 You accidentally connect factories to frontends and feel like a wizard 🧙‍♂️✨
-
 
 Alright, I'll stop here before this turns into a book.
 Thanks for reading, Now go break something and learn 💙

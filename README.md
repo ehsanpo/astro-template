@@ -42,11 +42,13 @@ A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 ## 🎯 Getting Started
 
 1. Install dependencies:
+
    ```bash
    npm install
    ```
 
 2. Start development server:
+
    ```bash
    npm run dev
    ```
@@ -59,6 +61,7 @@ A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 ## 📝 Content Management
 
 All content is managed through:
+
 - `src/data/portfolio.json` - Main data file
 - `src/content/portfolio/` - Portfolio case studies (Markdown)
 

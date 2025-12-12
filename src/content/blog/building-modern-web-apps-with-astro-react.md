@@ -46,15 +46,16 @@ Astro makes React integration ridiculously easy. Like:
 
 ```astro
 ---
-import Layout from '../layouts/Layout.astro';
-import InteractiveCounter from '../components/Counter.jsx';
+import Layout from "../layouts/Layout.astro";
+import InteractiveCounter from "../components/Counter.jsx";
 ---
 
 <Layout>
-  <h1>Static Stuff 🚧</h1>
-  <p>All this is rendered at build time</p>
+	<h1>Static Stuff 🚧</h1>
+	<p>All this is rendered at build time</p>
 
-  <InteractiveCounter client:load /> {/* But this is React doing React things */}
+	<InteractiveCounter client:load />
+	{/* But this is React doing React things */}
 </Layout>
 ```
 

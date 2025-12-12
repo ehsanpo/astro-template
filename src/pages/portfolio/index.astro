@@ -7,35 +7,30 @@ import { ProjectCard } from "@/components/portfolio/ProjectCard";
 
 const portfolioItems = await getPortfolioItems();
 const sortedItems = portfolioItems.sort((a, b) => {
-  if (a.onHome !== b.onHome) return b.onHome ? 1 : -1;
-  return new Date(b.date).getTime() - new Date(a.date).getTime();
+	if (a.onHome !== b.onHome) return b.onHome ? 1 : -1;
+	return new Date(b.date).getTime() - new Date(a.date).getTime();
 });
 
-const allCategories = [
-  ...new Set(portfolioItems.flatMap((entry) => entry.category)),
-];
+const allCategories = [...new Set(portfolioItems.flatMap((entry) => entry.category))];
 ---
 
-<Layout 
-  title="Portfolio - Work"
-  description="A showcase of my selected works and projects"
-  image="/img/og-default.jpg"
-  imageAlt="Ehsan's Portfolio - Selected Works and Projects"
+<Layout
+	title="Portfolio - Work"
+	description="A showcase of my selected works and projects"
+	image="/img/og-default.jpg"
+	imageAlt="Ehsan's Portfolio - Selected Works and Projects"
 >
-  <PageHero
-    title="Portfolio"
-    subtitle="A showcase of my selected works and projects"
-  />
-  <div class="py-20">
-    <div class="container mx-auto px-4">
-      <PortfolioFilter categories={allCategories} category="all" client:load />
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {
-          sortedItems.map((item) => (
-            <ProjectCard item={item} client:load className="portfolio-card" />
-          ))
-        }
-      </div>
-    </div>
-  </div>
+	<PageHero title="Portfolio" subtitle="A showcase of my selected works and projects" />
+	<div class="py-20">
+		<div class="container mx-auto px-4">
+			<PortfolioFilter categories={allCategories} category="all" client:load />
+			<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+				{
+					sortedItems.map((item) => (
+						<ProjectCard item={item} client:load className="portfolio-card" />
+					))
+				}
+			</div>
+		</div>
+	</div>
 </Layout>

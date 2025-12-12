@@ -6,119 +6,105 @@ import { TechTags } from "./TechTags";
 import TeamSection from "../team/TeamSection";
 
 interface TimelineSectionProps {
-  year: string;
-  title: string;
-  company: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  project?: {
-    title: string;
-    description: string;
-    image?: string;
-    link?: {
-      href: string;
-      title: string;
-    };
-    github?: string;
-    technologies: string[];
-  };
-  awards?: string[];
-  team?: {
-    name: string;
-    role: string;
-    linkedin?: string;
-    img?: string;
-  }[];
-  reverse?: boolean;
+	year: string;
+	title: string;
+	company: string;
+	description: string;
+	image: string;
+	technologies: string[];
+	project?: {
+		title: string;
+		description: string;
+		image?: string;
+		link?: {
+			href: string;
+			title: string;
+		};
+		github?: string;
+		technologies: string[];
+	};
+	awards?: string[];
+	team?: {
+		name: string;
+		role: string;
+		linkedin?: string;
+		img?: string;
+	}[];
+	reverse?: boolean;
 }
 
 export const TimelineSection: React.FC<TimelineSectionProps> = ({
-  year,
-  title,
-  company,
-  description,
-  image,
-  technologies,
-  project,
-  awards,
-  team,
-  reverse = false,
+	year,
+	title,
+	company,
+	description,
+	image,
+	technologies,
+	project,
+	awards,
+	team,
+	reverse = false,
 }) => {
-  return (
-    <section
-      className={`relative  ${
-        reverse ? "clip -my-2" : ""
-      }`}
-    >
-      <ParallaxBanner
-        layers={[
-          {
-            image,
-            speed: -20,
-            opacity: [0.8, 1],
-          },
-        ]}
-        className="relative"
-      >
-        <div className="py-16 inset-0 bg-black/50">
-          <Parallax speed={-25}>
-            <div
-              className={`absolute container left-[5%]  right-[5%] text-8xl  font-basement text-secondary-500 ${
-                reverse ? "text-left" : "text-right"
-              }`}
-            >
-              {year}
-            </div>
-          </Parallax>
+	return (
+		<section className={`relative ${reverse ? "clip -my-2" : ""}`}>
+			<ParallaxBanner
+				layers={[
+					{
+						image,
+						speed: -20,
+						opacity: [0.8, 1],
+					},
+				]}
+				className="relative"
+			>
+				<div className="inset-0 bg-black/50 py-16">
+					<Parallax speed={-25}>
+						<div
+							className={`container absolute left-[5%] right-[5%] font-basement text-8xl text-secondary-500 ${
+								reverse ? "text-left" : "text-right"
+							}`}
+						>
+							{year}
+						</div>
+					</Parallax>
 
-          <div
-            className={`container mx-auto h-full flex items-center ${
-              reverse ? "justify-end" : "justify-start"
-            }`}
-          >
-            <div
-              className={`max-w-xl ${
-                reverse ? "ml-auto" : "mr-auto"
-              } bg-black/40 backdrop-blur-md p-8 rounded-lg text-white border border-white/10`}
-            >
-              <h2 className="text-xl md:text-4xl font-bold mb-1 text-primary-500">
-                {company}
-              </h2>
-              <h3 className="text-base md:text-2xl text-secondary-500/90 mb-2">
-                {title}
-              </h3>
-              <p className="text-white/80 mb-4 leading-relaxed">
-                {description}
-              </p>
+					<div
+						className={`container mx-auto flex h-full items-center ${
+							reverse ? "justify-end" : "justify-start"
+						}`}
+					>
+						<div
+							className={`max-w-xl ${
+								reverse ? "ml-auto" : "mr-auto"
+							} rounded-lg border border-white/10 bg-black/40 p-8 text-white backdrop-blur-md`}
+						>
+							<h2 className="mb-1 text-xl font-bold text-primary-500 md:text-4xl">{company}</h2>
+							<h3 className="mb-2 text-base text-secondary-500/90 md:text-2xl">{title}</h3>
+							<p className="mb-4 leading-relaxed text-white/80">{description}</p>
 
-              <TechTags technologies={technologies} />
+							<TechTags technologies={technologies} />
 
-              {project && Object.keys(project).length > 0 && (
-                <Project {...project} />
-              )}
+							{project && Object.keys(project).length > 0 && <Project {...project} />}
 
-              {awards && awards.length > 0 && (
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-center gap-2 text-amber-400 mt-6">
-                    <Award size={20} />
-                    <span className="font-semibold">Awards</span>
-                  </div>
-                  {awards.map((award, index) => (
-                    <div key={index} className="ml-7 text-sm text-white/70">
-                      {award}
-                    </div>
-                  ))}
-                </div>
-              )}
+							{awards && awards.length > 0 && (
+								<div className="mb-4 space-y-2">
+									<div className="mt-6 flex items-center gap-2 text-amber-400">
+										<Award size={20} />
+										<span className="font-semibold">Awards</span>
+									</div>
+									{awards.map((award, index) => (
+										<div key={index} className="ml-7 text-sm text-white/70">
+											{award}
+										</div>
+									))}
+								</div>
+							)}
 
-              {team && team.length > 0 && (
-                <TeamSection team={team} />
-              )}
-            </div>
-          </div>
-        </div>
-      </ParallaxBanner>
-    </section>
-  );
+							{team && team.length > 0 && <TeamSection team={team} />}
+						</div>
+					</div>
+				</div>
+			</ParallaxBanner>
+		</section>
+	);
 };

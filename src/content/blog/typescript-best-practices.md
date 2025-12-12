@@ -21,7 +21,7 @@ So imagine I define:
 type Person = { firstName: string; age: number };
 
 function logPerson(person: Person) {
-  console.log(person);
+	console.log(person);
 }
 ```
 
@@ -37,9 +37,9 @@ But then, I did this:
 
 ```ts
 const person3: Person = {
-  firstName: "potato",
-  age: 21,
-  ...{ extraProp: "hello!" },
+	firstName: "potato",
+	age: 21,
+	...{ extraProp: "hello!" },
 }; // fine
 ```
 
@@ -84,7 +84,7 @@ You also gave the snippet:
 const foo: string[] = ["1", "2"];
 
 function bar(things: (number | string)[]) {
-  things.push(3); // passes type check
+	things.push(3); // passes type check
 }
 bar(foo);
 ```

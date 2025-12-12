@@ -4,14 +4,14 @@ const { contact } = await getPortfolioData();
 ---
 
 <div>
-  <h3 class="text-lg font-semibold mb-4 dark:text-white">Connect</h3>
-  <div class="flex gap-4">
-    {
-      Object.entries(contact.socialLinks).map(([platform, url]) => (
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <span class="capitalize">{platform}</span>
-        </a>
-      ))
-    }
-  </div>
+	<h3 class="mb-4 text-lg font-semibold dark:text-white">Connect</h3>
+	<div class="flex gap-4">
+		{
+			Object.entries(contact.socialLinks).map(([platform, url]) => (
+				<a href={url} target="_blank" rel="noopener noreferrer">
+					<span class="capitalize">{platform}</span>
+				</a>
+			))
+		}
+	</div>
 </div>

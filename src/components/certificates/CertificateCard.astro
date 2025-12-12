@@ -4,37 +4,32 @@ import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
 interface Props {
-  name: string;
-  image: ImageMetadata;
-  year: string;
-  index: number;
+	name: string;
+	image: ImageMetadata;
+	year: string;
+	index: number;
 }
 
 const { name, image, year, index } = Astro.props;
 ---
 
-<BoxReveal
-  boxColor="bg-primary-400 h-full"
-  duration={0.5}
-  delay={(index % 4) * 0.2}
-  client:idle
->
-  <div class="rounded-lg overflow-hidden text-center">
-    <Image 
-      src={image} 
-      alt={name}
-      widths={[400, 600, 800]}
-      sizes="(max-width: 768px) 100vw, 25vw"
-      format="webp"
-      quality={80}
-      loading="lazy"
-      class="w-full object-cover" 
-    />
-    <div class="p-4">
-      <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-        <p class="text-sm text-gray-600 dark:text-gray-400">{year}</p>
-        {name}
-      </h3>
-    </div>
-  </div>
+<BoxReveal boxColor="bg-primary-400 h-full" duration={0.5} delay={(index % 4) * 0.2} client:idle>
+	<div class="overflow-hidden rounded-lg text-center">
+		<Image
+			src={image}
+			alt={name}
+			widths={[400, 600, 800]}
+			sizes="(max-width: 768px) 100vw, 25vw"
+			format="webp"
+			quality={80}
+			loading="lazy"
+			class="w-full object-cover"
+		/>
+		<div class="p-4">
+			<h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
+				<p class="text-sm text-gray-600 dark:text-gray-400">{year}</p>
+				{name}
+			</h3>
+		</div>
+	</div>
 </BoxReveal>

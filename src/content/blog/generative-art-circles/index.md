@@ -4,14 +4,7 @@ description: "My journey into generative art using Processing and R. Creating be
 date: "2022-01-08"
 author: "Ehsan Pourhadi"
 category: ["Generative Art", "Creative Coding"]
-tag:
-  [
-    "Processing",
-    "R Programming",
-    "Generative Art",
-    "Visual Art",
-    "Creative Coding",
-  ]
+tag: ["Processing", "R Programming", "Generative Art", "Visual Art", "Creative Coding"]
 featured: false
 draft: false
 cover: "./circle-8+10.png"

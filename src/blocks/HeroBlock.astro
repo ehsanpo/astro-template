@@ -6,53 +6,47 @@ import { getPortfolioData, getPortfolioItems } from "@/utils/data";
 
 const { contact } = await getPortfolioData();
 const portfolioItems = await getPortfolioItems();
-
-
 ---
 
 <Hero
-  title={contact.name}
-  subtitle={contact.role}
-  subtitleText={contact.description}
-  fullHeight={true}
-  text="Hey! ✌️ I'm"
+	title={contact.name}
+	subtitle={contact.role}
+	subtitleText={contact.description}
+	fullHeight={true}
+	text="Hey! ✌️ I'm"
 >
-  <React.Fragment>
-    <div class="flex gap-4">
-      <Link href="/portfolio" text="View My Work" />
-      <Link href="/contact" text="Get in Touch" />
-    </div>
-    <div>
-      <ul class="mt-4 flex align-items-start">
-        <li class="hero-info-item">
-          <div class="flex align-items-center">
-            <h3 class="text-4xl font-bold">
-              <span class="font-bold gradient-text"
-                >{contact.yearsOfExperience}</span
-              >
-            </h3>
-            <h6
-              class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
-            >
-              Years <br />of Experience
-            </h6>
-          </div>
-        </li>
-        <li class="hero-info-item ml-8">
-          <div class="flex align-items-center">
-            <h3 class="text-4xl">
-              <span class="font-bold gradient-text"
-                >{portfolioItems.length}</span
-              >
-            </h3>
-            <h6
-              class="leading-tight border-l pl-2 ml-2 text-sm border-primary-500 text-gray-800 dark:text-gray-400"
-            >
-              Projects <br />Completed
-            </h6>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </React.Fragment>
+	<React.Fragment>
+		<div class="flex gap-4">
+			<Link href="/portfolio" text="View My Work" />
+			<Link href="/contact" text="Get in Touch" />
+		</div>
+		<div>
+			<ul class="align-items-start mt-4 flex">
+				<li class="hero-info-item">
+					<div class="align-items-center flex">
+						<h3 class="text-4xl font-bold">
+							<span class="gradient-text font-bold">{contact.yearsOfExperience}</span>
+						</h3>
+						<h6
+							class="ml-2 border-l border-primary-500 pl-2 text-sm leading-tight text-gray-800 dark:text-gray-400"
+						>
+							Years <br />of Experience
+						</h6>
+					</div>
+				</li>
+				<li class="hero-info-item ml-8">
+					<div class="align-items-center flex">
+						<h3 class="text-4xl">
+							<span class="gradient-text font-bold">{portfolioItems.length}</span>
+						</h3>
+						<h6
+							class="ml-2 border-l border-primary-500 pl-2 text-sm leading-tight text-gray-800 dark:text-gray-400"
+						>
+							Projects <br />Completed
+						</h6>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</React.Fragment>
 </Hero>

@@ -1,17 +1,17 @@
 ---
 interface Props {
-  clients: string[];
+	clients: string[];
 }
 
 const { clients } = Astro.props;
 ---
 
 <div class="flex items-center gap-12 px-4">
-  {
-    clients.map((client) => (
-      <div class="text-lg font-medium text-gray-900 whitespace-nowrap bg-secondary-400 p-3 rounded-md">
-        {client}
-      </div>
-    ))
-  }
+	{
+		clients.map((client) => (
+			<div class="whitespace-nowrap rounded-md bg-secondary-400 p-3 text-lg font-medium text-gray-900">
+				{client}
+			</div>
+		))
+	}
 </div>

@@ -32,16 +32,16 @@ This was such a "duh" moment for me. If I have some data I need to keep track of
 const [clickCount, setClickCount] = useState(0);
 
 const handleClick = () => {
-  setClickCount((prev) => prev + 1);
-  console.log(clickCount); // Still shows old value!
+	setClickCount((prev) => prev + 1);
+	console.log(clickCount); // Still shows old value!
 };
 
 // Use useRef for non-UI state!
 const clickCountRef = useRef(0);
 
 const handleClick = () => {
-  clickCountRef.current += 1;
-  console.log(clickCountRef.current); // Always current!
+	clickCountRef.current += 1;
+	console.log(clickCountRef.current); // Always current!
 };
 ```
 
@@ -73,11 +73,11 @@ const [error, setError] = useState(null);
 
 // Use FormData and proper form handling!
 const handleSubmit = (event) => {
-  event.preventDefault();
-  const formData = new FormData(event.target);
-  const name = formData.get("name");
-  const email = formData.get("email");
-  // Much cleaner!
+	event.preventDefault();
+	const formData = new FormData(event.target);
+	const name = formData.get("name");
+	const email = formData.get("email");
+	// Much cleaner!
 };
 ```
 

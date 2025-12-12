@@ -1,20 +1,19 @@
 ---
 interface Props {
-  href: string;
+	href: string;
 }
 
 const { href } = Astro.props;
 const currentPath = Astro.url.pathname;
-const isActive =
-  currentPath === href || (href !== "/" && currentPath.startsWith(href));
+const isActive = currentPath === href || (href !== "/" && currentPath.startsWith(href));
 ---
 
 <a
-  href={href}
-  class:list={[
-    "text font-medium transition-colors hover:text-primary-600",
-    isActive ? "text-primary-600" : "text-gray-600 dark:text-gray-300",
-  ]}
+	href={href}
+	class:list={[
+		"text font-medium transition-colors hover:text-primary-600",
+		isActive ? "text-primary-600" : "text-gray-600 dark:text-gray-300",
+	]}
 >
-  <slot />
+	<slot />
 </a>

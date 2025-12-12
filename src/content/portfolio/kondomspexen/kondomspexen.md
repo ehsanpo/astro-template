@@ -54,23 +54,19 @@ Kondomspexen's goal was to stand out in a competitive e-commerce market by combi
 As the sole developer and project lead, my responsibilities included:
 
 1. **Design Coordination:**
-
    - Collaborated with a designer to create unique and funny illustrations for the condoms.
    - Ensured the designs aligned with Kondomspexen's brand identity and vision.
 
 2. **Website Development:**
-
    - Built the entire website from scratch using WordPress.
    - Designed and implemented a custom e-commerce solution tailored to Kondomspexen's needs.
    - Focused on creating an intuitive and enjoyable user experience.
 
 3. **Payment Integration:**
-
    - Integrated Stripe to enable secure and seamless online payments.
    - Configured payment settings to handle various transaction scenarios.
 
 4. **System Administration:**
-
    - Managed hosting setup and deployment to ensure the site was live and running smoothly.
    - Implemented security measures to protect customer data and ensure PCI compliance.
 

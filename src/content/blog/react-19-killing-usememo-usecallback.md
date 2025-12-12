@@ -26,11 +26,11 @@ But also… confusing af. Like, do I memoize everything? Nothing? My grocery lis
 ```javascript
 // Me, circa 2022, memoizing EVERYTHING
 const expensiveCalculation = useMemo(() => {
-  return 2 + 2; // Very expensive math, clearly
+	return 2 + 2; // Very expensive math, clearly
 }, []);
 
 const memoizedString = useMemo(() => {
-  return "hello world"; // Such optimization, wow
+	return "hello world"; // Such optimization, wow
 }, []);
 ```
 
@@ -41,14 +41,14 @@ Fast-forward a bit → I got into the habit: _oh, function as a prop? slap a `us
 ```javascript
 // My old code be like:
 const handleClick = useCallback(() => {
-  console.log("clicked"); // Very callback, much memo
+	console.log("clicked"); // Very callback, much memo
 }, []);
 
 const handleSubmit = useCallback(
-  (data) => {
-    submitForm(data); // Definitely needed this wrapper
-  },
-  [submitForm]
+	(data) => {
+		submitForm(data); // Definitely needed this wrapper
+	},
+	[submitForm]
 );
 ```
 
@@ -68,41 +68,41 @@ I mean, frameworks like SolidJS and Svelte already flex with this whole "fine-gr
 ```javascript
 // Current React: Manual optimization everywhere
 const MyComponent = ({ items, filter }) => {
-  const filteredItems = useMemo(() => {
-    return items.filter((item) => item.category === filter);
-  }, [items, filter]);
+	const filteredItems = useMemo(() => {
+		return items.filter((item) => item.category === filter);
+	}, [items, filter]);
 
-  const handleItemClick = useCallback(
-    (id) => {
-      onItemClick(id);
-    },
-    [onItemClick]
-  );
+	const handleItemClick = useCallback(
+		(id) => {
+			onItemClick(id);
+		},
+		[onItemClick]
+	);
 
-  return (
-    <div>
-      {filteredItems.map((item) => (
-        <Item key={item.id} onClick={handleItemClick} />
-      ))}
-    </div>
-  );
+	return (
+		<div>
+			{filteredItems.map((item) => (
+				<Item key={item.id} onClick={handleItemClick} />
+			))}
+		</div>
+	);
 };
 
 // React 19 (maybe?): Just write normal code
 const MyComponent = ({ items, filter }) => {
-  const filteredItems = items.filter((item) => item.category === filter);
+	const filteredItems = items.filter((item) => item.category === filter);
 
-  const handleItemClick = (id) => {
-    onItemClick(id);
-  };
+	const handleItemClick = (id) => {
+		onItemClick(id);
+	};
 
-  return (
-    <div>
-      {filteredItems.map((item) => (
-        <Item key={item.id} onClick={handleItemClick} />
-      ))}
-    </div>
-  );
+	return (
+		<div>
+			{filteredItems.map((item) => (
+				<Item key={item.id} onClick={handleItemClick} />
+			))}
+		</div>
+	);
 };
 ```
 
@@ -162,7 +162,7 @@ So yeah… maybe one day we'll look back and laugh at our old code sprinkled wit
 ```javascript
 // Future me looking at 2024 code:
 const needlessOptimization = useMemo(() => {
-  return "Why did I wrap a string in useMemo? 🤦‍♂️";
+	return "Why did I wrap a string in useMemo? 🤦‍♂️";
 }, []);
 ```
 

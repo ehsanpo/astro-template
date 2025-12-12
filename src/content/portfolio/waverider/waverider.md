@@ -38,30 +38,27 @@ port_date:
   - "2025"
 ---
 
-
-
-
 <h2>The Origin Story:</h2>
 
-At 2 AM, hunched over a MacBook like a possessed gremlin, tilting it left and right to play *Tunnel* by Uri. No keyboard. No mouse. Just pure physical movement and one devastating realization: **What if I could play this inside my own music?**
+At 2 AM, hunched over a MacBook like a possessed gremlin, tilting it left and right to play _Tunnel_ by Uri. No keyboard. No mouse. Just pure physical movement and one devastating realization: **What if I could play this inside my own music?**
 
-The idea wouldn't leave. Weeks of thinking. Studio sessions layering kicks, sculpting reverb tails. A producer's life is built on digital signal processing—FFT analysis, spectral bands, RMS curves, transient detection. These tools shape sound. What if they shaped *geometry* instead?
+The idea wouldn't leave. Weeks of thinking. Studio sessions layering kicks, sculpting reverb tails. A producer's life is built on digital signal processing—FFT analysis, spectral bands, RMS curves, transient detection. These tools shape sound. What if they shaped _geometry_ instead?
 
-What if the music *was* the level itself?
-
-
+What if the music _was_ the level itself?
 
 <h2>The Concept:</h2>
 
 WaveRider is a hybrid experience at the intersection of music production and game design. It's not a game with a soundtrack. It's not a visualizer with gameplay. It's a **portal into the sonic worlds created through music**.
 
 Every track is analyzed to extract:
+
 - Frequency bands (bass, mids, treble)
 - Amplitude envelopes
 - BPM and beat timestamps
 - Over 4,000 analysis points per song
 
 These sonic details become tunnel geometry:
+
 - 🥁 **Beats** make the tunnel pulse and narrow
 - 🔊 **Bass** creates massive left-right movements
 - ✨ **Treble** adds micro-wiggles and twitchy details
@@ -98,7 +95,7 @@ These sonic details become tunnel geometry:
 
 <h2>The Experience:</h2>
 
-You're holding your phone. Tilt slightly left. The neon tunnel curves with you—smooth, responsive, *alive*. A kick drum hits. The tunnel *contracts* around you like a heartbeat. Tilt right to dodge the narrowing walls. A bass drop throws you sideways. You're fighting to stay centered.
+You're holding your phone. Tilt slightly left. The neon tunnel curves with you—smooth, responsive, _alive_. A kick drum hits. The tunnel _contracts_ around you like a heartbeat. Tilt right to dodge the narrowing walls. A bass drop throws you sideways. You're fighting to stay centered.
 
 Treble kicks in—tiny, flickering movements, micro-adjustments you feel in your fingertips. You're not listening to music anymore.
 
@@ -117,6 +114,7 @@ The tunnel isn't random. It's the producer's sound. Every twist, every pulse, ev
 For years, people said the music felt "dimensional" or "cinematic." They said it sounds like another place. So the challenge became simple: stop describing that place and build it.
 
 WaveRider is the bridge between two worlds that shouldn't have been separate:
+
 - **Music Producer** (signal processing, sound design, artistic vision)
 - **Software Developer** (architecture, systems design, technical execution)
 

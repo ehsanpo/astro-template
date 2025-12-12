@@ -20,40 +20,34 @@ const { certifications } = await getPortfolioData();
 
 // Map image paths to imported assets
 const imageMap: Record<string, any> = {
-  "/img/cert/cybersecurity.png": cybersecurity,
-  "/img/cert/AWS.png": AWS,
-  "/img/cert/SFPC.png": SFPC,
-  "/img/cert/RWVCPC.png": RWVCPC,
-  "/img/cert/ui-basic.png": uiBasic,
-  "/img/cert/ui-adv.png": uiAdv,
-  "/img/cert/design-composition.png": designComposition,
-  "/img/cert/accessibility.png": accessibility,
-  "/img/cert/GAA.png": GAA,
-  "/img/cert/GTM.png": GTM,
-  "/img/cert/GA.png": GA,
+	"/img/cert/cybersecurity.png": cybersecurity,
+	"/img/cert/AWS.png": AWS,
+	"/img/cert/SFPC.png": SFPC,
+	"/img/cert/RWVCPC.png": RWVCPC,
+	"/img/cert/ui-basic.png": uiBasic,
+	"/img/cert/ui-adv.png": uiAdv,
+	"/img/cert/design-composition.png": designComposition,
+	"/img/cert/accessibility.png": accessibility,
+	"/img/cert/GAA.png": GAA,
+	"/img/cert/GTM.png": GTM,
+	"/img/cert/GA.png": GA,
 };
 
 // Replace string paths with imported ImageMetadata
 const certsWithImages = certifications.map((cert) => ({
-  ...cert,
-  image: imageMap[cert.img] || cert.img,
+	...cert,
+	image: imageMap[cert.img] || cert.img,
 }));
 ---
 
-<section
-  class="py-20 bg-gray-50 dark:bg-neutral-900 w-full m-auto overflow-hidden"
->
-  <div class="container mx-auto px-4">
-    <Heading level="h3" gradient floating backplate client:idle>
-      Certifications
-    </Heading>
+<section class="m-auto w-full overflow-hidden bg-gray-50 py-20 dark:bg-neutral-900">
+	<div class="container mx-auto px-4">
+		<Heading level="h3" gradient floating backplate client:idle> Certifications </Heading>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center justify-items-center">
-      {
-        certsWithImages.map((cert, index) => (
-          <CertificateCard {...cert} index={index} />
-        ))
-      }
-    </div>
-  </div>
+		<div
+			class="grid grid-cols-1 justify-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4"
+		>
+			{certsWithImages.map((cert, index) => <CertificateCard {...cert} index={index} />)}
+		</div>
+	</div>
 </section>
