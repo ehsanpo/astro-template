@@ -275,6 +275,18 @@
           "role": "Development Team Manager",
           "linkedin": "",
           "img": ""
+        },
+        {
+          "name": "Timothy Alexis Vass",
+          "role": "Software Developer",
+          "linkedin": "",
+          "img": "/img/testimonial/timothy.jpg"
+        },
+        {
+          "name": "Erfan Shirazi",
+          "role": "CIO",
+          "linkedin": "",
+          "img": "/img/testimonial/erfan.jpg"
         }
       ]
     },
@@ -721,7 +733,7 @@
       "id": 11,
       "name": "Fredrik Madsen",
       "title": "Software developer at Telavox",
-      "img": "/img/testimonial/fredrik.jpg",
+      "img": "/img/testimonial/fredrik2.jpg",
       "short": "Ehsan is never afraid of a challenge, and will happily take on on tasks that might seem daunting to others. He was always first to jump on the problem when our complicated build system acted up, and even when others were dealing with the issues, he was happy to volunteer to help. When Ehsan was around, we could always be confident that our issues would get solved.",
       "desc": "For the two years that I worked with Eshan, he proved himself to be a knowledgeable, skilled and enthusiastic teammate, as well as a great guy to be around. Ehsan has vast frontend knowledge, which he demonstrated by being instrumental in our efforts to rewrite and modernize our huge, unwieldy react app. He was the go-to guy when we wanted to discuss code structure and quality. As if that wasn't enough, Ehsan is always keeping up with the latest toolkits and frameworks, learning in his spare time and finding ways to put his new knowledge to use at work.  \n Ehsan is never afraid of a challenge, and will happily take on on tasks that might seem daunting to others. He was always first to jump on the problem when our complicated build system acted up, and even when others were dealing with the issues, he was happy to volunteer to help. When Ehsan was around, we could always be confident that our issues would get solved.  \n Ehsan is also great at taking care of the team and contributing to our sense of community. When we were left without a manager for a time, Ehsan stepped up to lead discussions and plan meetings. When we had concerns about things, Ehsan would be the one to address them and make sure the right people heard them. And even though he's not afraid to deal with serious topics, he's also a real fun guy who brightens the office with his presence and we had plenty of laughs together. \n One thing I always liked about Ehsan was how he'd share his knowledge and findings with the team. Ehsan makes sure to stay at the forefront of modern technology and keeps the rest of us in the loop. If you read about a new AI tool, Ehsan has probably already tested and evaluated it, and knows if it's worth your time and money. He'd often do little presentations about these things to the team, helping us all improve our workflows and productivity.\n  \n tl;dr, when Ehsan comes knocking on your company door, make sure you answer!"
     },
@@ -817,7 +829,7 @@
   "stacks": [
     {
       "slug": "Front-end",
-      "labels": ["React", "Gatsby", "Next.js", "TypeScript", "Sass"],
+      "labels": ["React", "Gatsby", "Next.js", "TypeScript", "Css"],
       "icon": "/img/stacks/front-end.svg",
       "data": ["10", "10", "8", "7", "10"]
     },
@@ -840,18 +852,6 @@
       "data": ["10", "9", "8", "10", "8"]
     },
     {
-      "slug": "Cloud",
-      "labels": ["AWS API Gateway", "Lambda", "DynamoDB", "S3", "CloudFront"],
-      "icon": "/img/stacks/cloud.svg",
-      "data": ["9", "7", "7", "8", "8"]
-    },
-    {
-      "slug": "DevOps",
-      "labels": ["Linux", "Docker", "Nginx", "Shell Script", "Github Actions"],
-      "icon": "/img/stacks/devop2.svg",
-      "data": ["10", "9", "9", "10", "9"]
-    },
-    {
       "slug": "Apps",
       "labels": [
         "Electron js",
@@ -864,6 +864,24 @@
       "data": ["7", "8", "8", "6", "8"]
     },
     {
+      "slug": "Cloud",
+      "labels": ["AWS API Gateway", "Lambda", "DynamoDB", "S3", "CloudFront"],
+      "icon": "/img/stacks/cloud.svg",
+      "data": ["8", "6", "6", "8", "7"]
+    },
+    {
+      "slug": "DevOps",
+      "labels": ["Linux", "Docker", "Nginx", "Shell Script"],
+      "icon": "/img/stacks/devop2.svg",
+      "data": ["9", "9", "9", "8"]
+    },
+    {
+      "slug": "CI/CD",
+      "labels": ["Github Actions", "Jenkins", "CircleCI", "GitLab CI"],
+      "icon": "/img/stacks/cicd.svg",
+      "data": ["9", "7", "6", "6"]
+    },
+    {
       "slug": "Multimedia",
       "labels": ["Reason Studios", "Cubase", "FFmpeg", "After Effects"],
       "icon": "/img/stacks/music.svg",
@@ -871,18 +889,6 @@
     }
   ],
   "timeline": [
-    {
-      "id": 100,
-      "name": "Adobe Flash",
-      "icon": "https://icon-widget.codersrank.io/api/flash",
-      "duration": "2010-2012"
-    },
-    {
-      "id": 0,
-      "name": "Photoshop",
-      "icon": "https://icon-widget.codersrank.io/api/photoshop",
-      "duration": "2010-2019"
-    },
     {
       "id": 1,
       "name": "HTML & CSS",
@@ -896,6 +902,50 @@
       "duration": "2010-2025"
     },
     {
+      "id": 20,
+      "name": "TypeScript",
+      "icon": "https://icon-widget.codersrank.io/api/typescript",
+      "duration": "2022-2025"
+    },
+
+    {
+      "id": 110,
+      "name": "Reason Studios",
+      "icon": "https://icon-widget.codersrank.io/api/reason",
+      "duration": "2010-2025"
+    },
+    {
+      "id": 111,
+      "name": "Cubase",
+      "icon": "https://icon-widget.codersrank.io/api/cubase",
+      "duration": "2010-2019"
+    },
+    {
+      "id": 0,
+      "name": "Photoshop",
+      "icon": "https://icon-widget.codersrank.io/api/photoshop",
+      "duration": "2010-2019"
+    },
+    {
+      "id": 113,
+      "name": "After Effects",
+      "icon": "https://icon-widget.codersrank.io/api/aftereffects",
+      "duration": "2010-2014"
+    },
+    {
+      "id": 100,
+      "name": "Adobe Flash",
+      "icon": "https://icon-widget.codersrank.io/api/flash",
+      "duration": "2010-2012"
+    },
+
+    {
+      "id": 101,
+      "name": "Rest API",
+      "icon": "https://icon-widget.codersrank.io/api/REST_api",
+      "duration": "2012-2025"
+    },
+    {
       "id": 4,
       "name": "PHP",
       "icon": "https://icon-widget.codersrank.io/api/php",
@@ -907,6 +957,13 @@
       "icon": "https://icon-widget.codersrank.io/api/jquery",
       "duration": "2012-2015"
     },
+    {
+      "id": 104,
+      "name": "Motion Graphics",
+      "icon": "https://icon-widget.codersrank.io/api/motion%20graphics",
+      "duration": "2012-2020"
+    },
+
     {
       "id": 6,
       "name": "Wordpress",
@@ -925,24 +982,7 @@
       "icon": "https://icon-widget.codersrank.io/api/mysql",
       "duration": "2013-2017"
     },
-    {
-      "id": 8,
-      "name": "NoSQL",
-      "icon": "https://icon-widget.codersrank.io/api/nosql",
-      "duration": "2017-2018"
-    },
-    {
-      "id": 27,
-      "name": "Webpack",
-      "icon": "https://icon-widget.codersrank.io/api/webpack",
-      "duration": "2018-2025"
-    },
-    {
-      "id": 27,
-      "name": "Redux",
-      "icon": "https://icon-widget.codersrank.io/api/redux",
-      "duration": "2019-2025"
-    },
+
     {
       "id": 9,
       "name": "Drupal",
@@ -955,18 +995,14 @@
       "icon": "https://icon-widget.codersrank.io/api/laravel",
       "duration": "2014-2017"
     },
+
     {
       "id": 10,
       "name": "Angular",
       "icon": "https://icon-widget.codersrank.io/api/angular",
       "duration": "2015-2016"
     },
-    {
-      "id": 32,
-      "name": "UX Design",
-      "icon": "https://icon-widget.codersrank.io/api/ux-design",
-      "duration": "2016-2025"
-    },
+
     {
       "id": 23,
       "name": "Node.js",
@@ -974,10 +1010,36 @@
       "duration": "2016-2025"
     },
     {
+      "id": 32,
+      "name": "UX Design",
+      "icon": "https://icon-widget.codersrank.io/api/ux-design",
+      "duration": "2016-2025"
+    },
+
+    {
       "id": 25,
       "name": "AWS",
       "icon": "https://icon-widget.codersrank.io/api/aws",
       "duration": "2017-2018"
+    },
+    {
+      "id": 8,
+      "name": "NoSQL",
+      "icon": "https://icon-widget.codersrank.io/api/nosql",
+      "duration": "2017-2018"
+    },
+
+    {
+      "id": 11,
+      "name": "ReactJS",
+      "icon": "https://icon-widget.codersrank.io/api/ReactJS",
+      "duration": "2018-2025"
+    },
+    {
+      "id": 27,
+      "name": "Webpack",
+      "icon": "https://icon-widget.codersrank.io/api/webpack",
+      "duration": "2018-2025"
     },
     {
       "id": 26,
@@ -986,10 +1048,29 @@
       "duration": "2018-2019"
     },
     {
-      "id": 11,
-      "name": "ReactJS",
-      "icon": "https://icon-widget.codersrank.io/api/ReactJS",
+      "id": 107,
+      "name": "Nginx",
+      "icon": "https://icon-widget.codersrank.io/api/nginx",
       "duration": "2018-2025"
+    },
+    {
+      "id": 108,
+      "name": "Shell Script",
+      "icon": "https://icon-widget.codersrank.io/api/shell",
+      "duration": "2018-2025"
+    },
+
+    {
+      "id": 102,
+      "name": "MongoDB",
+      "icon": "https://icon-widget.codersrank.io/api/mongodb",
+      "duration": "2019-2020"
+    },
+    {
+      "id": 27,
+      "name": "Redux",
+      "icon": "https://icon-widget.codersrank.io/api/redux",
+      "duration": "2019-2025"
     },
     {
       "id": 12,
@@ -998,9 +1079,28 @@
       "duration": "2019-2022"
     },
     {
-      "id": 13,
-      "name": "Ruby on Rails",
-      "icon": "https://icon-widget.codersrank.io/api/ruby%20on%20rails",
+      "id": 115,
+      "name": "GitLab CI",
+      "icon": "https://icon-widget.codersrank.io/api/gitlabci",
+      "duration": "2019-2021"
+    },
+
+    {
+      "id": 103,
+      "name": "Redis",
+      "icon": "https://icon-widget.codersrank.io/api/redis",
+      "duration": "2020-2021"
+    },
+    {
+      "id": 104,
+      "name": "Elasticsearch",
+      "icon": "https://icon-widget.codersrank.io/api/elasticsearch",
+      "duration": "2020-2021"
+    },
+    {
+      "id": 114,
+      "name": "CircleCI",
+      "icon": "https://icon-widget.codersrank.io/api/circleci",
       "duration": "2020-2022"
     },
     {
@@ -1028,6 +1128,12 @@
       "duration": "2020-2021"
     },
     {
+      "id": 112,
+      "name": "FFmpeg",
+      "icon": "https://icon-widget.codersrank.io/api/ffmpeg",
+      "duration": "2020-2025"
+    },
+    {
       "id": 16,
       "name": "Figma",
       "icon": "https://icon-widget.codersrank.io/api/figma",
@@ -1046,6 +1152,25 @@
       "duration": "2021-2024"
     },
     {
+      "id": 109,
+      "name": "Github Actions",
+      "icon": "https://icon-widget.codersrank.io/api/github",
+      "duration": "2021-2025"
+    },
+
+    {
+      "id": 29,
+      "name": "Vite",
+      "icon": "https://icon-widget.codersrank.io/api/vite",
+      "duration": "2022-2025"
+    },
+    {
+      "id": 30,
+      "name": "React Native",
+      "icon": "https://icon-widget.codersrank.io/api/reactnative",
+      "duration": "2022-2025"
+    },
+    {
       "id": 30,
       "name": "Jenkins",
       "icon": "https://icon-widget.codersrank.io/api/jenkins",
@@ -1058,17 +1183,12 @@
       "duration": "2022-2025"
     },
     {
-      "id": 20,
-      "name": "TypeScript",
-      "icon": "https://icon-widget.codersrank.io/api/typescript",
-      "duration": "2022-2025"
-    },
-    {
       "id": 21,
       "name": "Electron JS",
       "icon": "https://icon-widget.codersrank.io/api/electron",
       "duration": "2022-2025"
     },
+
     {
       "id": 29,
       "name": "Zustand",
