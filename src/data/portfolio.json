@@ -893,313 +893,319 @@
     {
       "id": 1,
       "name": "HTML & CSS",
-      "icon": "https://icon-widget.codersrank.io/api/HTML",
+      "icon": "/img/timeline-icons/html-css.svg",
       "duration": "2010-2025"
     },
     {
       "id": 2,
       "name": "Javascript",
-      "icon": "https://icon-widget.codersrank.io/api/javascript",
+      "icon": "/img/timeline-icons/javascript.svg",
       "duration": "2010-2025"
     },
     {
       "id": 20,
       "name": "TypeScript",
-      "icon": "https://icon-widget.codersrank.io/api/typescript",
+      "icon": "/img/timeline-icons/typescript.svg",
       "duration": "2022-2025"
     },
 
     {
       "id": 110,
       "name": "Reason Studios",
-      "icon": "https://icon-widget.codersrank.io/api/reason",
+      "icon": "/img/timeline-icons/reason-studios.svg",
       "duration": "2010-2025"
     },
     {
       "id": 111,
       "name": "Cubase",
-      "icon": "https://icon-widget.codersrank.io/api/cubase",
+      "icon": "/img/timeline-icons/cubase.svg",
       "duration": "2010-2019"
     },
     {
       "id": 0,
       "name": "Photoshop",
-      "icon": "https://icon-widget.codersrank.io/api/photoshop",
+      "icon": "/img/timeline-icons/photoshop.svg",
       "duration": "2010-2019"
     },
     {
       "id": 113,
       "name": "After Effects",
-      "icon": "https://icon-widget.codersrank.io/api/aftereffects",
+      "icon": "/img/timeline-icons/after-effects.svg",
       "duration": "2010-2014"
     },
     {
       "id": 100,
       "name": "Adobe Flash",
-      "icon": "https://icon-widget.codersrank.io/api/flash",
+      "icon": "/img/timeline-icons/adobe-flash.svg",
       "duration": "2010-2012"
     },
 
     {
       "id": 101,
       "name": "Rest API",
-      "icon": "https://icon-widget.codersrank.io/api/REST_api",
+      "icon": "/img/timeline-icons/rest-api.svg",
       "duration": "2012-2025"
     },
     {
       "id": 4,
       "name": "PHP",
-      "icon": "https://icon-widget.codersrank.io/api/php",
+      "icon": "/img/timeline-icons/php.svg",
       "duration": "2012-2020"
     },
     {
       "id": 5,
       "name": "jQuery",
-      "icon": "https://icon-widget.codersrank.io/api/jquery",
+      "icon": "/img/timeline-icons/jquery.svg",
       "duration": "2012-2015"
     },
     {
       "id": 104,
       "name": "Motion Graphics",
-      "icon": "https://icon-widget.codersrank.io/api/motion%20graphics",
+      "icon": "/img/timeline-icons/motion-graphics.svg",
       "duration": "2012-2020"
     },
 
     {
       "id": 6,
       "name": "Wordpress",
-      "icon": "https://icon-widget.codersrank.io/api/wordpress",
+      "icon": "/img/timeline-icons/wordpress.svg",
       "duration": "2013-2020"
     },
     {
       "id": 7,
       "name": "Python",
-      "icon": "https://icon-widget.codersrank.io/api/python",
+      "icon": "/img/timeline-icons/python.svg",
       "duration": "2013-2014"
     },
     {
       "id": 8,
       "name": "MySQL",
-      "icon": "https://icon-widget.codersrank.io/api/mysql",
+      "icon": "/img/timeline-icons/mysql.svg",
       "duration": "2013-2017"
     },
 
     {
       "id": 9,
       "name": "Drupal",
-      "icon": "https://icon-widget.codersrank.io/api/drupal",
+      "icon": "/img/timeline-icons/drupal.svg",
       "duration": "2014-2018"
     },
     {
       "id": 24,
       "name": "Laravel",
-      "icon": "https://icon-widget.codersrank.io/api/laravel",
+      "icon": "/img/timeline-icons/laravel.svg",
       "duration": "2014-2017"
     },
 
     {
       "id": 10,
       "name": "Angular",
-      "icon": "https://icon-widget.codersrank.io/api/angular",
+      "icon": "/img/timeline-icons/angular.svg",
       "duration": "2015-2016"
     },
 
     {
       "id": 23,
       "name": "Node.js",
-      "icon": "https://icon-widget.codersrank.io/api/nodejs",
+      "icon": "/img/timeline-icons/node-js.svg",
       "duration": "2016-2025"
     },
     {
       "id": 32,
       "name": "UX Design",
-      "icon": "https://icon-widget.codersrank.io/api/ux-design",
+      "icon": "/img/timeline-icons/ux-design.svg",
       "duration": "2016-2025"
     },
 
     {
       "id": 25,
       "name": "AWS",
-      "icon": "https://icon-widget.codersrank.io/api/aws",
+      "icon": "/img/timeline-icons/aws.svg",
       "duration": "2017-2018"
     },
     {
       "id": 8,
       "name": "NoSQL",
-      "icon": "https://icon-widget.codersrank.io/api/nosql",
+      "icon": "/img/timeline-icons/nosql.svg",
       "duration": "2017-2018"
     },
 
     {
       "id": 11,
       "name": "ReactJS",
-      "icon": "https://icon-widget.codersrank.io/api/ReactJS",
+      "icon": "/img/timeline-icons/reactjs.svg",
       "duration": "2018-2025"
     },
     {
       "id": 27,
       "name": "Webpack",
-      "icon": "https://icon-widget.codersrank.io/api/webpack",
+      "icon": "/img/timeline-icons/webpack.svg",
       "duration": "2018-2025"
     },
     {
       "id": 26,
       "name": "ExpressJS",
-      "icon": "https://icon-widget.codersrank.io/api/express",
+      "icon": "/img/timeline-icons/expressjs.svg",
       "duration": "2018-2019"
     },
     {
       "id": 107,
       "name": "Nginx",
-      "icon": "https://icon-widget.codersrank.io/api/nginx",
+      "icon": "/img/timeline-icons/nginx.svg",
       "duration": "2018-2025"
     },
     {
       "id": 108,
       "name": "Shell Script",
-      "icon": "https://icon-widget.codersrank.io/api/shell",
+      "icon": "/img/timeline-icons/shell-script.svg",
       "duration": "2018-2025"
     },
 
     {
       "id": 102,
       "name": "MongoDB",
-      "icon": "https://icon-widget.codersrank.io/api/mongodb",
+      "icon": "/img/timeline-icons/mongodb.svg",
       "duration": "2019-2020"
     },
     {
       "id": 27,
       "name": "Redux",
-      "icon": "https://icon-widget.codersrank.io/api/redux",
+      "icon": "/img/timeline-icons/redux.svg",
+      "duration": "2019-2025"
+    },
+    {
+      "id": 13,
+      "name": "Ruby on Rails",
+      "icon": "/img/timeline-icons/ruby-on-rails.svg",
       "duration": "2019-2025"
     },
     {
       "id": 12,
       "name": "Adobe XD",
-      "icon": "https://icon-widget.codersrank.io/api/adobexd",
+      "icon": "/img/timeline-icons/adobe-xd.svg",
       "duration": "2019-2022"
     },
     {
       "id": 115,
       "name": "GitLab CI",
-      "icon": "https://icon-widget.codersrank.io/api/gitlabci",
+      "icon": "/img/timeline-icons/gitlab-ci.svg",
       "duration": "2019-2021"
     },
 
     {
       "id": 103,
       "name": "Redis",
-      "icon": "https://icon-widget.codersrank.io/api/redis",
+      "icon": "/img/timeline-icons/redis.svg",
       "duration": "2020-2021"
     },
     {
       "id": 104,
       "name": "Elasticsearch",
-      "icon": "https://icon-widget.codersrank.io/api/elasticsearch",
+      "icon": "/img/timeline-icons/elasticsearch.svg",
       "duration": "2020-2021"
     },
     {
       "id": 114,
       "name": "CircleCI",
-      "icon": "https://icon-widget.codersrank.io/api/circleci",
+      "icon": "/img/timeline-icons/circleci.svg",
       "duration": "2020-2022"
     },
     {
       "id": 14,
       "name": "GraphQL",
-      "icon": "https://icon-widget.codersrank.io/api/graphql",
+      "icon": "/img/timeline-icons/graphql.svg",
       "duration": "2020-2022"
     },
     {
       "id": 15,
       "name": "Gatsby",
-      "icon": "https://icon-widget.codersrank.io/api/gatsby",
+      "icon": "/img/timeline-icons/gatsby.svg",
       "duration": "2020-2023"
     },
     {
       "id": 31,
       "name": "Cypress",
-      "icon": "https://icon-widget.codersrank.io/api/cypress",
+      "icon": "/img/timeline-icons/cypress.svg",
       "duration": "2020-2023"
     },
     {
       "id": 28,
       "name": "VueJS",
-      "icon": "https://icon-widget.codersrank.io/api/vue",
+      "icon": "/img/timeline-icons/vuejs.svg",
       "duration": "2020-2021"
     },
     {
       "id": 112,
       "name": "FFmpeg",
-      "icon": "https://icon-widget.codersrank.io/api/ffmpeg",
+      "icon": "/img/timeline-icons/ffmpeg.svg",
       "duration": "2020-2025"
     },
     {
       "id": 16,
       "name": "Figma",
-      "icon": "https://icon-widget.codersrank.io/api/figma",
+      "icon": "/img/timeline-icons/figma.svg",
       "duration": "2021-2025"
     },
     {
       "id": 17,
       "name": "PostgreSQL",
-      "icon": "https://icon-widget.codersrank.io/api/postgresql",
+      "icon": "/img/timeline-icons/postgresql.svg",
       "duration": "2021-2022"
     },
     {
       "id": 18,
       "name": "Next.js",
-      "icon": "https://icon-widget.codersrank.io/api/nextjs",
+      "icon": "/img/timeline-icons/next-js.svg",
       "duration": "2021-2024"
     },
     {
       "id": 109,
       "name": "Github Actions",
-      "icon": "https://icon-widget.codersrank.io/api/github",
+      "icon": "/img/timeline-icons/github-actions.svg",
       "duration": "2021-2025"
     },
 
     {
       "id": 29,
       "name": "Vite",
-      "icon": "https://icon-widget.codersrank.io/api/vite",
+      "icon": "/img/timeline-icons/vite.svg",
       "duration": "2022-2025"
     },
     {
       "id": 30,
       "name": "React Native",
-      "icon": "https://icon-widget.codersrank.io/api/reactnative",
+      "icon": "/img/timeline-icons/react-native.svg",
       "duration": "2022-2025"
     },
     {
       "id": 30,
       "name": "Jenkins",
-      "icon": "https://icon-widget.codersrank.io/api/jenkins",
+      "icon": "/img/timeline-icons/jenkins.svg",
       "duration": "2022-2025"
     },
     {
       "id": 19,
       "name": "Tailwind",
-      "icon": "https://icon-widget.codersrank.io/api/tailwind",
+      "icon": "/img/timeline-icons/tailwind.svg",
       "duration": "2022-2025"
     },
     {
       "id": 21,
       "name": "Electron JS",
-      "icon": "https://icon-widget.codersrank.io/api/electron",
+      "icon": "/img/timeline-icons/electron-js.svg",
       "duration": "2022-2025"
     },
 
     {
       "id": 29,
       "name": "Zustand",
-      "icon": "https://icon-widget.codersrank.io/api/zustand",
+      "icon": "/img/timeline-icons/zustand.svg",
       "duration": "2024-2025"
     },
     {
       "id": 22,
       "name": "Astro",
-      "icon": "https://icon-widget.codersrank.io/api/astro",
+      "icon": "/img/timeline-icons/astro.svg",
       "duration": "2024-2025"
     }
   ],
