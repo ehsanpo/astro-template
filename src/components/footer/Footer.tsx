@@ -273,7 +273,7 @@ export function Footer({
 
             {/* Social Links */}
             {showSocial && (
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 flex-wrap">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
@@ -283,7 +283,7 @@ export function Footer({
                       target="_blank"
                       rel="noopener noreferrer"
                       className={cn(
-                        "w-10  p-2  border border-gray-800 rounded-lg glass-card transition-all duration-300 hover:scale-110 group relative overflow-hidden",
+                        "min-w-10 p-2 border border-gray-800 rounded-lg glass-card transition-all duration-300 hover:scale-110 group relative overflow-hidden",
                         "text-muted-foreground",
                         social.color
                       )}

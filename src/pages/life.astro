@@ -1,0 +1,87 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero/Hero.astro";
+import BoxReveal from "../components/ui/box-reveal";
+import Link from "@/components/Link";
+import TimelineLife from "../components/timeline/TimelineLife";
+import { getPortfolioData } from "../utils/data";
+
+const { life } = await getPortfolioData();
+const lifeHighlight = life.filter((item) => item.highlighted === true);
+const sortedLife = lifeHighlight.sort(
+  (a, b) => parseInt(a.year) - parseInt(b.year)
+);
+---
+
+<Layout title="Life Journey" description="Personal milestones and life timeline of Ehsan Pourhadi">
+  <Hero fullHeight title="Life Journey" img="/img/life-hero.jpg">
+    <div>
+      <BoxReveal
+        boxColor="bg-secondary-500"
+        duration={0.1}
+        delay={0.2}
+        client:load
+      >
+        <p class="text-2xl dark:text-gray-300 mb-5">
+          From Tehran to Malmö - A journey of growth, learning, and memorable moments.
+        </p>
+      </BoxReveal>
+      <BoxReveal
+        boxColor="bg-primary-500"
+        duration={0.5}
+        delay={0.2}
+        client:load
+      >
+        <p class="dark:text-gray-300 text-xl">
+          Every milestone tells a story. Here's a glimpse into the personal moments that shaped who I am today.
+        </p>
+      </BoxReveal>
+      <BoxReveal
+        boxColor="bg-primary-500"
+        duration={0.6}
+        delay={0.3}
+        client:load
+      >
+        <div>
+          <Link
+            href="/about"
+            className="mt-3"
+            text="Professional Journey"
+          />
+          <Link href="/contact" className="mt-3" text="Get in Touch" />
+        </div>
+      </BoxReveal>
+    </div>
+  </Hero>
+
+  <section class="container mx-auto px-4 py-20">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Timeline of My Life</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        Personal milestones, achievements, and memorable moments that defined my journey
+      </p>
+    </div>
+  </section>
+
+   <TimelineLife lifeData={sortedLife} client:load />
+
+
+  <section class="bg-opium dark:bg-neutral-800 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Want to Know More?</h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+        Check out my professional journey and the work I've done over the years.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <Link href="/about" text="About Me" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg transition-colors" />
+        <Link href="/portfolio" text="View My Work" className="border border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white px-8 py-4 rounded-lg transition-colors" />
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  section {
+    position: relative;
+  }
+</style>

@@ -33,6 +33,7 @@
       { "href": "/music", "text": "Music" },
       { "href": "/cv", "text": "Resume" },
       { "href": "/about", "text": "About" },
+      { "href": "/life", "text": "Life" },
       { "href": "/contact", "text": "Contact" }
     ]
   },
@@ -1397,6 +1398,75 @@
     {
       "name": "Persian",
       "proficiency": "Native"
+    }
+  ],
+  "life": [
+    {
+      "year": "1988",
+      "title": "🐣 Born in Tehran",
+      "org": "Tehran, Iran",
+      "description": "Born on May 24, 1988 in Tehran, Iran. The beginning of an incredible journey.",
+      "image": "/img/life/ep.jpg",
+      "tags": ["Life", "Beginning"],
+      "highlighted": true
+    },
+    {
+      "year": "2003",
+      "title": "✈️ Relocated to Sweden",
+      "org": "Malmö, Sweden",
+      "description": "Moved to Malmö, Sweden on May 5, 2003. A new chapter in a new country, embracing new cultures and opportunities.",
+      "image": "/img/life/sweden.jpg",
+      "tags": ["Migration", "New Beginning"],
+      "highlighted": true
+    },
+    {
+      "year": "2008",
+      "title": "🎓 Education Journey",
+      "org": "Technical & Creative Education",
+      "description": "⚡ Studied Electrical Automation (PLC, control engineering)\n🎨 Completed Web Design course – first step into digital creation",
+      "image": "/img/life/education.jpg",
+      "tags": ["Education", "Electrical Automation", "Web Design", "PLC"],
+      "highlighted": true
+    },
+    {
+      "year": "2010",
+      "title": "🎵 First Music Release",
+      "org": "Independent Artist",
+      "description": "Released my first official track 'The Demo' – marking the beginning of my music production journey. A milestone that combined technical skills with creative expression.",
+      "image": "/img/music.jpeg",
+      "tags": ["Music", "Production", "Hip-Hop", "Creative"],
+      "highlighted": true,
+      "spotifyEmbed": "https://open.spotify.com/embed/track/4ac9ugMH2a90F4LnRN8W01?utm_source=generator"
+    },
+    {
+      "year": "2012",
+      "title": "💼 First Professional Role",
+      "org": "The Fan Club",
+      "description": "Started my first official job as Web Developer/Designer at The Fan Club advertising agency. This role launched my professional career in web development and creative digital solutions.",
+      "image": "/img/bg5-7.jpg",
+      "tags": ["Career", "Web Development", "First Job"],
+      "highlighted": true
+    },
+    {
+      "year": "2012",
+      "title": "🏆 ToolPool Award Winner",
+      "org": "Industry Recognition",
+      "description": "Created ToolPool – an award-winning web application that received multiple industry awards including Guldägget (Gold Egg). Recognized for innovation, technical execution, and creative concept.",
+      "image": "/img/life/toolpool-team.jpg",
+      "tags": ["Award", "Innovation", "Web Application"],
+      "highlighted": true,
+      "awards": [
+        "Guldägget (Gold Egg) - Prestigious Swedish award for creative excellence"
+      ]
+    },
+    {
+      "year": "2019",
+      "title": "💍 Married CharLeen",
+      "org": "Love & Partnership",
+      "description": "Got married to CharLeen on August 8, 2019 ❤️. A beautiful celebration of love and commitment.",
+      "image": "/img/life/char.jpg",
+      "tags": ["Marriage", "Love", "Family"],
+      "highlighted": true
     }
   ]
 }
