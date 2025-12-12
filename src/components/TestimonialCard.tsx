@@ -40,7 +40,7 @@ export default function TestimonialCard({
         animate={{ height: isExpanded ? "auto" : "100px" }}
         className="overflow-hidden"
       >
-        <p className="text-secondary-200">{isExpanded ? desc : short}</p>
+        <p className="text-secondary-200 whitespace-pre-line">{isExpanded ? desc : short}</p>
       </motion.div>
       <button
         className="mt-4 text-primary-600 hover:text-white transition-colors"

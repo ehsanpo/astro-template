@@ -2,7 +2,6 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
-import Lenis from "@studio-freight/lenis";
 import Link from "./Link";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
@@ -29,32 +28,9 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
   const contentWrapRef = useRef<HTMLDivElement>(null);
   const titleWrapRef = useRef<HTMLDivElement>(null);
   const titleUpRef = useRef<HTMLSpanElement>(null);
-  const titleDownRef = useRef<HTMLSpanElement>(null);
   const maskRef = useRef<SVGCircleElement>(null);
   const imageRef = useRef<SVGImageElement>(null);
   const textRef = useRef<HTMLParagraphElement>(null);
-  // const isCircle = [1, 2, 3].includes(layout);
-
-  // Initialize smooth scroll
-  // useEffect(() => {
-  //   const lenis = new Lenis({
-  //     lerp: 0.1,
-  //     smoothWheel: true,
-  //   });
-
-  //   lenis.on("scroll", () => ScrollTrigger.update());
-
-  //   const scrollFn = (time: number) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(scrollFn);
-  //   };
-
-  //   requestAnimationFrame(scrollFn);
-
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-  // }, []);
 
   // Setup animations
   useEffect(() => {
@@ -120,28 +96,6 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
       scrub: 1,
       animation: flip,
     });
-
-    // Text animation
-    // gsap.fromTo(
-    //   textRef.current,
-    //   {
-    //     opacity: 0,
-    //     y: 50,
-    //   },
-    //   {
-    //     opacity: 0.5,
-    //     y: 0,
-    //     duration: 1,
-    //     ease: "power2.out",
-    //     scrollTrigger: {
-    //       trigger: textRef.current,
-    //       start: "top bottom-=20%",
-    //       end: "bottom center",
-    //       toggleActions: "play none none reverse",
-    //       scrub: 1,
-    //     },
-    //   }
-    // );
   }, []);
 
   const Filters = [

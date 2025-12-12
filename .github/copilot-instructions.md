@@ -65,7 +65,6 @@ npm run build        # Build admin panel
 - `src/data/portfolio.json` - Main content source of truth
 - `src/content/config.ts` - Content collection schema definitions
 - `src/utils/data.ts` - Data access utilities
-- `src/components/sections.json` - Section configuration for animated sequences
 - `tailwind.config.mjs` - Extended design system with custom colors
 
 ### When Adding New Features

@@ -16,7 +16,6 @@
     "@astrojs/tailwind": "^5.1.0",
     "@radix-ui/react-collapsible": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.4",
-    "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",

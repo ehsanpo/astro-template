@@ -40,12 +40,6 @@ const ServiceDetails = () => {
     serviceWrappersRef.current[index] = el;
   };
 
-  const addToRefs = (el) => {
-    if (el && !serviceWrappersRef.current.includes(el)) {
-      serviceWrappersRef.current.push(el);
-    }
-  };
-
   return (
     <ParallaxProvider>
       <div className="service-details-wrapper ">
