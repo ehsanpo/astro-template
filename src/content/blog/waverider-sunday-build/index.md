@@ -1,5 +1,6 @@
 ---
 title: "WaveRider: Built in One Sunday"
+description:  "A one-day build log of WaveRider from idea to deployment with AI-assisted tooling and Supabase backend. " 
 date: "2025-12-08"
 author: Ehsan
 category:
@@ -13,6 +14,8 @@ tag:
   - Supabase
   - Audio Analysis
 status: publish
+cover: "./cover2.jpg"
+
 ---
 
 <p>It all started 7:30 in the morning. Sunday. I made my breakfast, egg 🥚 in a butty and a cup ☕ of Cardemon Ahmed tea. Peak comfort. Peak genius mode. I was lurking around the internet like a bored raccoon trying to catch what's new, scrolling, scrolling, scrolling, until my brain suddenly went "yo... build something". And of course I listen to that voice, because that voice has gotten me into some pretty fun trouble before. I wanted to code something new, something silly, something cool, something that would make me go "🤣🤣 look at this weird thing I made".</p>

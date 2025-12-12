@@ -50,7 +50,12 @@ const { item } = Astro.props as unknown as { item: PortfolioItem };
 const { Content } = await item.content.render();
 ---
 
-<Layout title={`${item.title} - Portfolio`}>
+<Layout 
+  title={`${item.title} - Portfolio`}
+  description={item.tagline || `${item.title} - ${item.client}`}
+  image={item.background_image?.src || item.logo?.src || "/img/og-default.jpg"}
+  imageAlt={`${item.title} - ${item.client}`}
+>
   <article class="min-h-screen bg-white dark:bg-neutral-900 pt-4 relative">
     <PortfolioHeader item={item} client:load />
 

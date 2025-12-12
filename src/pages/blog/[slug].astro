@@ -39,7 +39,12 @@ const formatDate = (dateString: string) => {
 };
 ---
 
-<Layout title={`${post.title} - Blog`}>
+<Layout 
+  title={`${post.title} - Blog`}
+  description={post.description || `Read ${post.title} on Ehsan's Blog`}
+  image={post.cover?.src || "/img/og-default.jpg"}
+  imageAlt={post.title}
+>
   <article class="min-h-screen bg-white dark:bg-neutral-900 pt-4">
     <div class="max-w-3xl mx-auto px-4 py-16">
       {
