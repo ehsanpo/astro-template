@@ -1402,6 +1402,15 @@
 			"spotifyEmbed": "https://open.spotify.com/embed/track/4ac9ugMH2a90F4LnRN8W01?utm_source=generator"
 		},
 		{
+			"year": "2011",
+			"title": "💻 Co-Founded Next Generation Design",
+			"org": "Next Generation Design",
+			"description": "Co-founded Next Generation Design, a design and development agency. Started my entrepreneurial journey building WordPress websites, managing client projects, and handling server administration. This was my first step as a professional developer.",
+			"image": "/img/0_3.png",
+			"tags": ["Entrepreneurship", "Web Development", "WordPress", "First Company"],
+			"highlighted": true
+		},
+		{
 			"year": "2012",
 			"title": "💼 First Professional Role",
 			"org": "The Fan Club",
