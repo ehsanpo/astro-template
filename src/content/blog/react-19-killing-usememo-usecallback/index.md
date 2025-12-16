@@ -7,7 +7,7 @@ category: ["React", "Performance"]
 tag: ["React 19", "useMemo", "useCallback", "Performance", "Hooks"]
 featured: false
 draft: false
-cover: "cover.jpg"
+cover: "cover.png"
 ---
 
 So I was doomscrolling through DEV comments (as one does when you're "taking a short break" but actually procrastinating for 2 hours 😅), and I stumbled on this spicy take:

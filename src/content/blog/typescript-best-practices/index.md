@@ -7,7 +7,7 @@ category: ["TypeScript", "Best Practices"]
 tag: ["TypeScript", "JavaScript", "Development", "Code Quality"]
 featured: true
 draft: false
-cover: "cover.jpg"
+cover: "cover.png"
 ---
 
 Hey friends — I’ve been fiddling with TypeScript lately, trying to understand all those little gotchas. One thing that kept biting me was **excess property checks**, plus the difference between `object`, `{}`, `Object` types. I want to share what I learned, because earlier I was confused, maybe you will too, and maybe this helps you avoid stepping on the same banana peel 🍌.

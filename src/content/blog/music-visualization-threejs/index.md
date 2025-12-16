@@ -7,6 +7,7 @@ category: ["Web Development", "Creative Coding"]
 tag: ["Three.js", "WebGL", "Music Visualization", "JavaScript", "Audio"]
 featured: false
 draft: false
+cover: "cover.png"
 ---
 
 I’ve been experimenting with **music visualization** using Three.js and one of my unreleased tracks. It’s basically my love for music + web dev mashed together — creating visuals that **dance to the beat in real-time**.

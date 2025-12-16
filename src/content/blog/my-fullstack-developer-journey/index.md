@@ -7,7 +7,7 @@ category: ["Career", "Personal"]
 tag: ["Career", "Fullstack", "Development", "Journey"]
 featured: false
 draft: false
-cover: "cover.jpg"
+cover: "cover.png"
 ---
 
 If you told younger-me — the kid spending hours in **Photoshop 7**, carefully slicing images for rounded corners (lol, before border-radius was a thing) — that one day I’d be writing APIs and scaling apps, I would’ve laughed and gone back to designing fake CD covers. But yeah… that’s how it started. I’ve always had an eye for design, so messing around with graphics, covers, and layouts was my playground.
