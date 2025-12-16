@@ -7,6 +7,7 @@ category: ["React", "Frontend"]
 tag: ["React", "useState", "State Management", "Hooks"]
 featured: true
 draft: false
+cover: "cover.png"
 ---
 
 OMG, so you know how you have that one thing you use all the time, even when you know there are better options out there? For me, and apparently a lot of other devs, that thing is `useState` in React. I mean, it's the first hook you learn, right? It's so easy! You're just like, `const [count, setCount] = useState(0);`, and boom, you have state. Woohoo!

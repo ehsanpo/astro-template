@@ -5,7 +5,7 @@ date: "2025-12-16"
 author: "Ehsan Pourhadi"
 category: ["Projects", "Frontend"]
 tag: ["React", "Vite", "UX", "Side Projects"]
-featured: true
+featured: false
 draft: false
 cover: "cover.png"
 ---
@@ -188,3 +188,6 @@ Built for fun. Learned a ton.
 Highly recommend building weird little projects like this.
 
 Now excuse me while I add *one more feature* that I definitely don't need. 🚀
+
+
+![Developer Type Assessment Screenshot](./developer-type-calm-senior.png)
