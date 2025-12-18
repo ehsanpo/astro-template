@@ -25,6 +25,7 @@ import {
 	Newspaper,
 } from "lucide-react";
 import { cn } from "../../lib/utils";
+import { Tooltip } from "../ui/Tooltip";
 
 interface FooterProps {
 	readonly variant?: "default" | "glass" | "gradient" | "minimal";
@@ -330,62 +331,6 @@ export function Footer({
 								</ul>
 							</div>
 						))}
-
-					{/* Contact Section */}
-					{showContact && (
-						<div>
-							<div className="mb-6">
-								<svg
-									width="48"
-									height="48"
-									className="text-primary-500"
-									viewBox="0 0 27.8 26.7"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										fill="currentColor"
-										d="M0.5,19.4C0.2,19,0,18.7,0,18.2c0-0.4,0.2-0.8,0.5-1.1L17.1,0.5C17.4,0.2,17.8,0,18.2,0c0.4,0,0.8,0.2,1.1,0.5
-                    c0.3,0.3,0.5,0.7,0.5,1.1c0,0.4-0.2,0.8-0.5,1.1L2.7,19.4c-0.3,0.3-0.7,0.5-1.1,0.5C1.2,19.8,0.8,19.7,0.5,19.4z M12.4,25.6
-                    c-0.3,0.3-0.8,0.6-1.3,0.8s-1,0.3-1.5,0.3c-0.5,0-1.1-0.1-1.6-0.3c-0.5-0.2-1.1-0.5-1.5-1l-2.1-2.1c-0.4-0.4-0.6-0.8-0.5-1.2
-                    c0.1-0.4,0.4-0.8,0.9-1.3L20.6,5c0.3-0.3,0.7-0.5,1.1-0.5c0.4,0,0.8,0.2,1.1,0.5c0.3,0.3,0.5,0.7,0.5,1.1c0,0.4-0.2,0.8-0.5,1.1
-                    l-15,15L9,23.4c0.2,0.2,0.4,0.2,0.6,0.2c0.2,0,0.5-0.1,0.7-0.4L25.1,8.4C25.4,8.1,25.8,8,26.2,8c0.4,0,0.8,0.2,1.1,0.5
-                    c0.3,0.3,0.5,0.7,0.5,1.1c0,0.4-0.2,0.8-0.5,1.1L12.4,25.6z"
-									/>
-								</svg>
-							</div>
-							<div>
-								<h3 className="text-foreground mb-4 font-basement text-lg">Get In Touch</h3>
-								<div className="space-y-3">
-									<div className="text-muted-foreground font-kabel flex items-center text-sm">
-										<Mail className="mr-2 h-4 w-4 text-primary-500" />
-										<a
-											href="mailto:ehsan.po@gmail.com"
-											className="transition-colors hover:text-primary-500"
-										>
-											ehsan.po@gmail.com
-										</a>
-									</div>
-
-									<div className="text-muted-foreground font-kabel flex items-center text-sm">
-										<MapPin className="mr-2 h-4 w-4 text-primary-500" />
-										<span>Malmö, Sweden</span>
-									</div>
-
-									<div className="text-muted-foreground font-kabel flex items-center text-sm">
-										<ExternalLink className="mr-2 h-4 w-4 text-primary-500" />
-										<a
-											href="https://www.ehsan-pourhadi.com"
-											target="_blank"
-											rel="noopener noreferrer"
-											className="transition-colors hover:text-primary-500"
-										>
-											ehsan-pourhadi.com
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					)}
 				</div>
 
 				{/* Stats Section */}
@@ -423,9 +368,13 @@ export function Footer({
 							<span>© 2025 Ehsan Pourhadi. All rights reserved.</span>
 							<div className="flex items-center space-x-1">
 								<span>Made with</span>
-								<Heart className="h-4 w-4 fill-current text-red-600" />
+								<Tooltip content="Love and passion" position="top">
+									<Heart className="h-4 w-4 fill-current text-red-600" />
+								</Tooltip>
 								<span>and</span>
-								<Coffee className="h-4 w-4 text-yellow-500" />
+								<Tooltip content="Actually tea ☕ - coffee is for emergencies!" position="top">
+									<Coffee className="h-4 w-4 text-yellow-500" />
+								</Tooltip>
 							</div>
 						</div>
 
