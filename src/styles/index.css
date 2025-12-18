@@ -14,6 +14,17 @@
 	font-display: swap;
 }
 
+@keyframes float-up {
+	0% {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-50%, -150%) scale(1.5);
+	}
+}
+
 html {
 	font-size: 20px;
 }
@@ -303,6 +314,18 @@ body {
 		35% 100%,
 		calc(35% - 16px) calc(100% - 16px),
 		0 calc(100% - 16px)
+	);
+}
+.clip5 {
+	clip-path: polygon(
+		0 16px,
+		calc(35% - 16px) 16px,
+		35% 0,
+		65% 0,
+		calc(65% + 16px) 16px,
+		100% 16px,
+		100% 100%,
+		0 100%
 	);
 }
 

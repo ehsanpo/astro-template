@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import confetti from "canvas-confetti";
+import { useGameStore } from "../game";
 
 const KONAMI_CODE = [
 	"ArrowUp",
@@ -15,10 +16,19 @@ const KONAMI_CODE = [
 ];
 
 export default function KonamiCode() {
+	const [mounted, setMounted] = useState(false);
 	const [keys, setKeys] = useState<string[]>([]);
 	const [activated, setActivated] = useState(false);
+	const enableGame = useGameStore((s) => s.enableGame);
+	const setHUD = useGameStore((s) => s.setHUD);
 
 	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	useEffect(() => {
+		if (!mounted) return;
+		
 		const handleKeyDown = (e: KeyboardEvent) => {
 			setKeys((prevKeys) => {
 				const newKeys = [...prevKeys, e.key].slice(-10);
@@ -29,6 +39,8 @@ export default function KonamiCode() {
 				if (matches && !activated) {
 					setActivated(true);
 					triggerEasterEgg();
+					enableGame();
+					setHUD(true);
 					// Reset after 5 seconds
 					setTimeout(() => {
 						setActivated(false);
@@ -42,7 +54,7 @@ export default function KonamiCode() {
 
 		window.addEventListener("keydown", handleKeyDown);
 		return () => window.removeEventListener("keydown", handleKeyDown);
-	}, [activated]);
+	}, [mounted, activated, enableGame, setHUD]);
 
 	const triggerEasterEgg = () => {
 		// Confetti celebration
@@ -83,14 +95,16 @@ export default function KonamiCode() {
 		console.log("%cYou found the secret! 🎉", "font-size: 16px; color: #4ecdc4;");
 	};
 
+	if (!mounted) return null;
+
 	return (
 		<>
 			{activated && (
 				<div className="pointer-events-none fixed inset-0 z-[9998] flex items-center justify-center">
-					<div className="bg-primary absolute inline-flex h-full w-full animate-ping rounded-full opacity-75"></div>
-					<div className="bg-primary relative animate-bounce rounded-lg px-8 py-4 shadow-2xl">
+					<div className="bg-primary-600 absolute inline-flex h-full w-full animate-ping rounded-full opacity-20"></div>
+					<div className="bg-primary-600 relative animate-bounce rounded-lg px-8 py-4 shadow-2xl">
 						<h2 className="text-4xl font-bold text-white">🎮 KONAMI CODE! 🎮</h2>
-						<p className="mt-2 text-xl text-white">You're a true gamer! 🎉</p>
+						<p className="mt-2 text-xl text-white">GAME MODE ACTIVATED!!! 🎉</p>
 					</div>
 				</div>
 			)}

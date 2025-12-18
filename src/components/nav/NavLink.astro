@@ -10,6 +10,8 @@ const isActive = currentPath === href || (href !== "/" && currentPath.startsWith
 
 <a
 	href={href}
+	data-game-nav-link
+	data-href={href}
 	class:list={[
 		"text font-medium transition-colors hover:text-primary-600",
 		isActive ? "text-primary-600" : "text-gray-600 dark:text-gray-300",

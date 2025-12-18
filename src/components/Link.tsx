@@ -18,9 +18,9 @@ const Button: React.FC<ButtonProps> = ({ href, text, className, target = "_self"
 			)}
 			target={target}
 		>
-			<div className="bg-primary relative flex items-center justify-center overflow-hidden px-4 py-2">
+			<div className=" relative flex items-center justify-center overflow-hidden px-4 py-2">
 				<div className="relative z-20">
-					<div className="duration-[10.125s] ease-[cubic-bezier(0.19,1,0.22,1)] transform transition-transform group-hover:-translate-y-10">
+					<div className="duration-[10s] ease-[cubic-bezier(0.19,1,0.22,1)] transform transition-transform group-hover:-translate-y-10">
 						{text}
 					</div>
 					<div className="duration-[3000ms] absolute left-0 top-10 transition-all group-hover:top-0">
@@ -28,7 +28,7 @@ const Button: React.FC<ButtonProps> = ({ href, text, className, target = "_self"
 					</div>
 				</div>
 			</div>
-			<span className="bg-primary glitch-effect absolute inset-0 z-10 hidden group-hover:block"></span>
+			<span className=" glitch-effect absolute inset-0 z-10 hidden group-hover:block"></span>
 		</a>
 	);
 };

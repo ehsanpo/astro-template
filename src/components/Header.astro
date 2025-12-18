@@ -8,62 +8,16 @@ import HamburgerMenu from "./ui/Menu";
 	<defs>
 		<filter id="mixed-ui-player-filter">
 			<feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blurred_source"> </feGaussianBlur>
-			<feImage
-				href="/assets/displacement-map-ivknpp.png"
-				x="0"
-				y="0"
-				width="1200"
-				height="80"
-				result="displacement_map"
-			>
-			</feImage>
-			<feDisplacementMap
-				in="blurred_source"
-				in2="displacement_map"
-				scale="20"
-				xChannelSelector="R"
-				yChannelSelector="G"
-				result="displaced"
-			>
-			</feDisplacementMap>
-			<feColorMatrix in="displaced" type="saturate" result="displaced_saturated" values="5">
-			</feColorMatrix>
-			<feImage
-				href="/assets/specular-map-ivknpp.png"
-				x="0"
-				y="0"
-				width="1200"
-				height="80"
-				result="specular_layer"
-			>
-			</feImage>
-			<feComposite
-				in="displaced_saturated"
-				in2="specular_layer"
-				operator="in"
-				result="specular_saturated"
-			>
-			</feComposite>
-			<feComponentTransfer in="specular_layer" result="specular_faded">
-				<feFuncA type="linear" slope="0.9"></feFuncA>
-			</feComponentTransfer>
-			<feBlend in="specular_saturated" in2="displaced" mode="normal" result="withSaturation">
-			</feBlend>
-			<feBlend in="specular_faded" in2="withSaturation" mode="normal"></feBlend>
+	
 		</filter>
 	</defs>
 </svg>
 
-<header class="clip4 fixed top-0 z-50 w-full overflow-hidden">
+<header class="clip4 fixed top-0 z-50 w-full overflow-hidden backdrop-blur-md">
 	<div
-		class="bg-[var(--glass-rgb)]/[var(--glass-bg-alpha)] absolute inset-0 bg-white/80 dark:bg-neutral-900/80"
-		style="
-      backdrop-filter: url('#mixed-ui-player-filter');
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 19px;
-      --glass-bg-alpha: 60%;
-    "
-	>
-	</div>
+		class="absolute inset-0 bg-white/80 dark:bg-neutral-900/80"
+	/>
+	
 
 	<div class="container relative z-10 mx-auto px-4">
 		<nav class="flex h-16 items-center justify-center">

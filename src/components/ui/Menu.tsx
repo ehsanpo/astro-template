@@ -6,17 +6,28 @@ import Button from "@/components/Link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
-import MainNav from "../nav/MainNav.astro";
-import { getPortfolioData } from "@/utils/data";
+import { useGameStore } from "@/game";
+import type { UnlockablePage } from "@/game";
 
 type MenuItem = {
 	text: string;
 	href?: string;
 	submenu?: MenuItem[];
 };
-const { navigation } = await getPortfolioData();
 
-const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number }> = ({ item, depth = 0 }) => {
+const navigationMain: MenuItem[] = [
+	{ href: "/", text: "Home" },
+	{ href: "/portfolio", text: "Work" },
+	{ href: "/skills", text: "Skills" },
+	{ href: "/services", text: "Services" },
+	{ href: "/about", text: "About" },
+	{ href: "/contact", text: "Contact" },
+	{ href: "/life", text: "Life" },
+];
+
+const lifeItem: MenuItem = { href: "/life", text: "Life" };
+
+const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boolean }> = ({ item, depth = 0, locked = false }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	if (item.submenu) {
@@ -45,11 +56,22 @@ const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number }> = ({ item,
 	return (
 		<a
 			href={item.href}
+			onClick={(e) => {
+				if (locked) {
+					e.preventDefault();
+					e.stopPropagation();
+				}
+			}}
+			aria-disabled={locked}
+			title={locked ? "Locked — unlock in Shop" : undefined}
 			className={cn(
-				"hover:text-primary block py-2 text-lg font-medium transition-colors",
+				"block py-2 text-lg font-medium transition-colors",
+				locked ? "cursor-not-allowed text-gray-400" : "hover:text-primary",
 				depth > 0 && "pl-4",
 				item.href === "/" && "text-primary"
 			)}
+			data-game-nav-link
+			data-href={item.href}
 		>
 			{item.text}
 		</a>
@@ -58,6 +80,18 @@ const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number }> = ({ item,
 
 export default function HamburgerMenu() {
 	const [open, setOpen] = React.useState(false);
+	const mode = useGameStore((s) => s.mode);
+	const unlocks = useGameStore((s) => s.unlocks);
+
+	const items: MenuItem[] = unlocks["/life" as UnlockablePage]
+		? navigationMain
+		: navigationMain.filter((item) => item.href !== "/life");
+
+	const isLocked = (href?: string) => {
+		if (!href || href === "/") return false;
+		if (mode !== "active") return false;
+		return !unlocks[href as UnlockablePage];
+	};
 
 	return (
 		<Sheet open={open} onOpenChange={setOpen}>
@@ -72,10 +106,10 @@ export default function HamburgerMenu() {
 					}
 				/>
 			</SheetTrigger>
-			<SheetContent className="w-[240px] sm:w-[300px]">
+			<SheetContent className="w-[240px] sm:w-[300px]" data-game-ignore>
 				<nav className="flex flex-col space-y-4">
-					{navigation.main.map((item) => (
-						<MenuItemComponent key={item.text} item={item} />
+					{items.map((item) => (
+						<MenuItemComponent key={item.text} item={item} locked={isLocked(item.href)} />
 					))}
 				</nav>
 			</SheetContent>

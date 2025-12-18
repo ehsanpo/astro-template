@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import { Footer } from "../components/footer/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
 import KonamiCode from "../components/KonamiCode";
+import { GameHUD } from "../components/game/GameHUD";
+import { NavLockGuard } from "../components/game/NavLockGuard";
 import "../styles/index.css";
 
 interface Props {
@@ -61,7 +63,9 @@ const socialImage = new URL(image, Astro.site);
 	</head>
 	<body class="bg-white text-gray-900 dark:bg-neutral-900 dark:text-gray-100">
 		<KonamiCode client:load />
+		<NavLockGuard client:load />
 		<Header />
+		<GameHUD client:load />
 		<main class="min-h-screen">
 			<slot />
 			<Footer client:load />

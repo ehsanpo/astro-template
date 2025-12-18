@@ -22,6 +22,9 @@ export default defineConfig({
 		ssr: {
 			noExternal: ["gsap"],
 		},
+		define: {
+			"process.env.NODE_ENV": JSON.stringify("development"),
+		},
 	},
 	integrations: [tailwind(), mdx(), react(), sitemap()],
 });
