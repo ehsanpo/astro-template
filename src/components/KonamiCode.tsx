@@ -28,7 +28,7 @@ export default function KonamiCode() {
 
 	useEffect(() => {
 		if (!mounted) return;
-		
+
 		const handleKeyDown = (e: KeyboardEvent) => {
 			setKeys((prevKeys) => {
 				const newKeys = [...prevKeys, e.key].slice(-10);
@@ -101,8 +101,8 @@ export default function KonamiCode() {
 		<>
 			{activated && (
 				<div className="pointer-events-none fixed inset-0 z-[9998] flex items-center justify-center">
-					<div className="bg-primary-600 absolute inline-flex h-full w-full animate-ping rounded-full opacity-20"></div>
-					<div className="bg-primary-600 relative animate-bounce rounded-lg px-8 py-4 shadow-2xl">
+					<div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-600 opacity-20"></div>
+					<div className="relative animate-bounce rounded-lg bg-primary-600 px-8 py-4 shadow-2xl">
 						<h2 className="text-4xl font-bold text-white">🎮 KONAMI CODE! 🎮</h2>
 						<p className="mt-2 text-xl text-white">GAME MODE ACTIVATED!!! 🎉</p>
 					</div>

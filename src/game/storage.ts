@@ -24,10 +24,13 @@ const achievementIds: AchievementId[] = [
 ];
 
 const makeAchievements = () =>
-	achievementIds.reduce((acc, id) => {
-		acc[id] = { unlocked: false, unlockedAt: null };
-		return acc;
-	}, {} as GameState["achievements"]);
+	achievementIds.reduce(
+		(acc, id) => {
+			acc[id] = { unlocked: false, unlockedAt: null };
+			return acc;
+		},
+		{} as GameState["achievements"]
+	);
 
 export const createInitialState = (): GameState => ({
 	mode: "off",

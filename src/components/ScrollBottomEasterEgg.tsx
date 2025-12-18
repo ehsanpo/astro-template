@@ -13,7 +13,7 @@ export default function ScrollBottomEasterEgg() {
 
 		const handleWheel = (e: WheelEvent) => {
 			const now = Date.now();
-			
+
 			// Throttle: ignore if less than 300ms since last wheel event
 			if (now - lastWheelTime < THROTTLE_MS) {
 				return;
@@ -28,7 +28,14 @@ export default function ScrollBottomEasterEgg() {
 			if (isAtBottom && e.deltaY > 0) {
 				setExtraScrollAttempts((prev) => {
 					const newAttempts = prev + 1;
-					console.log("Scroll attempts:", newAttempts, "deltaY:", e.deltaY, "isAtBottom:", isAtBottom);
+					console.log(
+						"Scroll attempts:",
+						newAttempts,
+						"deltaY:",
+						e.deltaY,
+						"isAtBottom:",
+						isAtBottom
+					);
 
 					// Show banner after 8+ attempts of "extra scrolling" at the bottom
 					if (newAttempts > 7) {
@@ -77,7 +84,7 @@ export default function ScrollBottomEasterEgg() {
 
 	return (
 		<motion.div
-			className="fixed bottom-0 left-0 right-0 z-40 pointer-events-none"
+			className="pointer-events-none fixed bottom-0 left-0 right-0 z-40"
 			initial={{ y: "100%" }}
 			animate={{ y: showBanner ? "0%" : "100%" }}
 			transition={{ duration: 0.6, ease: "easeOut" }}
@@ -85,7 +92,7 @@ export default function ScrollBottomEasterEgg() {
 			<motion.img
 				src="/img/banner.gif"
 				alt="Easter Egg Banner"
-				className="w-full h-auto object-cover"
+				className="h-auto w-full object-cover"
 				initial={{ opacity: 0 }}
 				animate={{ opacity: showBanner ? 1 : 0 }}
 				transition={{ duration: 0.4, delay: 0.1 }}

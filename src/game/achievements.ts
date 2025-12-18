@@ -40,7 +40,9 @@ export const achievementDefinitions: AchievementDefinition[] = [
 ];
 
 export const findNewAchievements = (state: GameState): AchievementDefinition[] => {
-	return achievementDefinitions.filter((def) => !state.achievements[def.id]?.unlocked && def.condition(state));
+	return achievementDefinitions.filter(
+		(def) => !state.achievements[def.id]?.unlocked && def.condition(state)
+	);
 };
 
 export const markAchievements = (state: GameState, ids: AchievementId[]): GameState => {

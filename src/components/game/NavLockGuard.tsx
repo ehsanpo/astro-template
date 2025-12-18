@@ -11,7 +11,9 @@ const isUnlocked = (href: string, unlocks: Record<UnlockablePage, boolean>) => {
 let lockStateApplied = false;
 
 const applyLockState = (mode: string, unlocks: Record<UnlockablePage, boolean>) => {
-	const anchors = Array.from(document.querySelectorAll("[data-game-nav-link]")) as HTMLAnchorElement[];
+	const anchors = Array.from(
+		document.querySelectorAll("[data-game-nav-link]")
+	) as HTMLAnchorElement[];
 	const handlers: Array<{ el: HTMLAnchorElement; fn: (e: Event) => void }> = [];
 	const useCapture = true;
 
@@ -28,20 +30,20 @@ const applyLockState = (mode: string, unlocks: Record<UnlockablePage, boolean>) 
 		}
 
 		el.style.display = "";
-		
+
 		// Get original text content without emoji
 		const originalText = el.textContent?.replace(/🔒\s*/, "") || "";
-		
+
 		if (locked) {
 			el.setAttribute("aria-disabled", "true");
 			el.title = "Locked — unlock in Shop";
 			el.classList.add("pointer-events-none", "opacity-60");
-			
+
 			// Add lock emoji
 			if (!el.textContent?.includes("🔒")) {
 				el.textContent = `🔒 ${originalText}`;
 			}
-			
+
 			const fn = (e: Event) => {
 				e.preventDefault();
 				e.stopPropagation();
@@ -51,7 +53,7 @@ const applyLockState = (mode: string, unlocks: Record<UnlockablePage, boolean>) 
 		} else {
 			el.removeAttribute("aria-disabled");
 			el.classList.remove("pointer-events-none", "opacity-60");
-			
+
 			// Remove lock emoji
 			if (el.textContent?.includes("🔒")) {
 				el.textContent = originalText;
@@ -73,11 +75,11 @@ export function NavLockGuard() {
 
 	useEffect(() => {
 		if (!mounted) return;
-		
+
 		// Only run once per component lifecycle, even if store updates
 		const cleanup = applyLockState(mode, unlocks);
 		lockStateApplied = true;
-		
+
 		return cleanup;
 	}, [mounted, mode, unlocks]);
 

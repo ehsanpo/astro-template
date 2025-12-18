@@ -21,7 +21,9 @@ export const useGameStore = create<GameStore>()(
 		(set, get) => ({
 			...createInitialState(),
 			enableGame: () => {
-				set((state) => (state.mode === "active" ? state : { ...state, mode: "active", showHUD: true }));
+				set((state) =>
+					state.mode === "active" ? state : { ...state, mode: "active", showHUD: true }
+				);
 			},
 			exitGame: () => {
 				set((state) => ({
@@ -67,22 +69,28 @@ export const useGameStore = create<GameStore>()(
 						unlocks,
 					};
 
-				const fresh = findNewAchievements(next);
-				if (fresh.length) {
-					const updated = markAchievements(next, fresh.map((f) => f.id));
-					return {
-						...next,
-						...updated,
-						toasts: pushToasts(state as GameStore, fresh.map((f) => ({
-							id: `${f.id}-${now}`,
-							title: f.title,
-							message: f.description,
-							createdAt: now,
-						}))),
-					};
-				}
+					const fresh = findNewAchievements(next);
+					if (fresh.length) {
+						const updated = markAchievements(
+							next,
+							fresh.map((f) => f.id)
+						);
+						return {
+							...next,
+							...updated,
+							toasts: pushToasts(
+								state as GameStore,
+								fresh.map((f) => ({
+									id: `${f.id}-${now}`,
+									title: f.title,
+									message: f.description,
+									createdAt: now,
+								}))
+							),
+						};
+					}
 
-				return next;
+					return next;
 				});
 			},
 			addCoins: (amount: number) => {
@@ -105,16 +113,22 @@ export const useGameStore = create<GameStore>()(
 					};
 					const fresh = findNewAchievements(next);
 					if (fresh.length) {
-						const updated = markAchievements(next, fresh.map((f) => f.id));
+						const updated = markAchievements(
+							next,
+							fresh.map((f) => f.id)
+						);
 						return {
 							...next,
 							...updated,
-							toasts: pushToasts(state as GameStore, fresh.map((f) => ({
-								id: `${f.id}-${Date.now()}`,
-								title: f.title,
-								message: f.description,
-								createdAt: Date.now(),
-							}))),
+							toasts: pushToasts(
+								state as GameStore,
+								fresh.map((f) => ({
+									id: `${f.id}-${Date.now()}`,
+									title: f.title,
+									message: f.description,
+									createdAt: Date.now(),
+								}))
+							),
 						};
 					}
 					return next;
@@ -124,25 +138,36 @@ export const useGameStore = create<GameStore>()(
 				set((state) => {
 					const { next, success } = applyPurchase(state, id);
 					if (!success) return state;
-				const fresh = findNewAchievements(next);
-				if (fresh.length) {
-					const updated = markAchievements(next, fresh.map((f) => f.id));
-					return {
-						...next,
-						...updated,
-						toasts: pushToasts(state as GameStore, fresh.map((f) => ({
-							id: `${f.id}-${Date.now()}`,
-							title: f.title,
-							message: f.description,
-							createdAt: Date.now(),
-						}))),
-					};
-				}
-				return next;
+					const fresh = findNewAchievements(next);
+					if (fresh.length) {
+						const updated = markAchievements(
+							next,
+							fresh.map((f) => f.id)
+						);
+						return {
+							...next,
+							...updated,
+							toasts: pushToasts(
+								state as GameStore,
+								fresh.map((f) => ({
+									id: `${f.id}-${Date.now()}`,
+									title: f.title,
+									message: f.description,
+									createdAt: Date.now(),
+								}))
+							),
+						};
+					}
+					return next;
 				});
 			},
-			toggleShop: (open) => set((state) => ({ ...state, shopOpen: typeof open === "boolean" ? open : !state.shopOpen })),
-			ackToast: (id) => set((state) => ({ ...state, toasts: state.toasts.filter((t) => t.id !== id) })),
+			toggleShop: (open) =>
+				set((state) => ({
+					...state,
+					shopOpen: typeof open === "boolean" ? open : !state.shopOpen,
+				})),
+			ackToast: (id) =>
+				set((state) => ({ ...state, toasts: state.toasts.filter((t) => t.id !== id) })),
 			setHUD: (visible) => set((state) => ({ ...state, showHUD: visible })),
 		}),
 		{

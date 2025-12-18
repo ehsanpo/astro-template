@@ -118,11 +118,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 						{item.date && (
 							<div className="flex items-center space-x-1">
 								<Calendar className="h-3 w-3" />
-								<span>
-								
-										{item.date}
-								</span>
-							
+								<span>{item.date}</span>
 							</div>
 						)}
 						{item.client && (

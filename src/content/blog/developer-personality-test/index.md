@@ -11,13 +11,13 @@ cover: "cover.png"
 ---
 
 So… I built a thing.
-It's called **Developer Type Assessment** and it tells you *what kind of developer brain you have* 🧠💻
+It's called **Developer Type Assessment** and it tells you _what kind of developer brain you have_ 🧠💻
 
 Not "are you good at algorithms" (pls no), but more like:
 
-* do you **ship fast** or **overthink everything**
-* do you love **clean code** or just want it to *work*
-* do you debug like a detective or YOLO your way through bugs
+- do you **ship fast** or **overthink everything**
+- do you love **clean code** or just want it to _work_
+- do you debug like a detective or YOLO your way through bugs
 
 👉 You can try it here:
 [https://ehsanpo.github.io/developertype/](https://ehsanpo.github.io/developertype/)
@@ -29,23 +29,23 @@ I honestly started this as a "fun weekend project" and then suddenly I was deep 
 ## The Idea (aka: what was I thinking?)
 
 I didn't want a skills test.
-No quizzes like *"what does this JavaScript output?"* (trauma 😭).
+No quizzes like _"what does this JavaScript output?"_ (trauma 😭).
 
 I wanted something more **psychological**.
 Something that feels like real dev life.
 
 Every question forces a trade-off:
 
-* ship fast vs build it right
-* explore vs maintain
-* solo grinding vs team collaboration
+- ship fast vs build it right
+- explore vs maintain
+- solo grinding vs team collaboration
 
 Your answers slowly pull you toward one of **12 developer archetypes** like:
 
-* **The Ship It** 🚀
-* **The Detective** 🕵️
-* **The Craftsman** 🛠️
-* (yes, Architecture Astronaut is there too 👀)
+- **The Ship It** 🚀
+- **The Detective** 🕵️
+- **The Craftsman** 🛠️
+- (yes, Architecture Astronaut is there too 👀)
 
 No "right" answers. Just vibes.
 
@@ -60,10 +60,10 @@ This assessment was inspired by the article [The 12 Developer Mindsets I've Seen
 I didn't want backend drama. No auth. No DB. No servers.
 Just frontend fun.
 
-* **React + Vite** – fast, clean, no pain
-* **React Router** – with `HashRouter` because GitHub Pages 😅
-* **Pure CSS** – no Tailwind, no frameworks, just vibes and CSS variables
-* **html2canvas** – for downloading results as images (this was surprisingly fun)
+- **React + Vite** – fast, clean, no pain
+- **React Router** – with `HashRouter` because GitHub Pages 😅
+- **Pure CSS** – no Tailwind, no frameworks, just vibes and CSS variables
+- **html2canvas** – for downloading results as images (this was surprisingly fun)
 
 That's it. No magic. No enterprise nonsense.
 
@@ -78,7 +78,7 @@ Each answer gives **weighted points** to multiple archetypes.
 So you're not just "one thing".
 The algorithm can notice stuff like:
 
-> "huh, this person scores high in *Ship It* AND *Craftsman*… interesting tension 👀"
+> "huh, this person scores high in _Ship It_ AND _Craftsman_… interesting tension 👀"
 
 It actually felt like teaching the app to understand personalities. Kinda creepy. Kinda cool.
 
@@ -91,11 +91,11 @@ No backend needed – just pure frontend magic ✨
 
 Which means:
 
-* share the link and anyone can see your result
-* no retaking the test
-* no database, no servers, my wallet is happy
-* download your result as a PNG
-* share directly to LinkedIn (yes, devs love this stuff)
+- share the link and anyone can see your result
+- no retaking the test
+- no database, no servers, my wallet is happy
+- download your result as a PNG
+- share directly to LinkedIn (yes, devs love this stuff)
 
 Encoding state into the URL turned out to be insanely powerful. Sharing just works™ and I wanted it to feel like an **achievement unlock** 🎖️, not just text on a screen.
 
@@ -110,20 +110,20 @@ This part took the longest.
 
 Each answer had to:
 
-* feel *real*
-* map clearly to personality traits
-* not scream "THIS IS THE CORRECT ANSWER" 🙃
+- feel _real_
+- map clearly to personality traits
+- not scream "THIS IS THE CORRECT ANSWER" 🙃
 
 Example question:
 
 > **You find a messy file that somehow works. What do you do?**
 
-* Rewrite it from scratch (perfectionist)
-* Ship features and move on (pragmatic)
-* Understand why it works first (detective)
-* Refactor slowly over time (balanced dev)
+- Rewrite it from scratch (perfectionist)
+- Ship features and move on (pragmatic)
+- Understand why it works first (detective)
+- Refactor slowly over time (balanced dev)
 
-If you read that and felt *personally attacked*… good 😈
+If you read that and felt _personally attacked_… good 😈
 
 ---
 
@@ -164,12 +164,12 @@ UX is wild.
 
 ## Stats (because devs love numbers)
 
-* 20 questions
-* 12 archetypes
-* ~5 minutes
-* 0 backend servers
-* Hosted on GitHub Pages
-* Built in 2 hours
+- 20 questions
+- 12 archetypes
+- ~5 minutes
+- 0 backend servers
+- Hosted on GitHub Pages
+- Built in 2 hours
 
 ---
 
@@ -187,7 +187,6 @@ And if you read this far… wow. You're definitely not "The Ship It" 😅
 Built for fun. Learned a ton.
 Highly recommend building weird little projects like this.
 
-Now excuse me while I add *one more feature* that I definitely don't need. 🚀
-
+Now excuse me while I add _one more feature_ that I definitely don't need. 🚀
 
 ![Developer Type Assessment Screenshot](./developer-type-calm-senior.png)

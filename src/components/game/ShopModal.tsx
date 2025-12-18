@@ -52,7 +52,10 @@ export function ShopModal() {
 	if (!state.shopOpen) return null;
 
 	return (
-		<div className="fixed inset-0 z-[9997] flex items-center justify-center bg-black/70 p-4" data-game-ignore>
+		<div
+			className="fixed inset-0 z-[9997] flex items-center justify-center bg-black/70 p-4"
+			data-game-ignore
+		>
 			<div className="relative w-full max-w-md rounded-2xl border border-white/10 bg-neutral-900/90 p-5 shadow-2xl backdrop-blur">
 				<div className="mb-3 flex items-start justify-between text-white">
 					<div>
@@ -70,10 +73,15 @@ export function ShopModal() {
 				<ul className="flex max-h-[60vh] flex-col gap-3 overflow-auto pr-1" data-game-ignore>
 					{items.map(renderItem)}
 				</ul>
-				<div className="mt-4 flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white" data-game-ignore>
+				<div
+					className="mt-4 flex items-center justify-between rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-sm text-white"
+					data-game-ignore
+				>
 					<div className="flex flex-col">
 						<span className="font-semibold">Exit game mode</span>
-						<span className="text-[11px] text-gray-300">Pause HUD, stop auto-click, close shop.</span>
+						<span className="text-[11px] text-gray-300">
+							Pause HUD, stop auto-click, close shop.
+						</span>
 					</div>
 					<button
 						onClick={() => {

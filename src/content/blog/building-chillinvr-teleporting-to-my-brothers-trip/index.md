@@ -10,10 +10,9 @@ draft: false
 cover: "cover.jpg"
 ---
 
-
 ## The "Why Did I Think This Would Be Easy?" Moment
 
-My brother Soroush went on this insane multi-month trip, Kazakhstan, Vietnam, Thailand. While he was out there living his best life, he sent me these panorama photos from his phone like "look at this mountain" or "check out this temple." And I'm sitting here in my apartment thinking... what if I could actually *be* there?
+My brother Soroush went on this insane multi-month trip, Kazakhstan, Vietnam, Thailand. While he was out there living his best life, he sent me these panorama photos from his phone like "look at this mountain" or "check out this temple." And I'm sitting here in my apartment thinking... what if I could actually _be_ there?
 
 Not like, physically. But VR, right? Just throw on a headset and suddenly I'm standing in the same spot he was. How hard could it be?
 
@@ -33,7 +32,7 @@ Started setting it up... and then realized React 360's GitHub repo had this fun 
 
 Dead. Deprecated. Abandoned.
 
-*Great start, Ehsan.*
+_Great start, Ehsan._
 
 I spent like an hour trying to make it work anyway (because why learn from other people's mistakes when you can make them yourself?). Dependencies broke. Nothing would run. The internet collectively shrugged at me.
 
@@ -45,7 +44,7 @@ This is where I did what every modern developer does: I asked an AI for help. Sp
 
 "Try A-Frame."
 
-A-Frame turned out to be *perfect*. It's a web framework for VR built on top of Three.js, actively maintained, has actual documentation. Within like 30 minutes I had a basic HTML file running with my first panorama loaded. Saw Soroush's mountain photo wrapped around me in 360°.
+A-Frame turned out to be _perfect_. It's a web framework for VR built on top of Three.js, actively maintained, has actual documentation. Within like 30 minutes I had a basic HTML file running with my first panorama loaded. Saw Soroush's mountain photo wrapped around me in 360°.
 
 I literally said "YES!" out loud to my empty apartment.
 
@@ -54,15 +53,16 @@ I literally said "YES!" out loud to my empty apartment.
 Here's where things got messy.
 
 **Problem 1: The image quality was... not good.** Like, really not good. Blurry, washed out, looked like I was viewing everything through dirty glasses. I thought maybe my code was wrong? Nope. Turns out:
+
 - Phone panoramas are compressed JPEGs (to save space)
 - A-Frame was doing additional texture downsampling
 - Color space stuff was making everything look washed out and shiny
 
-I spent *hours* tweaking texture settings. LinearFilter vs NearestFilter. Anisotropic filtering. MipMaps. sRGB encoding vs Linear encoding. Felt like I was playing with magic spells I didn't understand.
+I spent _hours_ tweaking texture settings. LinearFilter vs NearestFilter. Anisotropic filtering. MipMaps. sRGB encoding vs Linear encoding. Felt like I was playing with magic spells I didn't understand.
 
 Claude helped me push the quality settings to the max, 8K canvas resolution, maximum anisotropic filtering, high-precision shaders. It got better, but still not perfect. Because ultimately, you can't magically enhance source image quality.
 
-**Problem 2: The seam.** Phone panoramas aren't true 360° spherical images. They're wide horizontal strips. And because of how Soroush took them (just moving his phone in an arc), some had this weird *cut* in the middle where the image doesn't perfectly loop.
+**Problem 2: The seam.** Phone panoramas aren't true 360° spherical images. They're wide horizontal strips. And because of how Soroush took them (just moving his phone in an arc), some had this weird _cut_ in the middle where the image doesn't perfectly loop.
 
 I tried using a cylinder instead of a sphere. Worse.
 
@@ -96,7 +96,7 @@ The whole thing runs in a browser. No installs, no VR headset required (though i
 
 4. **AI coding assistants are actually helpful.** Claude didn't write all my code, but it helped me debug, suggested alternatives when I hit dead ends, and explained concepts I didn't know. It's like pair programming with someone patient.
 
-5. **Shipping something imperfect is better than not shipping.** The seam bugs me. The quality isn't pristine. But it *works*. I can click through Soroush's trip and see what he saw. That's the whole point.
+5. **Shipping something imperfect is better than not shipping.** The seam bugs me. The quality isn't pristine. But it _works_. I can click through Soroush's trip and see what he saw. That's the whole point.
 
 ## If You're Trying Something Similar
 
@@ -106,9 +106,9 @@ Listen, if you're reading this and thinking "I want to try building something wi
 
 **Ask for help.** Use AI, Google, Stack Overflow, whatever. No one expects you to know everything. I sure didn't.
 
-**Accept imperfection.** Your first version won't be perfect. It might not even be *good*. But it'll be *done*, and that's infinitely better than a perfect project that only exists in your head.
+**Accept imperfection.** Your first version won't be perfect. It might not even be _good_. But it'll be _done_, and that's infinitely better than a perfect project that only exists in your head.
 
-**Iterate later.** Right now, ChillInVR loads panoramas and lets you look around. Cool. Later, I want to add ambient sounds — maybe AI-generated audio based on the location. Then maybe add info overlays, or clickable hotspots. But I shipped the basic version *first*.
+**Iterate later.** Right now, ChillInVR loads panoramas and lets you look around. Cool. Later, I want to add ambient sounds — maybe AI-generated audio based on the location. Then maybe add info overlays, or clickable hotspots. But I shipped the basic version _first_.
 
 ## What's Next
 
@@ -126,4 +126,4 @@ It's messy out here. But it's fun. 🏔️
 **Check out the code:** [github.com/ehsanpo/chillInVR](https://github.com/ehsanpo/chillInVR)  
 **Tech used:** A-Frame, Three.js, vanilla JavaScript, Claude Sonnet 4.5 for debugging help
 
-*And if you're reading this, Soroush, take more panoramas. Better quality this time. 😄*
+_And if you're reading this, Soroush, take more panoramas. Better quality this time. 😄_

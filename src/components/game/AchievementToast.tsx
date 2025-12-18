@@ -20,7 +20,9 @@ export function AchievementToast({ toast }: Props) {
 			data-game-ignore
 		>
 			<div className="flex items-center gap-2 font-semibold">
-				<span aria-hidden="true" role="img">🏆</span>
+				<span aria-hidden="true" role="img">
+					🏆
+				</span>
 				<span>{toast.title}</span>
 			</div>
 			<p className="mt-1 text-amber-50/90">{toast.message}</p>
@@ -29,7 +31,9 @@ export function AchievementToast({ toast }: Props) {
 				className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-amber-100 underline"
 				data-game-ignore
 			>
-				<span aria-hidden="true" role="img">✨</span>
+				<span aria-hidden="true" role="img">
+					✨
+				</span>
 				<span>Dismiss</span>
 			</button>
 		</div>

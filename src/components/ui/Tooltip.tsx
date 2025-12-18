@@ -10,12 +10,7 @@ interface TooltipProps {
 	className?: string;
 }
 
-export function Tooltip({
-	children,
-	content,
-	position = "top",
-	className,
-}: TooltipProps) {
+export function Tooltip({ children, content, position = "top", className }: TooltipProps) {
 	const [isVisible, setIsVisible] = useState(false);
 
 	const getPositionClasses = () => {
@@ -45,7 +40,7 @@ export function Tooltip({
 					className={cn(
 						"absolute z-50 whitespace-nowrap rounded-md bg-gray-900 px-2 py-1 text-xs text-white shadow-lg transition-opacity duration-200",
 						"before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-gray-900",
-						position === "top" && "before:top-full before:left-1/2 before:-translate-x-1/2",
+						position === "top" && "before:left-1/2 before:top-full before:-translate-x-1/2",
 						position === "bottom" && "before:bottom-full before:left-1/2 before:-translate-x-1/2",
 						position === "left" && "before:left-full before:top-1/2 before:-translate-y-1/2",
 						position === "right" && "before:right-full before:top-1/2 before:-translate-y-1/2",

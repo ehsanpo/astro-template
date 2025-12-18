@@ -5,7 +5,7 @@ export default function LifeGuard() {
 	useEffect(() => {
 		const mode = useGameStore.getState().mode;
 		const unlocked = useGameStore.getState().unlocks["/life"];
-		
+
 		// Redirect to home if not in game mode or /life not unlocked
 		if (mode !== "active" || !unlocked) {
 			window.location.href = "/";

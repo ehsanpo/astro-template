@@ -27,7 +27,11 @@ const navigationMain: MenuItem[] = [
 
 const lifeItem: MenuItem = { href: "/life", text: "Life" };
 
-const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boolean }> = ({ item, depth = 0, locked = false }) => {
+const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boolean }> = ({
+	item,
+	depth = 0,
+	locked = false,
+}) => {
 	const [isOpen, setIsOpen] = React.useState(false);
 
 	if (item.submenu) {

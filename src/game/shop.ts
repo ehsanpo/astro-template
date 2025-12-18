@@ -124,7 +124,8 @@ export const buildShop = (state: GameState): ShopItemDefinition[] => [
 	},
 ];
 
-export const getItemDefinition = (state: GameState, id: ShopItemId) => buildShop(state).find((item) => item.id === id);
+export const getItemDefinition = (state: GameState, id: ShopItemId) =>
+	buildShop(state).find((item) => item.id === id);
 
 export const isUnlocked = (state: GameState, target: UnlockablePage | null) => {
 	if (!target) return true;
@@ -161,7 +162,8 @@ export const applyPurchase = (
 		}
 		default: {
 			if (target) {
-				if (next.unlocks[target]) return { next: state, success: false, reason: "Already unlocked" };
+				if (next.unlocks[target])
+					return { next: state, success: false, reason: "Already unlocked" };
 				next.unlocks = { ...next.unlocks, [target]: true };
 			}
 			break;
