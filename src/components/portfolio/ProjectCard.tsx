@@ -49,7 +49,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 			whileHover={{ scale: 1.02 }}
 			data-categories={JSON.stringify(item.category)}
 		>
-			{/* Featured Badge */}
 			{item.onHome && (
 				<div className="absolute left-4 top-4 z-30">
 					<span className="inline-flex items-center gap-1 rounded-full bg-primary-500/90 px-3 py-1 text-xs text-primary-100">
@@ -58,11 +57,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					</span>
 				</div>
 			)}
-
-			{/* Background Gradient */}
 			<div className="absolute inset-0 z-20 bg-gradient-to-t from-slate-800 to-transparent" />
-
-			{/* Background Image */}
 			<div>
 				<img
 					src={item.background_image?.src || `/img/${item.background_image}`}
@@ -73,8 +68,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					}}
 				/>
 			</div>
-
-			{/* Overlay with actions */}
 			<div className="z-25 absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/40 group-hover:opacity-100">
 				<div className="flex items-center space-x-3">
 					{item.case_link_url && (
@@ -95,8 +88,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					)}
 				</div>
 			</div>
-
-			{/* Content */}
 			<div className="absolute bottom-0 left-0 right-0 z-20 p-4">
 				<div className="mb-3 flex items-center gap-4">
 					<div>
@@ -122,22 +113,16 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					</div>
 				</div>
 
-				{/* Metadata */}
 				<div className="mb-4 flex items-center justify-between text-xs text-gray-300">
 					<div className="flex items-center space-x-4">
 						{item.date && (
 							<div className="flex items-center space-x-1">
 								<Calendar className="h-3 w-3" />
 								<span>
-									{item.date
-										? new Date(
-												(item.date.length === 4 ? `${item.date}-01` : item.date).replace(/-/g, "/")
-											).toLocaleDateString(undefined, {
-												year: "numeric",
-												month: "short",
-											})
-										: ""}
+								
+										{item.date}
 								</span>
+							
 							</div>
 						)}
 						{item.client && (
@@ -149,7 +134,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					</div>
 				</div>
 
-				{/* Categories */}
 				<div className="flex flex-wrap gap-2 overflow-hidden group-hover:mt-4">
 					{item.category?.slice(0, 3).map((cat, index) => (
 						<span
@@ -164,7 +148,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					))}
 				</div>
 
-				{/* Tags */}
 				<div className="flex flex-wrap gap-2 overflow-hidden group-hover:mt-4">
 					{item.tag?.slice(0, 3).map((tag, index) => (
 						<span
@@ -177,7 +160,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 				</div>
 			</div>
 
-			{/* More Actions Menu */}
 			{showShare && (
 				<div className="absolute right-4 top-4 z-30">
 					<button
@@ -224,8 +206,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					)}
 				</div>
 			)}
-
-			{/* Glossy overlay effect */}
 			<div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-br from-white/5 to-transparent opacity-0 transition-opacity duration-300 hover:opacity-100" />
 		</motion.div>
 	);
