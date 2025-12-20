@@ -1,0 +1,169 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/hero/PageHero.astro";
+import StackCard from "../../components/StackCard";
+import SkillChart from "../../components/SkillChart";
+import ToolsList from "../../components/skills/ToolsList.astro";
+import { ProcessFlowDiagram } from "../../components/Beams";
+import { Heading } from "../../components/ui/heading";
+import { getPortfolioData } from "../../utils/data";
+
+const { stacks } = await getPortfolioData();
+
+// Filter stacks related to Application Development
+const appStacks = stacks.filter(stack => 
+  ['Front-end', 'Apps', 'Backend', 'Database'].includes(stack.slug)
+);
+
+// Create custom skills chart for Application Developer role
+const appChart = {
+  slug: "Application Development",
+  labels: ["Native Apps", "Hybrid Apps", "Cross-Platform", "Mobile UX", "Performance", "API Integration"],
+  data: ["8", "9", "9", "8", "9", "10"]
+};
+---
+
+<Layout title="Application Developer - Ehsan Pourhadi">
+  <PageHero
+    title="Application Developer"
+    subtitle="Building native and hybrid applications across platforms with modern frameworks."
+  />
+
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Self-Definition -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>What I Bring</Heading>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          I specialize in crafting applications that work seamlessly across platforms. From native iOS/Android development 
+          to cross-platform solutions with React Native and Electron, I build apps that deliver consistent user experiences 
+          while leveraging platform-specific capabilities when needed.
+        </p>
+      </div>
+
+      <!-- Evidence Snippets -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Evidence</Heading>
+        <div class="space-y-6">
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              From Experience at Telavox
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Developed and maintained soft phone, messaging app and video conferencing solutions using React, Java, and ElectronJs. 
+              Contributed to the design and architecture of web applications."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Experience - Telavox (2023-Present)
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Services Offering
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Cross-platform app development using Electron, Tailwind and Vite integration, React Native mobile apps."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Services - Application Development
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Focus -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Impact & Outcomes</Heading>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-lg bg-gradient-to-br from-primary-500/10 to-primary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-primary-600 dark:text-primary-400">Cross-Platform</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Native Performance</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Building apps with React Native and Electron that deliver native-like performance
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-secondary-600 dark:text-secondary-400">Real-Time</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Communication Apps</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Developed video conferencing and messaging solutions with WebRTC integration
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-blue-600 dark:text-blue-400">Modern Stack</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Latest Technologies</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Leveraging TypeScript, Vite, and modern build tools for optimal developer experience
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-green-600 dark:text-green-400">User-Focused</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Seamless UX</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Crafting intuitive interfaces that work consistently across desktop and mobile platforms
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stacks -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Technical Stacks</Heading>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        {appStacks.map((stack, index) => (
+          <StackCard {...stack} parentIndex={index} client:load />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Chart -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Application Development Skills</Heading>
+      <SkillChart 
+        data={[appChart]} 
+        chartData={appChart} 
+        client:load 
+      />
+    </div>
+  </section>
+
+  <!-- Development Tools -->
+  <ToolsList />
+
+  <!-- Development Process -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Development Process</Heading>
+      <ProcessFlowDiagram client:load />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="gradient-bg rounded-lg py-12 text-center">
+      <h3 class="mb-6 text-4xl text-gray-600 dark:text-gray-100">Ready to build your next application?</h3>
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
+      >
+        Get in Touch
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

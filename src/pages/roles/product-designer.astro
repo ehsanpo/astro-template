@@ -1,0 +1,234 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/hero/PageHero.astro";
+import StackCard from "../../components/StackCard";
+import SkillChart from "../../components/SkillChart";
+import { Heading } from "../../components/ui/heading";
+import { getPortfolioData } from "../../utils/data";
+
+const { stacks, tools } = await getPortfolioData();
+
+// Filter stacks related to Product Design
+const designStacks = stacks.filter(stack => 
+  ['Design', 'Front-end'].includes(stack.slug)
+);
+
+// Create custom skills chart for Product Designer role
+const designChart = {
+  slug: "Product Design",
+  labels: ["UI Design", "UX Research", "Interaction Design", "Product Thinking", "Prototyping", "User Testing"],
+  data: ["10", "9", "9", "9", "8", "8"]
+};
+
+// Design tools
+const designTools = tools.filter(tool => 
+  ['Figma', 'Visual Studio Code'].includes(tool.name)
+);
+---
+
+<Layout title="Product Designer - Ehsan Pourhadi">
+  <PageHero
+    title="Product Designer"
+    subtitle="Beyond UI/UX — crafting interactions and product experiences that solve real problems."
+  />
+
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Self-Definition -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>What I Bring</Heading>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          I approach design from a product perspective, not just aesthetics. With deep technical knowledge and UX expertise, 
+          I create interfaces that are both beautiful and functional. I understand the constraints and possibilities of 
+          implementation, enabling me to design solutions that actually get built.
+        </p>
+      </div>
+
+      <!-- Evidence Snippets -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Evidence</Heading>
+        <div class="space-y-6">
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Award-Winning Design Work
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Created a comprehensive digital identity for Malmö's premier food hall, featuring an immersive platform. 
+              Won Svenska Design: Gold in Digital Design for this work."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio - Malmö Saluhall Project
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Testimonial from Rebecca Löfgren (Senior UX Designer)
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Working with Ehsan means constantly being introduced to new ideas and interesting innovations. 
+              He has a keen eye for design and an eagerness to share his expertise, making our team better."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Testimonials - Rebecca Löfgren
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              From Services
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Designing intuitive and engaging user interfaces through wireframing, prototyping, and user research."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Services - UI/UX Design
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Focus -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Impact & Outcomes</Heading>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-lg bg-gradient-to-br from-primary-500/10 to-primary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-primary-600 dark:text-primary-400">Gold Award</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Svenska Design</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Recognition for exceptional digital design in category-leading project
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-secondary-600 dark:text-secondary-400">12+ Years</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Design Experience</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              From Photoshop in 2010 to modern Figma-based design systems
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-blue-600 dark:text-blue-400">Technical Edge</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Design + Code</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Unique ability to design interfaces and implement them in production code
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-green-600 dark:text-green-400">User-Centered</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Research-Driven</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Combining user research with design thinking to solve real user problems
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creative Stacks -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Design & Technical Stacks</Heading>
+      <div class="grid gap-8 md:grid-cols-2">
+        {designStacks.map((stack, index) => (
+          <StackCard {...stack} parentIndex={index} client:load />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Chart -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Product Design Skills</Heading>
+      <SkillChart 
+        data={[designChart]} 
+        chartData={designChart} 
+        client:load 
+      />
+    </div>
+  </section>
+
+  <!-- Design Tools -->
+  <section class="container mx-auto py-20">
+    <Heading level="h2" gradient floating backplate client:idle>Design Tools</Heading>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {designTools.map((tool) => (
+        <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+          <div class="mb-4 flex items-center">
+            <img src={tool.icon} alt={tool.name} class="mr-3 h-8 w-8" />
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">{tool.name}</h3>
+          </div>
+          <p class="mb-4 text-gray-600 dark:text-gray-400">{tool.description}</p>
+          <div class="flex items-center">
+            <div class="flex-1">
+              <div class="h-2 w-full rounded-full bg-gray-200 dark:bg-neutral-700">
+                <div
+                  class="h-2 rounded-full bg-primary-600"
+                  style={`width: ${tool.proficiency * 10}%`}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Design Process -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <Heading level="h2" gradient floating backplate client:idle>Design Process</Heading>
+      <div class="mx-auto max-w-4xl">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <div class="mb-4 text-4xl">🔍</div>
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">1. Research & Discovery</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              User interviews, competitive analysis, and product requirements gathering to understand the problem space
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <div class="mb-4 text-4xl">✏️</div>
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">2. Design & Prototype</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Wireframing, high-fidelity mockups in Figma, and interactive prototypes for user testing
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <div class="mb-4 text-4xl">🚀</div>
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">3. Build & Iterate</h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              Collaborate with engineering on implementation, gather user feedback, and continuously refine the design
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="gradient-bg rounded-lg py-12 text-center">
+      <h3 class="mb-6 text-4xl text-gray-600 dark:text-gray-100">Ready to create beautiful, functional products?</h3>
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
+      >
+        Get in Touch
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

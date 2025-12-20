@@ -1,0 +1,217 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/hero/PageHero.astro";
+import StackCard from "../../components/StackCard";
+import SkillChart from "../../components/SkillChart";
+import ToolsList from "../../components/skills/ToolsList.astro";
+import { ProcessFlowDiagram } from "../../components/Beams";
+import { Heading } from "../../components/ui/heading";
+import { getPortfolioData } from "../../utils/data";
+
+const { stacks } = await getPortfolioData();
+
+// Filter stacks related to Director of Engineering (aspirational)
+const directorStacks = stacks.filter(stack => 
+  ['Front-end', 'Backend', 'Cloud', 'DevOps'].includes(stack.slug)
+);
+
+// Create custom skills chart for Director of Engineering role
+const directorChart = {
+  slug: "Engineering Leadership",
+  labels: ["Strategic Planning", "Team Scaling", "Technical Vision", "Stakeholder Management", "Budget & Resources", "Organizational Growth"],
+  data: ["8", "8", "9", "9", "7", "8"]
+};
+---
+
+<Layout title="Director of Engineering (Aspiring) - Ehsan Pourhadi">
+  <PageHero
+    title="Director of Engineering"
+    subtitle="Strategic engineering leadership — building high-performing teams and driving organizational growth."
+  />
+
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Self-Definition -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>What I Bring</Heading>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          As an aspiring Director of Engineering, I combine deep technical expertise with growing leadership experience. 
+          I understand how to scale teams, set technical direction, and align engineering efforts with business goals. 
+          My hands-on background enables me to make informed decisions about architecture, process, and team structure.
+        </p>
+      </div>
+
+      <!-- Evidence Snippets -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Evidence</Heading>
+        <div class="space-y-6">
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              From Experience at Bredband2
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Managed the project and team. Streamlined development processes to enhance team productivity and efficiency. 
+              Successfully managed cross-functional teams through major technical transitions."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Experience - Bredband2 (2020-2023)
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Testimonial from Lenny Erlesand (Engineering Manager)
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Ehsan is deeply engaged in improving how we work together as a team. He takes initiative in refining our processes, 
+              ensuring that we collaborate more effectively and work more sustainably. He provides thoughtful feedback, asks challenging questions."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Testimonials - Lenny Erlesand
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Testimonial from Jony Lai (Software Developer)
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "He played a huge role in making sure we kept our documentation in good shape, pushed our projects forward with clarity and structure, 
+              and elevated the people around him through professionalism and courage."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Testimonials - Jony Lai
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Focus -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Impact & Strategic Vision</Heading>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-lg bg-gradient-to-br from-primary-500/10 to-primary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-primary-600 dark:text-primary-400">Team Building</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Cross-Functional Leadership</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Experience managing and coordinating cross-functional engineering teams
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-secondary-600 dark:text-secondary-400">Process</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Optimization & Scale</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Proven ability to refine processes for better collaboration and sustainable work
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-blue-600 dark:text-blue-400">Technical Depth</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Architecture & Vision</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Deep technical understanding to inform strategic decisions and technical direction
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-green-600 dark:text-green-400">Culture</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Team Excellence</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Building environments where engineers thrive and deliver their best work
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aspirational Section -->
+      <div class="mb-16 rounded-lg bg-gradient-to-br from-primary-500/10 to-secondary-500/10 p-8">
+        <Heading level="h2" gradient floating backplate client:idle>Strategic Direction</Heading>
+        <p class="mb-6 text-lg text-gray-700 dark:text-gray-300">
+          As I grow into the Director of Engineering role, I'm focused on:
+        </p>
+        <div class="grid gap-4 md:grid-cols-2">
+          <div class="rounded-lg bg-white/50 p-4 dark:bg-neutral-800/50">
+            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200">🎯 Scaling Teams</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Building hiring processes, onboarding frameworks, and growth paths
+            </p>
+          </div>
+          <div class="rounded-lg bg-white/50 p-4 dark:bg-neutral-800/50">
+            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200">📊 Business Alignment</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Translating business goals into engineering roadmaps and priorities
+            </p>
+          </div>
+          <div class="rounded-lg bg-white/50 p-4 dark:bg-neutral-800/50">
+            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200">🏗️ Technical Strategy</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Setting long-term technical vision and architectural standards
+            </p>
+          </div>
+          <div class="rounded-lg bg-white/50 p-4 dark:bg-neutral-800/50">
+            <h4 class="mb-2 font-semibold text-gray-800 dark:text-gray-200">🌱 Organizational Growth</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400">
+              Developing leaders, fostering innovation, and building sustainable practices
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stacks -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Technical Foundation</Heading>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        {directorStacks.map((stack, index) => (
+          <StackCard {...stack} parentIndex={index} client:load />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Chart -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Leadership Capabilities</Heading>
+      <SkillChart 
+        data={[directorChart]} 
+        chartData={directorChart} 
+        client:load 
+      />
+    </div>
+  </section>
+
+  <!-- Development Tools -->
+  <ToolsList />
+
+  <!-- Development Process -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Engineering Process</Heading>
+      <ProcessFlowDiagram client:load />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="gradient-bg rounded-lg py-12 text-center">
+      <h3 class="mb-6 text-4xl text-gray-600 dark:text-gray-100">Ready to discuss strategic engineering leadership?</h3>
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
+      >
+        Get in Touch
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

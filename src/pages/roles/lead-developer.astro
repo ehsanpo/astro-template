@@ -1,0 +1,183 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHero from "../../components/hero/PageHero.astro";
+import StackCard from "../../components/StackCard";
+import SkillChart from "../../components/SkillChart";
+import ToolsList from "../../components/skills/ToolsList.astro";
+import { ProcessFlowDiagram } from "../../components/Beams";
+import { Heading } from "../../components/ui/heading";
+import { getPortfolioData } from "../../utils/data";
+
+const { stacks } = await getPortfolioData();
+
+// Filter stacks related to Lead Developer
+const leadStacks = stacks.filter(stack => 
+  ['Front-end', 'Backend', 'DevOps', 'CI/CD'].includes(stack.slug)
+);
+
+// Create custom skills chart for Lead Developer role
+const leadChart = {
+  slug: "Technical Leadership",
+  labels: ["Technical Vision", "Code Architecture", "Team Mentoring", "Code Reviews", "Technical Decisions", "Hands-on Coding"],
+  data: ["10", "10", "10", "10", "9", "10"]
+};
+---
+
+<Layout title="Lead Developer - Ehsan Pourhadi">
+  <PageHero
+    title="Lead Developer"
+    subtitle="Technical leader of engineering teams — guiding architecture, code quality, and team growth."
+  />
+
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-4xl">
+      <!-- Self-Definition -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>What I Bring</Heading>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          I lead by example, writing code alongside my team while setting technical direction and standards. 
+          With deep expertise across the full stack, I make architectural decisions, conduct thorough code reviews, 
+          and mentor developers to grow their skills. I balance hands-on technical work with team leadership.
+        </p>
+      </div>
+
+      <!-- Evidence Snippets -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Evidence</Heading>
+        <div class="space-y-6">
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              From Experience at Guts & Glory
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Served as Tech Lead, overseeing technical aspects of web development projects. Mentored junior developers and conducted code reviews. 
+              Collaborated with the design team for seamless integration."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Experience - Guts & Glory (2017-2019)
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              Testimonial from David Szmak (Front End Developer)
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Few people have the opportunity to code to a Tech Lead Developer who is also a good coach and a great mentor—but I did when I worked with Ehsan. 
+              I was particularly impressed by his ability to handle even the toughest projects effortlessly."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Testimonials - David Szmak
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+            <h3 class="mb-2 text-xl font-semibold text-primary-600 dark:text-primary-400">
+              From Experience at Bredband2
+            </h3>
+            <blockquote class="border-l-4 border-primary-500 pl-4 italic text-gray-700 dark:text-gray-300">
+              "Streamlined development processes to enhance team productivity and efficiency. 
+              Mentored junior developers and conducted code reviews."
+            </blockquote>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Source: Portfolio Experience - Bredband2 (2020-2023)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outcome Focus -->
+      <div class="mb-16">
+        <Heading level="h2" gradient floating backplate client:idle>Impact & Outcomes</Heading>
+        <div class="grid gap-6 md:grid-cols-2">
+          <div class="rounded-lg bg-gradient-to-br from-primary-500/10 to-primary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-primary-600 dark:text-primary-400">Team Growth</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Mentorship Success</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Coached and mentored junior developers into confident, productive team members
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-secondary-500/10 to-secondary-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-secondary-600 dark:text-secondary-400">Code Quality</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Elevated Standards</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Implemented code review processes and best practices that improved codebase quality
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-blue-600 dark:text-blue-400">Award-Winning</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Technical Excellence</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Led teams to deliver award-winning projects (Svenska Design Gold, Cannes Lions)
+            </p>
+          </div>
+
+          <div class="rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/10 p-6">
+            <div class="mb-2 text-3xl font-bold text-green-600 dark:text-green-400">Process</div>
+            <div class="text-lg font-semibold text-gray-800 dark:text-gray-200">Productivity Gains</div>
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              Streamlined development workflows to enhance team efficiency
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Stacks -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Technical Leadership Stack</Heading>
+      <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
+        {leadStacks.map((stack, index) => (
+          <StackCard {...stack} parentIndex={index} client:load />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Chart -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Lead Developer Skills</Heading>
+      <SkillChart 
+        data={[leadChart]} 
+        chartData={leadChart} 
+        client:load 
+      />
+    </div>
+  </section>
+
+  <!-- Development Tools -->
+  <ToolsList />
+
+  <!-- Development Process -->
+  <section class="py-12">
+    <div class="container mx-auto">
+      <Heading level="h2" gradient floating backplate client:idle>Development Process</Heading>
+      <ProcessFlowDiagram client:load />
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="gradient-bg rounded-lg py-12 text-center">
+      <h3 class="mb-6 text-4xl text-gray-600 dark:text-gray-100">Ready to lead your engineering team to excellence?</h3>
+      <a
+        href="/contact"
+        class="inline-flex items-center rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
+      >
+        Get in Touch
+        <svg class="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>
