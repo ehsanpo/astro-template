@@ -1,3 +1,5 @@
+@import "./duck-sprite.css";
+
 @font-face {
 	font-family: "Basement";
 	src: url("/fonts/basement.woff2") format("woff2");
