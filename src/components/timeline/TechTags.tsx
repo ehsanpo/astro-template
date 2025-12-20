@@ -6,7 +6,7 @@ interface TechTagsProps {
 
 export const TechTags: React.FC<TechTagsProps> = ({ technologies }) => {
 	return (
-		<div className="mt-4 flex flex-wrap gap-2">
+		<div className="my-4 flex flex-wrap gap-2">
 			{technologies.map((tech, index) => (
 				<span
 					key={index}
