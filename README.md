@@ -1,5 +1,7 @@
 # Modern Portfolio Template
 
+![PixelWorld Demo](https://github.com/user-attachments/assets/b8f9c8a5-8b2d-4c4a-9a4f-2e5c8d9a1b3e)
+
 A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 
 ## 🚀 Features
@@ -9,6 +11,8 @@ A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 - 🌙 Dark mode support
 - 📱 Fully responsive design
 - 🔍 SEO optimized
+- 🎮 Interactive PixelWorld component with weather effects
+- 🔊 Dynamic sound generation system
 - 📊 Portfolio showcase
 - 💼 Services section
 - 📝 Skills & Experience
@@ -27,15 +31,24 @@ A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 ```
 /
 ├── public/          # Static assets
+│   └── img/px/      # PixelWorld assets (light/dark themes)
 ├── src/
 │   ├── components/  # UI components
+│   │   ├── pixelworld/  # PixelWorld components
+│   │   │   ├── PixelWorld.tsx
+│   │   │   ├── FireAnimation.tsx
+│   │   │   ├── WeatherSystem.tsx
+│   │   │   └── index.ts
+│   │   └── ...
 │   ├── content/     # Portfolio content (MD files)
 │   ├── data/        # JSON data files
 │   ├── layouts/     # Page layouts
 │   ├── pages/       # Route pages
 │   ├── styles/      # Global styles
 │   ├── types/       # TypeScript types
-│   └── utils/       # Utility functions
+│   ├── utils/       # Utility functions
+│   │   └── sounds.ts # Sound generation utilities
+│   └── ...
 └── package.json
 ```
 
@@ -58,6 +71,50 @@ A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
    npm run build
    ```
 
+## 🎮 PixelWorld Component
+
+An interactive pixel art world featuring:
+
+- **Dynamic Weather System**: Rain, snow, fog effects with particle animations
+- **Theme-aware Assets**: Automatically switches between light/dark themed pixel art
+- **Interactive Elements**: Clickable animated cat with sound effects
+- **Fire Animation**: Sprite-based campfire with looping animation
+- **Parallax Effects**: Mouse-responsive background layers
+- **Sound Generation**: Procedural audio for interactive elements
+
+### Usage
+
+```tsx
+import { PixelWorld } from "./components/pixelworld";
+
+<PixelWorld className="border-t border-neutral-800/50" height={320} />;
+```
+
+### Assets Structure
+
+```
+public/img/px/
+├── dark/           # Dark theme assets
+│   ├── sky.jpg
+│   ├── mountain.png
+│   ├── grass.png
+│   ├── ground.jpg
+│   ├── tree.png
+│   └── stone.png
+├── light/          # Light theme assets
+│   ├── sky.png
+│   ├── mountain.png
+│   ├── grass.png
+│   ├── ground.png
+│   ├── tree.png
+│   └── stone.png
+└── fire/           # Fire animation sprites
+    ├── CampFire1.png
+    ├── CampFire2.png
+    ├── ...
+    └── fire_spritesheet.png
+```
+
 ## 📝 Content Management
 
 All content is managed through:
@@ -67,9 +124,14 @@ All content is managed through:
 
 ## 🎨 Customization
 
-1. Colors: Edit `tailwind.config.mjs`
-2. Typography: Update fonts in `Layout.astro`
-3. Content: Modify `portfolio.json`
+1. **Colors**: Edit `tailwind.config.mjs`
+2. **Typography**: Update fonts in `Layout.astro`
+3. **Content**: Modify `portfolio.json`
+4. **PixelWorld**:
+   - Replace assets in `public/img/px/`
+   - Modify weather effects in `WeatherSystem.tsx`
+   - Customize sounds in `utils/sounds.ts`
+   - Adjust animations in CSS files
 
 ## 📄 Page Structure
 

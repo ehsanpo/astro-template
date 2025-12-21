@@ -39,10 +39,8 @@ export default function PortfolioFilter({
 			<motion.button
 				onClick={() => filterPortfolio("all")}
 				className={clsx(
-					"rounded-full px-4 py-2 transition-colors",
-					selectedCategory === "all"
-						? "bg-primary-500 text-black"
-						: "text-light bg-black/50 hover:bg-black/70"
+					"clip2 rounded px-4 py-2 transition-colors",
+					selectedCategory === "all" ? "bg-primary-500 text-black" : "text-light bg-neutral-800/50"
 				)}
 				whileHover={{ scale: 1.05 }}
 				whileTap={{ scale: 0.95 }}
@@ -55,10 +53,10 @@ export default function PortfolioFilter({
 					key={category}
 					onClick={() => filterPortfolio(category)}
 					className={clsx(
-						"rounded-full px-4 py-2 transition-colors",
+						"clip2 rounded px-4 py-2 transition-colors",
 						selectedCategory === category
 							? "bg-primary-500 text-black"
-							: "text-light bg-black/50 hover:bg-black/70"
+							: "text-light bg-neutral-800/50"
 					)}
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}

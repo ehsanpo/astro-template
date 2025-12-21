@@ -623,6 +623,6 @@ body {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--primary);
+	background-color: var(--bg);
 	animation: glitch-animation 1s linear infinite;
 }

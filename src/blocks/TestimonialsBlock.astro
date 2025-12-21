@@ -2,12 +2,13 @@
 import { getPortfolioData } from "@/utils/data";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Heading } from "@/components/ui/heading";
+import Link from "@/components/Link";
 
 const { testimonials } = await getPortfolioData();
 const { showAll = false } = Astro.props;
 ---
 
-<section class="bg-white py-20 dark:bg-neutral-800" id="testimonials">
+<section class="clip5 bg-white py-20 dark:bg-neutral-800" id="testimonials">
 	<div class="container mx-auto px-4">
 		<Heading
 			level="h2"
@@ -30,12 +31,7 @@ const { showAll = false } = Astro.props;
 		{
 			showAll ? null : (
 				<div class="mt-12 text-center">
-					<a
-						href="/about/#testimonials"
-						class="inline-block rounded bg-secondary-600 px-6 py-3 font-semibold text-white transition hover:bg-secondary-700"
-					>
-						View All Testimonials
-					</a>
+					<Link href="/about/#testimonials" text="View All Testimonials →" variant="secondary" />
 				</div>
 			)
 		}

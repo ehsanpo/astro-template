@@ -33,7 +33,7 @@ const awardsWithImages = awards.map((award) => ({
 				awardsWithImages.map((award) => (
 					<a
 						href={award.link}
-						class="clip group rounded-lg bg-opium p-6 transition-transform hover:-translate-y-1 dark:bg-neutral-700"
+						class="clip group rounded-lg bg-opium p-6 transition-transform hover:-translate-y-1 dark:bg-secondary-900"
 					>
 						<div class="">
 							<Image
@@ -46,8 +46,8 @@ const awardsWithImages = awards.map((award) => ({
 								loading="lazy"
 								class="mx-auto mb-4 rounded-lg transition-transform group-hover:scale-105"
 							/>
-							<h3 class="mb-2 text-xl font-semibold text-yellow-500">{award.name}</h3>
-							<p class="dark:text-gray-400">{award.description}</p>
+							<h3 class="mb-2 text-xl font-semibold text-secondary-400">{award.name}</h3>
+							<p class="dark:text-secondary-200">{award.description}</p>
 						</div>
 					</a>
 				))

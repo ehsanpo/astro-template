@@ -15,6 +15,7 @@ import accessibility from "@/assets/cert/accessibility.png";
 import GAA from "@/assets/cert/GAA.png";
 import GTM from "@/assets/cert/GTM.png";
 import GA from "@/assets/cert/GA.png";
+import Link from "@/components/Link";
 
 const { certifications } = await getPortfolioData();
 
@@ -38,6 +39,7 @@ const certsWithImages = certifications.map((cert) => ({
 	...cert,
 	image: imageMap[cert.img] || cert.img,
 }));
+const { showAll = false } = Astro.props;
 ---
 
 <section class="m-auto w-full overflow-hidden bg-gray-50 py-20 dark:bg-neutral-900">
@@ -47,7 +49,22 @@ const certsWithImages = certifications.map((cert) => ({
 		<div
 			class="grid grid-cols-1 justify-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4"
 		>
-			{certsWithImages.map((cert, index) => <CertificateCard {...cert} index={index} />)}
+			{
+				certsWithImages
+					.slice(0, showAll ? certsWithImages.length : 4)
+					.map((cert, index) => <CertificateCard {...cert} index={index} />)
+			}
 		</div>
+		{
+			showAll ? null : (
+				<div class="mt-12 text-center">
+					<Link
+						href="/about/#certifications"
+						text="View All Certifications →"
+						variant="secondary"
+					/>
+				</div>
+			)
+		}
 	</div>
 </section>

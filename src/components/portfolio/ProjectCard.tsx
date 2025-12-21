@@ -51,7 +51,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 		>
 			{item.onHome && (
 				<div className="absolute left-4 top-4 z-30">
-					<span className="inline-flex items-center gap-1 rounded-full bg-primary-500/90 px-3 py-1 text-xs text-primary-100">
+					<span className="inline-flex items-center gap-1 rounded-full bg-primary-500/90 px-3 py-1 text-xs text-primary-900">
 						<Star className="h-3 w-3" />
 						Featured
 					</span>
@@ -134,7 +134,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					{item.category?.slice(0, 3).map((cat, index) => (
 						<span
 							key={cat}
-							className={`invisible h-0 overflow-hidden bg-primary-500/80 px-3 text-sm text-primary-100 transition-all ease-in-out group-hover:visible group-hover:h-7 group-hover:py-1 ${delay[index]}`}
+							className={`clip2 invisible h-0 overflow-hidden bg-primary-500/80 px-3 text-sm text-primary-900 transition-all ease-in-out group-hover:visible group-hover:h-7 group-hover:py-1 ${delay[index]}`}
 							style={{
 								viewTransitionName: `portfolio-category-${item.permalink || item.slug}-${cat}`,
 							}}
@@ -148,7 +148,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 					{item.tag?.slice(0, 3).map((tag, index) => (
 						<span
 							key={tag}
-							className={`${index > 2 ? "hidden" : ""} invisible h-0 overflow-hidden border-l-2 border-purple-500/30 bg-purple-500/80 px-3 text-sm text-purple-100 transition-all hover:border-purple-500 group-hover:visible group-hover:h-7 group-hover:py-1 ${delay[index]}`}
+							className={`${index > 2 ? "hidden" : ""} clip2 invisible h-0 overflow-hidden border-l-2 border-purple-500/30 bg-purple-500/80 px-3 text-sm text-purple-100 transition-all hover:border-purple-500 group-hover:visible group-hover:h-7 group-hover:py-1 ${delay[index]}`}
 						>
 							{tag}
 						</span>

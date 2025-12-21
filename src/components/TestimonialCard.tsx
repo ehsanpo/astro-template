@@ -21,8 +21,8 @@ export default function TestimonialCard({ name, title, img, short, desc }: Testi
 			<div className="mb-4 flex items-center gap-4">
 				<img src={img} alt={name} className="h-16 w-16 rounded-full object-cover" />
 				<div>
-					<h3 className="font-basement text-xl text-primary-400">{name}</h3>
-					<p className="text-primary-600">{title}</p>
+					<h3 className="font-basement text-xl text-secondary-400">{name}</h3>
+					<p className="text-secondary-500">{title}</p>
 				</div>
 			</div>
 			<motion.div
@@ -33,7 +33,7 @@ export default function TestimonialCard({ name, title, img, short, desc }: Testi
 				<p className="whitespace-pre-line text-secondary-200">{isExpanded ? desc : short}</p>
 			</motion.div>
 			<button
-				className="mt-4 text-primary-600 transition-colors hover:text-white"
+				className="mt-4 text-secondary-500 transition-colors hover:text-white"
 				onClick={(e) => {
 					e.stopPropagation();
 					setIsExpanded(!isExpanded);

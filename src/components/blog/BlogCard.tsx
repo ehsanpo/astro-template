@@ -35,7 +35,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false, clas
 	return (
 		<article
 			className={cn(
-				"group relative overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-neutral-800",
+				"clip group relative overflow-hidden rounded bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-neutral-800",
 				featured && "md:col-span-1",
 				className
 			)}
@@ -90,13 +90,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false, clas
 									{post.category.slice(0, 2).map((cat) => (
 										<span
 											key={cat}
-											className="rounded-md bg-primary-100 px-2 py-1 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-200"
+											className="clip2 rounded bg-primary-100 px-2 py-1 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-200"
 										>
 											{cat}
 										</span>
 									))}
 									{post.category.length > 2 && (
-										<span className="text-xs text-gray-500 dark:text-gray-400">
+										<span className="clip2 text-xs text-gray-500 dark:text-gray-400">
 											+{post.category.length - 2}
 										</span>
 									)}
@@ -107,7 +107,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false, clas
 
 					<h3
 						className={cn(
-							"mb-3 font-bold text-gray-900 transition-colors group-hover:text-primary-600 dark:text-white dark:group-hover:text-primary-400",
+							"mb-3 font-bold text-gray-900 transition-colors group-hover:text-primary-600 dark:text-secondary-100 dark:group-hover:text-primary-400",
 							featured ? "text-2xl" : "text-xl"
 						)}
 					>
@@ -115,7 +115,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false, clas
 					</h3>
 
 					{post.description && (
-						<p className="mb-4 text-gray-600 dark:text-gray-300">
+						<p className="mb-4 text-gray-600 dark:text-secondary-200">
 							{post.description.length > 120
 								? `${post.description.substring(0, 120)}...`
 								: post.description}
