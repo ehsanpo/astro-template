@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { generateSound } from "../utils/sounds";
 
 interface DuckSpriteProps {
 	className?: string;
@@ -11,42 +12,10 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 	const [isWalking, setIsWalking] = useState(false);
 
 	const handleQuack = () => {
-		// Light, cute quack sound!
-		const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-
-		const oscillator = audioContext.createOscillator();
-		const gainNode = audioContext.createGain();
-
-		// Connect nodes
-		oscillator.connect(gainNode);
-		gainNode.connect(audioContext.destination);
-
-		// Higher, lighter frequency range (400-800 Hz)
-		const frequency = 400 + Math.random() * 400;
-		oscillator.frequency.setValueAtTime(frequency, audioContext.currentTime);
-		oscillator.frequency.exponentialRampToValueAtTime(
-			frequency * 0.7,
-			audioContext.currentTime + 0.05
-		);
-		oscillator.frequency.exponentialRampToValueAtTime(
-			frequency * 0.5,
-			audioContext.currentTime + 0.1
-		);
-
-		// Use square wave for more "quacky" character
-		oscillator.type = "square";
-
-		// Quick, light envelope
-		gainNode.gain.setValueAtTime(0, audioContext.currentTime);
-		gainNode.gain.linearRampToValueAtTime(0.15, audioContext.currentTime + 0.01);
-		gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
-
-		oscillator.start(audioContext.currentTime);
-		oscillator.stop(audioContext.currentTime + 0.1);
+		generateSound("duck");
 	};
 
 	useEffect(() => {
-		// Set initial random position
 		setPosition(Math.random() * (window.innerWidth - 32));
 
 		const interval = setInterval(
@@ -77,9 +46,12 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 				const newPos = prev + speed;
 				const maxX = window.innerWidth - 32;
 
-				if (newPos < 0 || newPos > maxX) {
-					setDirection(direction === "right" ? "left" : "right");
-					return prev;
+				if (newPos <= 0) {
+					setDirection("right");
+					return 0;
+				} else if (newPos >= maxX) {
+					setDirection("left");
+					return maxX;
 				}
 				return newPos;
 			});
@@ -95,13 +67,13 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 			style={{
 				position: "absolute",
 				left: `${position}px`,
-				bottom: "208px",
+				bottom: "220px",
 				width: "32px",
 				height: "32px",
 				backgroundImage: "url(/img/ducky_2_spritesheet.png)",
 				backgroundSize: "192px 128px",
 				imageRendering: "pixelated",
-				transform: direction === "left" ? "scaleX(-1)" : "scaleX(1)",
+				transform: direction === "left" ? "scaleX(-2) scaleY(2)" : "scaleX(2) scaleY(2)",
 				zIndex: 1000,
 				pointerEvents: "auto",
 				cursor: "pointer",

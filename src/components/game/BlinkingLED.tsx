@@ -10,7 +10,7 @@ interface BlinkingLEDProps {
 }
 
 export function BlinkingLED({
-	color = "#22c55e",
+	color = "#efb503",
 	size = 10,
 	height = 1,
 	width = 100,

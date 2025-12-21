@@ -60,13 +60,13 @@ const socialImage = new URL(image, Astro.site);
 	</head>
 	<body class="bg-white text-gray-900 dark:bg-neutral-900 dark:text-gray-100">
 		<KonamiCode client:load />
-		<ScrollBottomEasterEgg client:load />
 		<NavLockGuard client:load />
 		<Header />
 		<GameHUD client:load />
 		<main class="min-h-screen">
 			<slot />
 			<Footer client:load />
+			<ScrollBottomEasterEgg client:load />
 		</main>
 		<script>
 			document.addEventListener("astro:after-swap", function () {
