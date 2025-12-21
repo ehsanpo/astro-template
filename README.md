@@ -1,6 +1,6 @@
 # Modern Portfolio Template
 
-![PixelWorld Demo](https://github.com/user-attachments/assets/b8f9c8a5-8b2d-4c4a-9a4f-2e5c8d9a1b3e)
+![PixelWorld Demo](https://github.com/ehsanpo/astro-template/blob/main/demo/pxworld.png?raw=true)
 
 A modern, responsive portfolio website built with Astro, React, and TailwindCSS.
 
