@@ -7,10 +7,6 @@ export function getHeadingClass({ gradient, shadow, floating }: HeadingStyles): 
 		baseClasses.push("!text-primary-500");
 	}
 
-	if (shadow) {
-		baseClasses.push("drop-shadow-md");
-	}
-
 	if (floating) {
 		baseClasses.push("hover:-translate-y-1", "hover:drop-shadow-xl", "duration-300");
 	}

@@ -253,7 +253,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
 	return (
 		<div
 			className={`${
-				layout % 2 ? "bg-offwhite dark:bg-neutral-900" : "clip -my-2 bg-opium dark:bg-neutral-700"
+				layout % 2 ? "bg-offwhite dark:bg-neutral-900" : "clip -my-2 bg-opium dark:bg-neutral-800"
 			} p-4 lg:p-20`}
 		>
 			<div
