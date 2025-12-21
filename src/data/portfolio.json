@@ -35,7 +35,8 @@
 			{ "href": "/cv", "text": "Resume" },
 			{ "href": "/about", "text": "About" },
 			{ "href": "/life", "text": "Life" },
-			{ "href": "/contact", "text": "Contact" }
+			{ "href": "/contact", "text": "Contact" },
+			{ "href": "/credits", "text": "Credits" }
 		]
 	},
 	"contact": {
