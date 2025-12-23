@@ -1440,5 +1440,47 @@
 			"tags": ["Marriage", "Love", "Family"],
 			"highlighted": true
 		}
+	],
+	"roles": [
+		{
+			"title": "Senior Software Engineer",
+			"slug": "senior-software-engineer",
+			"description": "Delivering technical excellence through experience, leadership, and continuous innovation.",
+			"icon": "👨‍💻",
+			"image": "/img/roles/Senior Software Engineer.png",
+			"tags": ["Leadership", "Architecture", "Mentorship"]
+		},
+		{
+			"title": "Product Engineer",
+			"slug": "product-engineer",
+			"description": "Crafting product solutions, not just code — where engineering meets user needs.",
+			"icon": "🎯",
+			"image": "/img/roles/Product Engineer.png",
+			"tags": ["Product Thinking", "User Research", "Full-stack"]
+		},
+		{
+			"title": "Engineering Manager",
+			"slug": "engineering-manager",
+			"description": "Leading high-performing engineering teams to deliver exceptional software products.",
+			"icon": "👥",
+			"image": "/img/roles/Engineering Manage.png",
+			"tags": ["Team Leadership", "Strategy", "Process"]
+		},
+		{
+			"title": "DevOps Cloud Engineer",
+			"slug": "devops-cloud-engineer",
+			"description": "Building scalable infrastructure and optimizing deployment pipelines.",
+			"icon": "☁️",
+			"image": "/img/roles/devops.png",
+			"tags": ["Cloud", "Automation", "Scalability"]
+		},
+		{
+			"title": "Music Production Technologist",
+			"slug": "music-production-technologist",
+			"description": "Combining technical expertise with creative audio production and sound design.",
+			"icon": "🎵",
+			"image": "/img/roles/Music Production.png",
+			"tags": ["Audio", "Production", "Technology"]
+		}
 	]
 }

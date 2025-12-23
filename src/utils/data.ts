@@ -157,3 +157,7 @@ export const findTimelineMatch = (stackLabel: string) => {
 
 	return null;
 };
+
+export const getRoles = () => {
+	return portfolioData.roles;
+};
