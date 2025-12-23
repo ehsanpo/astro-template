@@ -59,8 +59,8 @@ const musicTools = [
 ];
 ---
 
-<Layout title="Music Production Technologist - Ehsan Pourhadi">
-	<Hero fullHeight title="Music Production Technologist" img={currentRole?.image}>
+<Layout title={currentRole?.title + " - Ehsan Pourhadi"}>
+	<Hero fullHeight title={currentRole?.title} img={currentRole?.image}>
 		<div>
 			<BoxReveal boxColor="bg-secondary-500" duration={0.1} delay={0.2} client:load>
 				<p class="mb-5 text-2xl dark:text-gray-300">

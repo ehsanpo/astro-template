@@ -24,6 +24,7 @@ interface SkillChartProps {
 		data: string[];
 		slug: string;
 	};
+	categoryButton?: boolean;
 }
 
 // Color mappings for each category
@@ -246,7 +247,7 @@ const StatisticsCard = ({
 	);
 };
 
-export default function SkillChart({ data, chartData }: SkillChartProps) {
+export default function SkillChart({ data, chartData, categoryButton = true }: SkillChartProps) {
 	const [currentChart, setCurrentChart] = React.useState(chartData);
 	const [currentCategory, setCurrentCategory] = React.useState("Overall");
 	const [isDarkMode, setIsDarkMode] = useState(false);
@@ -370,42 +371,40 @@ export default function SkillChart({ data, chartData }: SkillChartProps) {
 
 	return (
 		<div className="mx-auto w-full max-w-6xl px-4 py-1">
-			{/* Header */}
+			{categoryButton && (
+				<div className="mb-8">
+					<div className="flex flex-wrap justify-center gap-3">
+						{[
+							"Overall",
+							"Front-end",
+							"Backend",
+							"Database",
+							"Design",
+							"Cloud",
+							"DevOps",
+							"Apps",
+							"Music",
+						].map((category) => {
+							const isActive = currentCategory === category;
+							const skillCount =
+								category === "Overall"
+									? createOverallData(data).labels.length
+									: data.find((d) => d.slug === category)?.labels.length || 0;
 
-			{/* Category Selection Buttons */}
-			<div className="mb-8">
-				<div className="flex flex-wrap justify-center gap-3">
-					{[
-						"Overall",
-						"Front-end",
-						"Backend",
-						"Database",
-						"Design",
-						"Cloud",
-						"DevOps",
-						"Apps",
-						"Music",
-					].map((category) => {
-						const isActive = currentCategory === category;
-						const skillCount =
-							category === "Overall"
-								? createOverallData(data).labels.length
-								: data.find((d) => d.slug === category)?.labels.length || 0;
-
-						return (
-							<CategoryButton
-								key={category}
-								category={category}
-								isActive={isActive}
-								onClick={() => onSkillChartLoad(category)}
-								skillCount={skillCount}
-							/>
-						);
-					})}
+							return (
+								<CategoryButton
+									key={category}
+									category={category}
+									isActive={isActive}
+									onClick={() => onSkillChartLoad(category)}
+									skillCount={skillCount}
+								/>
+							);
+						})}
+					</div>
 				</div>
-			</div>
+			)}
 
-			{/* Chart Container */}
 			<div className={`rounded-xl p-8 shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
 				<div className="mb-6">
 					<h3
