@@ -11,6 +11,7 @@ import PageHero from "@/components/hero/PageHero.astro";
 import TechStackBlock from "@/blocks/TechStackBlock.astro";
 import { Heading } from "@/components/ui/heading";
 import { ProcessFlowDiagram } from "@/components/Beams";
+import GitHubContributionsBlock from "@/blocks/GitHubContributionsBlock.astro";
 
 const { stacks, charts } = await getPortfolioData();
 ---
@@ -33,6 +34,7 @@ const { stacks, charts } = await getPortfolioData();
 	</section>
 
 	<ToolsList />
+	<GitHubContributionsBlock />
 	<Heading level="h2" gradient floating backplate client:idle>Development Process</Heading>
 	<ProcessFlowDiagram client:load />
 	<Certificates showAll />

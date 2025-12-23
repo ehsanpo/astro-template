@@ -377,6 +377,18 @@ export function Footer({
 								<Tooltip content="Actually tea ☕ - coffee is for emergencies!" position="top">
 									<Coffee className="h-4 w-4 text-yellow-500" />
 								</Tooltip>
+								<span>using</span>
+								<Tooltip content="See all tools and resources" position="top">
+									<a
+										href="/credits"
+										className="inline-flex items-center gap-1 align-bottom text-primary-500 transition-colors hover:text-primary-400"
+									>
+										<Zap className="h-4 w-4" />
+										<span className="underline decoration-primary-500/50 underline-offset-2">
+											awesome tools
+										</span>
+									</a>
+								</Tooltip>
 							</div>
 						</div>
 
@@ -387,25 +399,6 @@ export function Footer({
 							<ArrowUp className="h-4 w-4" />
 							Back to Top
 						</button>
-					</div>
-
-					<div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-						<span className="text-muted-foreground font-kabel mr-2 text-xs">Built with:</span>
-						<span className="text-muted-foreground rounded bg-neutral-500/20 px-2 py-1 text-xs">
-							Astro
-						</span>
-						<span className="text-muted-foreground rounded bg-neutral-500/20 px-2 py-1 text-xs">
-							React
-						</span>
-						<span className="text-muted-foreground rounded bg-neutral-500/20 px-2 py-1 text-xs">
-							TypeScript
-						</span>
-						<span className="text-muted-foreground rounded bg-neutral-500/20 px-2 py-1 text-xs">
-							TailwindCSS
-						</span>
-						<span className="text-muted-foreground rounded bg-neutral-500/20 px-2 py-1 text-xs">
-							Claude Sonnet 4
-						</span>
 					</div>
 				</div>
 			</div>
