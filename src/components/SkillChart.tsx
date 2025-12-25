@@ -19,6 +19,7 @@ interface SkillChartProps {
 		data: string[];
 		slug: string;
 	}[];
+	showButtons?: boolean;
 	chartData: {
 		labels: string[];
 		data: string[];
@@ -68,7 +69,7 @@ const categoryColors = {
 		border: "rgba(20, 184, 166, 1)",
 		button: "bg-teal-500 text-teal-900",
 	},
-	Music: {
+	Multimedia: {
 		bg: "rgba(217, 70, 239, 0.2)",
 		border: "rgba(217, 70, 239, 1)",
 		button: "bg-fuchsia-400 text-fuchsia-900",
@@ -246,7 +247,7 @@ const StatisticsCard = ({
 	);
 };
 
-export default function SkillChart({ data, chartData }: SkillChartProps) {
+export default function SkillChart({ data, chartData, showButtons }: SkillChartProps) {
 	const [currentChart, setCurrentChart] = React.useState(chartData);
 	const [currentCategory, setCurrentCategory] = React.useState("Overall");
 	const [isDarkMode, setIsDarkMode] = useState(false);
@@ -370,40 +371,40 @@ export default function SkillChart({ data, chartData }: SkillChartProps) {
 
 	return (
 		<div className="mx-auto w-full max-w-6xl px-4 py-1">
-			{/* Header */}
-
 			{/* Category Selection Buttons */}
-			<div className="mb-8">
-				<div className="flex flex-wrap justify-center gap-3">
-					{[
-						"Overall",
-						"Front-end",
-						"Backend",
-						"Database",
-						"Design",
-						"Cloud",
-						"DevOps",
-						"Apps",
-						"Music",
-					].map((category) => {
-						const isActive = currentCategory === category;
-						const skillCount =
-							category === "Overall"
-								? createOverallData(data).labels.length
-								: data.find((d) => d.slug === category)?.labels.length || 0;
+			{showButtons && (
+				<div className="mb-8">
+					<div className="flex flex-wrap justify-center gap-3">
+						{[
+							"Overall",
+							"Front-end",
+							"Backend",
+							"Database",
+							"Design",
+							"Cloud",
+							"DevOps",
+							"Apps",
+							"Multimedia",
+						].map((category) => {
+							const isActive = currentCategory === category;
+							const skillCount =
+								category === "Overall"
+									? createOverallData(data).labels.length
+									: data.find((d) => d.slug === category)?.labels.length || 0;
 
-						return (
-							<CategoryButton
-								key={category}
-								category={category}
-								isActive={isActive}
-								onClick={() => onSkillChartLoad(category)}
-								skillCount={skillCount}
-							/>
-						);
-					})}
+							return (
+								<CategoryButton
+									key={category}
+									category={category}
+									isActive={isActive}
+									onClick={() => onSkillChartLoad(category)}
+									skillCount={skillCount}
+								/>
+							);
+						})}
+					</div>
 				</div>
-			</div>
+			)}
 
 			{/* Chart Container */}
 			<div className={`rounded-xl p-8 shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>

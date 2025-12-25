@@ -25,6 +25,7 @@ interface PortfolioItem {
 	onHome?: boolean;
 	video?: string;
 	slug?: string;
+	type?: string;
 }
 
 interface ProjectCardProps {
@@ -34,10 +35,7 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ item, className, showShare = true }: ProjectCardProps) {
-	const [isLiked, setIsLiked] = useState(false);
 	const [showShareMenu, setShowShareMenu] = useState(false);
-	const likes = Math.floor(Math.random() * 50) + 10; // Mock likes
-
 	const delay = ["", "delay-75", "delay-100", "delay-150", "delay-200", "delay-300"];
 
 	return (
@@ -91,7 +89,9 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 			<div className="absolute bottom-0 left-0 right-0 z-20 p-4">
 				<div className="mb-3 flex items-center gap-4">
 					<div>
-						<a href={`/portfolio/${item.permalink || item.slug}`}>
+						<a
+							href={`/${item.type === "product" ? "products" : "portfolio"}/${item.permalink || item.slug}`}
+						>
 							<h3
 								className="font-basement text-xl text-white transition-colors group-hover:text-primary-500"
 								style={{
@@ -99,6 +99,7 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 								}}
 							>
 								<div className="hover:text-primary-400">{item.title}</div>
+								XXX {item.type} XXXX
 							</h3>
 							<p
 								className="font-kabel mb-1 leading-tight text-primary-500"

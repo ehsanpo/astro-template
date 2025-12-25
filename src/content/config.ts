@@ -21,6 +21,7 @@ const portfolio = defineCollection({
 			logo2: image().optional(),
 			images: z.array(image()).optional(),
 			onHome: z.boolean().optional(),
+			type: z.literal("portfolio").optional(),
 		}),
 });
 
@@ -45,6 +46,7 @@ const products = defineCollection({
 			logo2: image().optional(),
 			images: z.array(image()).optional(),
 			onHome: z.boolean().optional(),
+			type: z.literal("product").optional(),
 		}),
 });
 

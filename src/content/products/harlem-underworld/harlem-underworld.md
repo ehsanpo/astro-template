@@ -3,6 +3,7 @@ title: Harlem Underworld
 date: "2025-06-23"
 permalink: harlem-underworld
 agency: Freelance
+type: product
 category:
   - Front-end
   - Game

@@ -24,7 +24,7 @@ const { stacks, charts } = await getPortfolioData();
 	<TechStackBlock stacks={stacks} />
 	<Heading level="h2" gradient floating backplate client:idle>Skills Chart</Heading>
 
-	<SkillChart data={stacks} chartData={charts[0]} client:load />
+	<SkillChart data={stacks} chartData={charts[0]} client:load showButtons={true} />
 
 	<section class="">
 		<div class="container mx-auto">

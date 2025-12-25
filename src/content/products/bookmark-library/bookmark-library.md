@@ -6,6 +6,7 @@ permalink: bookmark-library
 author: Ehsan
 id: 316
 agency: Personal
+type: product
 category:
   - Backend
   - Front-end
