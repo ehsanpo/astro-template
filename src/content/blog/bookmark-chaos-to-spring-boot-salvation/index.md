@@ -152,8 +152,6 @@ Deployed on **Render** and it was... shockingly easy? Connect GitHub repo, set e
 
 The Docker build took forever the first time (Java compilation is not fast), but subsequent deploys were quick thanks to layer caching.
 
-Pro tip: Use port `6543` for Supabase instead of `5432`. The transaction pooler is way more reliable, especially if you're dealing with IPv4/IPv6 weirdness. Learned this after 2 hours of connection timeouts 😅
-
 ---
 
 ## 📚 What I Actually Learned
@@ -172,7 +170,7 @@ Was it overkill to build an entire fullstack app to organize bookmarks? Absolute
 
 Do I now have a beautifully organized, searchable, click-tracked bookmark collection with proper categories and descriptions? Also absolutely.
 
-Was it worth spending 2 weeks on something Chrome's bookmark manager could probably do? Look... I learned Spring Boot, built something cool, and now I can actually find that React tutorial from 6 months ago.
+Was it worth spending 1 day on something Chrome's bookmark manager could probably do? Look... I learned Spring Boot, built something cool, and now I can actually find that React tutorial from 6 months ago.
 
 So yeah. Worth it 🎉
 
@@ -184,4 +182,4 @@ Plus, now I have this weird urge to build more Java apps. Who am I becoming?? �
 
 🔗 **Try it yourself**: [bookmark-0s4v.onrender.com](https://bookmark-0s4v.onrender.com/)
 
-_P.S. The app is live and working! Upload your own bookmark file and see if you can tame your digital chaos too. Fair warning: there's probably some questionable variable naming in the code... don't judge me! 😅_
+Fair warning: there's probably some questionable links in the site... 😅

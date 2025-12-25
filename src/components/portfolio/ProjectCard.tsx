@@ -99,7 +99,6 @@ export function ProjectCard({ item, className, showShare = true }: ProjectCardPr
 								}}
 							>
 								<div className="hover:text-primary-400">{item.title}</div>
-								XXX {item.type} XXXX
 							</h3>
 							<p
 								className="font-kabel mb-1 leading-tight text-primary-500"
