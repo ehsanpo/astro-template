@@ -4,12 +4,11 @@ date: "2025-12-23"
 status: publish
 permalink: bookmark-library
 author: Ehsan
-type: portfolio
 id: 316
 agency: Personal
 category:
   - Backend
-  - Lab
+  - Front-end
 tag:
   - Spring Boot
   - React

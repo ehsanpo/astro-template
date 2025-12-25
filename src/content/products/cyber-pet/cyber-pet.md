@@ -4,12 +4,12 @@ date: "2025-05-01"
 status: publish
 permalink: cyber-pet
 author: Ehsan
-type: portfolio
+type: product
 id: 314
 agency: Freelance
 category:
   - Front-end
-  - Lab
+  - Game
 tag:
   - React
   - TypeScript

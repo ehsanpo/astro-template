@@ -4,11 +4,11 @@ date: "2025-12-08"
 status: publish
 permalink: waverider
 author: Ehsan
-type: portfolio
+type: product
 id: 315
 agency: Freelance
 category:
-  - Lab
+  - Game
 tag:
   - React Native
   - Expo

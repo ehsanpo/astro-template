@@ -19,6 +19,19 @@ export const getPortfolioItems = async () => {
 	}));
 };
 
+export const getProductItems = async () => {
+	const productEntries = await getCollection("products");
+
+	return productEntries.map((entry: CollectionEntry<"products">) => ({
+		...entry.data,
+		slug: entry.slug,
+		background_image: entry.data.background_image,
+		logo: entry.data.logo,
+		bilder: entry.data.images,
+		content: entry,
+	}));
+};
+
 export const getBlogPosts = async () => {
 	const blogEntries = await getCollection("blog", ({ data }) => {
 		return data.draft !== true;

@@ -5,7 +5,7 @@ permalink: harlem-underworld
 agency: Freelance
 category:
   - Front-end
-  - Lab
+  - Game
 tag:
   - React
   - TypeScript

@@ -7,11 +7,10 @@ date: "2023-07-18"
 status: publish
 permalink: slack-points-bot
 author: Ehsan
-type: portfolio
+type: product
 id: 2023001
 category:
   - Backend
-  - Lab
 tag:
   - Node.js
   - Vercel

@@ -19,6 +19,7 @@
 		"main": [
 			{ "href": "/", "text": "Home" },
 			{ "href": "/portfolio", "text": "Work" },
+			{ "href": "/products", "text": "Products" },
 			{ "href": "/skills", "text": "Skills" },
 			{ "href": "/services", "text": "Services" },
 			{ "href": "/about", "text": "About" },
@@ -28,6 +29,7 @@
 		"footer": [
 			{ "href": "/", "text": "Home" },
 			{ "href": "/portfolio", "text": "Work" },
+			{ "href": "/products", "text": "Products" },
 			{ "href": "/blog", "text": "Blog" },
 			{ "href": "/skills", "text": "Skills" },
 			{ "href": "/services", "text": "Services" },

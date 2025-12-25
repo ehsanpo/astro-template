@@ -4,7 +4,7 @@ date: "2025-11"
 status: publish
 permalink: herbal-ai
 author: Ehsan
-type: portfolio
+type: product
 id: 251
 agency: Personal Project
 category:

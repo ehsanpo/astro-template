@@ -1,16 +1,17 @@
 ---
 title: Blockpress
-date: "2018"
+date: "2018-03-01"
 status: publish
 permalink: blockpress
 author: Ehsan
-type: portfolio
+type: product
 id: 243
 agency: Guts&Glory
 category:
   - Backend
   - Design
   - Front-end
+  - DevTools
 tag:
   - Maintenance
   - Wordpress

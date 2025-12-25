@@ -1,14 +1,14 @@
 ---
 title: "Px to Tailwind"
-date: "2024-11-28T12:58:42+00:00"
+date: "2024-11-28"
 status: publish
 permalink: vscode-px-to-tailwind
 author: Ehsan
-type: portfolio
+type: product
 id: 335
 agency: "Telavox"
 category:
-  - Lab
+  - DevTools
 tag:
   - Javascript
   - Typescript
