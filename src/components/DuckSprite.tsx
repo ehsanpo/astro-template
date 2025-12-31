@@ -67,7 +67,7 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 			style={{
 				position: "absolute",
 				left: `${position}px`,
-				bottom: "220px",
+				bottom: "160px",
 				width: "32px",
 				height: "32px",
 				backgroundImage: "url(/img/ducky_2_spritesheet.png)",

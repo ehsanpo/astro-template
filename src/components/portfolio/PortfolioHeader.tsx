@@ -141,7 +141,7 @@ const PortfolioHeader: React.FC<Props> = ({ item }) => {
 											/>
 										</Parallax>
 									</div>
-									{images[0] && (
+									{images && images[0] && (
 										<div className="portfolio-hero-image absolute left-0 top-[100%] w-full">
 											<Parallax speed={10}>
 												<img

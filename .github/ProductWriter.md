@@ -50,27 +50,24 @@ The page should follow a **classic, high-performing product landing flow**:
 </div>
 ```
 
-3. **Tiny Shiny Details**
+3. **Tiny Shiny Details (If project has one)**
    - Small, thoughtful features
    - Polishing touches that improve experience
    - These are supporting, not leading
 
-4. **Who This Is For**
+4. **Who This Is For adn Why This Product Exists**
    - Clearly defined audience segments
-   - Written in neutral, descriptive language
    - Explicitly communicates fit and relevance
-
-5. **Why This Product Exists**
    - High-level reasoning, not personal storytelling
    - Focus on the problem space and design philosophy
    - Rational, product-driven motivation
 
-6. **Why Choose This**
+5. **Why Choose This**
    - Clear differentiation
    - Emphasis on simplicity, focus, and execution
    - Avoids competitor comparisons or emotional language
 
-7. **Call to Action**
+6. **Call to Action**
    - Clear and direct
    - Encourages the next step without pressure
    - Feels safe and intentional
@@ -115,15 +112,7 @@ No “I built this because…”.
 
 ---
 
-### ✨ **Tiny Shiny Things**
 
-- Treated as enhancements, not selling points
-- Subtle but valuable
-- Communicated briefly and clearly
-
-These exist to **reinforce quality**, not personality.
-
----
 
 ### 🔍 **SEO Optimization (Subtle and Structural)**
 
@@ -162,3 +151,82 @@ That’s a strong product page.
 ### 🧮 **Perplexity and Burstiness**
 
 When it comes to writing content, two factors are crucial, "perplexity" and "burstiness." Perplexity measures the complexity of text. Separately, burstiness compares the variations of sentences. Humans tend to write with greater burstiness, for example, with some longer or complex sentences alongside shorter ones. AI sentences tend to be more uniform. Therefore, when writing the following content I am going to ask you to create, I need it to have a good amount of perplexity and burstiness.
+
+---
+
+### 💎 **HTML Templates for Consistent Styling**
+
+**Precise Control Features Grid:**
+```html
+<div class="my-8">
+  <div class="grid gap-4 md:grid-cols-3">
+    <div class="text-center p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-lg">
+      <div class="w-12 h-12 bg-{color}-500 rounded-full flex items-center justify-center mx-auto mb-3">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {icon path}
+        </svg>
+      </div>
+      <h4 class="font-semibold text-gray-900 dark:text-white">{title}</h4>
+      <p class="m-0 text-sm text-gray-600 dark:text-gray-300">{description}</p>
+    </div>
+  </div>
+</div>
+```
+
+**Audience Cards Grid:**
+```html
+<div class="grid gap-6 md:grid-cols-2 my-8">
+  <div class="border-l-4 border-{color}-500 bg-{color}-50 dark:bg-{color}-950/30 p-6 rounded-r-lg">
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-8 h-8 bg-{color}-500 rounded-lg flex items-center justify-center">
+        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {icon path}
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-{color}-800 dark:text-{color}-200">{audience}</h3>
+    </div>
+    <p class="text-{color}-700 dark:text-{color}-300">{description}</p>
+  </div>
+</div>
+```
+
+**Technical Foundation Grid:**
+```html
+<div class="my-8">
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="text-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-8">
+      <div class="w-16 h-16 bg-gradient-to-br from-{color}-500 to-{color}-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {icon path}
+        </svg>
+      </div>
+      <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">{tech stack}</h3>
+      <p class="text-slate-600 dark:text-slate-300 text-sm">{description}</p>
+    </div>
+  </div>
+</div>
+```
+
+**Performance Callout Box:**
+```html
+<div class="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-lg my-6">
+  <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+    </svg>
+  </div>
+  <p class="text-green-800 dark:text-green-200">
+    <span class="font-semibold">Performance Advantage:</span> {description}
+  </p>
+</div>
+```
+
+**Simple CTA Section:**
+```html
+<div class="bg-gradient-to-r from-primary-50 to-secondary-50 p-8 dark:from-primary-950/50 dark:to-secondary-950/50 rounded-xl text-center my-8">
+  <div class="max-w-2xl mx-auto">
+    <h3 class="text-2xl font-bold mb-4">{cta headline}</h3>
+    <p class="text-lg mb-6 opacity-90">{cta description}</p>
+  </div>
+</div>
+```
