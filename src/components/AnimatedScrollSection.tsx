@@ -292,7 +292,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
 							mask={`url(#circleMask${layout})`}
 						/>
 					</svg>
-					<div ref={textRef} className="m-0 max-w-[400px] text-[1.2rem] [grid-area:text]">
+					<div ref={textRef} className="m-0 max-w-[600px] text-[1.2rem] [grid-area:text]">
 						{text}
 						<br />
 						<Link href={link} text="View Project" className="mt-4" />
