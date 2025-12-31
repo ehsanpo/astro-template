@@ -9,7 +9,6 @@ id: 360
 agency: Personal Project
 category:
   - Mobile Apps
-  - Privacy Tools
 tag:
   - React Native
   - Expo

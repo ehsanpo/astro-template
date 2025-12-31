@@ -10,7 +10,6 @@ agency: Personal Project
 category:
   - Audio
   - Visualization
-  - Web Development
 tag:
   - React
   - Three.js

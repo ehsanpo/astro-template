@@ -9,7 +9,6 @@ id: 243
 agency: Guts&Glory
 category:
   - Backend
-  - Design
   - Front-end
   - DevTools
 tag:
