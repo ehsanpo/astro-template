@@ -45,9 +45,9 @@ const Heading: React.FC<Props> = ({
 				{backplate && (
 					<Parallax
 						speed={5}
-						className="absolute left-0 top-[-10%] z-10 w-full text-4xl font-bold opacity-10 blur-sm lg:text-9xl"
+						className="absolute left-0 top-[-10%] z-10 w-full overflow-hidden text-4xl font-bold opacity-10 blur-sm lg:text-9xl"
 					>
-						<div>{children}</div>
+						<div className="user">{children}</div>
 					</Parallax>
 				)}
 
