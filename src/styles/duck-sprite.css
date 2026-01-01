@@ -1,6 +1,16 @@
 /* Duck Sprite Animations */
 /* Sprite sheet is 192x128 with 32x32 sprites arranged in a 6x4 grid */
 
+/* Container styles to prevent layout breaking */
+.duck-container {
+	pointer-events: none;
+	overflow: hidden;
+}
+
+.duck-container .duck-sprite {
+	pointer-events: auto;
+}
+
 @keyframes duck-idle_normal {
 	0% {
 		background-position: 0px 0px;

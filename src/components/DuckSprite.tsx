@@ -16,7 +16,15 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 	};
 
 	useEffect(() => {
-		setPosition(Math.random() * (window.innerWidth - 32));
+		// Use a safe container width that accounts for potential scrollbars and padding
+		const getContainerWidth = () => {
+			const bodyWidth = document.body.clientWidth;
+			const duckScaledWidth = 64; // 32px sprite * 2 scale
+			return Math.max(320, bodyWidth - 32); // Minimum 320px width, subtract some padding
+		};
+
+		const containerWidth = getContainerWidth();
+		setPosition(Math.random() * Math.max(0, containerWidth - 64));
 
 		const interval = setInterval(
 			() => {
@@ -44,7 +52,9 @@ const DuckSprite: React.FC<DuckSpriteProps> = ({ className = "" }) => {
 			setPosition((prev) => {
 				const speed = direction === "right" ? 2 : -2;
 				const newPos = prev + speed;
-				const maxX = window.innerWidth - 32;
+				// Use body width instead of window width for safer calculation
+				const bodyWidth = document.body.clientWidth;
+				const maxX = Math.max(0, bodyWidth - 96); // 64px duck + 32px padding
 
 				if (newPos <= 0) {
 					setDirection("right");

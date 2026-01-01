@@ -16,12 +16,12 @@ const portfolioItems = await getPortfolioItems();
 	text="Hey! ✌️ I'm"
 >
 	<React.Fragment>
-		<div class="flex gap-4">
+		<div class="flex flex-wrap gap-4">
 			<Link href="/portfolio" text="View My Work" />
 			<Link href="/contact" text="Get in Touch" />
 		</div>
 		<div>
-			<ul class="align-items-start mt-4 flex">
+			<ul class="align-items-start mt-4 flex flex-wrap">
 				<li class="hero-info-item">
 					<div class="align-items-center flex">
 						<h3 class="text-4xl font-bold">
@@ -34,7 +34,7 @@ const portfolioItems = await getPortfolioItems();
 						</h6>
 					</div>
 				</li>
-				<li class="hero-info-item ml-8">
+				<li class="hero-info-item md:ml-8">
 					<div class="align-items-center flex">
 						<h3 class="text-4xl">
 							<span class="gradient-text font-bold">{portfolioItems.length}</span>

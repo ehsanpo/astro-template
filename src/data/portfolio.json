@@ -1185,6 +1185,21 @@
 	],
 	"certifications": [
 		{
+			"name": "Cybersecurity Awareness (CAPC)",
+			"img": "/img/cert/CAPC.png",
+			"year": "2025"
+		},
+		{
+			"name": "Lean Leadership (LLPC)",
+			"img": "/img/cert/LLPC.png",
+			"year": "2025"
+		},
+		{
+			"name": "Certified Prompt Engineering Foundation (CPEFPC)",
+			"img": "/img/cert/CPEFPC.png",
+			"year": "2025"
+		},
+		{
 			"name": "Introduction to Cybersecurity",
 			"img": "/img/cert/cybersecurity.png",
 			"year": "2022"

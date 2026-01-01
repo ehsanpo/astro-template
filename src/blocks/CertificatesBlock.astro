@@ -16,6 +16,9 @@ import GAA from "@/assets/cert/GAA.png";
 import GTM from "@/assets/cert/GTM.png";
 import GA from "@/assets/cert/GA.png";
 import Link from "@/components/Link";
+import cybersecurityAware from "@/assets/cert/CAPC.png";
+import leanLeadership from "@/assets/cert/LLPC.png";
+import promptEngineering from "@/assets/cert/CPEFPC.png";
 
 const { certifications } = await getPortfolioData();
 
@@ -32,6 +35,9 @@ const imageMap: Record<string, any> = {
 	"/img/cert/GAA.png": GAA,
 	"/img/cert/GTM.png": GTM,
 	"/img/cert/GA.png": GA,
+	"/img/cert/CAPC.png": cybersecurityAware,
+	"/img/cert/LLPC.png": leanLeadership,
+	"/img/cert/CPEFPC.png": promptEngineering,
 };
 
 // Replace string paths with imported ImageMetadata
