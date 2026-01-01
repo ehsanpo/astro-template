@@ -15,7 +15,7 @@ export const Main: React.FC<MainProps> = ({ data, mainColor, language }) => {
 	const t = translations[language].sections;
 
 	return (
-		<main className="space-y-8 lg:col-span-2">
+		<main className="space-y-8 lg:col-span-3">
 			<Section title={t.experience} mainColor={mainColor}>
 				<Timeline
 					items={data.experience.map((exp) => ({
@@ -53,22 +53,6 @@ export const Main: React.FC<MainProps> = ({ data, mainColor, language }) => {
 						</li>
 					))}
 				</ul>
-			</Section>
-
-			<Section title={t.skills} mainColor={mainColor}>
-				<div className="flex flex-wrap gap-2">
-					{data.skills.map((skill, index) => (
-						<Tag key={index}>{skill}</Tag>
-					))}
-				</div>
-			</Section>
-
-			<Section title={t.languages} mainColor={mainColor}>
-				<div className="flex flex-wrap gap-2">
-					{data.languages.map((lang, index) => (
-						<Tag key={index}>{lang}</Tag>
-					))}
-				</div>
 			</Section>
 		</main>
 	);

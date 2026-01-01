@@ -626,3 +626,32 @@ body {
 	background-color: var(--bg);
 	animation: glitch-animation 1s linear infinite;
 }
+
+/* Print styles to prevent page breaks within sections */
+@media print {
+	/* Prevent page breaks within sections when possible */
+	section,
+	.section,
+	[class*="Section"] {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	/* Keep individual timeline items together */
+	.timeline-item {
+		page-break-inside: avoid !important;
+		break-inside: avoid !important;
+	}
+
+	/* Keep list items together */
+	li {
+		page-break-inside: avoid;
+		break-inside: avoid;
+	}
+
+	/* For long sections like Experience, allow the section to break */
+	.space-y-8 > div:first-child {
+		page-break-inside: auto;
+		break-inside: auto;
+	}
+}

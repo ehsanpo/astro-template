@@ -20,16 +20,16 @@ export const Toolbar: React.FC<ToolbarProps> = ({
 		<div className="fixed left-0 right-0 top-16 z-50 bg-white shadow-md print:hidden">
 			<div className="mx-auto flex max-w-4xl items-center justify-between px-4 py-2">
 				<div className="flex items-center gap-4">
-					{/* <div className="flex items-center gap-2">
-            {colors.map((color) => (
-              <button
-                key={color}
-                onClick={() => onColorChange(color)}
-                className="w-6 h-6 rounded-full border-2 border-gray-200"
-                style={{ backgroundColor: color }}
-              />
-            ))}
-          </div> */}
+					<div className="flex items-center gap-2">
+						{colors.map((color) => (
+							<button
+								key={color}
+								onClick={() => onColorChange(color)}
+								className="h-6 w-6 rounded-full border-2 border-gray-200"
+								style={{ backgroundColor: color }}
+							/>
+						))}
+					</div>
 
 					<button
 						onClick={() => onLanguageChange(currentLanguage === "en" ? "sv" : "en")}
@@ -38,8 +38,7 @@ export const Toolbar: React.FC<ToolbarProps> = ({
 						<Languages className="h-5 w-5 text-primary-500" />
 					</button>
 				</div>
-
-				<button onClick={onExportPDF} className="rounded-lg p-2 hover:bg-gray-100">
+				<button onClick={onExportPDF} className="rounded-lg bg-slate-300 p-2 hover:bg-gray-100">
 					<Download className="h-5 w-5" />
 				</button>
 			</div>

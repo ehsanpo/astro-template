@@ -26,7 +26,7 @@ const ResumeCv: React.FC<Props> = () => {
 	};
 
 	return (
-		<div className="relative mt-16 min-h-screen bg-white">
+		<div className="relative mt-16 min-h-screen bg-white print:mt-0">
 			<Toolbar
 				onColorChange={setMainColor}
 				onLanguageChange={setLanguage}
@@ -35,33 +35,32 @@ const ResumeCv: React.FC<Props> = () => {
 			/>
 
 			<div className="bg-white pt-16 text-gray-900">
-				<div className="mx-auto grid max-w-4xl grid-cols-1 items-center gap-8 px-4 lg:grid-cols-3">
-					<div className="lg:col-span-1">
+				<div className="mx-auto max-w-4xl px-4">
+					<div>
 						<img
 							src="/img/profile.jpg"
+							width={100}
+							height={100}
 							alt={resumeData.basics.name}
-							className="mb-4 h-48 w-48 rounded-full object-cover"
+							className="mb-4 rounded-full object-cover"
 						/>
 					</div>
 
-					<div className="lg:col-span-2">
+					<div>
 						<h1 className="text-6xl font-bold" style={{ color: mainColor }}>
 							{resumeData.basics.name}
 						</h1>
 						<p className="text-4xl">{resumeData.basics.title}</p>
-
-						<div className="printShow">
-							<p className="mt-4 text-sm">{resumeData.basics.location}</p>
-							<p className="mt-4 text-sm">{resumeData.basics.email}</p>
-							<p className="mt-4 text-sm">{resumeData.basics.linkedin}</p>
-							<p className="mt-4 text-sm">{resumeData.basics.website}</p>
-						</div>
 					</div>
 				</div>
 
-				<div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 px-4 py-8 lg:grid-cols-3">
-					<Aside data={resumeData.basics} mainColor={mainColor} language={language} />
-					<Main data={resumeData} mainColor={mainColor} language={language} />
+				<div className="mx-auto flex max-w-4xl gap-8 px-4 py-8 print:block print:gap-0 print:space-y-4">
+					<div className="w-1/4 flex-shrink-0 print:w-full">
+						<Aside data={resumeData} mainColor={mainColor} language={language} />
+					</div>
+					<div className="flex-1 print:w-full">
+						<Main data={resumeData} mainColor={mainColor} language={language} />
+					</div>
 				</div>
 			</div>
 		</div>

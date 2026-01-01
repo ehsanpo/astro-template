@@ -51,20 +51,25 @@ export const Timeline: React.FC<TimelineProps> = ({ items, mainColor }) => {
 			{items.map((item, index) => (
 				<div
 					key={index}
-					className="relative border-l-2 border-current pb-4 pl-8"
+					className="timeline-item relative border-l-2 border-current pb-4 pl-8"
 					style={{ color: mainColor }}
 				>
-					<div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-current" />
+					<div className="absolute -left-[11px] top-1 h-4 w-4 rounded-full bg-current" />
 					<div className="mb-1 text-black">
 						<div className="flex items-baseline justify-between">
-							<h3 className="mb-1 text-lg font-bold" style={{ color: mainColor }}>
+							<h3
+								className="mb-1 text-lg font-bold print:mb-0 print:text-base"
+								style={{ color: mainColor }}
+							>
 								{item.title}
 							</h3>
-							<span className="text-sm">
+							<span className="text-sm print:text-xs">
 								{item.startDate} - {item.endDate} {calculateDuration(item.startDate, item.endDate)}
 							</span>
 						</div>
-						{item.subtitle && <div className="text-sm font-bold">{item.subtitle}</div>}
+						{item.subtitle && (
+							<div className="text-sm font-bold print:text-xs">{item.subtitle}</div>
+						)}
 					</div>
 					<p className="mb-2 text-sm text-black">
 						{item.description.map((desc) => (

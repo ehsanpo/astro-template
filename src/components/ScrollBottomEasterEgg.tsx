@@ -73,6 +73,7 @@ export default function ScrollBottomEasterEgg() {
 	return (
 		<motion.div
 			className="pointer-events-auto relative z-40 overflow-hidden"
+			id="pixelworld"
 			initial={{ y: "100%" }}
 			animate={{
 				y: showBanner ? "0%" : "100%",

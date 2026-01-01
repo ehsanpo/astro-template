@@ -2,9 +2,11 @@ import React from "react";
 import type { Resume } from "@/types/resume";
 import { translations, type Language } from "@/translations";
 import { MapPin, Mail, Globe, Linkedin } from "lucide-react";
+import { Section } from "./Section";
+import { Tag } from "./Tag";
 
 interface AsideProps {
-	data: Resume["basics"];
+	data: Resume;
 	mainColor: string;
 	language: Language;
 }
@@ -18,7 +20,7 @@ export const Aside: React.FC<AsideProps> = ({ data, mainColor, language }) => {
 				<h2 className="mb-2 text-xl font-semibold" style={{ color: mainColor }}>
 					{t.about}
 				</h2>
-				<p className="text-sm">{data.about}</p>
+				<p className="text-sm">{data.basics.about}</p>
 			</div>
 
 			<div>
@@ -28,32 +30,48 @@ export const Aside: React.FC<AsideProps> = ({ data, mainColor, language }) => {
 				<div className="space-y-2 text-sm">
 					<p className="flex items-center gap-2">
 						<MapPin size={16} style={{ color: mainColor }} />
-						{data.location}
+						{data.basics.location}
 					</p>
 					<p className="flex items-center gap-2">
 						<Mail size={16} style={{ color: mainColor }} />
-						{data.email}
+						{data.basics.email}
 					</p>
 					<a
-						href={data.website}
+						href={data.basics.website}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center gap-2 hover:underline"
 					>
 						<Globe size={16} style={{ color: mainColor }} />
-						{data.website}
+						{data.basics.website}
 					</a>
 					<a
-						href={data.linkedin}
+						href={data.basics.linkedin}
 						target="_blank"
 						rel="noopener noreferrer"
 						className="flex items-center gap-2 hover:underline"
 					>
 						<Linkedin size={16} style={{ color: mainColor }} />
-						{data.linkedin}
+						{data.basics.linkedin}
 					</a>
 				</div>
 			</div>
+
+			<Section title={t.skills} mainColor={mainColor}>
+				<div className="flex flex-wrap gap-2">
+					{data.skills.map((skill, index) => (
+						<Tag key={index}>{skill}</Tag>
+					))}
+				</div>
+			</Section>
+
+			<Section title={t.languages} mainColor={mainColor}>
+				<div className="mb-16 flex flex-wrap gap-2">
+					{data.languages.map((lang, index) => (
+						<Tag key={index}>{lang}</Tag>
+					))}
+				</div>
+			</Section>
 		</aside>
 	);
 };
