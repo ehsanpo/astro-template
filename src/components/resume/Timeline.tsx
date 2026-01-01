@@ -47,7 +47,7 @@ export const Timeline: React.FC<TimelineProps> = ({ items, mainColor }) => {
 	}
 
 	return (
-		<div className="">
+		<div>
 			{items.map((item, index) => (
 				<div
 					key={index}
@@ -72,8 +72,8 @@ export const Timeline: React.FC<TimelineProps> = ({ items, mainColor }) => {
 						)}
 					</div>
 					<p className="mb-2 text-sm text-black">
-						{item.description.map((desc) => (
-							<li>{desc}</li>
+						{item.description.map((desc, index) => (
+							<li key={index}>{desc}</li>
 						))}
 					</p>
 					{item.tags && (
