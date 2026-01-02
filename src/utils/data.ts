@@ -1,6 +1,7 @@
 import portfolioData from "../data/portfolio.json";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
+import { getCollection } from "@/lib/content";
+type CollectionEntry<T> = any;
+
 
 export const getPortfolioData = () => {
 	return portfolioData;

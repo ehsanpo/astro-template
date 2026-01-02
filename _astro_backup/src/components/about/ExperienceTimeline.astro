@@ -1,0 +1,23 @@
+---
+import { getPortfolioData } from "../../utils/data";
+const { experience } = await getPortfolioData();
+---
+
+<div class="space-y-12">
+	{
+		experience.map((item, index) => (
+			<div class="relative pl-8 md:pl-12">
+				<div class="absolute left-0 top-0 h-2 w-2 rounded-full bg-primary-600" />
+				{index !== experience.length - 1 && (
+					<div class="absolute left-[3px] top-2 h-[calc(100%+2rem)] w-[2px] bg-gray-200 dark:bg-neutral-700" />
+				)}
+				<div>
+					<span class="text-sm font-medium text-primary-600">{item.period}</span>
+					<h3 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+					<p class="mt-1 text-gray-600 dark:text-gray-400">{item.company}</p>
+					<p class="mt-2 text-gray-600 dark:text-gray-400">{item.description}</p>
+				</div>
+			</div>
+		))
+	}
+</div>

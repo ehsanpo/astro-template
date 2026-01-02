@@ -1,3 +1,5 @@
+"use client";
+
 import React, { forwardRef, useRef } from "react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 
@@ -66,7 +68,7 @@ export function ProcessFlowDiagram() {
 
 	// Utility for building the circle+tooltip structure
 	const CircleWithTooltip = (
-		circleRef: React.RefObject<HTMLDivElement>,
+		circleRef: React.RefObject<HTMLDivElement | null>,
 		IconComponent: React.FC<React.SVGProps<SVGSVGElement>>,
 		tooltipText: string
 	) => (

@@ -1,0 +1,32 @@
+---
+import { getPortfolioData } from "../../utils/data";
+import { Heading } from "../ui/heading";
+const { tools } = await getPortfolioData();
+---
+
+<div class="container mx-auto py-20">
+	<Heading level="h2" gradient floating backplate client:idle>Development Tools</Heading>
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+		{
+			tools.map((tool) => (
+				<div class="rounded-lg bg-white p-6 shadow-lg dark:bg-neutral-800">
+					<div class="mb-4 flex items-center">
+						<img src={tool.icon} alt={tool.name} class="mr-3 h-8 w-8" />
+						<h3 class="text-lg font-semibold text-gray-900 dark:text-white">{tool.name}</h3>
+					</div>
+					<p class="mb-4 text-gray-600 dark:text-gray-400">{tool.description}</p>
+					<div class="flex items-center">
+						<div class="flex-1">
+							<div class="h-2 w-full rounded-full bg-gray-200 dark:bg-neutral-700">
+								<div
+									class="h-2 rounded-full bg-primary-600"
+									style={`width: ${tool.proficiency * 10}%`}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			))
+		}
+	</div>
+</div>

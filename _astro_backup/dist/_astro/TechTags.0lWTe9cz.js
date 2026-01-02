@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime.C51r_xpA.js";import"./index.BoyW3vH1.js";const p=({technologies:r})=>e.jsx("div",{className:"my-4 flex flex-wrap gap-2",children:r.map((t,s)=>e.jsx("span",{className:"rounded-full border border-white/20 bg-white/10 px-2 py-1 text-xs text-white/70",children:t},s))});export{p as TechTags};

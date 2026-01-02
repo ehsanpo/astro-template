@@ -1,0 +1,35 @@
+---
+import { Heading } from "../ui/heading";
+import { getPortfolioItems } from "../../utils/data";
+import { AnimatedScrollSection } from "../AnimatedScrollSection";
+const portfolioItems = await getPortfolioItems();
+
+const filteredAndSortedItems = portfolioItems
+	.filter((item) => item.onHome)
+	.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+function incrementAndSkip(index: number) {
+	index += 1;
+	if (index === 3) {
+		index += 1; // Skip the number 3
+	}
+	return index;
+}
+---
+
+<section class="clip overflow-hidden bg-white dark:bg-neutral-800">
+	{
+		filteredAndSortedItems.map((item, index) => (
+			<AnimatedScrollSection
+				titleUp={item.title}
+				imageSrc={item.cover?.src || item.logo.src}
+				text={item.description}
+				link={`/portfolio/${item.permalink}`}
+				layout={index}
+				imageWidth={item.cover?.width || item.logo.width}
+				imageHeight={item.cover?.height || item.logo.height}
+				client:load
+			/>
+		))
+	}
+</section>

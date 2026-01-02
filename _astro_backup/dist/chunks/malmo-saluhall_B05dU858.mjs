@@ -1,0 +1,64 @@
+const id = "malmo-saluhall/malmo-saluhall.md";
+						const collection = "portfolio";
+						const slug = "malmo-saluhall/malmo-saluhall";
+						const body = "\n <h3>Introduction:</h3>\n  <p>\n    With a new brand identity, Malmö Saluhall needed to update the digital profile of the website. As a developer at Gutsglory agency, I worked closely with Martin Johansson, the agency's art director, to build the website. The team collaborated to translate the new brand identity into a captivating digital UI. After completing the project, we provided support and maintenance for the site and implemented additional features. The successful outcome of the project was recognized when Malmö Saluhall was awarded Svenska Designpriset in the category of Digital Design.\n  </p>\n   <h3>The Agency's Perspective:</h3>\n  <p>\n    At Guts & Glory agency, we had the privilege of working on the Malmö Saluhall project. The task involved developing a new website to showcase the beauty and offerings of Malmö Saluhall. Our collaborative approach began with creating a strong brand identity and effectively communicating the upcoming launch through various PR initiatives. We also designed an informative web platform to keep the locals updated on the progress of the new saluhall.<br /><br />\n    As the completion of Malmö Saluhall approached, we crafted a captivating website that matched the allure of the physical space and the exquisite food it housed. The visual identity of the website was carefully designed to capture the essence of Malmö Saluhall and entice visitors to explore its offerings. <br /><br />\n    Our hard work and dedication paid off when Malmö Saluhall's digital identity, including the website, was recognized with the prestigious Svenska Designpriset in the highly competitive Digital Identity category in 2017.\n\n  </p>\n\n  <h3>Conclusion:</h3>\n  <p>\n    The Malmö Saluhall website redesign project exemplifies the successful collaboration between Guts & Glory agency, Malmö Saluhall, and myself as a developer. Through our combined efforts, we created a visually captivating website that effectively represented the brand and enhanced the online presence of Malmö Saluhall. The recognition received in the form of the Svenska Designpriset award reaffirmed the project's success. The redesigned website continues to serve as a compelling platform, inviting visitors to experience the culinary delights and ambiance of Malmö Saluhall.\n  </p>\n";
+						const data = {title:"Malmö Saluhall",description:"Malmö Saluhall's award-winning website in collaboration with Guts & Glory, translating its new brand identity into a captivating digital presence.",tagline:"Ett himmelrike för matälskare",date:"2017",permalink:"malmo-saluhall",client:"Malmö Saluhall",agency:"Guts & Glory",category:["Backend","Design","Front-end"],tag:["CSS","HTML","Maintenance","PHP","Support","Web Development","Wordpress"],case_link_url:"http://www.malmosaluhall.se",background_image:
+						new Proxy({"src":"/_astro/malmo-saluhall-bg.RElNpMGf.jpg","width":1920,"height":1080,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-bg.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-bg.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-bg.jpg");
+							return target[name];
+						}
+					})
+					,cover:
+						new Proxy({"src":"/_astro/wsi-imageoptim-5_Malmo_saluhall_2104x1315-2048x1280.v-upsChc.jpg","width":2048,"height":926,"format":"jpg","orientation":1,"fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/wsi-imageoptim-5_Malmo_saluhall_2104x1315-2048x1280.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/wsi-imageoptim-5_Malmo_saluhall_2104x1315-2048x1280.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/wsi-imageoptim-5_Malmo_saluhall_2104x1315-2048x1280.jpg");
+							return target[name];
+						}
+					})
+					,logo:
+						new Proxy({"src":"/_astro/malmo-saluhall-top.ChpRD2Yl.png","width":1920,"height":1182,"format":"png","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-top.png"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-top.png";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall-top.png");
+							return target[name];
+						}
+					})
+					,images:[
+						new Proxy({"src":"/_astro/malmosaluhall1.DDVj3pVl.jpg","width":1830,"height":9797,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmosaluhall1.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmosaluhall1.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmosaluhall1.jpg");
+							return target[name];
+						}
+					})
+					],onHome:true,type:"portfolio"};
+						const _internal = {
+							type: 'content',
+							filePath: "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/malmo-saluhall/malmo-saluhall.md",
+							rawData: undefined,
+						};
+
+export { _internal, body, collection, data, id, slug };

@@ -1,0 +1,103 @@
+const id = "toolpool/toolpool.md";
+						const collection = "portfolio";
+						const slug = "toolpool/toolpool";
+						const body = "\n<h2>ToolPool - Verktygsutlåning: A Case Study in Innovative Tool Sharing</h2>\n\n  <h3>Introduction:</h3>\n  <p>\n    Malmö Hardware Store faced the challenge of competing with large home improvement chains dominating the market. To tackle this, The Fan Club, an advertising agency, enlisted my expertise as a developer to create a solution that would enable the store to stand out. Through careful analysis, we discovered that the store's main source of revenue came from supplies rather than expensive tools. To address this, we devised a unique concept called ToolPool, inspired by the idea of a carpool but with tools. The service allowed customers to borrow tools for free in exchange for sharing the message on Facebook. The initiative received extensive media coverage, garnered awards and recognition, and significantly boosted the store's sales by 25% within the first month.\n  </p>\n\n  <h3>Facebook App and Web Development:</h3>\n  <p>\n    As part of The Fan Club team, I spearheaded the development of ToolPool as a Facebook app to leverage the platform's extensive reach and social sharing capabilities. After witnessing the success and popularity of the concept, we expanded it to its dedicated webpage. The development process involved utilizing technologies such as the Facebook API, jQuery, jQuery UI, PHP, and MySQL to create a seamless user experience and facilitate efficient tool borrowing and sharing. User experience (UX) was of paramount importance, and our team worked diligently to ensure a visually appealing and user-friendly interface that enhanced engagement and encouraged sharing.\n  </p>\n\n  <h3>Collaboration and Teamwork:</h3>\n  <p>\n    ToolPool's success was the result of collaboration among a team of talented creators, copywriters, and myself. Working closely together at The Fan Club, we engaged in extensive discussions and brainstorming sessions to ensure that all aspects of the project, from functionality to messaging, worked harmoniously together. The collaborative effort played a pivotal role in the project's overall success.\n  </p>\n\n  <h3>About ToolPool - Verktygsutlåning:</h3>\n  <p>\n    ToolPool - Verktygsutlåning provided a convenient and award-winning tool lending service, offering approximately 20 different types of tools, including concrete drills, sanders, electric saws, and more. Customers could book the tools through Facebook, by calling the store, or directly in-person. The tool lending service was completely free, while consumables such as sandpaper and screws could be purchased if needed. ToolPool was widely appreciated and gained popularity, with approximately 200 tool loans per month. The service exemplified the simplicity of sustainable consumption and highlighted that being eco-friendly does not have to come at an extra cost.\n  </p>\n\n  <h3>Conclusion:</h3>\n  <p>\n    The ToolPool - Verktygsutlåning project, developed by The Fan Club with my contribution as a developer, showcased the power of innovation and collaboration in driving business success. By leveraging technologies such as the Facebook API, we created a platform that revolutionized tool borrowing and sharing. The initiative received recognition through prestigious awards and media coverage, validating its impact and effectiveness. ToolPool not only provided a practical solution for Malmö Hardware Store to compete with larger chains but also promoted sustainability and cost-effective consumer behavior. The project's success demonstrated the potential for simple ideas to create a lasting impact and inspire positive change in the market.\n  </p>\n\nToolPool has been awarded in Cannes Lions (Silver Lion in Promo &amp; Activation, Bronze Lion in Cyber and Shortlist in Media), Guldägget (Golden Egg in PR, Silver Egg in Digital and Silver Egg in Alternative Media), Tomorrow Awards (Shortlist), Spinn (Shortlist x3), Best Ads (Gold), Campaign of the Month, Interactive (Gold), 100-wattaren (Gold) and published in Contagius Magazine.\n\n </p>\n";
+						const data = {title:"ToolPool",title2:"Handyman Store",description:"Developed the award-winning ToolPool platform, enabling free tool lending via Facebook and a dedicated website to boost Malmö Hardware Store's sales by 25%.",tagline:"ToolPool is like a carpool, but with tools and it’s free.",date:"2012",permalink:"toolpool",client:"Malmö Järnhandel",agency:"The Fan Club",category:["Backend","Front-end","UX"],tag:["CSS","HTML","Javascript","PHP"],case_link_url:"https://www.malmojarnhandel.se/ToolPool-Verktygsutl%C3%A5ning",background_image:
+						new Proxy({"src":"/_astro/toolpool-top1.DX-azgY6.jpg","width":2953,"height":1969,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top1.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top1.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top1.jpg");
+							return target[name];
+						}
+					})
+					,cover:
+						new Proxy({"src":"/_astro/toolpool.DYHMi5kG.jpg","width":1500,"height":678,"format":"jpg","orientation":1,"fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool.jpg");
+							return target[name];
+						}
+					})
+					,logo:
+						new Proxy({"src":"/_astro/toolpool-4.D4cCkDRu.jpg","width":621,"height":881,"format":"jpg","orientation":1,"fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-4.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-4.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-4.jpg");
+							return target[name];
+						}
+					})
+					,images:[
+						new Proxy({"src":"/_astro/toolpool-top.LtYp_5th.jpg","width":2551,"height":1701,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-top.jpg");
+							return target[name];
+						}
+					})
+					,
+						new Proxy({"src":"/_astro/toolpool-1.D6KZnAWP.jpg","width":2048,"height":1448,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-1.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-1.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-1.jpg");
+							return target[name];
+						}
+					})
+					,
+						new Proxy({"src":"/_astro/toolpool-3.CkxrnGtK.jpg","width":960,"height":960,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-3.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-3.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool-3.jpg");
+							return target[name];
+						}
+					})
+					,
+						new Proxy({"src":"/_astro/site-1.BfU6BhMa.jpg","width":800,"height":600,"format":"jpg","fsPath":"C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/site-1.jpg"}, {
+						get(target, name, receiver) {
+							if (name === 'clone') {
+								return structuredClone(target);
+							}
+							if (name === 'fsPath') {
+								return "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/site-1.jpg";
+							}
+							if (target[name] !== undefined && globalThis.astroAsset) globalThis.astroAsset?.referencedImages.add("C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/site-1.jpg");
+							return target[name];
+						}
+					})
+					],onHome:true,type:"portfolio"};
+						const _internal = {
+							type: 'content',
+							filePath: "C:/Users/Ehsan/dev/astro-template/src/content/portfolio/toolpool/toolpool.md",
+							rawData: undefined,
+						};
+
+export { _internal, body, collection, data, id, slug };

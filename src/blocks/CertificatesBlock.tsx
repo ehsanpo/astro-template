@@ -1,0 +1,81 @@
+import { getPortfolioData } from "@/utils/data";
+import CertificateCard from "@/components/certificates/CertificateCard";
+import { Heading } from "@/components/ui/heading";
+import Button from "@/components/Link";
+
+// Import certificate images from assets
+// Need to ensure src/assets copied correctly. Checked in step 93, it was copied.
+import cybersecurity from "@/assets/cert/cybersecurity.png";
+import AWS from "@/assets/cert/AWS.png";
+import SFPC from "@/assets/cert/SFPC.png";
+import RWVCPC from "@/assets/cert/RWVCPC.png";
+import uiBasic from "@/assets/cert/ui-basic.png";
+import uiAdv from "@/assets/cert/ui-adv.png";
+import designComposition from "@/assets/cert/design-composition.png";
+import accessibility from "@/assets/cert/accessibility.png";
+import GAA from "@/assets/cert/GAA.png";
+import GTM from "@/assets/cert/GTM.png";
+import GA from "@/assets/cert/GA.png";
+import cybersecurityAware from "@/assets/cert/CAPC.png";
+import leanLeadership from "@/assets/cert/LLPC.png";
+import promptEngineering from "@/assets/cert/CPEFPC.png";
+import selfLeadership from "@/assets/cert/bb2-self-leader.png";
+
+const imageMap: Record<string, any> = {
+	"/img/cert/cybersecurity.png": cybersecurity,
+	"/img/cert/AWS.png": AWS,
+	"/img/cert/SFPC.png": SFPC,
+	"/img/cert/RWVCPC.png": RWVCPC,
+	"/img/cert/ui-basic.png": uiBasic,
+	"/img/cert/ui-adv.png": uiAdv,
+	"/img/cert/design-composition.png": designComposition,
+	"/img/cert/accessibility.png": accessibility,
+	"/img/cert/GAA.png": GAA,
+	"/img/cert/GTM.png": GTM,
+	"/img/cert/GA.png": GA,
+	"/img/cert/CAPC.png": cybersecurityAware,
+	"/img/cert/LLPC.png": leanLeadership,
+	"/img/cert/CPEFPC.png": promptEngineering,
+	"/img/cert/bb2-self-leader.png": selfLeadership,
+};
+
+interface Props {
+	showAll?: boolean;
+}
+
+export const CertificatesBlock = ({ showAll = false }: Props) => {
+	const { certifications } = getPortfolioData();
+
+	const certsWithImages = certifications.map((cert: any) => ({
+		...cert,
+		image: imageMap[cert.img] || cert.img,
+	}));
+
+	return (
+		<section className="m-auto w-full overflow-hidden bg-gray-50 py-20 dark:bg-neutral-900">
+			<div className="container mx-auto px-4">
+				<Heading level="h3" gradient floating backplate>
+					{" "}
+					Certifications{" "}
+				</Heading>
+
+				<div className="grid grid-cols-1 justify-center justify-items-center gap-8 md:grid-cols-2 lg:grid-cols-4">
+					{certsWithImages
+						.slice(0, showAll ? certsWithImages.length : 4)
+						.map((cert: any, index: number) => (
+							<CertificateCard key={cert.name} {...cert} index={index} />
+						))}
+				</div>
+				{!showAll && (
+					<div className="mt-12 text-center">
+						<Button
+							href="/about/#certifications"
+							text="View All Certifications →"
+							variant="secondary"
+						/>
+					</div>
+				)}
+			</div>
+		</section>
+	);
+};

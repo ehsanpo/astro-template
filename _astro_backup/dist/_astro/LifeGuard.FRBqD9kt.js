@@ -1,0 +1,1 @@
+import{r}from"./index.BoyW3vH1.js";import{u as e}from"./state.CMkg019G.js";function n(){return r.useEffect(()=>{const t=e.getState().mode,o=e.getState().unlocks["/life"];(t!=="active"||!o)&&(window.location.href="/")},[]),null}export{n as default};

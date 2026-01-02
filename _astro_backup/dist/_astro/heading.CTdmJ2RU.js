@@ -1,0 +1,1 @@
+import{Heading as e}from"./heading.C1HyC5oo.js";import"./jsx-runtime.C51r_xpA.js";import"./index.BoyW3vH1.js";import"./react-scroll-parallax.esm.C2GjozQw.js";import"./parallax-controller.esm.C3FdbzjI.js";export{e as Heading};
