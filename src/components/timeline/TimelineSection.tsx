@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { ParallaxBanner, Parallax } from "react-scroll-parallax";
 import { Award } from "lucide-react";

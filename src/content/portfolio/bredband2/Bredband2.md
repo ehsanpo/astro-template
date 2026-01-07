@@ -73,7 +73,6 @@ images:
 <br />
 <h3>Conclusion:</h3>
 
-<p>
-My time at Bredband2 was characterized by my dedication to driving digital transformation, enhancing security measures, and improving the overall customer experience. Through continues development, spearheading a comprehensive website redesign, and developing the "Mitt Bredband2" customer portal, I demonstrated my technical expertise, collaboration skills, and ability to deliver impactful solutions.<br /><br />
+<p>My time at Bredband2 was characterized by my dedication to driving digital transformation, enhancing security measures, and improving the overall customer experience. Through continues development, spearheading a comprehensive website redesign, and developing the "Mitt Bredband2" customer portal, I demonstrated my technical expertise, collaboration skills, and ability to deliver impactful solutions.</p>
 
-Furthermore, by actively pursuing continuous learning and acquiring certifications, I ensured that I remained at the forefront of industry trends and best practices, enabling me to contribute effectively to Bredband2's success.</p>
+<p>Furthermore, by actively pursuing continuous learning and acquiring certifications, I ensured that I remained at the forefront of industry trends and best practices, enabling me to contribute effectively to Bredband2's success.</p>

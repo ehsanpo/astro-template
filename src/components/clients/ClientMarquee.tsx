@@ -1,4 +1,4 @@
-import { getPortfolioItems } from "@/utils/data";
+import { getPortfolioItems } from "@/utils/data-server";
 
 const MarqueeContent = ({ clients }: { clients: string[] }) => (
 	<div className="flex items-center gap-12 px-4">

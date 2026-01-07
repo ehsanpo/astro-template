@@ -50,7 +50,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boo
 				</CollapsibleTrigger>
 				<CollapsibleContent>
 					{item.submenu.map((subItem) => (
-						<MenuItemComponent key={subItem.title} item={subItem} depth={depth + 1} />
+						<MenuItemComponent key={subItem.text} item={subItem} depth={depth + 1} />
 					))}
 				</CollapsibleContent>
 			</Collapsible>

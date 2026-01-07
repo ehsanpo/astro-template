@@ -20,7 +20,7 @@ I’ve been experimenting with **music visualization** using Three.js and one of
   width="100%"
   height="500px"
   src="https://stirring-bienenstitch-82cd5b.netlify.app/"
-  style="border: none; border-radius: 8px; margin: 20px 0;"
+  style={{border: 'none', borderRadius: '8px', margin: '20px 0'}}
   title="Music Visualization Demo">
 </iframe>
 

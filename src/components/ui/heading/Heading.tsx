@@ -1,8 +1,10 @@
+"use client";
+
 import React from "react";
 import type { HeadingLevel } from "./types";
 import { getHeadingClass } from "./utils";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 interface Props {
 	level?: HeadingLevel;
@@ -27,7 +29,7 @@ const Heading: React.FC<Props> = ({
 	backplate,
 	style,
 }) => {
-	const Tag = level as keyof JSX.IntrinsicElements; // Ensures Tag is a valid HTML heading element
+	const Tag = level as React.ElementType; // Ensures Tag is a valid HTML heading element
 	const headingClass = getHeadingClass({
 		gradient,
 		shadow,

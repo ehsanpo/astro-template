@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { Users, ChevronDown, ChevronUp } from "lucide-react";
 import TeamMemberCard from "./TeamMemberCard";

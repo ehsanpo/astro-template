@@ -25,7 +25,7 @@ export const Aside: React.FC<AsideProps> = ({ data, mainColor, language }) => {
 
 			<div>
 				<h2 className="mb-2 text-xl font-semibold" style={{ color: mainColor }}>
-					{t.contact}
+					Contact
 				</h2>
 				<div className="space-y-2 text-sm print:grid print:grid-cols-2 print:gap-x-4 print:gap-y-1 print:space-y-0">
 					<p className="flex items-center gap-2">

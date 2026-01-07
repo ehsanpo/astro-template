@@ -1,5 +1,3 @@
-"use client";
-
 import PageHero from "@/components/hero/PageHero";
 import { TechStackBlock } from "@/blocks/TechStackBlock";
 import { Heading } from "@/components/ui/heading";

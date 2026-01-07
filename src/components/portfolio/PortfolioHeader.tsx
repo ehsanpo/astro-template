@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Heading } from "../ui/heading";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";

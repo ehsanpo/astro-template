@@ -23,7 +23,7 @@ export const TechStackBlock = ({ stacks }: Props) => {
 				</Heading>
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{stacks.map((stack, index) => (
-						<StackCard key={stack.name} {...stack} parentIndex={index} />
+						<StackCard key={stack.slug} {...stack} parentIndex={index} />
 					))}
 				</div>
 				<SkillsInfo />

@@ -1,5 +1,5 @@
 import { Heading } from "../ui/heading";
-import { getPortfolioItems } from "@/utils/data";
+import { getPortfolioItems } from "@/utils/data-server";
 import { AnimatedScrollSection } from "../AnimatedScrollSection";
 
 export const SelectedWork = async () => {

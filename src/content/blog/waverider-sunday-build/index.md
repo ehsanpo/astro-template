@@ -17,13 +17,13 @@ status: publish
 cover: "./cover2.jpg"
 ---
 
-<p>It all started 7:30 in the morning. Sunday. I made my breakfast, egg 🥚 in a butty and a cup ☕ of Cardemon Ahmed tea. Peak comfort. Peak genius mode. I was lurking around the internet like a bored raccoon trying to catch what's new, scrolling, scrolling, scrolling, until my brain suddenly went "yo... build something". And of course I listen to that voice, because that voice has gotten me into some pretty fun trouble before. I wanted to code something new, something silly, something cool, something that would make me go "🤣🤣 look at this weird thing I made".</p>
+<p>It all started 7:30 in the morning. Sunday. I made my breakfast, egg ðŸ¥š in a butty and a cup â˜• of Cardemon Ahmed tea. Peak comfort. Peak genius mode. I was lurking around the internet like a bored raccoon trying to catch what's new, scrolling, scrolling, scrolling, until my brain suddenly went "yo... build something". And of course I listen to that voice, because that voice has gotten me into some pretty fun trouble before. I wanted to code something new, something silly, something cool, something that would make me go "ðŸ¤£ðŸ¤£ look at this weird thing I made".</p>
 
-<p>And then the idea 💡 came back to me, like an old meme you forgot but still love. Ride inside my music. I have tons of unreleased tracks 😎 just sitting on my hard drive collecting dust like ancient artifacts, so why not use those. And I knew Expo and React Native already so boom, decision made. Web, Android, iOS, full cross platform madness. I also wanted tilt controls. Tilt on phone. Mouse on web. Tilt on browser mobile too because why not. Full chaos.</p>
+<p>And then the idea ðŸ’¡ came back to me, like an old meme you forgot but still love. Ride inside my music. I have tons of unreleased tracks ðŸ˜Ž just sitting on my hard drive collecting dust like ancient artifacts, so why not use those. And I knew Expo and React Native already so boom, decision made. Web, Android, iOS, full cross platform madness. I also wanted tilt controls. Tilt on phone. Mouse on web. Tilt on browser mobile too because why not. Full chaos.</p>
 
-<p>So I opened bolt.new because they support Expo and it gives you a nice base to work with, like a boilerplate but with vibes. I asked it to help me setup the project and even in the very first step I added collision detection because I knew I was going to need it later anyway. Felt good to have that in place early instead of trying to duct tape it at the end like I usually do 😭.</p>
+<p>So I opened bolt.new because they support Expo and it gives you a nice base to work with, like a boilerplate but with vibes. I asked it to help me setup the project and even in the very first step I added collision detection because I knew I was going to need it later anyway. Felt good to have that in place early instead of trying to duct tape it at the end like I usually do ðŸ˜­.</p>
 
-<h2>🔊 Audio Analysis: Scan First, Upload Later</h2>
+<h2>ðŸ”Š Audio Analysis: Scan First, Upload Later</h2>
 
 <p>The plan was very clear:</p>
 
@@ -44,13 +44,13 @@ cover: "./cover2.jpg"
     <li>upload that data to Supabase</li>
 </ul>
 
-<p>Only <strong>after</strong> the analysis finished did the script upload the actual audio files to Supabase Storage. Correct order. Everything clean and organized (for once 😭).</p>
+<p>Only <strong>after</strong> the analysis finished did the script upload the actual audio files to Supabase Storage. Correct order. Everything clean and organized (for once ðŸ˜­).</p>
 
 <p>This whole pipeline took maybe 2 hours and suddenly I had a full library of levels ready.</p>
 
-<hr>
+<hr />
 
-<h2>🌀 Drawing the Level: Frequency Torture Testing</h2>
+<h2>ðŸŒ€ Drawing the Level: Frequency Torture Testing</h2>
 
 <p>Next I had to use the analyzed data to actually shape the tunnel. This part took a lot of testing:</p>
 
@@ -60,7 +60,7 @@ cover: "./cover2.jpg"
     <li>some made everything look like melted spaghetti</li>
 </ul>
 
-<p>But bolt.new made testing super fast — push code, it rebuilds, test instantly via Expo QR or web preview. After tweaking values on different tracks, I finally found combinations I liked:</p>
+<p>But bolt.new made testing super fast â€” push code, it rebuilds, test instantly via Expo QR or web preview. After tweaking values on different tracks, I finally found combinations I liked:</p>
 
 <ul>
     <li>bass = big movement</li>
@@ -71,9 +71,9 @@ cover: "./cover2.jpg"
 
 <p>When it started to look and feel fun, I knew I was on the right path.</p>
 
-<hr>
+<hr />
 
-<h2>🎮 Game Logic, Pages, UI — The Gameplay Skeleton</h2>
+<h2>ðŸŽ® Game Logic, Pages, UI â€” The Gameplay Skeleton</h2>
 
 <p>After the tunnel felt good, I moved on to building:</p>
 
@@ -90,17 +90,19 @@ cover: "./cover2.jpg"
 
 <p>Eventually switched from bolt.new to VS Code when I needed fine control over spacing, padding, margins, and a preloader.</p>
 
-<hr>
+<hr />
 
-<h2>🧠 Using Multi Agents in VS Code for the First Time</h2>
+<h2>ðŸ§  Using Multi Agents in VS Code for the First Time</h2>
 
 <p>This was the first time I really used <strong>multi-agent workflows</strong> in VS Code, and honestly it clicked for me in a cool way.</p>
 
 <p>I learned:</p>
 
-<p>👉 One agent can "hold the context" for a task<br>
-👉 If I needed something totally different, I could open a new agent<br>
-👉 That way I didn't confuse a single agent by jumping topics</p>
+<ul>
+    <li>👉 One agent can "hold the context" for a task</li>
+    <li>👉 If I needed something totally different, I could open a new agent</li>
+    <li>👉 That way I didn't confuse a single agent by jumping topics</li>
+</ul>
 
 <p>So I had different agents working on:</p>
 
@@ -112,11 +114,11 @@ cover: "./cover2.jpg"
     <li>Agent 5: working on enemy patterns</li>
 </ul>
 
-<p>It ended up feeling like I had a tiny chaotic dev team living inside my editor. Except nobody complained. And nobody asked for coffee ☕🤣</p>
+<p>It ended up feeling like I had a tiny chaotic dev team living inside my editor. Except nobody complained. And nobody asked for coffee â˜•ðŸ¤£</p>
 
-<hr>
+<hr />
 
-<h2>🎨 Getting Graphics: Enter Gemini Nanobanana 🍌✨</h2>
+<h2>ðŸŽ¨ Getting Graphics: Enter Gemini Nanobanana ðŸŒâœ¨</h2>
 
 <p>Time for visuals. I can't draw anything, so I used <strong>Gemini Nanobanana</strong> to:</p>
 
@@ -132,9 +134,9 @@ cover: "./cover2.jpg"
 
 ![Game Assets](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xu9gl7ulse1q3lu0p1e1.png)
 
-<hr>
+<hr />
 
-<h2>⚡ Adding Enemies, Powerups, Shields and Other Fun Stuff</h2>
+<h2>âš¡ Adding Enemies, Powerups, Shields and Other Fun Stuff</h2>
 
 <p>Once the graphics looked good, it was time for more gameplay elements:</p>
 
@@ -147,13 +149,11 @@ cover: "./cover2.jpg"
     <li>tiny details everywhere</li>
 </ul>
 
-<p>Every time I thought "ok done", my brain quietly said<br>
-"hmmm… but what if… more stuff?"<br>
-and then I added more stuff.</p>
+<p>Every time I thought "ok done", my brain quietly said... "hmmm... but what if... more stuff?" and then I added more stuff.</p>
 
-<hr>
+<hr />
 
-<h2>🏆 Leaderboard Time</h2>
+<h2>ðŸ† Leaderboard Time</h2>
 
 <p>Since levels are endless (the music loops), I wanted high scores and user profiles.</p>
 
@@ -167,9 +167,9 @@ and then I added more stuff.</p>
 
 <p>One of the easiest setups of the whole day thanks to AI helping me config everything.</p>
 
-<hr>
+<hr />
 
-<h2>🚀 Final Build, Deploy and Bedtime</h2>
+<h2>ðŸš€ Final Build, Deploy and Bedtime</h2>
 
 <p>Once everything worked:</p>
 
@@ -181,24 +181,21 @@ and then I added more stuff.</p>
     <li>fixed small bugs</li>
 </ul>
 
-<p>By the time I finished, it was already 22:00. I was tired, happy, a bit confused how fast the day went. I tried the game a few times in bed, smiled at my own weird creation, and fell asleep 😴</p>
+<p>By the time I finished, it was already 22:00. I was tired, happy, a bit confused how fast the day went. I tried the game a few times in bed, smiled at my own weird creation, and fell asleep ðŸ˜´</p>
 
-<hr>
+<hr />
 
 <h2>Final thoughts</h2>
 
-<p>Could I spend more time polishing? Yes.<br>
-Fix rendering and loading issues? Sure.<br>
-Add more ships, enemies, power-ups? Absolutely.<br>
-Turn it into a full commercial game? Maybe one day.</p>
+<p>Could I spend more time polishing? Yes. Fix rendering and loading issues? Sure. Add more ships, enemies, power-ups? Absolutely. Turn it into a full commercial game? Maybe one day.</p>
 
 <p>But for a <strong>single Sunday coding session</strong>, this is insane.</p>
 
 <p>And honestly, I'm super happy with what I built. AI didn't replace me, it amplified me. Gave me momentum. Removed boring stuff. Let me stay in "flow mode."</p>
 
-<p>This Sunday was one of my most fun coding days in a long time.<br>
-And now I can literally ride inside my own music.</p>
+<p>This Sunday was one of my most fun coding days in a long time. And now I can literally ride inside my own music.</p>
 
-<p>Life = good ❤️🎧🚀</p>
+<p>Life = good â¤ï¸ðŸŽ§ðŸš€</p>
 
-<iframe width="100%" height="600" style="border-radius: 8px; margin: 2rem 0;" src="https://www.youtube.com/embed/laWv14Y59hg" title="WaveRider Gameplay" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+<iframe width="100%" height="600" style={{borderRadius: '8px', margin: '2rem 0'}} src="https://www.youtube.com/embed/laWv14Y59hg" title="WaveRider Gameplay" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+

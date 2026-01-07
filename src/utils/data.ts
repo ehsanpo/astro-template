@@ -1,51 +1,12 @@
 import portfolioData from "../data/portfolio.json";
-import { getCollection } from "@/lib/content";
-type CollectionEntry<T> = any;
+
 
 
 export const getPortfolioData = () => {
 	return portfolioData;
 };
 
-export const getPortfolioItems = async () => {
-	const portfolioEntries = await getCollection("portfolio");
 
-	return portfolioEntries.map((entry: CollectionEntry<"portfolio">) => ({
-		...entry.data,
-		slug: entry.slug,
-		background_image: entry.data.background_image,
-		logo: entry.data.logo,
-		bilder: entry.data.images,
-		content: entry,
-	}));
-};
-
-export const getProductItems = async () => {
-	const productEntries = await getCollection("products");
-
-	return productEntries.map((entry: CollectionEntry<"products">) => ({
-		...entry.data,
-		slug: entry.slug,
-		background_image: entry.data.background_image,
-		logo: entry.data.logo,
-		bilder: entry.data.images,
-		content: entry,
-	}));
-};
-
-export const getBlogPosts = async () => {
-	const blogEntries = await getCollection("blog", ({ data }) => {
-		return data.draft !== true;
-	});
-
-	return blogEntries
-		.map((entry: CollectionEntry<"blog">) => ({
-			...entry.data,
-			slug: entry.slug,
-			content: entry,
-		}))
-		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-};
 
 // Calculate years of experience from duration string
 export const calculateYearsOfExperience = (duration: string): number => {

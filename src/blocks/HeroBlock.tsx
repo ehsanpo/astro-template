@@ -1,6 +1,7 @@
 import { Hero } from "@/components/hero/Hero";
 import Button from "@/components/Link";
-import { getPortfolioData, getPortfolioItems } from "@/utils/data";
+import { getPortfolioData } from "@/utils/data";
+import { getPortfolioItems } from "@/utils/data-server";
 import React from "react";
 
 export const HeroBlock = async () => {

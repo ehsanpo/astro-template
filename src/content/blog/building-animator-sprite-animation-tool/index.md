@@ -115,24 +115,25 @@ For now, I'm super happy using this app to generate sprite sheets with CSS. Here
 
 Check out this fire animation I generated with the tool! This is exactly the kind of stuff that gets me excited about sprite animations:
 
-<div style="background: #111; padding: 2rem; border-radius: 8px; text-align: center; margin: 1rem 0;">
-  <div class="fire-demo" style="
-    width: 192px; 
-    height: 172px; 
-    background-image: url('/img/px/fire/fire_spritesheet.png');
-    background-repeat: no-repeat;
-    display: inline-block;
-    animation: fire-animation 0.70s steps(7) infinite;
-  "></div>
-  <p style="color: #888; font-size: 0.75rem; margin-top: 1rem;">Live fire animation - smooth CSS keyframes!</p>
-</div>
+Here’s the markup the tool spits out for a tiny fire animation:
 
-<style>
+```html
+<div class="fire-demo" style="
+  width: 192px;
+  height: 172px;
+  background-image: url('/img/px/fire/fire_spritesheet.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  animation: fire-animation 0.70s steps(7) infinite;
+"></div>
+```
+
+```css
 @keyframes fire-animation {
   from { background-position: 0px 0px; }
   to { background-position: -1344px 0px; }
 }
-</style>
+```
 
 _Generated with Animator - perfect loop, clean code!_
 

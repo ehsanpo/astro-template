@@ -1,4 +1,4 @@
-import { getBlogPosts } from "@/utils/data";
+import { getBlogPosts } from "@/utils/data-server";
 import { BlogCard } from "@/components/blog/BlogCard";
 import Button from "@/components/Link";
 

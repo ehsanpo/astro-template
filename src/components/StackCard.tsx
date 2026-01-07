@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "./ui/magic-card";
@@ -63,7 +65,7 @@ export default function StackCard({ slug, labels, icon, data, parentIndex }: Sta
 										<span className="text-gray-700 dark:text-gray-300">
 											<span
 												className={`mr-1 inline-block h-3 w-3 rounded-full ${getExpertiseColor(
-													timelineMatch?.stillActive
+													timelineMatch?.stillActive ?? 0
 												)}`}
 											></span>{" "}
 											{label}

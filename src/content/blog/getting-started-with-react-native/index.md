@@ -44,7 +44,7 @@ Then I tested it on iOS and… my SVG symbols were _gone_. Poof.
 Hours of Googling later, I tried different libraries, converted all my SVGs into React components, and still — nothing.
 Turns out, I just **forgot to set width and height** on each SVG. 😭
 
-<iframe allowfullscreen="" class="giphy-embed" frameborder="0" height="300" src="https://giphy.com/embed/6xcqPF9MTwChq" width="300" style="margin: 20px auto; display: block;"></iframe>
+<iframe allowFullScreen={true} className="giphy-embed" frameBorder="0" height="300" src="https://giphy.com/embed/6xcqPF9MTwChq" width="300" style={{margin: '20px auto', display: 'block'}}></iframe>
 _That “ohhhh” moment when the bug finally makes sense 😅_
 
 ---

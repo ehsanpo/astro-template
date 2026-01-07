@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useGameStore, useGameEngine } from "../../game";
 import { AchievementToast } from "./AchievementToast";

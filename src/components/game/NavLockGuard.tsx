@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { useGameStore } from "../../game";
 import type { UnlockablePage } from "../../game";

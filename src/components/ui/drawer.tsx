@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { Drawer as DrawerPrimitive } from "vaul";
 
@@ -27,7 +29,7 @@ const DrawerOverlay = React.forwardRef<
 		{...props}
 	/>
 ));
-DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
+DrawerOverlay.displayName = DrawerPrimitive.Overlay?.displayName || "DrawerOverlay";
 
 const DrawerContent = React.forwardRef<
 	React.ElementRef<typeof DrawerPrimitive.Content>,
@@ -70,7 +72,7 @@ const DrawerTitle = React.forwardRef<
 		{...props}
 	/>
 ));
-DrawerTitle.displayName = DrawerPrimitive.Title.displayName;
+DrawerTitle.displayName = DrawerPrimitive.Title?.displayName || "DrawerTitle";
 
 const DrawerDescription = React.forwardRef<
 	React.ElementRef<typeof DrawerPrimitive.Description>,
@@ -82,7 +84,7 @@ const DrawerDescription = React.forwardRef<
 		{...props}
 	/>
 ));
-DrawerDescription.displayName = DrawerPrimitive.Description.displayName;
+DrawerDescription.displayName = DrawerPrimitive.Description?.displayName || "DrawerDescription";
 
 export {
 	Drawer,

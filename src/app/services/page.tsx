@@ -1,5 +1,3 @@
-"use client";
-
 import PageHero from "@/components/hero/PageHero";
 import ServiceDetails from "@/components/FullScroll";
 import Button from "@/components/Link";

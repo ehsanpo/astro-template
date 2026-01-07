@@ -1,16 +1,15 @@
 
-import { getPortfolioItems } from "@/utils/data-server";
+import { getProductItems } from "@/utils/data-server";
 import PortfolioHeader from "@/components/portfolio/PortfolioHeader";
 import Gallery from "@/components/portfolio/Gallery";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Link from "next/link";
 
 interface Props {
 	params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-	const items = await getPortfolioItems();
+	const items = await getProductItems();
 	return items.map((item: any) => ({
 		slug: item.permalink,
 	}));
@@ -18,28 +17,28 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params;
-	const items = await getPortfolioItems();
+	const items = await getProductItems();
 	const item = items.find((i: any) => i.permalink === slug);
 
 	if (!item) {
 		return {
-			title: "Project Not Found",
+			title: "Product Not Found",
 		};
 	}
 
 	return {
-		title: `${item.title} - Portfolio`,
+		title: `${item.title} - Products`,
 		description: item.description || item.tagline || `${item.title} - ${item.client}`,
 	};
 }
 
-export default async function PortfolioItemPage({ params }: Props) {
+export default async function ProductItemPage({ params }: Props) {
     const { slug } = await params;
-	const items = await getPortfolioItems();
+	const items = await getProductItems();
 	const item = items.find((i: any) => i.permalink === slug);
 
 	if (!item) {
-		return <div>Project not found</div>;
+		return <div>Product not found</div>;
 	}
 
 	return (
