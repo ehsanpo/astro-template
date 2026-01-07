@@ -1,5 +1,5 @@
 import { getBlogPosts } from "@/utils/data-server";
-import { marked } from "marked";
+import { sanitizeMarkdown } from "@/lib/sanitize";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -116,7 +116,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div
           className="prose prose-base max-w-none dark:prose-invert"
           dangerouslySetInnerHTML={{
-            __html: marked.parse(resolvedBody) as string,
+            __html: sanitizeMarkdown(resolvedBody),
           }}
         />
 

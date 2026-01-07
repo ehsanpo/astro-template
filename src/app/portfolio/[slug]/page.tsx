@@ -1,7 +1,7 @@
 import { getPortfolioItems } from "@/utils/data-server";
 import PortfolioHeader from "@/components/portfolio/PortfolioHeader";
 import Gallery from "@/components/portfolio/Gallery";
-import { marked } from "marked";
+import { sanitizeMarkdown } from "@/lib/sanitize";
 import Link from "next/link";
 
 interface Props {
@@ -62,7 +62,7 @@ export default async function PortfolioItemPage({ params }: Props) {
         <div
           className="prose mx-auto mb-20 max-w-3xl dark:prose-invert"
           dangerouslySetInnerHTML={{
-            __html: marked.parse(resolvedBody) as string,
+            __html: sanitizeMarkdown(resolvedBody),
           }}
         />
 

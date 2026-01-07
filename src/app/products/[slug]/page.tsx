@@ -1,7 +1,7 @@
 import { getProductItems } from "@/utils/data-server";
 import PortfolioHeader from "@/components/portfolio/PortfolioHeader";
 import Gallery from "@/components/portfolio/Gallery";
-import { marked } from "marked";
+import { sanitizeMarkdown } from "@/lib/sanitize";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -49,7 +49,7 @@ export default async function ProductItemPage({ params }: Props) {
         <div
           className="prose mx-auto mb-20 max-w-3xl dark:prose-invert"
           dangerouslySetInnerHTML={{
-            __html: marked.parse(item.content.body || "") as string,
+            __html: sanitizeMarkdown(item.content.body || ""),
           }}
         />
 

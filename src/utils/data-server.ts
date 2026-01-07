@@ -1,13 +1,21 @@
 import { getCollection } from "@/lib/content";
+import path from "path";
 
 type CollectionEntry<T> = any;
 
 // Helper function to convert image filename to proper path
+// Note: Image metadata extraction via sharp is disabled to prevent build timeouts
+// Re-enable by uncommenting the getImageMetadata calls when needed
 function getImagePath(
   dirPath: string,
   collection: string,
   imageName: any
-): { src: string; width?: number; height?: number } | null {
+): {
+  src: string;
+  width?: number;
+  height?: number;
+  blurDataURL?: string;
+} | null {
   if (!imageName) return null;
   // If it's already an object with src, return it
   if (typeof imageName === "object" && imageName.src) {
@@ -15,6 +23,7 @@ function getImagePath(
       src: imageName.src,
       width: imageName.width,
       height: imageName.height,
+      blurDataURL: imageName.blurDataURL,
     };
   }
   // If it's a string, construct the path and return as object
@@ -36,6 +45,8 @@ function getImagePath(
       }
     }
 
+    // Return with default dimensions
+    // TODO: Add build-time image metadata extraction with caching
     return {
       src: fullPath,
       width: 800,
