@@ -50,7 +50,9 @@ export default function CreditsPage() {
                 </div>
                 <div className="group relative overflow-hidden rounded-2xl border border-neutral-200/50 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 p-8 backdrop-blur-sm transition-transform duration-300 hover:scale-105 dark:border-neutral-700/50">
                   <div className="mb-4 text-4xl">⚛️</div>
-                  <h3 className="mb-2 font-basement text-xl font-bold">React</h3>
+                  <h3 className="mb-2 font-basement text-xl font-bold">
+                    React
+                  </h3>
                   <p className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
                     Interactive components
                   </p>
