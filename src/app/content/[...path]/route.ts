@@ -1,76 +1,64 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 
-export const dynamic = "force-static";
-
-export async function generateStaticParams() {
-	const contentDir = path.join(process.cwd(), "src/content");
-	
-	function getFiles(dir: string): string[] {
-		const entries = fs.readdirSync(dir, { withFileTypes: true });
-		const files = entries.flatMap((entry) => {
-			const res = path.join(dir, entry.name);
-			return entry.isDirectory() ? getFiles(res) : res;
-		});
-		return files;
-	}
-
-	const allFiles = getFiles(contentDir);
-	return allFiles.map((file) => {
-		const relativePath = path.relative(contentDir, file);
-		return {
-			path: relativePath.split(path.sep),
-		};
-	});
-}
-
+// Serve files from src/content at /content/* during dev. For static export, files are copied to out/content.
 export async function GET(
-	request: NextRequest,
-	{ params }: { params: Promise<{ path: string[] }> }
+  req: NextRequest,
+  { params }: { params: Promise<{ path: string[] }> }
 ) {
-	try {
-		const { path: pathSegments } = await params;
-		const relativePath = pathSegments.join("/");
-		console.log(`[Content Route] Requested: ${relativePath}`);
-		
-		const fullPath = path.join(process.cwd(), "src/content", ...pathSegments);
-		console.log(`[Content Route] Full Path: ${fullPath}`);
+  try {
+    const { path: segments } = await params;
+    const root = process.cwd();
+    const baseDir = path.join(root, "src", "content");
+    const target = path.join(baseDir, ...segments);
 
-		// Security: Ensure the path is within src/content
-		const contentDir = path.join(process.cwd(), "src/content");
-		if (!fullPath.startsWith(contentDir)) {
-			console.error(`[Content Route] Forbidden: ${fullPath} is outside of ${contentDir}`);
-			return new NextResponse("Forbidden", { status: 403 });
-		}
+    // Prevent path traversal
+    const resolved = path.resolve(target);
+    if (!resolved.startsWith(path.resolve(baseDir))) {
+      return new Response("Forbidden", { status: 403 });
+    }
 
-		if (!fs.existsSync(fullPath)) {
-			console.error(`[Content Route] Not Found: ${fullPath}`);
-			return new NextResponse("Not Found", { status: 404 });
-		}
+    if (!fs.existsSync(resolved) || !fs.statSync(resolved).isFile()) {
+      return new Response("Not Found", { status: 404 });
+    }
 
-		const fileBuffer = fs.readFileSync(fullPath);
-		const ext = path.extname(fullPath).toLowerCase();
+    const ext = path.extname(resolved).toLowerCase();
+    const contentType =
+      MIME[ext as keyof typeof MIME] || "application/octet-stream";
 
-		const mimeTypes: { [key: string]: string } = {
-			".png": "image/png",
-			".jpg": "image/jpeg",
-			".jpeg": "image/jpeg",
-			".gif": "image/gif",
-			".svg": "image/svg+xml",
-			".webp": "image/webp",
-		};
-
-		const contentType = mimeTypes[ext] || "application/octet-stream";
-
-		return new Response(fileBuffer, {
-			headers: {
-				"Content-Type": contentType,
-				"Cache-Control": "public, max-age=31536000, immutable",
-			},
-		});
-	} catch (error: any) {
-		console.error(`[Content Route] Error: ${error.message}`);
-		return new NextResponse(`Internal Server Error: ${error.message}`, { status: 500 });
-	}
+    const buffer = fs.readFileSync(resolved);
+    return new Response(buffer, {
+      status: 200,
+      headers: {
+        "Content-Type": contentType,
+        "Cache-Control": "public, max-age=0, must-revalidate",
+      },
+    });
+  } catch (err) {
+    return new Response("Internal Server Error", { status: 500 });
+  }
 }
+
+const MIME = {
+  ".jpg": "image/jpeg",
+  ".jpeg": "image/jpeg",
+  ".png": "image/png",
+  ".webp": "image/webp",
+  ".gif": "image/gif",
+  ".svg": "image/svg+xml",
+  ".bmp": "image/bmp",
+  ".ico": "image/x-icon",
+  ".avif": "image/avif",
+  ".mp4": "video/mp4",
+  ".webm": "video/webm",
+  ".ogg": "video/ogg",
+  ".mp3": "audio/mpeg",
+  ".wav": "audio/wav",
+  ".json": "application/json",
+  ".xml": "application/xml",
+  ".txt": "text/plain; charset=utf-8",
+  ".html": "text/html; charset=utf-8",
+  ".css": "text/css; charset=utf-8",
+  ".js": "application/javascript",
+} as const;

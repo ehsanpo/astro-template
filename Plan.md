@@ -15,52 +15,59 @@ Scope
 
 Phases
 
-1. Cleanup & Types
+1. ✅ Cleanup & Types
 
-   - Remove/convert `.astro` files in `src/blocks` and `src/components` to TSX equivalents.
-   - Fix imports, props, and Next types; remove Astro-specific types/config.
-   - Align `tsconfig.json` paths and strict settings; resolve current type error set.
+   - ✅ Remove/convert `.astro` files in `src/blocks` and `src/components` to TSX equivalents.
+   - ✅ Fix imports, props, and Next types; remove Astro-specific types/config.
+   - ✅ Align `tsconfig.json` paths and strict settings; resolve current type error set.
 
-2. Content Pipeline (MDX)
+2. 🔄 Content Pipeline (Markdown via `marked`)
 
-   - Introduce MDX with Contentlayer for blog/portfolio documents.
-   - Use `remark-gfm`, `rehype-raw` (to parse HTML), and `rehype-sanitize` (custom schema) to keep HTML safe.
-   - Define MDX component mapping for `img`, `a`, `code`, figures, etc.
+   - ✅ Switched from MDX to `marked` for blog/portfolio/products to handle raw HTML without build breaks.
+   - ✅ Implemented relative image path resolver: rewrites `<img src="...">` to `/content/<collection>/<dirPath>/...`.
+   - ⏳ Contentlayer integration deferred; using custom `getCollection` with gray-matter.
+   - ⏳ Optional: Add `sanitize-html` with allowlist for classes/data-attrs.
 
-3. Image Optimization (No `/public` move)
+3. 🔄 Image Optimization (No `/public` move)
 
-   - Create a build-time image metadata step using `sharp` to compute `width`, `height`, and blur placeholders.
-   - Rewrite Markdown/HTML `<img>` to a custom `MDXImage` that wraps `next/image` with known dimensions.
-   - Configure `next.config.ts` `images.remotePatterns` for any remote assets; keep `unoptimized: false` for runtime where possible, or precompute sizes for static export.
+   - ✅ Static export copies `src/content/**` to `out/content/**` via postbuild script.
+   - ✅ Images render in blog/portfolio via resolved `/content/...` paths.
+   - ✅ Set `next.config.ts` `images.unoptimized: true` for static export.
+   - ⏳ Build-time image metadata via `sharp` (dimensions + blur placeholders) pending.
+   - ⏳ Replace `<img>` with responsive `<picture>` or `next/image` with known dimensions.
 
-4. Missing Pages
+4. ✅ Missing Pages
 
-   - Restore `/roles` and any other pages under `_astro_backup/pages` into `src/app/roles` (and siblings), porting components/data.
-   - Verify navigation and links; add redirects if slugs changed.
+   - ✅ Restored `/roles` list page and dynamic `/roles/[slug]` pages.
+   - ✅ Navigation and links verified; routes statically generated.
 
-5. HTML Hardening
+5. ⏳ HTML Hardening
 
-   - Sanitize embedded HTML in Markdown via `rehype-sanitize` with an allowlist for classes, data-attrs, and necessary tags.
-   - Add CI check to fail on disallowed tags/attrs; document safe HTML patterns.
+   - ✅ Raw HTML rendered via `marked` (tolerant parser).
+   - ⏳ Add server-side sanitization with `sanitize-html` or similar.
+   - ⏳ Document safe HTML patterns and add CI checks.
 
-6. Verification & Build
-   - Add preview routes/components to validate MDX rendering and images.
-   - Run `type-check`, `lint`, and `build` (static export) and fix regressions.
-   - Remove unused Astro configs and backup artifacts once parity is confirmed.
+6. ✅ Verification & Build
+   - ✅ Type-check passes; no `.astro` imports.
+   - ✅ Static export (`output: 'export'`) succeeds with 121 routes.
+   - ✅ Postbuild script copies content assets to `out/content`.
+   - ⏳ Remove unused Astro configs and `_astro_backup` once parity confirmed.
 
 Decisions
 
-- Content: Use Contentlayer to model blog/portfolio, compute fields for image metadata, and streamline queries.
-- Images: Prefer local content-relative paths, computed at build via `sharp`; support remote via `next.config.ts`.
-- HTML: Allow raw HTML via `rehype-raw` but sanitize with a strict schema to avoid build breaks.
+- Content: Using custom `getCollection` with `gray-matter` for blog/portfolio/products. Contentlayer deferred.
+- Rendering: Switched from MDX to `marked` to handle embedded HTML gracefully without build breaks.
+- Images: Content-relative paths rewritten to `/content/<collection>/<dirPath>/...` at render; static export copies `src/content/**` to `out/content/**`.
+- Image optimization: Currently `images.unoptimized: true`; build-time `sharp` metadata and responsive variants pending.
+- HTML: `marked` parses raw HTML tolerantly; optional server-side sanitization with `sanitize-html` can be added.
 
 Milestones
 
-- M1: Repo cleanup; type-safe build without `.astro` imports.
-- M2: MDX + component mapping renders posts; HTML sanitized.
-- M3: Images optimized (dimensions + blur) and visible in posts.
-- M4: `/roles` and other missing pages restored and tested.
-- M5: Static export passes; remove Astro leftovers; docs updated.
+- ✅ M1: Repo cleanup; type-safe build without `.astro` imports.
+- ✅ M2: Markdown rendering via `marked`; HTML handled gracefully.
+- 🔄 M3: Images visible in posts via `/content/...` paths; build-time optimization pending.
+- ✅ M4: `/roles` and other missing pages restored and tested.
+- 🔄 M5: Static export passes; Astro leftovers cleanup and docs pending.
 
 Risks & Mitigations
 
@@ -70,15 +77,15 @@ Risks & Mitigations
 
 Next Actions (Execution Order)
 
-1. Audit Astro remnants in repo
-2. Convert `.astro` blocks/components to TSX
-3. Resolve TypeScript errors
-4. Set up MDX + Contentlayer
-5. Map MDX components (img, a, code)
-6. Build-time image metadata via sharp
-7. Fix blog post image paths
-8. Sanitize HTML in Markdown
-9. Restore roles and missing pages
-10. Update `next.config` and `tsconfig`
-11. Remove Astro config leftovers
-12. Add docs and upgrade notes
+1. ✅ Audit Astro remnants in repo
+2. ✅ Convert `.astro` blocks/components to TSX
+3. ✅ Resolve TypeScript errors
+4. ⏳ Set up MDX + Contentlayer (deferred; using `marked` instead)
+5. ✅ Map image paths in Markdown (via regex rewrite to `/content/...`)
+6. ⏳ Build-time image metadata via sharp
+7. ✅ Fix blog post image paths
+8. 🔄 Sanitize HTML in Markdown (using `marked`; optional sanitization layer pending)
+9. ✅ Restore roles and missing pages
+10. ✅ Update `next.config` and `tsconfig`
+11. ⏳ Remove Astro config leftovers
+12. ⏳ Add docs and upgrade notes

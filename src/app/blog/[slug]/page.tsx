@@ -1,5 +1,5 @@
 import { getBlogPosts } from "@/utils/data-server";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { marked } from "marked";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -47,6 +47,17 @@ export default async function BlogPostPage({ params }: Props) {
       day: "numeric",
     });
   };
+
+  const resolvedBody = (post.content.body || "").replace(
+    /(src=["'])(?!https?:|\/?content\/)([^"']+)(["'])/g,
+    (_m: string, p1: string, p2: string, p3: string) => {
+      const baseDir = post.content?.dirPath
+        ? `/content/${post.content.collection}/${post.content.dirPath}`
+        : `/content/${post.content.collection}`;
+      const normalized = p2.startsWith("/") ? p2 : `${baseDir}/${p2}`;
+      return `${p1}${normalized}${p3}`;
+    }
+  );
 
   return (
     <article className="min-h-screen bg-white pt-4 dark:bg-neutral-900">
@@ -102,9 +113,12 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </header>
 
-        <div className="prose prose-base max-w-none dark:prose-invert">
-          <MDXRemote source={post.content.body} />
-        </div>
+        <div
+          className="prose prose-base max-w-none dark:prose-invert"
+          dangerouslySetInnerHTML={{
+            __html: marked.parse(resolvedBody) as string,
+          }}
+        />
 
         {post.tag && post.tag.length > 0 && (
           <footer className="mt-12 border-t border-gray-200 pt-8 dark:border-gray-700">
