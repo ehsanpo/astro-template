@@ -41,7 +41,6 @@ interface ProductItem {
 		width: number;
 		src: string;
 	}[];
-	bilder: string[];
 	case_link_url?: string;
 	content: any;
 	date: string;
@@ -66,7 +65,7 @@ const { Content } = await item.content.render();
 				<Content />
 			</div>
 
-			<Gallery images={item.bilder} alt={item.title} />
+			<Gallery images={item.images} alt={item.title} />
 
 			{
 				item.case_link_url && (

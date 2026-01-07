@@ -7,6 +7,7 @@ category: ["Mobile Development", "Real-time Apps"]
 tag: ["React Native", "Expo", "Supabase", "Location Tracking", "Privacy", "TypeScript", "Real-time"]
 featured: true
 draft: false
+cover: "cover.jpg"
 ---
 
 So here's how this whole thing started...
@@ -87,6 +88,16 @@ Why circles instead of just "family"? Well, our extended family situation is... 
 Sometimes we want to share location with grandparents. Sometimes it's just immediate family. Sometimes it's the whole cousin crew when we're planning a BBQ. Circles let you have different groups without the family drama!
 
 Plus each circle gets its own color on the map. So your "School Pickup" circle shows up as blue dots, your "Weekend Plans" circle is green, etc. Visual organization for the win! 🎨
+
+<div class="flex gap-2">
+
+![Complex wave interference](./1.png)
+
+![Complex wave interference](./3.png)
+
+![Complex wave interference](./22.png)
+
+</div>
 
 ---
 

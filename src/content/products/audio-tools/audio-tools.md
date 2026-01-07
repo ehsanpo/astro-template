@@ -9,7 +9,7 @@ id: 316
 agency: Personal Project
 category:
   - Audio
-  - Visualization
+  - Front-end
 tag:
   - React
   - Three.js
@@ -18,12 +18,16 @@ tag:
   - Web Audio API
   - Shaders
   - Real-time Processing
-client: Open Source Community
+client: OpenSource
 tagline: "Professional audio visualization and analysis tools for the web"
 onHome: true
 background_image: "cover.jpg"
 logo: "cover.jpg"
-
+images:
+  - "0.png"
+  - "00.png"
+  - "1.png"
+  - "2.png"
 port_date:
   - "2025"
 ---
@@ -96,6 +100,10 @@ Advanced audio processing capabilities with professional-grade precision and rea
   </div>
 </div>
 
+<video controls preload="metadata" playsinline style="width:100%; height:auto; background:#000">
+    <source src="/video/audioTool1-2025-12-14%2016-09-45.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
 ## Tiny Shiny Details
 
 Automatic shape detection identifies Lissajous curves, circles, and ellipses in goniometer displays. Color randomization algorithms generate harmonious palettes for shader effects. Preset management systems enable configuration saving and sharing across sessions.
@@ -128,7 +136,6 @@ Performance optimization includes adaptive particle count scaling based on devic
     </div>
     <p class="text-cyan-700 dark:text-cyan-300">Interested in audiovisual programming, WebGL shader development, and real-time graphics applications for live performances or interactive installations.</p>
   </div>
-  
   <div class="border-l-4 border-pink-500 bg-pink-50 dark:bg-pink-950/30 p-6 rounded-r-lg">
     <div class="flex items-center gap-3 mb-3">
       <div class="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center">
@@ -153,6 +160,11 @@ Performance optimization includes adaptive particle count scaling based on devic
     <p class="text-emerald-700 dark:text-emerald-300">Exploring visual interpretation of their music through scientific visualization methods or seeking immersive audiovisual experiences for performance enhancement.</p>
   </div>
 </div>
+
+<video controls preload="metadata" playsinline style="width:100%; height:auto; background:#000">
+    <source src="/video/audioTool2-2025-12-14%2016-17-59.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
 
 ## Technical Foundation
 

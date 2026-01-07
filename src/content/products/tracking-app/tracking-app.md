@@ -21,8 +21,12 @@ tag:
 client: Open Source
 tagline: "Privacy-first family location sharing that actually works"
 onHome: false
-background_image: "cover.jpg"
+background_image: "22.png"
 logo: "cover.jpg"
+images:
+  - "1.png"
+  - "22.png"
+  - "3.png"
 ---
 
 # Family Tracking App
@@ -58,7 +62,7 @@ A React Native application built for families who need location awareness withou
 ## Privacy by Design
 
 <div class="my-8">
-  <div class="grid gap-4 md:grid-cols-2">
+  <div class="grid gap-4 md:grid-cols-2 clip">
     <div class="text-center p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-lg">
       <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,7 +87,7 @@ A React Native application built for families who need location awareness withou
 ## Technical Foundation
 
 <div class="my-8">
-  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 clip">
     <div class="text-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-8">
       <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -148,7 +152,7 @@ This application addresses core family coordination needs while maintaining comp
 
 ## Try Family Tracking App
 
-<div class="bg-gradient-to-r from-primary-50 to-secondary-50 p-8 dark:from-primary-950/50 dark:to-secondary-950/50 rounded-xl text-center my-8">
+<div class="clip bg-gradient-to-r from-primary-50 to-secondary-50 p-8 dark:from-primary-950/50 dark:to-secondary-950/50 rounded-xl text-center my-8">
   <div class="max-w-2xl mx-auto">
     <h3 class="text-2xl font-bold mb-4">Start Privacy-First Family Coordination</h3>
     <p class="text-lg mb-6 opacity-90">Set up your private family circle and experience location sharing that respects your privacy while keeping your family connected.</p>

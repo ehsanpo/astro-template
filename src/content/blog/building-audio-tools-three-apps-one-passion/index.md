@@ -5,8 +5,9 @@ date: "2025-12-25"
 author: "Ehsan Pourhadi"
 category: ["Web Development", "Creative Coding", "Audio"]
 tag: ["Three.js", "React", "WebGL", "Audio Visualization", "TypeScript", "Web Audio API"]
-featured: true
+featured: false
 draft: false
+cover: "cover.jpg"
 ---
 
 Ok so... I might have gotten a little carried away 😅
@@ -24,6 +25,11 @@ First up: **Custom Audio Reactive Shaders**. This one's pure eye candy and I'm n
 Picture this: 19 different shader effects that literally dance to your music. We're talking plasma waves, fractals, particle galaxies - stuff that makes your brain go "ooooh shiny" while your ears are having a good time.
 
 The coolest part? Each shader reacts differently to frequency ranges. Bass hits make some effects pulse like a heartbeat, while treble creates these tiny sparkly details that are just _chef's kiss_ perfect.
+
+<video controls preload="metadata" playsinline style="width:100%; height:auto; background:#000">
+    <source src="/video/audioTool1-2025-12-14%2016-09-45.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
 
 **What I learned building this:**
 
@@ -44,6 +50,11 @@ This one's for the audio engineers, podcasters, and anyone who's ever wondered "
 
 It visualizes stereo width, phase correlation, and all those technical things that make good mixes sound... well, good! Plus it has these gorgeous Lissajous patterns that are both functional AND mesmerizing.
 
+<video controls preload="metadata" playsinline style="width:100%; height:auto; background:#000">
+    <source src="/video/audioTool2-2025-12-14%2016-17-59.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
 **Real talk moment:** I spent WAY too much time making the visualization smooth because I got obsessed with 60fps updates. Was it necessary? Probably not. Did it feel amazing? Absolutely.
 
 The phase correlation meter alone taught me more about stereo imaging than years of just mixing by ear. Sometimes you need to SEE the problem to really understand it, you know?
@@ -56,9 +67,20 @@ Tech highlights: Web Audio API doing heavy lifting + Canvas 2D for that butter-s
 
 Last but definitely not least: **Real-Time Sound-Reactive 3D Cymatics**. This one broke my brain in the best way possible.
 
+<div class="flex justify-center gap-2">
+<div>
 Ever heard of cymatics? It's this wild physics phenomenon where sound frequencies create geometric patterns in sand or particles. Like, certain frequencies make perfect circles, others create complex interference patterns. It's literally the visual language of sound!
 
 So naturally I had to recreate this in 3D with up to 20,000 particles dancing in real-time. Because why not turn your browser into a physics laboratory? 🧪
+
+</div>
+
+<video controls preload="metadata"  style=" height:300px; margin:0px;">
+    <source src="/video/audioTool3-2025-12-14%2015-57-50.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
+</div>
 
 **The rabbit holes I fell into:**
 
@@ -114,7 +136,7 @@ These tools are fully open source (because knowledge should be shared!), and I'm
 
 ## 🎵 Try Them Yourself!
 
-Each tool runs directly in your browser - no installation, no setup, just pure audio-visual magic. Whether you're a music producer, a developer curious about audio programming, or just someone who likes pretty things that respond to sound, there's something here for you.
+Each tool runs directly in your browser - no installation, no setup, just pure audio-visual magic. Whether you're a music producer, a developer curious about audio programming, or just someone who likes pretty things that respond to sound, there's omething here for you.
 
 The code's all on GitHub if you want to peek under the hood or build something even cooler. And if you do, please share it! I love seeing what people create with this stuff.
 

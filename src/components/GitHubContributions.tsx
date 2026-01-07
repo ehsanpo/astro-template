@@ -23,7 +23,7 @@ interface GitHubContributionsProps {
 
 const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 	username = "ehsanpo",
-	defaultYear = new Date().getFullYear(),
+	defaultYear = new Date().getFullYear() - 1,
 	className = "",
 }) => {
 	const [selectedYear, setSelectedYear] = useState(defaultYear);

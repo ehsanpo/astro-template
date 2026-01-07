@@ -25,6 +25,13 @@ client: Self
 tagline: "Transform sprite sheets into web-ready animations with native desktop performance"
 background_image: "cover.jpg"
 logo: "logo.png"
+images:
+  - "1.png"
+  - "2.png"
+  - "3.png"
+  - "4.png"
+  - "logo.png"
+  - "cover.jpg"
 ---
 
 A native desktop application that converts sprite sheets into CSS animations, HTML code, and GIF exports. Built with Wails for cross-platform performance.

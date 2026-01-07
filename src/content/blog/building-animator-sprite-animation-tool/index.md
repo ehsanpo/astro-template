@@ -7,6 +7,7 @@ category: ["Game Development", "Desktop Apps"]
 tag: ["Wails", "React", "Go", "Sprite Animation", "CSS", "TypeScript"]
 featured: false
 draft: false
+cover: "cover.jpg"
 ---
 
 ## The Day I Ate My Words (and loved every bite) 🤤

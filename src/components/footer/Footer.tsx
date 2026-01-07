@@ -96,6 +96,7 @@ const navigationSections: { title: string; links: NavigationLink[] }[] = [
 			{ name: "Skills", href: "/skills", icon: Code },
 			{ name: "Services", href: "/services", icon: Palette },
 			{ name: "About", href: "/about", icon: User },
+			{ name: "Roles", href: "/roles", icon: Briefcase },
 		],
 	},
 	{
