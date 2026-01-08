@@ -27,7 +27,7 @@ const Button: React.FC<ButtonProps> = ({
 		<a
 			href={href}
 			className={twMerge(
-				`link-border btn font-tomorrow group relative inline-block rounded-lg border px-4 py-2 text-sm font-bold uppercase tracking-wide transition-all hover:text-white hover:shadow-sm ${getColorClasses()}`,
+				`link-border btn font-tomorrow group relative inline-block rounded-lg border text-sm font-bold uppercase tracking-wide transition-all hover:text-white hover:shadow-sm ${getColorClasses()}`,
 				className
 			)}
 			target={target}

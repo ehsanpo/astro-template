@@ -22,7 +22,6 @@ const navigationMain: MenuItem[] = [
 	{ href: "/services", text: "Services" },
 	{ href: "/about", text: "About" },
 	{ href: "/contact", text: "Contact" },
-	{ href: "/life", text: "Life" },
 ];
 
 const lifeItem: MenuItem = { href: "/life", text: "Life" };
@@ -50,7 +49,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boo
 				</CollapsibleTrigger>
 				<CollapsibleContent>
 					{item.submenu.map((subItem) => (
-						<MenuItemComponent key={subItem.title} item={subItem} depth={depth + 1} />
+						<MenuItemComponent key={subItem.text} item={subItem} depth={depth + 1} />
 					))}
 				</CollapsibleContent>
 			</Collapsible>
