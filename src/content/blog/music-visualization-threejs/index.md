@@ -10,7 +10,7 @@ draft: false
 cover: "cover.png"
 ---
 
-I’ve been experimenting with **music visualization** using Three.js and one of my unreleased tracks. It’s basically my love for music + web dev mashed together — creating visuals that **dance to the beat in real-time**.
+I’ve been experimenting with **music visualization** using Three.js and one of my unreleased tracks. It’s basically my love for music + web dev mashed together , creating visuals that **dance to the beat in real-time**.
 
 ---
 
@@ -24,7 +24,7 @@ I’ve been experimenting with **music visualization** using Three.js and one of
   title="Music Visualization Demo">
 </iframe>
 
-_The visuals respond to the audio frequency — move your mouse, change the song, enjoy the chaos!_
+_The visuals respond to the audio frequency , move your mouse, change the song, enjoy the chaos!_
 
 ---
 
@@ -54,7 +54,7 @@ Key features:
 
 - Cool colors for calm sections, warm colors for intense parts
 - Momentum-based particle motion for natural flow
-- Less = more — simple effects often look better than over-the-top chaos
+- Less = more , simple effects often look better than over-the-top chaos
 
 ---
 
@@ -84,6 +84,6 @@ Key features:
 
 ---
 
-This project is my playground where **code meets creativity**. Music visualization isn’t just pretty lights — it’s about **translating audio into emotion**, finding patterns, and creating interactive experiences.
+This project is my playground where **code meets creativity**. Music visualization isn’t just pretty lights , it’s about **translating audio into emotion**, finding patterns, and creating interactive experiences.
 
-_Code is on GitHub — tweak it, remix it, make your own musical visual world._
+_Code is on GitHub , tweak it, remix it, make your own musical visual world._

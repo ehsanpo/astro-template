@@ -46,4 +46,4 @@ Hot: 0.98 | Fat: 0.007 | Ugly: 0.002 | Badgirl: 0.002 | Asian: 0.0003
 
 ---
 
-⚠️ **Quick note on ethics:** This AI is just a silly experiment. Please remember that using AI to judge people’s appearance can be harmful or offensive — it’s fun to play with data, but always respect others and use AI responsibly! ❤️
+⚠️ **Quick note on ethics:** This AI is just a silly experiment. Please remember that using AI to judge people’s appearance can be harmful or offensive , it’s fun to play with data, but always respect others and use AI responsibly! ❤️

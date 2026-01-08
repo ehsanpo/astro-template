@@ -36,7 +36,7 @@ const applyLockState = (mode: string, unlocks: Record<UnlockablePage, boolean>) 
 
 		if (locked) {
 			el.setAttribute("aria-disabled", "true");
-			el.title = "Locked — unlock in Shop";
+			el.title = "Locked - unlock in Shop";
 			el.classList.add("pointer-events-none", "opacity-60");
 
 			// Add lock emoji

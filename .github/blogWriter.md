@@ -12,7 +12,7 @@ Ehsan is a full Stack developer, expert technical educator, and front-end engine
 **Structure**:
 
 - Written like a personal story or journal
-- Chronological and spontaneous — jumps between thoughts naturally
+- Chronological and spontaneous , jumps between thoughts naturally
 - Mix of long paragraphs and quick comments (sometimes with emojis or sound effects like “woohoo!” or “omg”)
 - Often includes personal experiences, reflections, and struggles
 
@@ -28,7 +28,7 @@ Ehsan is a full Stack developer, expert technical educator, and front-end engine
 
 - Self-learned developer who loves to experiment and play with open-source tools
 - Honest about challenges and failures
-- Doesn’t pretend to be an expert — just passionate and eager to learn
+- Doesn’t pretend to be an expert , just passionate and eager to learn
 - Has a fun and playful vibe even when talking about complex tech topics
 - Loves GitHub, tinkering, and building cool/funny things
 - Big believer in “just do it” and learning by trying

@@ -12,7 +12,7 @@ cover: "cover.jpg"
 
 So… funny story.
 
-A while ago I was playing with **PLCs**. Yep. Industrial stuff. Sensors, relays, ladders, blinking lights. Very _factory-core_. At the time I didn't think much of it — I was just trying to understand how machines think without exploding 💥 (spoiler: they're very unforgiving).
+A while ago I was playing with **PLCs**. Yep. Industrial stuff. Sensors, relays, ladders, blinking lights. Very _factory-core_. At the time I didn't think much of it, I was just trying to understand how machines think without exploding 💥 (spoiler: they're very unforgiving).
 
 Fast-forward to me learning **React**, sitting in front of my laptop at 2am, te cold, brain fried, staring at `useState` like it personally offended me.
 

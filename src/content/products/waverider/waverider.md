@@ -42,7 +42,7 @@ port_date:
 
 At 2 AM, hunched over a MacBook like a possessed gremlin, tilting it left and right to play _Tunnel_ by Uri. No keyboard. No mouse. Just pure physical movement and one devastating realization: **What if I could play this inside my own music?**
 
-The idea wouldn't leave. Weeks of thinking. Studio sessions layering kicks, sculpting reverb tails. A producer's life is built on digital signal processing—FFT analysis, spectral bands, RMS curves, transient detection. These tools shape sound. What if they shaped _geometry_ instead?
+The idea wouldn't leave. Weeks of thinking. Studio sessions layering kicks, sculpting reverb tails. A producer's life is built on digital signal processing,FFT analysis, spectral bands, RMS curves, transient detection. These tools shape sound. What if they shaped _geometry_ instead?
 
 What if the music _was_ the level itself?
 
@@ -79,7 +79,7 @@ These sonic details become tunnel geometry:
   </li>
   <li>
     <h3>Backend Infrastructure:</h3>
-    <strong>Supabase</strong> serves as the backbone: Auth for player accounts, Storage for music uploads, Database for levels, scores, and pre-generated geometry. Pre-analysis prevents runtime generation overhead—everything is instant on every device.
+    <strong>Supabase</strong> serves as the backbone: Auth for player accounts, Storage for music uploads, Database for levels, scores, and pre-generated geometry. Pre-analysis prevents runtime generation overhead,everything is instant on every device.
   </li>
   <li>
     <h3>Game Systems:</h3>
@@ -95,13 +95,13 @@ These sonic details become tunnel geometry:
 
 <h2>The Experience:</h2>
 
-You're holding your phone. Tilt slightly left. The neon tunnel curves with you—smooth, responsive, _alive_. A kick drum hits. The tunnel _contracts_ around you like a heartbeat. Tilt right to dodge the narrowing walls. A bass drop throws you sideways. You're fighting to stay centered.
+You're holding your phone. Tilt slightly left. The neon tunnel curves with you,smooth, responsive, _alive_. A kick drum hits. The tunnel _contracts_ around you like a heartbeat. Tilt right to dodge the narrowing walls. A bass drop throws you sideways. You're fighting to stay centered.
 
-Treble kicks in—tiny, flickering movements, micro-adjustments you feel in your fingertips. You're not listening to music anymore.
+Treble kicks in,tiny, flickering movements, micro-adjustments you feel in your fingertips. You're not listening to music anymore.
 
 **You're inside it.**
 
-The tunnel isn't random. It's the producer's sound. Every twist, every pulse, every moment of space or chaos—a direct reflection of the music created. You're not playing a game with a soundtrack. You're falling into a wormhole made of sound.
+The tunnel isn't random. It's the producer's sound. Every twist, every pulse, every moment of space or chaos,a direct reflection of the music created. You're not playing a game with a soundtrack. You're falling into a wormhole made of sound.
 
 <br />
 
@@ -118,7 +118,7 @@ WaveRider is the bridge between two worlds that shouldn't have been separate:
 - **Music Producer** (signal processing, sound design, artistic vision)
 - **Software Developer** (architecture, systems design, technical execution)
 
-The result is something that can only exist at that intersection—a game designed entirely from the language of sound itself.
+The result is something that can only exist at that intersection,a game designed entirely from the language of sound itself.
 
 <br />
 
@@ -126,7 +126,7 @@ The result is something that can only exist at that intersection—a game design
 
 WaveRider successfully transforms abstract audio data into playable, engaging geometry. Players aren't just experiencing another playlist or game. They're riding inside the sonic architecture of unreleased tracks, tasting the producer's creative decisions through gameplay. Every kick drum, bass drop, and harmonic shimmer becomes tactile.
 
-When someone tilts their phone, dodging neon walls sculpted from unreleased music, riding the bass drops and feeling the kick drums contract space around them—they're experiencing the same magic felt that night tilting a MacBook in the dark.
+When someone tilts their phone, dodging neon walls sculpted from unreleased music, riding the bass drops and feeling the kick drums contract space around them,they're experiencing the same magic felt that night tilting a MacBook in the dark.
 
 Except now, they're not just playing a game.
 

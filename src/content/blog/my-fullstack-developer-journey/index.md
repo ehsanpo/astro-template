@@ -10,7 +10,7 @@ draft: false
 cover: "cover.png"
 ---
 
-If you told younger-me — the kid spending hours in **Photoshop 7**, carefully slicing images for rounded corners (lol, before border-radius was a thing) — that one day I’d be writing APIs and scaling apps, I would’ve laughed and gone back to designing fake CD covers. But yeah… that’s how it started. I’ve always had an eye for design, so messing around with graphics, covers, and layouts was my playground.
+If you told younger-me , the kid spending hours in **Photoshop 7**, carefully slicing images for rounded corners (lol, before border-radius was a thing) , that one day I’d be writing APIs and scaling apps, I would’ve laughed and gone back to designing fake CD covers. But yeah… that’s how it started. I’ve always had an eye for design, so messing around with graphics, covers, and layouts was my playground.
 
 ---
 
@@ -18,7 +18,7 @@ If you told younger-me — the kid spending hours in **Photoshop 7**, carefully 
 
 Naturally, design pushed me toward the web. HTML and CSS became my jam (and my nightmare). Aligning stuff was like dark magic back then. Tables for layout? Floats everywhere? And don’t get me started on IE6… 🥲
 
-But I loved the creative part — making something look good, making sure it _felt_ right. That’s probably when I first learned a baby version of UX:
+But I loved the creative part , making something look good, making sure it _felt_ right. That’s probably when I first learned a baby version of UX:
 👉 _“Can your mom navigate this app?”_
 If the answer was no, you failed. Simple as that.
 
@@ -32,7 +32,7 @@ Then came **jQuery**. And omg… the power. Animations! Slide toggles! AJAX with
 
 ## 🧱 PHP + WordPress World
 
-After that, I leveled up into PHP. WordPress became my playground. Building themes, customizing plugins, breaking sites and fixing them again — I learned a ton. It wasn’t just “make it pretty” anymore, it was “make it work.”
+After that, I leveled up into PHP. WordPress became my playground. Building themes, customizing plugins, breaking sites and fixing them again , I learned a ton. It wasn’t just “make it pretty” anymore, it was “make it work.”
 
 This is also when I started touching databases (hello MySQL 👋) and realizing how messy backend logic could get. Still, PHP gave me my first taste of _real development_.
 
@@ -88,5 +88,5 @@ It’s wild to think about the path: from slicing images in Photoshop to animati
 
 It’s been messy, funny, frustrating, and ridiculously rewarding. And honestly? I wouldn’t change a thing.
 
-The journey never ends — you just keep leveling up, trying new tools, and asking the same old question:
+The journey never ends , you just keep leveling up, trying new tools, and asking the same old question:
 👉 _“Can your mom navigate this app?”_ 😅

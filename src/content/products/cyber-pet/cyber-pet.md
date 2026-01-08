@@ -37,7 +37,7 @@ port_date:
 Cyber-pet 🐣 is a simulation-based virtual pet game designed to combine the charm of digital pet care with the challenge and satisfaction of learning technology skills. The game allows players to raise and evolve a pet while teaching it various programming disciplines, blending entertainment with skill-building in an innovative way.
 <br />
 <h2>Objective:</h2>
-The goal was to build an engaging educational simulation game that immerses users in both pet management and technical learning. Inspired by classics like Tamagotchi and RPG skill trees, the project set out to integrate real programming paths (HTML, JS, backend, etc.) into a gamified evolution system—using modern web technologies for high performance and flexibility.
+The goal was to build an engaging educational simulation game that immerses users in both pet management and technical learning. Inspired by classics like Tamagotchi and RPG skill trees, the project set out to integrate real programming paths (HTML, JS, backend, etc.) into a gamified evolution system,using modern web technologies for high performance and flexibility.
 
 <br />
 <h2>Approach:</h2>

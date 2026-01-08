@@ -1,6 +1,6 @@
 ---
 title: "My TypeScript Adventures: Excess Props, `object` vs `{}`, and Why My Code Sometimes Explodess"
-description: "Tripped over excess property checks in TypeScript — sharing what I learned so you don’t."
+description: "Tripped over excess property checks in TypeScript , sharing what I learned so you don’t."
 date: "2025-09-24"
 author: "Ehsan Pourhadi"
 category: ["TypeScript", "Best Practices"]
@@ -10,7 +10,7 @@ draft: false
 cover: "cover.png"
 ---
 
-Hey friends — I’ve been fiddling with TypeScript lately, trying to understand all those little gotchas. One thing that kept biting me was **excess property checks**, plus the difference between `object`, `{}`, `Object` types. I want to share what I learned, because earlier I was confused, maybe you will too, and maybe this helps you avoid stepping on the same banana peel 🍌.
+Hey friends , I’ve been fiddling with TypeScript lately, trying to understand all those little gotchas. One thing that kept biting me was **excess property checks**, plus the difference between `object`, `{}`, `Object` types. I want to share what I learned, because earlier I was confused, maybe you will too, and maybe this helps you avoid stepping on the same banana peel 🍌.
 
 ---
 
@@ -32,7 +32,7 @@ Then I try
 const person2: Person = { firstName: "potato", age: 21, extraProp: "hello!" }; // <-- error
 ```
 
-At first I was like “wtf, I thought TypeScript was structural, isn’t extraProp ok if it has all the required ones?” But no — TS is stricter when you assign an _object literal_ directly to a typed variable (or pass literal directly to a function). It checks: “does this literal have any properties I don’t know about (i.e. not in the target type)?” If yes → error. That’s the “excess property check.” ([TypeScript][1])
+At first I was like “wtf, I thought TypeScript was structural, isn’t extraProp ok if it has all the required ones?” But no , TS is stricter when you assign an _object literal_ directly to a typed variable (or pass literal directly to a function). It checks: “does this literal have any properties I don’t know about (i.e. not in the target type)?” If yes → error. That’s the “excess property check.” ([TypeScript][1])
 
 But then, I did this:
 
@@ -58,7 +58,7 @@ So yeah, it feels inconsistent if you don’t know the rules. But once you know 
 
 ---
 
-### `object` vs `{}` vs `Object` — my head almost exploded
+### `object` vs `{}` vs `Object` , my head almost exploded
 
 While learning excess props, I also got confused about these three. They seem like they'd be the same, but noooo. TS is picky in its own special way. Here’s how I think of them (after many StackOverflow lurks + making tiny example code to test) :
 
@@ -70,7 +70,7 @@ While learning excess props, I also got confused about these three. They seem li
 | Type                     | What it allows                                                                                                           | What it forbids                                                                                            | When I might use it                                                                            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `object` (lowercase)     | non-primitive things: objects, arrays, functions etc. ([DEV Community][3])                                               | primitives like number, string, boolean, symbol etc. ([DEV Community][3])                                  | When I really want “this must be an object (or array etc.), not just a string or number”       |
-| `{}` (empty object type) | almost everything except `null` or `undefined` — yes you can pass string, number, bool etc. ([Type-Level TypeScript][4]) | basically only `null` and `undefined` are excluded (if `strictNullChecks` on) ([Type-Level TypeScript][4]) | When I don’t care much about structure, or I want super loose type (but that’s dangerous)      |
+| `{}` (empty object type) | almost everything except `null` or `undefined` , yes you can pass string, number, bool etc. ([Type-Level TypeScript][4]) | basically only `null` and `undefined` are excluded (if `strictNullChecks` on) ([Type-Level TypeScript][4]) | When I don’t care much about structure, or I want super loose type (but that’s dangerous)      |
 | `Object` (capital O)     | similar to `{}`, lots of overlap; but has some weirdness, prototypical methods etc. ([jser.dev][5])                      | maybe stricter in some built-in method typings; also semantically confusing (some people avoid using it)   | I try to avoid; if I use it, it’s for “just anything with the base Object” but clarity suffers |
 
 So: if I want more type safety, `object` is usually safer than `{}` in my code. `{}` is too broad; you can accidentally pass a `"hello"` or `123` and TS won’t complain. (Yes, I tested this.) ([Type-Level TypeScript][4])
@@ -116,7 +116,7 @@ Here are some bits I picked up that really helped me stop banging my head:
 
 Honestly, understanding these quirks felt like unlocking secret levels in TS. Sometimes I feel TS is beautiful, other times it's like one more trap waiting. But the more I write, experiment, make mistakes (omg so many), the more these behavior patterns stick.
 
-If you’re a beginner: don’t let it discourage you. It’s OK to get weird errors. Try small isolated examples like above. Try modifying them and see what TS complains about. Throw in a spread, move to variable first, assign literal, pass directly to function — see where TS flips. That kind of play is what taught me.
+If you’re a beginner: don’t let it discourage you. It’s OK to get weird errors. Try small isolated examples like above. Try modifying them and see what TS complains about. Throw in a spread, move to variable first, assign literal, pass directly to function , see where TS flips. That kind of play is what taught me.
 
 If you want, I can write up a mini-cheat sheet you can keep open, with all these “when does excess prop check happen / when not / object vs {} etc.” Want me to drop that?
 

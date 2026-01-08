@@ -92,7 +92,7 @@ The whole thing runs in a browser. No installs, no VR headset required (though i
 
 2. **Phone panoramas ≠ VR panoramas.** They're different formats. Phone panoramas are convenient but not designed for spherical projection. If I want perfect VR, I'd need proper 360° camera footage.
 
-3. **Image quality is hard.** You can't just "enhance" low-res compressed JPEGs. Texture filtering, color spaces, GPU capabilities — there's a whole world of graphics programming I barely scratched the surface of.
+3. **Image quality is hard.** You can't just "enhance" low-res compressed JPEGs. Texture filtering, color spaces, GPU capabilities, there's a whole world of graphics programming I barely scratched the surface of.
 
 4. **AI coding assistants are actually helpful.** Claude didn't write all my code, but it helped me debug, suggested alternatives when I hit dead ends, and explained concepts I didn't know. It's like pair programming with someone patient.
 
@@ -108,7 +108,7 @@ Listen, if you're reading this and thinking "I want to try building something wi
 
 **Accept imperfection.** Your first version won't be perfect. It might not even be _good_. But it'll be _done_, and that's infinitely better than a perfect project that only exists in your head.
 
-**Iterate later.** Right now, ChillInVR loads panoramas and lets you look around. Cool. Later, I want to add ambient sounds — maybe AI-generated audio based on the location. Then maybe add info overlays, or clickable hotspots. But I shipped the basic version _first_.
+**Iterate later.** Right now, ChillInVR loads panoramas and lets you look around. Cool. Later, I want to add ambient sounds, maybe AI-generated audio based on the location. Then maybe add info overlays, or clickable hotspots. But I shipped the basic version _first_.
 
 ## What's Next
 

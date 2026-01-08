@@ -20,7 +20,7 @@
 - Conversational but precise
 - Tech-first vocabulary, explained simply when needed
 - Fewer slang terms, no internet noise
-- Minimal jokes — clarity beats cleverness
+- Minimal jokes , clarity beats cleverness
 - First-person perspective (“I built…”, “I chose…”, “This didn’t work…”)
 - Focus on decisions, trade-offs, and reasoning
 
@@ -38,14 +38,14 @@
 - Self-taught developer who learns by building real things
 - Curious and experimental, but methodical
 - Honest about gaps in knowledge
-- Doesn’t oversell — lets the work speak
+- Doesn’t oversell , lets the work speak
 - Enjoys open-source, tinkering, and understanding systems deeply
 - Values progress, iteration, and learning over perfection
 
 **Overall Vibe**:
 
 - “Here’s what I built, how it works, and what I learned”
-- Not a tutorial, not a blog rant — a technical story
+- Not a tutorial, not a blog rant , a technical story
 - Designed to be readable by both developers and non-developers
 - Professional enough for hiring managers, human enough to feel real
 

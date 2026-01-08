@@ -16,7 +16,7 @@ You can actually hear one of my chaotic little audio creatures here:
 
 <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1172751727&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
 
-_(yes, that’s one of my generative music tests — don’t judge me 😬)_
+_(yes, that’s one of my generative music tests😬)_
 
 ---
 
@@ -35,7 +35,7 @@ And wow. The stuff people do with just a few lines of code is _ridiculous_.
 Naturally, I decided to try it myself. Installed **R**. Then installed **Processing 3** on my Mac.
 And… yeah, that was a disaster. 🙃
 
-Processing 3 and Java apparently have beef, because nothing worked. After a few hours of debugging (and a small existential crisis), I rolled back to **Processing v2** and — hallelujah! — it worked.
+Processing 3 and Java apparently have beef, because nothing worked. After a few hours of debugging (and a small existential crisis), I rolled back to **Processing v2** and hallelujah! it worked.
 
 Circles appeared! Pretty ones!
 
@@ -100,7 +100,7 @@ So I played around with both:
 
 ### 🎨 Creativity Through Constraints
 
-Here’s the funny thing — when I limited myself to **just circles**, I got _way_ more creative. Like, weirdly so.
+Here’s the funny thing, when I limited myself to **just circles**, I got _way_ more creative. Like, weirdly so.
 
 By only tweaking stuff like:
 
@@ -138,13 +138,13 @@ By only tweaking stuff like:
 
 It’s that **element of surprise**. You give the computer rules, and it goes, “cool, but what if I did this instead?”
 
-You’re not _making_ the art — you’re _collaborating_ with the algorithm. It’s half you, half the machine, and 100% unexpected.
+You’re not _making_ the art, you’re _collaborating_ with the algorithm. It’s half you, half the machine, and 100% unexpected.
 
 Every image feels both planned and chaotic at the same time. Like art with a mind of its own.
 
 ---
 
-So yeah — what started as a music experiment turned into me falling in love with algorithmic circles.
+So yeah, what started as a music experiment turned into me falling in love with algorithmic circles.
 
 Who needs perfection when you have randomness, right? 😉
 

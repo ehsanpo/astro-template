@@ -20,7 +20,7 @@ Here’s my **modern workflow** for remixing a song:
 
 ## 1️⃣ Get Your Software
 
-Grab your DAW or VSTs — I usually check [Professional Audio Software Blog](https://audioz.download/).
+Grab your DAW or VSTs , I usually check [Professional Audio Software Blog](https://audioz.download/).
 _Pro tip: support devs when you can!_
 
 ---
@@ -45,7 +45,7 @@ Separate vocals, drums, bass, etc. Perfect for remixing!
 - **[Bakuage](https://bakuage.com/en/)**
 - **[LANDR](https://www.landr.com/)**
 
-No more guessing EQ and compression — AI analyzes and masters your track.
+No more guessing EQ and compression , AI analyzes and masters your track.
 
 ---
 
@@ -55,7 +55,7 @@ No more guessing EQ and compression — AI analyzes and masters your track.
 - **[Kaleidosync](https://www.kaleidosync.com/visualizer)** → Spotify-connected
 - **[WOMBO Dream](https://app.wombo.art/)** → AI-generated cover art (type a prompt, get instant art!)
 
-Social media loves visuals — these tools make it effortless.
+Social media loves visuals , these tools make it effortless.
 
 ---
 
@@ -70,10 +70,10 @@ Social media loves visuals — these tools make it effortless.
 7. Generate cover art with WOMBO
 8. Upload to SoundCloud/Spotify
 
-Boom — hours of work condensed into a day.
+Boom , hours of work condensed into a day.
 
 ## 🔮 Why It Matters
 
-AI tools remove boring technical barriers, letting bedroom producers compete with pros. You learn faster, iterate faster, and focus on the fun stuff — creativity.
+AI tools remove boring technical barriers, letting bedroom producers compete with pros. You learn faster, iterate faster, and focus on the fun stuff , creativity.
 
 The challenge now? Standing out. The ocean of content is massive.

@@ -10,7 +10,7 @@ draft: false
 cover: "./1.png"
 ---
 
-After my circle art phase, I wanted something more _alive_. Enter [**Wavepaper**](https://github.com/DeanIsMe/Wavepaper_Release) — a tool for creating dreamy, flowing wave patterns. It’s like if math and the ocean had a baby.
+After my circle art phase, I wanted something more _alive_. Enter [**Wavepaper**](https://github.com/DeanIsMe/Wavepaper_Release) a tool for creating dreamy, flowing wave patterns. It’s like if math and the ocean had a baby.
 
 ---
 
@@ -49,7 +49,7 @@ The tiniest tweaks changed everything. Some of my best results came from total a
 - Color totally sets the emotion
 - Happy glitches = bonus art
 
-Waves feel connected to generative music — both use math to make something _alive_.
+Waves feel connected to generative music, both use math to make something _alive_.
 
 ---
 
@@ -63,6 +63,6 @@ I’m dreaming of:
 
 ---
 
-Working with waves has been oddly meditative — less precision, more flow. It reminds me that coding can be creative, and math can actually _feel_ beautiful.
+Working with waves has been oddly meditative , less precision, more flow. It reminds me that coding can be creative, and math can actually _feel_ beautiful.
 
-_(Got wave art or generative experiments? Drop them — I’d love to see what you’re making!)_
+_(Got wave art or generative experiments? Drop them , I’d love to see what you’re making!)_

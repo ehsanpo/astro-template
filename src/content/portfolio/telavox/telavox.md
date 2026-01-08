@@ -64,7 +64,7 @@ client: "Telavox"
 
 ### Project 2: **Next-Gen Video Conferencing Platform: Revolutionizing Virtual Collaboration** 🚀
 
-In today’s hyperconnected world, video conferencing has become the backbone of communication. I set out to develop a **next-gen video conferencing solution** that goes beyond basic video calls—designed for seamless collaboration, crystal-clear communication, and adaptability.
+In today’s hyperconnected world, video conferencing has become the backbone of communication. I set out to develop a **next-gen video conferencing solution** that goes beyond basic video calls,designed for seamless collaboration, crystal-clear communication, and adaptability.
 
 #### **Key Features** 🌟
 
@@ -103,7 +103,7 @@ In today’s hyperconnected world, video conferencing has become the backbone of
 
 #### **Why It Stands Out** 🌐
 
-This platform isn’t just another video conferencing app—it’s built to tackle the most common frustrations with virtual collaboration. By combining **cutting-edge WebRTC technology**, **AI-driven features**, and an intuitive design, it enhances productivity and brings people closer together, no matter where they are.
+This platform isn’t just another video conferencing app,it’s built to tackle the most common frustrations with virtual collaboration. By combining **cutting-edge WebRTC technology**, **AI-driven features**, and an intuitive design, it enhances productivity and brings people closer together, no matter where they are.
 
 ---
 

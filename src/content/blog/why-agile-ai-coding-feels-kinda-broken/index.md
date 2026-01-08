@@ -28,7 +28,7 @@ But with AI, typing isn’t the bottleneck anymore. Thinking is.
 
 The AI doesn’t care what’s “MVP” or what’s “nice-to-have.” It’ll happily generate both in the same session. Sometimes I just ask for a basic version, and it still goes “oh btw, here’s a dashboard, an auth flow, and five utility functions you didn’t ask for.” Thanks? I guess? 😂
 
-So instead of carefully adding things sprint by sprint, you kinda… teleport to the end state. And then throw half of it away because you realize you didn’t actually need all that. That’s why Agile feels weird with AI — the cycles are _too fast_.
+So instead of carefully adding things sprint by sprint, you kinda… teleport to the end state. And then throw half of it away because you realize you didn’t actually need all that. That’s why Agile feels weird with AI , the cycles are _too fast_.
 
 ---
 
@@ -50,7 +50,7 @@ And honestly, that shift has been huge for me. It’s like pair programming with
 
 Another weird thing: refactoring doesn’t happen at the “later” stage anymore. With Agile, you ship now and clean later. With AI, I’ll generate a messy version and _immediately_ ask it to refactor, add tests, or even port it into a different stack.
 
-So instead of carrying “technical debt,” I carry “prompt debt.” The more I refine my instructions, the cleaner the code gets — without me manually rewriting thousands of lines. That part feels totally alien compared to how I used to work.
+So instead of carrying “technical debt,” I carry “prompt debt.” The more I refine my instructions, the cleaner the code gets , without me manually rewriting thousands of lines. That part feels totally alien compared to how I used to work.
 
 ---
 
@@ -58,7 +58,7 @@ So instead of carrying “technical debt,” I carry “prompt debt.” The more
 
 When I built my portfolio site recently, I leaned fully into this workflow.
 
-- First, I had AI create an **overall plan**. Then I asked it to break that down into smaller specs. Boom — I had a roadmap without touching Jira.
+- First, I had AI create an **overall plan**. Then I asked it to break that down into smaller specs. Boom , I had a roadmap without touching Jira.
 - Next, I got AI to help me build a **design system**: colors, components, typography, the whole vibe.
 - Then I converted that into a **Next.js site**.
 - Added my own content (the only boring manual part, lol).
@@ -70,9 +70,9 @@ The result? A working site full of small bugs, lots of "any" types, messed up ma
 
 ## So What’s The Deal?
 
-For me, Agile with AI feels like forcing an old rhythm on a new instrument. The methodology was built for scarcity — AI dev is built for abundance. You don’t sprint anymore, you _speedrun_.
+For me, Agile with AI feels like forcing an old rhythm on a new instrument. The methodology was built for scarcity , AI dev is built for abundance. You don’t sprint anymore, you _speedrun_.
 
-That doesn’t mean Agile is dead — it’s still great for teams, communication, structure. But if you’re solo-building with AI, the playbook changes:
+That doesn’t mean Agile is dead , it’s still great for teams, communication, structure. But if you’re solo-building with AI, the playbook changes:
 
 - Don’t overthink specs. Just get AI to sketch the whole thing.
 - Don’t fear “nice-to-have.” You can always throw things away later.

@@ -60,7 +60,7 @@ cover: "./cover2.jpg"
     <li>some made everything look like melted spaghetti</li>
 </ul>
 
-<p>But bolt.new made testing super fast — push code, it rebuilds, test instantly via Expo QR or web preview. After tweaking values on different tracks, I finally found combinations I liked:</p>
+<p>But bolt.new made testing super fast , push code, it rebuilds, test instantly via Expo QR or web preview. After tweaking values on different tracks, I finally found combinations I liked:</p>
 
 <ul>
     <li>bass = big movement</li>
@@ -73,7 +73,7 @@ cover: "./cover2.jpg"
 
 <hr>
 
-<h2>🎮 Game Logic, Pages, UI — The Gameplay Skeleton</h2>
+<h2>🎮 Game Logic, Pages, UI , The Gameplay Skeleton</h2>
 
 <p>After the tunnel felt good, I moved on to building:</p>
 

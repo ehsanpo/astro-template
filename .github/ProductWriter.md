@@ -7,7 +7,7 @@ Write a **clear, structured, product-first landing page** that:
 - Explains _what the product is_ immediately
 - Highlights value, features, and benefits with precision
 - Builds trust through clarity and restraint
-- Feels modern, human, and intentional — not chatty, not bloggy
+- Feels modern, human, and intentional , not chatty, not bloggy
 
 This is a **product page**, not a story and not a conversation.
 
@@ -112,8 +112,6 @@ No “I built this because…”.
 
 ---
 
-
-
 ### 🔍 **SEO Optimization (Subtle and Structural)**
 
 - Clear H1 with primary keyword
@@ -144,7 +142,7 @@ The page should feel like it was written by someone who:
 
 When someone lands on the page, they should think:
 
-> “I understand what this does, who it’s for, and why it exists — and I can decide quickly whether it’s right for me.”
+> “I understand what this does, who it’s for, and why it exists , and I can decide quickly whether it’s right for me.”
 
 That’s a strong product page.
 
@@ -157,76 +155,93 @@ When it comes to writing content, two factors are crucial, "perplexity" and "bur
 ### 💎 **HTML Templates for Consistent Styling**
 
 **Precise Control Features Grid:**
+
 ```html
 <div class="my-8">
-  <div class="grid gap-4 md:grid-cols-3">
-    <div class="text-center p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-lg">
-      <div class="w-12 h-12 bg-{color}-500 rounded-full flex items-center justify-center mx-auto mb-3">
-        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          {icon path}
-        </svg>
-      </div>
-      <h4 class="font-semibold text-gray-900 dark:text-white">{title}</h4>
-      <p class="m-0 text-sm text-gray-600 dark:text-gray-300">{description}</p>
-    </div>
-  </div>
+	<div class="grid gap-4 md:grid-cols-3">
+		<div
+			class="clip rounded-lg bg-gradient-to-r from-gray-50 to-gray-100 p-6 text-center dark:from-gray-800 dark:to-gray-900"
+		>
+			<div
+				class="bg-{color}-500 mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full"
+			>
+				<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					{icon path}
+				</svg>
+			</div>
+			<h4 class="font-semibold text-gray-900 dark:text-white">{title}</h4>
+			<p class="m-0 text-sm text-gray-600 dark:text-gray-300">{description}</p>
+		</div>
+	</div>
 </div>
 ```
 
 **Audience Cards Grid:**
+
 ```html
-<div class="grid gap-6 md:grid-cols-2 my-8">
-  <div class="border-l-4 border-{color}-500 bg-{color}-50 dark:bg-{color}-950/30 p-6 rounded-r-lg">
-    <div class="flex items-center gap-3 mb-3">
-      <div class="w-8 h-8 bg-{color}-500 rounded-lg flex items-center justify-center">
-        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          {icon path}
-        </svg>
-      </div>
-      <h3 class="text-lg font-semibold text-{color}-800 dark:text-{color}-200">{audience}</h3>
-    </div>
-    <p class="text-{color}-700 dark:text-{color}-300">{description}</p>
-  </div>
+<div class="my-8 grid gap-6 md:grid-cols-2">
+	<div class="border-{color}-500 bg-{color}-50 dark:bg-{color}-950/30 rounded-r-lg border-l-4 p-6">
+		<div class="mb-3 flex items-center gap-3">
+			<div class="bg-{color}-500 flex h-8 w-8 items-center justify-center rounded-lg">
+				<svg class="h-4 w-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					{icon path}
+				</svg>
+			</div>
+			<h3 class="text-{color}-800 dark:text-{color}-200 text-lg font-semibold">{audience}</h3>
+		</div>
+		<p class="text-{color}-700 dark:text-{color}-300">{description}</p>
+	</div>
 </div>
 ```
 
 **Technical Foundation Grid:**
+
 ```html
 <div class="my-8">
-  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-    <div class="text-center bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 rounded-xl p-8">
-      <div class="w-16 h-16 bg-gradient-to-br from-{color}-500 to-{color}-600 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          {icon path}
-        </svg>
-      </div>
-      <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">{tech stack}</h3>
-      <p class="text-slate-600 dark:text-slate-300 text-sm">{description}</p>
-    </div>
-  </div>
+	<div class="clip grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+		<div
+			class="rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 p-8 text-center dark:from-slate-800 dark:to-slate-900"
+		>
+			<div
+				class="from-{color}-500 to-{color}-600 mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg"
+			>
+				<svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					{icon path}
+				</svg>
+			</div>
+			<h3 class="mb-2 text-lg font-semibold text-slate-900 dark:text-white">{tech stack}</h3>
+			<p class="text-sm text-slate-600 dark:text-slate-300">{description}</p>
+		</div>
+	</div>
 </div>
 ```
 
 **Performance Callout Box:**
+
 ```html
-<div class="flex items-center gap-4 p-4 bg-green-50 dark:bg-green-950/30 border border-green-200 dark:border-green-800 rounded-lg my-6">
-  <div class="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
-    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-    </svg>
-  </div>
-  <p class="text-green-800 dark:text-green-200">
-    <span class="font-semibold">Performance Advantage:</span> {description}
-  </p>
+<div
+	class="my-6 flex items-center gap-4 rounded-lg border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-950/30"
+>
+	<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+		<svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+		</svg>
+	</div>
+	<p class="text-green-800 dark:text-green-200">
+		<span class="font-semibold">Performance Advantage:</span> {description}
+	</p>
 </div>
 ```
 
 **Simple CTA Section:**
+
 ```html
-<div class="bg-gradient-to-r from-primary-50 to-secondary-50 p-8 dark:from-primary-950/50 dark:to-secondary-950/50 rounded-xl text-center my-8">
-  <div class="max-w-2xl mx-auto">
-    <h3 class="text-2xl font-bold mb-4">{cta headline}</h3>
-    <p class="text-lg mb-6 opacity-90">{cta description}</p>
-  </div>
+<div
+	class="my-8 rounded-xl bg-gradient-to-r from-primary-50 to-secondary-50 p-8 text-center dark:from-primary-950/50 dark:to-secondary-950/50"
+>
+	<div class="mx-auto max-w-2xl">
+		<h3 class="mb-4 text-2xl font-bold">{cta headline}</h3>
+		<p class="mb-6 text-lg opacity-90">{cta description}</p>
+	</div>
 </div>
 ```

@@ -67,7 +67,7 @@ const MenuItemComponent: React.FC<{ item: MenuItem; depth?: number; locked?: boo
 				}
 			}}
 			aria-disabled={locked}
-			title={locked ? "Locked — unlock in Shop" : undefined}
+			title={locked ? "Locked , unlock in Shop" : undefined}
 			className={cn(
 				"block py-2 text-lg font-medium transition-colors",
 				locked ? "cursor-not-allowed text-gray-400" : "hover:text-primary",

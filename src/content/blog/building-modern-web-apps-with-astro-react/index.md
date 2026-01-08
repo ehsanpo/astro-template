@@ -1,6 +1,6 @@
 ---
 title: "Building Modern Web Applications with Astro and React"
-description: "Playing with Astro feels like cheating — you get lightning-fast static pages, then just sprinkle in React where you actually want stuff to move."
+description: "Playing with Astro feels like cheating - you get lightning-fast static pages, then just sprinkle in React where you actually want stuff to move."
 date: "2024-12-15"
 author: "Ehsan Pourhadi"
 category: ["Web Development", "Frontend"]
@@ -10,7 +10,7 @@ draft: false
 cover: "cover.png"
 ---
 
-Okay so… I recently fell into the **Astro rabbit hole**. I’d been hearing the hype for a while — “static sites are the future,” “zero JS by default,” blah blah. Honestly, I ignored it at first because I thought: _ugh another shiny framework_. But then I actually tried it. And omg… it’s kinda magical. ✨
+Okay so… I recently fell into the **Astro rabbit hole**. I’d been hearing the hype for a while “static sites are the future,” “zero JS by default,” blah blah. Honestly, I ignored it at first because I thought: _ugh another shiny framework_. But then I actually tried it. And omg… it’s kinda magical. ✨
 
 ---
 
@@ -86,6 +86,6 @@ Because Astro generates mostly static HTML/CSS:
 
 ## Final Thoughts
 
-If you’re like me — someone who loves React but also wants blazing fast sites — Astro is _chef’s kiss_. 💫 It’s perfect for blogs, portfolios, or just messing around with side projects.
+If you’re like me, someone who loves React but also wants blazing fast sites - Astro is _chef’s kiss_. 💫 It’s perfect for blogs, portfolios, or just messing around with side projects.
 
-Not gonna lie, I was skeptical at first. But after tinkering with it, I’m sold. Seriously, try it — you’ll probably end up grinning at Lighthouse scores like a weirdo (…me).
+Not gonna lie, I was skeptical at first. But after tinkering with it, I’m sold. Seriously, try it, you’ll probably end up grinning at Lighthouse scores like a weirdo (…me).
