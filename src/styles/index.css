@@ -15,7 +15,7 @@
 	font-style: normal;
 	font-display: swap;
 }
-body {
+.dark body {
 	background-image: url("/page-bottom-bg.jpg");
 	background-position: bottom;
 	background-repeat: no-repeat;

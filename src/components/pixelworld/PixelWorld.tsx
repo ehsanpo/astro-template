@@ -13,6 +13,8 @@ export default function PixelWorld({ className, height = 320 }: PixelWorldProps)
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 	const [isDarkMode, setIsDarkMode] = useState(true);
 	const [catAnimationDuration, setCatAnimationDuration] = useState(8);
+	const [fireClickCount, setFireClickCount] = useState(0);
+	const [isHellMode, setIsHellMode] = useState(false);
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -47,7 +49,17 @@ export default function PixelWorld({ className, height = 320 }: PixelWorldProps)
 		setTimeout(() => setCatAnimationDuration(8), 1000);
 	};
 
-	const themeFolder = isDarkMode ? "dark" : "light";
+	const handleFireClick = () => {
+		generateSound("fire");
+		const newCount = fireClickCount + 1;
+		setFireClickCount(newCount);
+
+		if (newCount >= 10 && !isHellMode) {
+			setIsHellMode(true);
+		}
+	};
+
+	const themeFolder = isHellMode ? "hell" : isDarkMode ? "dark" : "light";
 	return (
 		<div
 			className={cn("relative mx-auto w-full overflow-hidden", className)}
@@ -56,7 +68,7 @@ export default function PixelWorld({ className, height = 320 }: PixelWorldProps)
 			<div
 				className="absolute bottom-32 h-32 w-[120%] animate-[slideBG_60s_linear_infinite]"
 				style={{
-					backgroundImage: `url('/img/px/${themeFolder}/sky.${isDarkMode ? "jpg" : "png"}')`,
+					backgroundImage: `url('/img/px/${themeFolder}/sky.${isHellMode ? "png" : isDarkMode ? "jpg" : "png"}')`,
 					backgroundRepeat: "repeat-x",
 					backgroundSize: "auto 100%",
 					imageRendering: "pixelated",
@@ -87,7 +99,7 @@ export default function PixelWorld({ className, height = 320 }: PixelWorldProps)
 			<div
 				className="absolute bottom-0 z-10 h-8 w-full"
 				style={{
-					backgroundImage: `url('/img/px/${themeFolder}/ground.${isDarkMode ? "jpg" : "png"}')`,
+					backgroundImage: `url('/img/px/${themeFolder}/ground.${isHellMode ? "png" : isDarkMode ? "jpg" : "png"}')`,
 					backgroundRepeat: "repeat-x",
 					backgroundSize: "auto 100%",
 					imageRendering: "pixelated",
@@ -114,7 +126,9 @@ export default function PixelWorld({ className, height = 320 }: PixelWorldProps)
 				}}
 			/>
 
-			<FireAnimation className="absolute bottom-6 z-20" style={{ left: "45%" }} />
+			<div className="cursor-pointer" onClick={handleFireClick}>
+				<FireAnimation className="absolute bottom-6 z-20" style={{ left: "45%" }} />
+			</div>
 
 			<div
 				className="pointer-events-auto absolute bottom-5 z-10 h-32 w-32 cursor-pointer"

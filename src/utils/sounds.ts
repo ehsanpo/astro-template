@@ -1,4 +1,4 @@
-export const generateSound = (type: "duck" | "cat" | "click") => {
+export const generateSound = (type: "duck" | "cat" | "click" | "fire") => {
 	const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
 
 	if (type === "duck") {
@@ -91,5 +91,35 @@ export const generateSound = (type: "duck" | "cat" | "click") => {
 
 		oscillator.start(audioContext.currentTime);
 		oscillator.stop(audioContext.currentTime + 0.05);
+	} else if (type === "fire") {
+		const oscillator = audioContext.createOscillator();
+		const gainNode = audioContext.createGain();
+		const filterNode = audioContext.createBiquadFilter();
+
+		oscillator.connect(filterNode);
+		filterNode.connect(gainNode);
+		gainNode.connect(audioContext.destination);
+
+		// Crackling fire sound with noise-like characteristics
+		const baseFreq = 80 + Math.random() * 120;
+		oscillator.frequency.setValueAtTime(baseFreq, audioContext.currentTime);
+		oscillator.frequency.linearRampToValueAtTime(
+			baseFreq + Math.random() * 100,
+			audioContext.currentTime + 0.1
+		);
+
+		oscillator.type = "sawtooth";
+
+		// Band-pass filter for crackling effect
+		filterNode.type = "bandpass";
+		filterNode.frequency.setValueAtTime(400 + Math.random() * 800, audioContext.currentTime);
+		filterNode.Q.setValueAtTime(0.5, audioContext.currentTime);
+
+		gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+		gainNode.gain.linearRampToValueAtTime(0.04, audioContext.currentTime + 0.01);
+		gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.15);
+
+		oscillator.start(audioContext.currentTime);
+		oscillator.stop(audioContext.currentTime + 0.2);
 	}
 };
