@@ -1,9 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { Heading } from "../components/ui/heading";
-import { Card } from "../components/ui/card";
+import { Card } from "../components/ui/Card";
 import ServiceCard from "../components/services/ServiceCard.astro";
 import SectionTitle from "../components/ui/SectionTitle.astro";
+import { BaseCard } from "@/components/ui/base/BaseCard";
+import Button from "@/components/ui/Button";
+import { Link } from "@/components/ui/Link";
+import { ExternalLink } from "@/components/ui/ExternalLink";
+import StackCard from "@/components/StackCard";
+import TestimonialCard from "@/components/TestimonialCard";
 
 const colors = [
 	{
@@ -107,32 +113,127 @@ const typography = [
 		<section class="mb-16">
 			<Heading level="h2" className="mb-8">Components</Heading>
 
-			<!-- Cards -->
-			<div class="mb-8 grid grid-cols-2 gap-8">
-				<Card title="Basic Card" subtitle="Card component example">
-					This is a basic card component with a title and content.
-				</Card>
+			<!-- Base Cards -->
+			<div class="mb-12">
+				<h3 class="mb-4 text-xl font-semibold">Base Cards</h3>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+					<BaseCard title="Default Card" subtitle="Basic card variant" client:load>
+						This is the default base card with a title, subtitle, and content.
+					</BaseCard>
 
-				<ServiceCard
-					title="Service Card"
-					description="Example service description"
-					icon="💡"
-					features={["Feature 1", "Feature 2"]}
-				/>
+					<BaseCard
+						variant="gradient"
+						title="Gradient Card"
+						subtitle="With gradient background"
+						client:load
+					>
+						This card uses the gradient variant for a more vibrant look.
+					</BaseCard>
+
+					<BaseCard
+						variant="transparent"
+						title="Transparent Card"
+						subtitle="Minimal style"
+						client:load
+					>
+						This card has a transparent background with subtle border.
+					</BaseCard>
+
+					<BaseCard
+						variant="bordered"
+						title="Bordered Card"
+						subtitle="With border emphasis"
+						client:load
+					>
+						This card emphasizes the border for a cleaner look.
+					</BaseCard>
+
+					<BaseCard title="Card with Icon" icon="🎨" client:load>
+						Cards can also include icons for visual interest.
+					</BaseCard>
+
+					<BaseCard title="Interactive Card" client:load>
+						This card has an interactive action.
+					</BaseCard>
+				</div>
 			</div>
 
-			<!-- Buttons -->
-			<div class="space-x-4">
-				<button
-					class="rounded-lg bg-primary-600 px-6 py-3 text-white transition-colors hover:bg-primary-700"
-				>
-					Primary Button
-				</button>
-				<button
-					class="rounded-lg border border-primary-600 px-6 py-3 text-primary-600 transition-colors hover:bg-primary-600 hover:text-white"
-				>
-					Secondary Button
-				</button>
+			<!-- Specialized Cards -->
+			<div class="mb-12">
+				<h3 class="mb-4 text-xl font-semibold">Specialized Cards</h3>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+					<Card title="UI Card" subtitle="Original card component">
+						This is the original UI card component with a title and content.
+					</Card>
+
+					<ServiceCard
+						title="Service Card"
+						description="Example service description for displaying services"
+						icon="💡"
+						features={["Feature 1", "Feature 2", "Feature 3"]}
+					/>
+
+					<StackCard
+						slug="React"
+						labels={["React", "Frontend", "UI"]}
+						icon="/img/stacks/react.svg"
+						data={["Component-based", "Virtual DOM", "Hooks"]}
+						parentIndex={0}
+						client:load
+					/>
+					<TestimonialCard
+						name="John Doe"
+						title="Developer"
+						short="CEO, Example Company"
+						img="/img/avatar-placeholder.jpg"
+						desc="Great work and excellent communication throughout the project!"
+						client:load
+					/>
+				</div>
+			</div>
+
+			<!-- Buttons & Links -->
+			<div class="mb-12">
+				<h3 class="mb-4 text-xl font-semibold">Buttons & Links</h3>
+				<div class="space-y-6">
+					<div>
+						<h4 class="mb-3 text-sm font-medium text-gray-600">Button Component</h4>
+						<div class="flex flex-wrap gap-4">
+							<Button href="#" text="Primary Button" client:load />
+							<Button href="#" text="Secondary Button" variant="secondary" client:load />
+							<Button
+								href="#"
+								text="With Custom Class"
+								className="bg-green-600 hover:bg-green-700"
+								client:load
+							/>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="mb-3 text-sm font-medium text-gray-600">Link Component</h4>
+						<div class="flex flex-wrap gap-4">
+							<Link href="/about" client:load>Internal Link</Link>
+							<Link
+								href="/portfolio"
+								className="text-primary-600 hover:text-primary-700"
+								client:load
+							>
+								Styled Link
+							</Link>
+						</div>
+					</div>
+
+					<div>
+						<h4 class="mb-3 text-sm font-medium text-gray-600">External Link Component</h4>
+						<div class="flex flex-wrap gap-4">
+							<ExternalLink href="https://github.com" client:load> GitHub Link </ExternalLink>
+							<ExternalLink href="https://example.com" className="text-secondary-600" client:load>
+								Custom Styled External Link
+							</ExternalLink>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>

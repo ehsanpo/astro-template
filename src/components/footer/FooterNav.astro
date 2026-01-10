@@ -1,5 +1,6 @@
 ---
 import { getPortfolioData } from "../../utils/data";
+import { Link } from "@/components/ui/Link";
 const { navigation } = await getPortfolioData();
 ---
 
@@ -9,9 +10,9 @@ const { navigation } = await getPortfolioData();
 		{
 			navigation.footer.map((link) => (
 				<li>
-					<a href={link.href} class="text-gray-100 hover:text-gray-200">
+					<Link href={link.href} className="text-gray-100 hover:text-gray-200" client:load>
 						{link.text}
-					</a>
+					</Link>
 				</li>
 			))
 		}

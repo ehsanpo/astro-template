@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { PromptSidebar } from "./PromptSidebar";
 
 interface PromptsViewerProps {
 	prompts: Array<{
@@ -33,15 +32,6 @@ export function PromptsViewer({ prompts }: PromptsViewerProps) {
 
 	return (
 		<div className="flex min-h-screen">
-			<PromptSidebar
-				prompts={prompts.map((p) => ({
-					title: p.title,
-					slug: p.slug,
-					category: p.category,
-				}))}
-				activeSlug={activeSlug}
-			/>
-
 			<main className="flex-1 p-6 lg:p-10">
 				<div className="mx-auto max-w-4xl">
 					{/* Header */}

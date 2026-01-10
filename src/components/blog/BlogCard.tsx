@@ -1,21 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-
-interface BlogPost {
-	title: string;
-	description?: string;
-	date: string;
-	author?: string;
-	category?: string[];
-	tag?: string[];
-	cover?: {
-		height: number;
-		width: number;
-		src: string;
-	};
-	featured?: boolean;
-	slug: string;
-}
+import type { BlogPost } from "@/utils/data";
 
 interface BlogCardProps {
 	post: BlogPost;

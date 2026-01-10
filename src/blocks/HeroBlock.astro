@@ -1,7 +1,7 @@
 ---
 import React from "react";
 import Hero from "../components/hero/Hero.astro";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
 import { getPortfolioData, getPortfolioItems } from "@/utils/data";
 
 const { contact } = await getPortfolioData();
@@ -17,8 +17,8 @@ const portfolioItems = await getPortfolioItems();
 >
 	<React.Fragment>
 		<div class="flex flex-wrap gap-4">
-			<Link href="/portfolio" text="View My Work" />
-			<Link href="/contact" text="Get in Touch" />
+			<Button href="/portfolio" text="View My Work" />
+			<Button href="/contact" text="Get in Touch" />
 		</div>
 		<div>
 			<ul class="align-items-start mt-4 flex flex-wrap">

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/Flip";
-import Link from "./Link";
+import Button from "@/components/ui/Button";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -295,7 +295,7 @@ export const AnimatedScrollSection: React.FC<AnimatedScrollSectionProps> = ({
 					<div ref={textRef} className="m-0 max-w-[600px] text-[1.2rem] [grid-area:text]">
 						{text}
 						<br />
-						<Link href={link} text="View Project" className="mt-4" />
+						<Button href={link} text="View Project" className="mt-4" />
 					</div>
 				</div>
 			</div>

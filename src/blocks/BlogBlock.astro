@@ -1,7 +1,7 @@
 ---
 import { getBlogPosts } from "../utils/data";
 import { BlogCard } from "../components/blog/BlogCard";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
 
 const blogPosts = await getBlogPosts();
 const latestPosts = blogPosts.slice(0, 3);
@@ -25,7 +25,7 @@ const latestPosts = blogPosts.slice(0, 3);
 				</div>
 
 				<div class="text-center">
-					<Link href="/blog" text="View All Posts →" variant="secondary" />
+					<Button href="/blog" text="View All Posts →" variant="secondary" />
 				</div>
 			</div>
 		</section>

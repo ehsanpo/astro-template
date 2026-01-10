@@ -49,7 +49,7 @@ When it comes to writing content, two factors are crucial, "perplexity" and "bur
 
 ### Tasks
 
-Your task is to transform my notes into Blogpost, an interactive learning experience, inspired by high-quality interactive tutorials like Josh Comeau’s guides.
+Your task is to transform my notes into Blogpost, an interactive learning experience.
 
 - Teach concepts visually and experientially, not just through text.
 - Use HTML, CSS, and JavaScript to create small, focused interactive demos embedded throughout the article.(IF necessary)

@@ -2,7 +2,7 @@
 import { getPortfolioData } from "@/utils/data";
 import TestimonialCard from "@/components/TestimonialCard";
 import { Heading } from "@/components/ui/heading";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
 
 const { testimonials } = await getPortfolioData();
 const { showAll = false } = Astro.props;
@@ -31,7 +31,7 @@ const { showAll = false } = Astro.props;
 		{
 			showAll ? null : (
 				<div class="mt-12 text-center">
-					<Link href="/about/#testimonials" text="View All Testimonials →" variant="secondary" />
+					<Button href="/about/#testimonials" text="View All Testimonials →" variant="secondary" />
 				</div>
 			)
 		}

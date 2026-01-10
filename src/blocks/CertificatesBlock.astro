@@ -15,7 +15,7 @@ import accessibility from "@/assets/cert/accessibility.png";
 import GAA from "@/assets/cert/GAA.png";
 import GTM from "@/assets/cert/GTM.png";
 import GA from "@/assets/cert/GA.png";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
 import cybersecurityAware from "@/assets/cert/CAPC.png";
 import leanLeadership from "@/assets/cert/LLPC.png";
 import promptEngineering from "@/assets/cert/CPEFPC.png";
@@ -66,7 +66,7 @@ const { showAll = false } = Astro.props;
 		{
 			showAll ? null : (
 				<div class="mt-12 text-center">
-					<Link
+					<Button
 						href="/about/#certifications"
 						text="View All Certifications →"
 						variant="secondary"

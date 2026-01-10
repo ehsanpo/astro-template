@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
 import BoxReveal from "../components/ui/box-reveal";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
 import TimelineLife from "../components/timeline/TimelineLife";
 import LifeGuard from "../components/game/LifeGuard";
 import { getPortfolioData } from "../utils/data";
@@ -29,8 +29,8 @@ const sortedLife = lifeHighlight.sort((a, b) => parseInt(a.year) - parseInt(b.ye
 			</BoxReveal>
 			<BoxReveal boxColor="bg-primary-500" duration={0.6} delay={0.3} client:load>
 				<div>
-					<Link href="/about" className="mt-3" text="Professional Journey" />
-					<Link href="/contact" className="mt-3" text="Get in Touch" />
+					<Button href="/about" className="mt-3" text="Professional Journey" client:load />
+					<Button href="/contact" className="mt-3" text="Get in Touch" client:load />
 				</div>
 			</BoxReveal>
 		</div>
@@ -54,16 +54,8 @@ const sortedLife = lifeHighlight.sort((a, b) => parseInt(a.year) - parseInt(b.ye
 				Check out my professional journey and the work I've done over the years.
 			</p>
 			<div class="flex flex-wrap justify-center gap-4">
-				<Link
-					href="/about"
-					text="About Me"
-					className="rounded-lg bg-primary-600 px-8 py-4 text-white transition-colors hover:bg-primary-700"
-				/>
-				<Link
-					href="/portfolio"
-					text="View My Work"
-					className="rounded-lg border border-primary-600 px-8 py-4 text-primary-600 transition-colors hover:bg-primary-600 hover:text-white"
-				/>
+				<Button href="/about" text="About Me" client:load />
+				<Button href="/portfolio" text="View My Work" client:load />
 			</div>
 		</div>
 	</section>

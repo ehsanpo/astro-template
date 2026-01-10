@@ -1,5 +1,6 @@
 ---
 import { getPortfolioData } from "../../utils/data";
+import { Link } from "@/components/ui/Link";
 const { contact } = await getPortfolioData();
 const year = new Date().getFullYear();
 ---
@@ -9,9 +10,9 @@ const year = new Date().getFullYear();
 	<address class="not-italic">
 		<p>{contact.location}</p>
 		<p class="mt-2">
-			<a href={`mailto:${contact.website}`}>
+			<Link href={`mailto:${contact.website}`} client:load>
 				{contact.website}
-			</a>
+			</Link>
 		</p>
 	</address>
 	<p class="mt-4 text-sm">

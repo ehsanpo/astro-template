@@ -1,5 +1,6 @@
 ---
 import { getPortfolioData } from "../../utils/data";
+import { ExternalLink } from "@/components/ui/ExternalLink";
 const { contact } = await getPortfolioData();
 ---
 
@@ -8,9 +9,9 @@ const { contact } = await getPortfolioData();
 	<div class="flex gap-4">
 		{
 			Object.entries(contact.socialLinks).map(([platform, url]) => (
-				<a href={url} target="_blank" rel="noopener noreferrer">
+				<ExternalLink href={url} showIcon={false} client:load>
 					<span class="capitalize">{platform}</span>
-				</a>
+				</ExternalLink>
 			))
 		}
 	</div>

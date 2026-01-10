@@ -12,9 +12,9 @@ const { experience } = await getPortfolioData();
 					<div class="absolute left-[3px] top-2 h-[calc(100%+2rem)] w-[2px] bg-gray-200 dark:bg-neutral-700" />
 				)}
 				<div>
-					<span class="text-sm font-medium text-primary-600">{item.period}</span>
+					<span class="text-sm font-medium text-primary-600">{item.startDate}</span>
 					<h3 class="mt-2 text-xl font-semibold text-gray-900 dark:text-white">{item.title}</h3>
-					<p class="mt-1 text-gray-600 dark:text-gray-400">{item.company}</p>
+					<p class="mt-1 text-gray-600 dark:text-gray-400">{item.title}</p>
 					<p class="mt-2 text-gray-600 dark:text-gray-400">{item.description}</p>
 				</div>
 			</div>

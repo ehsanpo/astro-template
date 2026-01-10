@@ -1,13 +1,13 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Hero from "../../components/hero/Hero.astro";
-import StackCard from "../../components/StackCard";
-import SkillChart from "../../components/SkillChart";
-import ToolsList from "../../components/skills/ToolsList.astro";
-import { ProcessFlowDiagram } from "../../components/Beams";
-import { Heading } from "../../components/ui/heading";
-import { getPortfolioData, getRoles } from "../../utils/data";
-import BoxReveal from "../../components/ui/box-reveal";
+import Layout from "@/layouts/Layout.astro";
+import Hero from "@/components/hero/Hero.astro";
+import StackCard from "@/components/StackCard";
+import SkillChart from "@/components/SkillChart";
+import ToolsList from "@/components/skills/ToolsList.astro";
+import { ProcessFlowDiagram } from "@/components/Beams";
+import { Heading } from "@/components/ui/heading";
+import { getPortfolioData, getRoles } from "@/utils/data";
+import BoxReveal from "@/components/ui/box-reveal";
 
 const { stacks } = await getPortfolioData();
 const roles = getRoles();

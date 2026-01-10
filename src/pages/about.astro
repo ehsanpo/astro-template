@@ -4,7 +4,8 @@ import Hero from "../components/hero/Hero.astro";
 import { getPortfolioData } from "../utils/data";
 import TimelineAbout from "../components/timeline/TimelineAbout";
 import BoxReveal from "../components/ui/box-reveal";
-import Link from "@/components/Link";
+import Button from "@/components/ui/Button";
+import { ExternalLink } from "@/components/ui/ExternalLink";
 import Testimonials from "@/blocks/TestimonialsBlock.astro";
 ---
 
@@ -25,13 +26,14 @@ import Testimonials from "@/blocks/TestimonialsBlock.astro";
 			</BoxReveal>
 			<BoxReveal boxColor="bg-primary-500" duration={0.6} delay={0.3} client:load>
 				<div>
-					<Link
+					<ExternalLink
 						href="https://www.linkedin.com/in/ehsanp/"
-						target="_blank"
-						className="mt-3"
-						text="Reach me on LinkedIn."
-					/>
-					<Link href="/cv" className="mt-3" text="Resume" />
+						className="mt-3 block"
+						client:load
+					>
+						Reach me on LinkedIn.
+					</ExternalLink>
+					<Button href="/cv" className="mt-3" text="Resume" client:load />
 				</div>
 			</BoxReveal>
 		</div>

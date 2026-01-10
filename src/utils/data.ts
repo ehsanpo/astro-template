@@ -2,6 +2,24 @@ import portfolioData from "../data/portfolio.json";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 
+export interface BlogPost {
+	title: string;
+	description: string;
+	date: string;
+	author?: string;
+	category?: string[];
+	tag?: string[];
+	cover?: {
+		height?: number;
+		width?: number;
+		src?: string;
+		format?: "png" | "jpg" | "jpeg" | "tiff" | "webp" | "gif" | "svg" | "avif";
+	};
+	featured?: boolean;
+	slug: string;
+	content: CollectionEntry<"blog">;
+}
+
 export const getPortfolioData = () => {
 	return portfolioData;
 };
@@ -32,17 +50,26 @@ export const getProductItems = async () => {
 	}));
 };
 
-export const getBlogPosts = async () => {
+export const getBlogPosts = async (): Promise<BlogPost[]> => {
 	const blogEntries = await getCollection("blog", ({ data }) => {
 		return data.draft !== true;
 	});
 
 	return blogEntries
-		.map((entry: CollectionEntry<"blog">) => ({
-			...entry.data,
-			slug: entry.slug,
-			content: entry,
-		}))
+		.map(
+			(entry: CollectionEntry<"blog">): BlogPost => ({
+				title: entry.data.title,
+				description: entry.data.description,
+				date: entry.data.date,
+				author: entry.data.author,
+				category: entry.data.category,
+				tag: entry.data.tag,
+				cover: entry.data.cover,
+				featured: entry.data.featured,
+				slug: entry.slug,
+				content: entry,
+			})
+		)
 		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 

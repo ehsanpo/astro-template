@@ -1,14 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { getPortfolioData } from "../utils/data";
+import { getPortfolioData } from "@/utils/data";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const ServiceDetails = () => {
-	const serviceWrappersRef = useRef([]);
+/**
+ * ServiceDetails - Full-screen scrolling service showcase
+ *
+ * Displays services in a pinned scroll animation. Each service
+ * takes up full viewport and pins while scrolling.
+ */
+const ServiceDetails: React.FC = () => {
+	const serviceWrappersRef = useRef<(HTMLDivElement | null)[]>([]);
 	const { services } = getPortfolioData();
 
 	useEffect(() => {
@@ -34,9 +40,9 @@ const ServiceDetails = () => {
 		return () => {
 			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
 		};
-	}, [serviceWrappersRef]);
+	}, []);
 
-	const updateServiceWrappersRef = (el, index) => {
+	const updateServiceWrappersRef = (el: HTMLDivElement | null, index: number) => {
 		serviceWrappersRef.current[index] = el;
 	};
 
@@ -52,7 +58,7 @@ const ServiceDetails = () => {
 						<div
 							className={`justify-content-center container relative mx-auto flex h-[calc(100vh-99px)] w-full flex-row flex-wrap overflow-hidden p-0 px-4 md:flex-col ${
 								index % 2 === 0 ? "image-right" : "image-left"
-							} ${service.isLast ? "last" : ""}`}
+							} `}
 						>
 							<div className="service-detail-image-hold z-2 relative top-0 h-[40%] overflow-hidden bg-black md:h-full md:w-1/2">
 								<img

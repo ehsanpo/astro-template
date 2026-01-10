@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { Menu, ChevronDown, ChevronRight } from "lucide-react";
-import Button from "@/components/Link";
+import Button from "@/components/ui/Button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { cn } from "@/lib/utils";
