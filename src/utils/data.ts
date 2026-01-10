@@ -46,6 +46,23 @@ export const getBlogPosts = async () => {
 		.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 };
 
+export const getPrompts = async () => {
+	const promptEntries = await getCollection("prompt");
+
+	return promptEntries
+		.map((entry: CollectionEntry<"prompt">) => ({
+			title: entry.data.title,
+			description: entry.data.description,
+			category: entry.data.category,
+			tags: entry.data.tags,
+			order: entry.data.order,
+			icon: entry.data.icon,
+			slug: entry.slug,
+			content: entry,
+		}))
+		.sort((a, b) => (a.order || 999) - (b.order || 999));
+};
+
 // Calculate years of experience from duration string
 export const calculateYearsOfExperience = (duration: string): number => {
 	const [startYear, endYear] = duration.split("-").map((year) => parseInt(year));

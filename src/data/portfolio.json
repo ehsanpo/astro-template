@@ -30,6 +30,7 @@
 			{ "href": "/portfolio", "text": "Work" },
 			{ "href": "/products", "text": "Products" },
 			{ "href": "/blog", "text": "Blog" },
+			{ "href": "/prompts", "text": "AI Prompts" },
 			{ "href": "/skills", "text": "Skills" },
 			{ "href": "/services", "text": "Services" },
 			{ "href": "/music", "text": "Music" },

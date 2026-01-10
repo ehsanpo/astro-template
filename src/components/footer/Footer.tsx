@@ -106,6 +106,7 @@ const navigationSections: { title: string; links: NavigationLink[] }[] = [
 			{ name: "Resume", href: "/cv", icon: FileText },
 			{ name: "Contact", href: "/contact", icon: Mail },
 			{ name: "Blog", href: "/blog", icon: Newspaper },
+			{ name: "AI Prompts", href: "/prompts", icon: Zap },
 		],
 	},
 	{

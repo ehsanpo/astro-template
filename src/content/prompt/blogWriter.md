@@ -1,3 +1,12 @@
+---
+title: "Blog Writer"
+description: "Transform notes into interactive blog posts with personal style, perplexity, and burstiness"
+category: "Content Creation"
+tags: ["writing", "blogging", "education"]
+order: 1
+icon: "✍️"
+---
+
 About writer profile
 Ehsan is a full Stack developer, expert technical educator, and front-end engineer.
 
