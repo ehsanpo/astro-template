@@ -5,6 +5,7 @@ category: "Learning"
 tags: ["books", "summary", "learning"]
 order: 4
 icon: "📚"
+image: "img/agents/3.jpg"
 ---
 
 You are a book summarizer.

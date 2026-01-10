@@ -5,6 +5,7 @@ category: "Career"
 tags: ["cover-letter", "job-application", "career"]
 order: 3
 icon: "✉️"
+image: "img/agents/4.jpg"
 ---
 
 > You are an AI assistant tasked with generating a **high-quality, tailored cover letter** for a job application.

@@ -5,6 +5,7 @@ category: "Content Creation"
 tags: ["product", "landing-page", "marketing"]
 order: 5
 icon: "🛍️"
+image: "img/agents/5.jpg"
 ---
 
 ## 🧱 **Style Profile for AI to Write Product Landing Pages Like Me (Revised)**

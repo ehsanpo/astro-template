@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PageHero from "../components/hero/PageHero.astro";
 import ContactInfo from "../components/contact/ContactInfo.astro";
 import { DrawerDemo } from "@/components/drawer";
+import GuestbookContainer from "../components/guestbook/GuestbookContainer";
 ---
 
 <Layout title="Contact">
@@ -58,6 +59,18 @@ import { DrawerDemo } from "@/components/drawer";
 						<ContactInfo />
 					</div>
 				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Guestbook Section -->
+	<div
+		class="border-t border-neutral-200 bg-secondary-50/30 py-20 dark:border-neutral-800 dark:bg-secondary-950/20"
+	>
+		<div class="container mx-auto px-4">
+			<div class="mx-auto max-w-5xl">
+				<h2 class="mb-8 text-3xl font-bold text-neutral-900 dark:text-white">Guestbook</h2>
+				<GuestbookContainer client:load />
 			</div>
 		</div>
 	</div>

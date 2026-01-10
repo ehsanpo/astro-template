@@ -5,6 +5,7 @@ category: "Career"
 tags: ["resume", "career", "job-search"]
 order: 2
 icon: "📄"
+image: "img/agents/6.jpg"
 ---
 
 > You are an AI assistant tasked with **reviewing and improving a resume** based on best practices learned from reviewing **hundreds to thousands of real resumes**, including both strong and weak examples.

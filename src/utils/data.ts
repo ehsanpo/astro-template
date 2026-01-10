@@ -57,6 +57,7 @@ export const getPrompts = async () => {
 			tags: entry.data.tags,
 			order: entry.data.order,
 			icon: entry.data.icon,
+			image: entry.data.image?.src,
 			slug: entry.slug,
 			content: entry,
 		}))

@@ -5,6 +5,7 @@ category: "Content Creation"
 tags: ["portfolio", "case-study", "technical-writing"]
 order: 6
 icon: "💼"
+image: "img/agents/2.jpg"
 ---
 
 ### 🧩 **Style Profile for AI to Write My Portfolio Case Studies**

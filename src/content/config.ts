@@ -68,14 +68,16 @@ const blog = defineCollection({
 
 const prompt = defineCollection({
 	type: "content",
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		category: z.string().optional(),
-		tags: z.array(z.string()).optional(),
-		order: z.number().optional(),
-		icon: z.string().optional(),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			description: z.string(),
+			category: z.string().optional(),
+			tags: z.array(z.string()).optional(),
+			order: z.number().optional(),
+			icon: z.string().optional(),
+			image: image().optional(),
+		}),
 });
 
 export const collections = {

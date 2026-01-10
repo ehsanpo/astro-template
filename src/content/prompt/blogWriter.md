@@ -5,6 +5,7 @@ category: "Content Creation"
 tags: ["writing", "blogging", "education"]
 order: 1
 icon: "✍️"
+image: "img/agents/1.jpg"
 ---
 
 About writer profile
