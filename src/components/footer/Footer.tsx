@@ -296,9 +296,9 @@ export function Footer({
 						)}
 						<div className="mt-2">
 							<DocSearch
-								appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID}
-								apiKey={import.meta.env.PUBLIC_ALGOLIA_SEARCH_API_KEY}
-								indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME}
+								appId="0DAQDYSKFQ"
+								apiKey="c8c883e13001397dffa296b48dd5edac"
+								indexName="Portfolio"
 							/>
 						</div>
 					</div>
