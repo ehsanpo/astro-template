@@ -27,6 +27,7 @@ import {
 import { cn } from "../../lib/utils";
 import { Tooltip } from "../ui/Tooltip";
 import DuckSprite from "../DuckSprite";
+import DocSearch from "../DocSearch";
 
 interface FooterProps {
 	readonly variant?: "default" | "glass" | "gradient" | "minimal";
@@ -263,12 +264,10 @@ export function Footer({
 								<div className="font-kabel text-muted-foreground text-sm">Software Developer</div>
 							</div>
 						</div>
-
 						<p className="text-muted-foreground font-kabel mb-6 text-sm leading-relaxed">
 							Experienced software developer passionate about creating impactful digital experiences
 							with modern web technologies and thoughtful design.
 						</p>
-
 						{/* Social Links */}
 						{showSocial && (
 							<div className="flex flex-wrap items-center gap-1">
@@ -295,6 +294,12 @@ export function Footer({
 								})}
 							</div>
 						)}
+
+						<DocSearch
+							appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID || "YOUR_APP_ID"}
+							apiKey={import.meta.env.PUBLIC_ALGOLIA_SEARCH_API_KEY || "YOUR_SEARCH_API_KEY"}
+							indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME || "YOUR_INDEX_NAME"}
+						/>
 					</div>
 
 					{/* Navigation Sections */}
