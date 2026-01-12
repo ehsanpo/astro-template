@@ -13,10 +13,13 @@ const style = `
 		outline: none !important;
         box-shadow: none !important;
 	}
+	.DocSearch-Button {
+		margin-left: 0 !important;
+	}
 `;
 
 export default function DocSearch({ appId, apiKey, indexName }: DocSearchProps) {
-	const searchButtonRef = useRef<HTMLButtonElement>(null);
+	const searchButtonRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
 		// Check for dark mode preference
@@ -63,7 +66,7 @@ export default function DocSearch({ appId, apiKey, indexName }: DocSearchProps) 
 	return (
 		<>
 			<style dangerouslySetInnerHTML={{ __html: style }} />
-			<button ref={searchButtonRef} type="button" />
+			<div ref={searchButtonRef} />
 		</>
 	);
 }

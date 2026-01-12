@@ -294,12 +294,13 @@ export function Footer({
 								})}
 							</div>
 						)}
-
-						<DocSearch
-							appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID || "YOUR_APP_ID"}
-							apiKey={import.meta.env.PUBLIC_ALGOLIA_SEARCH_API_KEY || "YOUR_SEARCH_API_KEY"}
-							indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME || "YOUR_INDEX_NAME"}
-						/>
+						<div className="mt-2">
+							<DocSearch
+								appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID}
+								apiKey={import.meta.env.PUBLIC_ALGOLIA_SEARCH_API_KEY}
+								indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME}
+							/>
+						</div>
 					</div>
 
 					{/* Navigation Sections */}
