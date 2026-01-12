@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import { Footer } from "../components/footer/Footer";
 import { ParallaxProvider } from "react-scroll-parallax";
 import KonamiCode from "../components/KonamiCode";
+import ChatBox from "../components/ChatBox";
 import { GameHUD } from "../components/game/GameHUD";
 import { NavLockGuard } from "../components/game/NavLockGuard";
 import ScrollBottomEasterEgg from "../components/ScrollBottomEasterEgg";
@@ -63,6 +64,7 @@ const socialImage = new URL(image, Astro.site);
 		<NavLockGuard client:load />
 		<Header />
 		<GameHUD client:load />
+		<ChatBox client:load />
 		<main class="min-h-screen">
 			<slot />
 			<Footer client:load />

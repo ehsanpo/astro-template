@@ -23,6 +23,7 @@ import {
 	Play,
 	Pen,
 	Newspaper,
+	MessageSquare,
 } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { Tooltip } from "../ui/Tooltip";
@@ -294,12 +295,20 @@ export function Footer({
 								})}
 							</div>
 						)}
-						<div className="mt-2">
+						<div className="mt-4 flex flex-col gap-4">
 							<DocSearch
 								appId={import.meta.env.PUBLIC_ALGOLIA_APP_ID}
 								apiKey={import.meta.env.PUBLIC_ALGOLIA_SEARCH_API_KEY}
 								indexName={import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME}
 							/>
+
+							<button
+								onClick={() => window.dispatchEvent(new CustomEvent("open-chat"))}
+								className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-4 py-2 font-basement text-sm text-black transition-all hover:bg-primary-700 hover:shadow-lg"
+							>
+								<MessageSquare className="h-4 w-4" />
+								Chat with Assistant
+							</button>
 						</div>
 					</div>
 
