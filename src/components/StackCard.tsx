@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { MagicCard } from "./ui/magic-card";
-import { findTimelineMatch } from "../utils/data";
+import { findTimelineMatch } from "../utils/client-data";
 
 interface StackCardProps {
 	readonly slug: string;

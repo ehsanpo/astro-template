@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { getPortfolioData } from "@/utils/data";
+import { getPortfolioData } from "@/utils/client-data";
 import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 // Register GSAP plugin

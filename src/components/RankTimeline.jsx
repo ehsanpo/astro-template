@@ -1,6 +1,6 @@
 import React from "react";
 import "./RankTimeline.css";
-import { getPortfolioData } from "../utils/data.ts";
+import { getPortfolioData } from "../utils/client-data.ts";
 
 const RankTimeline = () => {
 	const portfolioData = getPortfolioData();

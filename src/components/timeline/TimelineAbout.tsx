@@ -1,7 +1,7 @@
 import React from "react";
 import { ParallaxProvider } from "react-scroll-parallax";
 import { TimelineSection } from "./TimelineSection";
-import { getPortfolioData } from "../..//utils/data";
+import { getPortfolioData } from "../..//utils/client-data";
 interface Props {
 	// Define your props here if needed
 }
