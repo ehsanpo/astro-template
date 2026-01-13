@@ -66,6 +66,8 @@ client: "Telavox"
 
 ### Project 2: Chat Microservice & Feature Enhancements
 
+![Chat app](./chat.png)
+
 Following the TypeScript migration, our team separated the chat functionality into its own microservice, enabling more flexible development and faster feature deployment. I led the development of several key features that significantly enhanced user engagement:
 
 #### **New Chat Features:**
@@ -98,6 +100,9 @@ Built a profile page for AI agents with minimal statistics and monitoring capabi
 - Call history tracking and visualization
 - Real-time status indicators for active AI calls
 
+<div class="flex gap-4">
+<div>
+
 #### **Text-to-Speech (TTS):**
 
 Implemented a TTS feature using ElevenLabs API that transformed how users create queue messages:
@@ -105,6 +110,12 @@ Implemented a TTS feature using ElevenLabs API that transformed how users create
 - Instead of uploading audio files for different queue stages, users can now write text and convert it directly to audio
 - Multi-language and multi-voice support for diverse user needs
 - Seamless in-app audio generation and deployment
+
+</div>
+
+![TTS](./ts.png)
+
+</div>
 
 ---
 
