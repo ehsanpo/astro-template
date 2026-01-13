@@ -67,7 +67,7 @@ images:
 <ul>
     <li>Developing separate search experiences for private and corporate broadband offerings</li>
     <li>Creating a streamlined e-commerce flow used by multiple customer personas</li>
-    <li>Ensuring WCAG compliance throughout the redesign, working with Rebecca, a senior UX expert, to bridge the gap between design and implementation</li>
+    <li>Ensuring WCAG compliance throughout the redesign, working with Rebecca Löfgren, a senior UX expert, to bridge the gap between design and implementation</li>
     <li>Delivering a visually modern, accessible, and user-centric website that elevated Bredband2's brand perception</li>
 </ul>
 
@@ -80,7 +80,9 @@ images:
 
 <br />
 
-<h3>Project 3: Implementing Advanced Search with Algolia and Contentful API</h3> <p>Another major initiative I spearheaded at Bredband2 was the implementation of a robust search functionality across the website and customer portal, utilizing Algolia Search, Contentful API, and InstantSearch. This project aimed to improve information retrieval, enabling users to find content quickly and intuitively. </p> <p>Working as the lead developer, I integrated Algolia's powerful search engine with Contentful, the company’s CMS, to create a seamless and efficient search experience. By leveraging InstantSearch, I implemented advanced search features, including:</p> <ul> <li>Real-time search results and filtering based on user input.</li> <li>Autocomplete suggestions to guide users toward relevant content faster.</li> <li>Dynamic ranking algorithms, ensuring the most relevant results appeared first.</li> </ul> <p>The search implementation significantly enhanced the user experience by enabling users to navigate Bredband2’s extensive content library and quickly find solutions to their queries. Furthermore, it streamlined the website’s usability, reduced bounce rates, and contributed to a measurable improvement in customer satisfaction metrics.</p>
+<h3>Project 3: Implementing Advanced Search with Algolia and Contentful API</h3>
+
+<p>Another major initiative I spearheaded at Bredband2 was the implementation of a robust search functionality across the website and customer portal, utilizing Algolia Search, Contentful API, and InstantSearch. This project aimed to improve information retrieval, enabling users to find content quickly and intuitively. </p> <p>Working as the lead developer, I integrated Algolia's powerful search engine with Contentful, the company’s CMS, to create a seamless and efficient search experience. By leveraging InstantSearch, I implemented advanced search features, including:</p> <ul> <li>Real-time search results and filtering based on user input.</li> <li>Autocomplete suggestions to guide users toward relevant content faster.</li> <li>Dynamic ranking algorithms, ensuring the most relevant results appeared first.</li> </ul> <p>The search implementation significantly enhanced the user experience by enabling users to navigate Bredband2’s extensive content library and quickly find solutions to their queries. Furthermore, it streamlined the website’s usability, reduced bounce rates, and contributed to a measurable improvement in customer satisfaction metrics.</p>
 
 <h3>Professional Growth and Accomplishments:</h3>
 
