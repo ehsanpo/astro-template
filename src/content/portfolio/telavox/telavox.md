@@ -64,52 +64,83 @@ client: "Telavox"
 
 ---
 
-### Project 2: **Next-Gen Video Conferencing Platform: Revolutionizing Virtual Collaboration** 🚀
+### Project 2: Chat Microservice & Feature Enhancements
 
-In today's hyperconnected world, video conferencing has become the backbone of communication. I set out to develop a **next-gen video conferencing solution** that goes beyond basic video calls, designed for seamless collaboration, crystal-clear communication, and adaptability.
+Following the TypeScript migration, our team separated the chat functionality into its own microservice, enabling more flexible development and faster feature deployment. I led the development of several key features that significantly enhanced user engagement:
 
-#### **Key Features** 🌟
+#### **New Chat Features:**
 
-1. **Real-Time Chat** 💬
-   A sleek, user-friendly chat interface enables instant text communication during calls, ensuring nothing is missed. Powered by modern web technologies for low-latency messaging.
-
-2. **Adaptive Video Quality Optimization** 🎥
-   Built for global connectivity, the platform dynamically adjusts video quality based on network conditions. This ensures a smooth experience even on low-bandwidth connections.
-
-3. **AI-Powered Live Captions** ✍️
-   Integrated with OpenAI models, this feature provides real-time, accurate captions to improve accessibility and inclusivity.
-
-#### **The Tech Stack** 🛠️
-
-- **Frontend:**
-  - **TailwindCSS:** For a sleek, responsive, and modern UI.
-  - **TypeScript:** For strongly-typed, maintainable code.
-
-- **Backend:**
-  - **Mediasoup:** The powerhouse for WebRTC-based video conferencing. It enables ultra-low latency, scalability, and flexible topologies.
-  - **Custom JS SDK:** Built to streamline communication between the frontend and backend.
-
-- **AI Capabilities:**
-  - OpenAI's language models power real-time captioning, offering accessibility and context-aware insights during meetings.
-
-#### **Challenges & Solutions** 🧩
-
-1. **Latency Optimization:**
-   With Mediasoup, we implemented a selective forwarding unit (SFU) architecture, ensuring low latency for multi-participant calls.
-
-2. **Seamless Video Quality Adjustments:**
-   Leveraging advanced WebRTC APIs, I built an adaptive mechanism that analyzes user bandwidth and adjusts video streams dynamically.
-
-3. **AI Caption Accuracy:**
-   Integrated a custom preprocessing layer for better speaker segmentation and context recognition using OpenAI’s API.
-
-#### **Why It Stands Out** 🌐
-
-This platform isn’t just another video conferencing app,it’s built to tackle the most common frustrations with virtual collaboration. By combining **cutting-edge WebRTC technology**, **AI-driven features**, and an intuitive design, it enhances productivity and brings people closer together, no matter where they are.
+- **Message Reactions:** Users can react to messages with emojis displayed beneath the message, adding quick emotional responses to conversations.
+- **Quoted Replies:** Implemented reply functionality allowing users to respond to specific messages, maintaining conversation context.
+- **Conversation Threads:** Built a slide-in thread panel enabling users to create separate discussions within the same chat group without cluttering the main conversation.
+- **Tenor GIF Integration:** Integrated Tenor API via Google Cloud, allowing users to search and send GIFs directly in chat, making conversations more expressive beyond just emojis.
+- **Markdown Support:** Added full markdown rendering support for announcements, code sharing, and styled messages. This was particularly valuable for teams using chat groups as announcement channels, providing better formatting options for important communications.
 
 ---
 
-### Project 3: Feature Flag Management System
+### Project 3: AI Integration & Voice Solutions
+
+I contributed to multiple AI-powered features that enhanced the platform's capabilities and user experience:
+
+#### **Translation Pipeline:**
+
+Our application serves users in multiple languages. While I didn't develop the core translation tool (which replaced our third-party translation service), I was instrumental in:
+
+- Reviewing and testing the translation implementation
+- Integrating it into our CI/CD pipeline
+- Migrating it from OpenAI to Google Gemini for improved performance and cost efficiency
+
+#### **AI Agent Profile:**
+
+Built a profile page for AI agents with minimal statistics and monitoring capabilities:
+
+- AI agent profile pages displaying key statistics for superuser monitoring
+- Call history tracking and visualization
+- Real-time status indicators for active AI calls
+
+#### **Text-to-Speech (TTS):**
+
+Implemented a TTS feature using ElevenLabs API that transformed how users create queue messages:
+
+- Instead of uploading audio files for different queue stages, users can now write text and convert it directly to audio
+- Multi-language and multi-voice support for diverse user needs
+- Seamless in-app audio generation and deployment
+
+---
+
+### Project 4: Video Conferencing Integration
+
+This project began with our team member architecting the backend infrastructure for video conferencing. After six months of development by a consulting firm that added core features, I joined to finalize and productize the solution.
+
+#### **My Role:**
+
+I took ownership of transforming the existing codebase into a production-ready product integrated into our main application. This involved:
+
+- Analyzing and understanding code written by multiple developers with different approaches
+- Removing debugging code and development artifacts to prepare for production
+- Implementing proper naming conventions, color schemes, and UI consistency
+- Building the complete chat functionality for video calls
+- Integrating the video conferencing feature seamlessly into the existing application
+- Ensuring the product met quality standards for end-user release
+
+#### **Key Features:**
+
+- **Real-Time Chat:** Built a complete chat interface for text communication during video calls
+- **Adaptive Video Quality:** The platform adjusts video quality based on network conditions for optimal performance
+
+#### **Technical Stack:**
+
+- **Frontend:** TypeScript, TailwindCSS
+- **Backend:** Mediasoup (WebRTC-based conferencing with SFU architecture)
+- **Custom JS SDK** for frontend-backend communication
+
+#### **Challenges:**
+
+The main challenge was inheriting a codebase developed by different teams and turning it into a polished, production-ready product. This required deep code analysis, refactoring for consistency, and building new features while maintaining compatibility with the existing architecture. Successfully integrating video conferencing into our application gave users a complete communication solution within a single platform.
+
+---
+
+### Project 5: Feature Flag Management System
 
 A robust, full-stack feature flag management system built with modern web technologies, enabling teams to control feature rollouts and manage account-specific settings with precision and ease.
 Technical Overview
