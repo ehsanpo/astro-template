@@ -2,7 +2,7 @@
 	"basics": {
 		"name": "Ehsan Pourhadi",
 		"title": "Software Developer",
-		"currentPosition": "Software Developer at Telavox",
+		"currentPosition": "Open for opportunities",
 		"image": "https://ehsan-pourhadi.com/img/118.jpg",
 		"about": "Experienced software developer with a proven track record in full-stack development and web application architecture. Passionate about delivering scalable and user-focused solutions.",
 		"location": "Malmö, Sweden",
@@ -15,14 +15,14 @@
 			"company": "Telavox",
 			"position": "Software Developer",
 			"startDate": "2023-09",
-			"endDate": "Present",
+			"endDate": "2025-11",
 			"description": [
 				"Developed and maintained softphone, messaging, and video conferencing applications used in a large-scale communications platform.",
 				"Contributed to the design and architecture of web-based applications with a focus on performance and maintainability.",
 				"Collaborated closely with product, design, and backend teams to deliver features end to end.",
 				"Worked extensively with Electron, TypeScript, and React in a modern frontend environment."
 			],
-			"tags": ["Electron", "TypeScript", "React"]
+			"tags": ["Electron", "TypeScript", "React", "Node.js"]
 		},
 		{
 			"company": "Bredband2",
@@ -50,7 +50,7 @@
 				"Conducted SEO audits and implemented improvements to increase search visibility.",
 				"Built e-commerce solutions using WooCommerce, including multilingual configurations."
 			],
-			"tags": ["WordPress", "WooCommerce", "SEO"]
+			"tags": ["Node.js", "WordPress", "WooCommerce", "SEO"]
 		},
 		{
 			"company": "Guts & Glory",
@@ -64,7 +64,7 @@
 				"Collaborated with designers to ensure smooth integration between design and implementation.",
 				"Improved internal development processes to increase delivery speed and team efficiency."
 			],
-			"tags": ["WordPress", "Team Leadership"]
+			"tags": ["Node.js", "WordPress", "TypeScript", "Team Leadership"]
 		},
 		{
 			"company": "Whitespace AB",
@@ -78,7 +78,7 @@
 				"Applied Agile methodologies to improve collaboration and delivery predictability.",
 				"Acted as a technical consultant, translating business requirements into scalable solutions."
 			],
-			"tags": ["Full Stack Development", "UX/UI Design", "Agile"]
+			"tags": ["PHP", "Node.js", "UX/UI Design", "Agile"]
 		},
 		{
 			"company": "The Fan Club",
@@ -105,7 +105,7 @@
 				"Managed full project lifecycles from client consultation to deployment and support.",
 				"Optimized websites for performance, SEO, and security."
 			],
-			"tags": ["WordPress", "SEO", "Web Development"]
+			"tags": ["WordPress", "JavaScript", "Web Development"]
 		}
 	],
 	"education": [

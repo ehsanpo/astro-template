@@ -38,9 +38,11 @@ client: "Telavox"
 
 <p>At Telavox, I work as a Fullstack Developer with a focus on front-end development. Our team is dedicated to building an Electron and web application for our softphone product, ensuring it meets the highest standards of performance and user experience.</p>
 
-<h3>Project 1: Visual Refresh and RTL Support</h3>
+<h3 id="project-1-visual-refresh-rtl-support-typescript">Project 1: Visual Refresh and RTL Support And TypeScript</h3>
 
-<p>The primary goal of this project was to update the design of our application with a modern, sleek interface and to introduce Right-to-Left (RTL) support for the Arabic language. This involved a complete rewrite of the aspplication in TypeScript, as well as addressing technical debt by migrating from MUI4 to Tailwind CSS.</p>
+<p>The primary goal of this project from the product side, was to update the design of our application with a modern, sleek interface and to introduce Right-to-Left (RTL) support for the Arabic language. This involved a complete rewrite of the application in TypeScript, as well as addressing technical debt by migrating from MUI4 to Tailwind CSS.</p>
+
+<p>The existing application was a 9-year-old JavaScript codebase with mixed code quality—spanning React components, API calls, and auto-generated code from backend services. I led the migration effort to TypeScript, systematically converting and typing thousands of lines of legacy code. This included refactoring outdated patterns, eliminating deprecated libraries, replacing legacy data fetching with TanStack Query for proper caching, and modernizing the Redux state management to efficiently handle frequent WebSocket updates. The result was a robust, type-safe codebase that significantly reduced runtime errors and improved developer experience.</p>
 
 <h3>Key Responsibilities:</h3>
 
@@ -64,7 +66,7 @@ client: "Telavox"
 
 ### Project 2: **Next-Gen Video Conferencing Platform: Revolutionizing Virtual Collaboration** 🚀
 
-In today’s hyperconnected world, video conferencing has become the backbone of communication. I set out to develop a **next-gen video conferencing solution** that goes beyond basic video calls,designed for seamless collaboration, crystal-clear communication, and adaptability.
+In today's hyperconnected world, video conferencing has become the backbone of communication. I set out to develop a **next-gen video conferencing solution** that goes beyond basic video calls, designed for seamless collaboration, crystal-clear communication, and adaptability.
 
 #### **Key Features** 🌟
 
