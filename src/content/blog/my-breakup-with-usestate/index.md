@@ -5,7 +5,7 @@ date: "2025-03-20"
 author: "Ehsan Pourhadi"
 category: ["React", "Frontend"]
 tag: ["React", "useState", "State Management", "Hooks"]
-featured: true
+featured: false
 draft: false
 cover: "cover.png"
 ---
