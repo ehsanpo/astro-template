@@ -124,6 +124,8 @@ The polygon approach requires manual calculation for responsive designs. The pat
 
 ## Building CyberTechUI
 
+![CyberTechUI](./demo1.png)
+
 I built a complete UI library with this workflow. Cards, buttons, inputs, tabs - everything with cyberpunk shapes baked in.
 
 Integrated with shadcn/ui so you can install components with one command. Each component includes the CSS shapes directly, no external dependencies.
@@ -152,6 +154,8 @@ I made each component separately. They all looked great individually.
 
 Then I tried putting them together in a real layout. Spacing was off. Visual weight didn't balance. Components that looked perfect alone didn't play well with each other.
 Spent hours adjusting. The tabs component was the worst - I gave each tab state its own unique shape (7 different shapes total). Each one needed to feel distinct but cohesive.
+
+![CyberTechUI](demo2.png)
 
 In hindsight, I should've built one complete page layout first, then extracted the components. Design systems work better when you start with real use cases.
 
