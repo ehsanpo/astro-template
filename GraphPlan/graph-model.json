@@ -1,0 +1,204 @@
+{
+	"meta": {
+		"name": "Ehsan Pourhadi Knowledge Graph",
+		"version": "1.0.0",
+		"description": "Canonical schema for portfolio, work, products, roles, skills, tools, and certifications.",
+		"sourceOfTruth": "Neo4j (local)",
+		"buildMode": "static-export"
+	},
+
+	"nodes": {
+		"Person": {
+			"description": "A human actor. Currently only one: the portfolio owner.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"title": "string",
+				"location": "string",
+				"website": "string"
+			}
+		},
+
+		"Work": {
+			"description": "A concrete system, platform, or deliverable that was built or shipped.",
+			"properties": {
+				"id": "string (unique, required)",
+				"title": "string",
+				"summary": "string",
+				"url": "string",
+				"type": "enum [client, personal, employment, open-source, case-study]",
+				"highlighted": "boolean",
+				"startDate": "string (YYYY-MM)",
+				"endDate": "string (YYYY-MM | Present)"
+			}
+		},
+
+		"Product": {
+			"description": "An owned, repeatable artifact that can evolve independently of a single engagement.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"description": "string",
+				"url": "string",
+				"status": "enum [active, paused, archived]"
+			}
+		},
+
+		"Organization": {
+			"description": "Employer, client, institution, or platform.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"type": "enum [company, client, institution, platform]",
+				"location": "string",
+				"website": "string"
+			}
+		},
+
+		"Role": {
+			"description": "A mode of contribution or responsibility.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"seniority": "enum [junior, mid, senior, lead, principal] (optional)"
+			}
+		},
+
+		"Skill": {
+			"description": "A transferable capability independent of specific tools.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"category": "enum [frontend, backend, data, design, cloud, devops, leadership, multimedia]",
+				"level": "number (1-10, optional)"
+			}
+		},
+
+		"Tool": {
+			"description": "A concrete technology, framework, or platform.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"type": "enum [language, framework, library, database, platform, service]"
+			}
+		},
+
+		"Certification": {
+			"description": "A formal external validation of knowledge or skill.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"issuer": "string",
+				"year": "number",
+				"url": "string (optional)"
+			}
+		},
+
+		"Service": {
+			"description": "A professional service or offering provided by the person.",
+			"properties": {
+				"id": "string (unique, required)",
+				"name": "string",
+				"description": "string",
+				"tags": "array of strings (optional)"
+			}
+		},
+
+		"TimeSpan": {
+			"description": "A temporal window used for slicing or grouping activity.",
+			"properties": {
+				"id": "string (unique, required)",
+				"label": "string",
+				"start": "string (YYYY)",
+				"end": "string (YYYY | Present)"
+			}
+		}
+	},
+
+	"relationships": {
+		"PERFORMED": {
+			"from": "Person",
+			"to": "Work",
+			"description": "Person performed or contributed to a work."
+		},
+
+		"DELIVERED_FOR": {
+			"from": "Work",
+			"to": "Organization",
+			"description": "Work was delivered for an organization."
+		},
+
+		"ACTED_AS": {
+			"from": "Person",
+			"to": "Role",
+			"description": "Person acted in a given role."
+		},
+
+		"APPLIED_IN": {
+			"from": "Role",
+			"to": "Work",
+			"description": "Role was applied in a specific work."
+		},
+
+		"DEMONSTRATES": {
+			"from": "Work",
+			"to": "Skill",
+			"description": "Work demonstrates a skill."
+		},
+
+		"SUPPORTED_BY": {
+			"from": "Skill",
+			"to": "Tool",
+			"description": "Skill is supported or enabled by a tool."
+		},
+
+		"USES_TOOL": {
+			"from": "Work",
+			"to": "Tool",
+			"description": "Work directly used a tool."
+		},
+
+		"PRODUCED": {
+			"from": "Work",
+			"to": "Product",
+			"description": "Work resulted in a product."
+		},
+
+		"EVOLVES_FROM": {
+			"from": "Product",
+			"to": "Work",
+			"description": "Product evolved from earlier work."
+		},
+
+		"VALIDATES": {
+			"from": "Certification",
+			"to": "Skill",
+			"description": "Certification validates a skill."
+		},
+
+		"EARNED": {
+			"from": "Person",
+			"to": "Certification",
+			"description": "Person earned a certification."
+		},
+
+		"OFFERS": {
+			"from": "Person",
+			"to": "Service",
+			"description": "Person offers a professional service."
+		},
+
+		"DURING": {
+			"from": "Work",
+			"to": "TimeSpan",
+			"description": "Work occurred during a time span."
+		}
+	},
+
+	"constraints": {
+		"noRuntimeMutation": true,
+		"noInferredRelationships": true,
+		"singleSourceOfTruth": "neo4j-local",
+		"caseStudyIsView": true
+	}
+}
