@@ -806,7 +806,7 @@
 			"slug": "Front-end",
 			"labels": ["React", "Gatsby", "Next.js", "TypeScript", "Css"],
 			"icon": "/img/stacks/front-end.svg",
-			"data": ["10", "10", "8", "7", "10"]
+			"data": ["10", "10", "9", "8", "10"]
 		},
 		{
 			"slug": "Backend",
@@ -828,9 +828,9 @@
 		},
 		{
 			"slug": "Apps",
-			"labels": ["Electron js", "Typescript", "Tailwind", "Vite", "React Native"],
+			"labels": ["Electron js", "Wails", "Tailwind", "Vite", "React Native"],
 			"icon": "/img/stacks/apps.svg",
-			"data": ["7", "8", "8", "6", "8"]
+			"data": ["9", "7", "10", "7", "8"]
 		},
 		{
 			"slug": "Cloud",
@@ -874,7 +874,7 @@
 			"id": 20,
 			"name": "TypeScript",
 			"icon": "/img/timeline-icons/typescript.svg",
-			"duration": "2022-2026"
+			"duration": "2021-2026"
 		},
 
 		{
@@ -893,7 +893,7 @@
 			"id": 0,
 			"name": "Photoshop",
 			"icon": "/img/timeline-icons/photoshop.svg",
-			"duration": "2010-2019"
+			"duration": "2010-2025"
 		},
 		{
 			"id": 113,

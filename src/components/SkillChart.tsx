@@ -371,7 +371,6 @@ export default function SkillChart({ data, chartData, showButtons }: SkillChartP
 
 	return (
 		<div className="mx-auto w-full max-w-6xl px-4 py-1">
-			{/* Category Selection Buttons */}
 			{showButtons && (
 				<div className="mb-8">
 					<div className="flex flex-wrap justify-center gap-3">
@@ -406,7 +405,6 @@ export default function SkillChart({ data, chartData, showButtons }: SkillChartP
 				</div>
 			)}
 
-			{/* Chart Container */}
 			<div className={`rounded-xl p-8 shadow-lg ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
 				<div className="mb-6">
 					<h3
@@ -426,7 +424,6 @@ export default function SkillChart({ data, chartData, showButtons }: SkillChartP
 					<Radar data={chartDatainternal} options={options} />
 				</div>
 
-				{/* Technology Details */}
 				<div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 					{skillsData.map((skill, index) => (
 						<SkillCard
@@ -440,7 +437,6 @@ export default function SkillChart({ data, chartData, showButtons }: SkillChartP
 					))}
 				</div>
 
-				{/* Category Statistics */}
 				<StatisticsCard
 					skillsData={skillsData}
 					currentCategory={currentCategory}

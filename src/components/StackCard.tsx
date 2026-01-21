@@ -24,9 +24,9 @@ export default function StackCard({ slug, labels, icon, data, parentIndex }: Sta
 		"from-primary-500/50 to-primary-500",
 		"from-primary-500/50 to-primary-500",
 
-		"from-blue-500/50 to-blue-500 ",
-		"from-blue-500/50 to-blue-500",
-		"from-blue-500/50 to-blue-500 ",
+		"from-orange-500/50 to-orange-500 ",
+		"from-orange-500/50 to-orange-500",
+		"from-orange-500/50 to-orange-500 ",
 
 		"from-blue-500/50 to-secondary-500 ",
 		"from-blue-500/50 to-secondary-500 ",
