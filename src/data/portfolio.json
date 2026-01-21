@@ -862,26 +862,26 @@
 			"id": 1,
 			"name": "HTML & CSS",
 			"icon": "/img/timeline-icons/html-css.svg",
-			"duration": "2010-2025"
+			"duration": "2010-2026"
 		},
 		{
 			"id": 2,
 			"name": "Javascript",
 			"icon": "/img/timeline-icons/javascript.svg",
-			"duration": "2010-2025"
+			"duration": "2010-2026"
 		},
 		{
 			"id": 20,
 			"name": "TypeScript",
 			"icon": "/img/timeline-icons/typescript.svg",
-			"duration": "2022-2025"
+			"duration": "2022-2026"
 		},
 
 		{
 			"id": 110,
 			"name": "Reason Studios",
 			"icon": "/img/timeline-icons/reason-studios.svg",
-			"duration": "2010-2025"
+			"duration": "2010-2024"
 		},
 		{
 			"id": 111,
@@ -912,7 +912,7 @@
 			"id": 101,
 			"name": "Rest API",
 			"icon": "/img/timeline-icons/rest-api.svg",
-			"duration": "2012-2025"
+			"duration": "2012-2026"
 		},
 		{
 			"id": 4,
@@ -949,7 +949,7 @@
 			"id": 8,
 			"name": "MySQL",
 			"icon": "/img/timeline-icons/mysql.svg",
-			"duration": "2013-2017"
+			"duration": "2013-2020"
 		},
 
 		{
@@ -976,13 +976,13 @@
 			"id": 23,
 			"name": "Node.js",
 			"icon": "/img/timeline-icons/node-js.svg",
-			"duration": "2016-2025"
+			"duration": "2016-2026"
 		},
 		{
 			"id": 32,
 			"name": "UX Design",
 			"icon": "/img/timeline-icons/ux-design.svg",
-			"duration": "2016-2025"
+			"duration": "2016-2026"
 		},
 
 		{
@@ -1002,7 +1002,7 @@
 			"id": 11,
 			"name": "ReactJS",
 			"icon": "/img/timeline-icons/reactjs.svg",
-			"duration": "2018-2025"
+			"duration": "2018-2026"
 		},
 		{
 			"id": 27,
@@ -1026,7 +1026,7 @@
 			"id": 108,
 			"name": "Shell Script",
 			"icon": "/img/timeline-icons/shell-script.svg",
-			"duration": "2018-2025"
+			"duration": "2018-2026"
 		},
 
 		{
@@ -1039,13 +1039,13 @@
 			"id": 27,
 			"name": "Redux",
 			"icon": "/img/timeline-icons/redux.svg",
-			"duration": "2019-2025"
+			"duration": "2019-2026"
 		},
 		{
 			"id": 13,
 			"name": "Ruby on Rails",
 			"icon": "/img/timeline-icons/ruby-on-rails.svg",
-			"duration": "2019-2025"
+			"duration": "2019-2023"
 		},
 		{
 			"id": 12,
@@ -1106,13 +1106,13 @@
 			"id": 112,
 			"name": "FFmpeg",
 			"icon": "/img/timeline-icons/ffmpeg.svg",
-			"duration": "2020-2025"
+			"duration": "2020-2024"
 		},
 		{
 			"id": 16,
 			"name": "Figma",
 			"icon": "/img/timeline-icons/figma.svg",
-			"duration": "2021-2025"
+			"duration": "2021-2026"
 		},
 		{
 			"id": 17,
@@ -1124,26 +1124,26 @@
 			"id": 18,
 			"name": "Next.js",
 			"icon": "/img/timeline-icons/next-js.svg",
-			"duration": "2021-2024"
+			"duration": "2021-2026"
 		},
 		{
 			"id": 109,
 			"name": "Github Actions",
 			"icon": "/img/timeline-icons/github-actions.svg",
-			"duration": "2021-2025"
+			"duration": "2021-2026"
 		},
 
 		{
 			"id": 29,
 			"name": "Vite",
 			"icon": "/img/timeline-icons/vite.svg",
-			"duration": "2022-2025"
+			"duration": "2022-2026"
 		},
 		{
 			"id": 30,
 			"name": "React Native",
 			"icon": "/img/timeline-icons/react-native.svg",
-			"duration": "2022-2025"
+			"duration": "2022-2026"
 		},
 		{
 			"id": 30,
@@ -1155,7 +1155,7 @@
 			"id": 19,
 			"name": "Tailwind",
 			"icon": "/img/timeline-icons/tailwind.svg",
-			"duration": "2022-2025"
+			"duration": "2022-2026"
 		},
 		{
 			"id": 21,
@@ -1168,13 +1168,37 @@
 			"id": 29,
 			"name": "Zustand",
 			"icon": "/img/timeline-icons/zustand.svg",
-			"duration": "2024-2025"
+			"duration": "2024-2026"
 		},
 		{
 			"id": 22,
 			"name": "Astro",
 			"icon": "/img/timeline-icons/astro.svg",
-			"duration": "2024-2025"
+			"duration": "2024-2026"
+		},
+		{
+			"id": 116,
+			"name": "Go",
+			"icon": "/img/timeline-icons/go.svg",
+			"duration": "2025-2026"
+		},
+		{
+			"id": 116,
+			"name": "Wails",
+			"icon": "/img/timeline-icons/wails.svg",
+			"duration": "2025-2026"
+		},
+		{
+			"id": 117,
+			"name": "Docker",
+			"icon": "/img/timeline-icons/docker.svg",
+			"duration": "2019-2026"
+		},
+		{
+			"id": 118,
+			"name": "Linux",
+			"icon": "/img/timeline-icons/linux.svg",
+			"duration": "2011-2026"
 		}
 	],
 	"charts": [

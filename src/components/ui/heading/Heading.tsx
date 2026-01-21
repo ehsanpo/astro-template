@@ -47,7 +47,15 @@ const Heading: React.FC<Props> = ({
 						speed={5}
 						className="absolute left-0 top-[-10%] z-10 w-full overflow-hidden text-4xl font-bold opacity-10 blur-sm lg:text-9xl"
 					>
-						<div className="user">{children}</div>
+						<motion.div
+							className="select-none"
+							initial={{ opacity: 0 }}
+							whileInView={{ opacity: 1 }}
+							transition={{ duration: 0.5 }}
+							viewport={{ once: false }}
+						>
+							{children}
+						</motion.div>
 					</Parallax>
 				)}
 

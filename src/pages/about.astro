@@ -1,7 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/hero/Hero.astro";
-import { getPortfolioData } from "../utils/data";
 import TimelineAbout from "../components/timeline/TimelineAbout";
 import BoxReveal from "../components/ui/box-reveal";
 import Button from "@/components/ui/Button";
@@ -25,15 +24,15 @@ import Testimonials from "@/blocks/TestimonialsBlock.astro";
 				</p>
 			</BoxReveal>
 			<BoxReveal boxColor="bg-primary-500" duration={0.6} delay={0.3} client:load>
-				<div>
+				<div class="flex">
+					<Button href="/cv" className="mt-3" text="Resume" client:load />
 					<ExternalLink
 						href="https://www.linkedin.com/in/ehsanp/"
-						className="mt-3 block"
+						className="ml-4 mt-3"
 						client:load
 					>
 						Reach me on LinkedIn.
 					</ExternalLink>
-					<Button href="/cv" className="mt-3" text="Resume" client:load />
 				</div>
 			</BoxReveal>
 		</div>

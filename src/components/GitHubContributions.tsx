@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
+import { Tooltip as ReactTooltip } from "react-tooltip";
 
 interface ContributionDay {
 	date: string;
@@ -58,6 +59,19 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 		fetchContributions(selectedYear);
 	}, [selectedYear, username]);
 
+	useEffect(() => {
+		if (data) {
+			// Add staggered animation delays to each cell
+			const rects = document.querySelectorAll(".react-calendar-heatmap rect");
+			rects.forEach((rect, index) => {
+				(rect as SVGRectElement).style.transitionDelay = `${index * 0.002}s`;
+				rect.setAttributeNS(null, "rx", "1");
+				rect.setAttributeNS(null, "ry", "1");
+				rect.setAttributeNS(null, "data-tooltip-id", "tooltip-graph");
+			});
+		}
+	}, [data]);
+
 	const handleYearChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setSelectedYear(parseInt(event.target.value));
 	};
@@ -65,7 +79,7 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 	// Generate year options (from 2008 when GitHub was founded to current year)
 	const currentYear = new Date().getFullYear();
 	const yearOptions = [];
-	for (let year = 2008; year <= currentYear; year++) {
+	for (let year = 2018; year <= currentYear; year++) {
 		yearOptions.push(year);
 	}
 
@@ -85,14 +99,37 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 					<h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
 						GitHub Contributions
 					</h3>
-					{data && !loading && (
-						<p className="text-sm text-gray-600 dark:text-gray-400">
-							{totalContributions} contributions in {selectedYear}
-						</p>
-					)}
+					<div className="h-6">
+						{data && !loading && (
+							<p className="text-sm text-gray-600 dark:text-gray-400">
+								{totalContributions} contributions in {selectedYear}
+							</p>
+						)}
+					</div>
 				</div>
 
 				<div className="flex items-center gap-2">
+					{loading && (
+						<div className="flex items-center gap-1 text-sm text-gray-600 dark:text-gray-400">
+							<svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24">
+								<circle
+									className="opacity-25"
+									cx="12"
+									cy="12"
+									r="10"
+									stroke="currentColor"
+									strokeWidth="4"
+									fill="none"
+								/>
+								<path
+									className="opacity-75"
+									fill="currentColor"
+									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+								/>
+							</svg>
+							Loading...
+						</div>
+					)}
 					<label
 						htmlFor="year-select"
 						className="text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -116,30 +153,6 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 			</div>
 
 			<div className="relative">
-				{loading && (
-					<div className="absolute inset-0 z-10 flex items-center justify-center rounded-lg bg-white/50 dark:bg-gray-900/50">
-						<div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
-							<svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24">
-								<circle
-									className="opacity-25"
-									cx="12"
-									cy="12"
-									r="10"
-									stroke="currentColor"
-									strokeWidth="4"
-									fill="none"
-								/>
-								<path
-									className="opacity-75"
-									fill="currentColor"
-									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-								/>
-							</svg>
-							Loading...
-						</div>
-					</div>
-				)}
-
 				{error && (
 					<div className="rounded-lg border border-red-200 bg-red-50 p-4 dark:border-red-700 dark:bg-red-900/20">
 						<p className="text-sm text-red-600 dark:text-red-400">
@@ -148,7 +161,7 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 					</div>
 				)}
 
-				{data && !loading && !error && (
+				{data && !error && (
 					<div className="w-full overflow-x-auto">
 						<style>{`
 							.react-calendar-heatmap {
@@ -176,7 +189,24 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 								fill: #03aad7;
 							}
 							.react-calendar-heatmap .color-scale-4 {
-								fill: #027ba1;
+								fill: #0377a7;
+							}
+							.react-calendar-heatmap rect {
+								transition: fill 0.1s ease-out;
+								opacity: 0;
+								animation: cellFadeIn 0.1s ease-out both;
+							}
+							@keyframes cellFadeIn {
+								to {
+									opacity: 1;
+								}
+							}
+							.heatmap-container {
+							}
+							.react-calendar-heatmap rect:hover {
+								stroke: var(--primary);
+								stroke-width: 1;
+								cursor: pointer;
 							}
 							@media (prefers-color-scheme: dark) {
 								.react-calendar-heatmap .react-calendar-heatmap-month-label {
@@ -190,27 +220,29 @@ const GitHubContributions: React.FC<GitHubContributionsProps> = ({
 								}
 							}
 						`}</style>
-						<CalendarHeatmap
-							startDate={new Date(`${selectedYear}-01-01`)}
-							endDate={new Date(`${selectedYear}-12-31`)}
-							values={heatMapData}
-							classForValue={(value) => {
-								if (!value || value.count === 0) {
-									return "color-empty";
+						<div className="heatmap-container">
+							<CalendarHeatmap
+								startDate={new Date(`${selectedYear}-01-01`)}
+								endDate={new Date(`${selectedYear}-12-31`)}
+								values={heatMapData}
+								classForValue={(value) => {
+									if (!value || value.count === 0) {
+										return "color-empty";
+									}
+									// Map contribution counts to scale levels (1-4)
+									if (value.count >= 1 && value.count <= 3) return "color-scale-1";
+									if (value.count >= 4 && value.count <= 6) return "color-scale-2";
+									if (value.count >= 7 && value.count <= 9) return "color-scale-3";
+									return "color-scale-4"; // 10+ contributions
+								}}
+								tooltipDataAttrs={(value) =>
+									({
+										"data-tooltip-content": `${new Date(value.date).toISOString().slice(0, 10)} has count: ${value.count}`,
+									}) as Record<string, string>
 								}
-								// Map contribution counts to scale levels (1-4)
-								if (value.count >= 1 && value.count <= 3) return "color-scale-1";
-								if (value.count >= 4 && value.count <= 6) return "color-scale-2";
-								if (value.count >= 7 && value.count <= 9) return "color-scale-3";
-								return "color-scale-4"; // 10+ contributions
-							}}
-							showWeekdayLabels
-							onClick={(value) => {
-								if (value) {
-									console.log(`${value.count} contributions on ${value.date}`);
-								}
-							}}
-						/>
+							/>
+							<ReactTooltip id="tooltip-graph" />
+						</div>
 					</div>
 				)}
 			</div>

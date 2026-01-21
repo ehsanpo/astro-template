@@ -19,7 +19,7 @@ const RankTimeline = () => {
 		<div className="ranktimeline">
 			<div className="ranktimeline-wrap">
 				<div className="ranktimeline-year-lines">
-					{[...Array(15)].map((_, index) => (
+					{[...Array(16)].map((_, index) => (
 						<div
 							className="ranktimeline-year-line"
 							style={{ left: `calc(var(--col-width) * ${index * 12})` }}
@@ -28,7 +28,7 @@ const RankTimeline = () => {
 					))}
 				</div>
 				<div className="ranktimeline-years">
-					{[...Array(15)].map((_, index) => (
+					{[...Array(16)].map((_, index) => (
 						<div
 							className="ranktimeline-year !text-xl"
 							style={{ width: `calc(var(--col-width) * 12)` }}

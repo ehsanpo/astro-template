@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
 			)}
 			target={target}
 		>
-			<div className="relative flex items-center justify-center overflow-hidden px-4 py-2 font-basement">
+			<div className="relative flex items-center justify-center overflow-hidden px-4 pb-2 pt-[11px] font-basement">
 				<div className="relative z-20">
 					<div className="duration-[10s] ease-[cubic-bezier(0.19,1,0.22,1)] transform transition-transform group-hover:-translate-y-10">
 						{text}

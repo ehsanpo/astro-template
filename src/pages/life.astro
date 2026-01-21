@@ -4,7 +4,6 @@ import Hero from "../components/hero/Hero.astro";
 import BoxReveal from "../components/ui/box-reveal";
 import Button from "@/components/ui/Button";
 import TimelineLife from "../components/timeline/TimelineLife";
-import LifeGuard from "../components/game/LifeGuard";
 import { getPortfolioData } from "../utils/data";
 
 const { life } = await getPortfolioData();
@@ -12,7 +11,6 @@ const lifeHighlight = life.filter((item) => item.highlighted === true);
 const sortedLife = lifeHighlight.sort((a, b) => parseInt(a.year) - parseInt(b.year));
 ---
 
-<LifeGuard client:load />
 <Layout title="Life Journey" description="Personal milestones and life timeline of Ehsan Pourhadi">
 	<Hero fullHeight title="Life Journey" img="/img/life/ep.jpg">
 		<div>
@@ -60,9 +58,3 @@ const sortedLife = lifeHighlight.sort((a, b) => parseInt(a.year) - parseInt(b.ye
 		</div>
 	</section>
 </Layout>
-
-<style>
-	section {
-		position: relative;
-	}
-</style>
