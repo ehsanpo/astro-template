@@ -5,7 +5,7 @@ date: "2025-09-24"
 author: "Ehsan Pourhadi"
 category: ["TypeScript", "Best Practices"]
 tag: ["TypeScript", "JavaScript", "Development", "Code Quality"]
-featured: true
+featured: false
 draft: false
 cover: "cover.png"
 ---

@@ -20,9 +20,8 @@ tag:
 case_link_url: "https://github.com/ehsanpo/fakering"
 client: Self
 tagline: "A virtual ring light for your desktop, built with Go and Win32 magic"
+background_image: "cover.png"
 logo: "logo.png"
-images:
-  - "cover.png"
 ---
 
 FakeRing is a lightweight desktop utility that transforms your computer monitors into a powerful, software-based ring light. Designed for remote workers and developers, it solves the problem of poor video lighting without the need for additional hardware.
