@@ -23,6 +23,7 @@ client: Self
 tagline: "A component library for building high-tech, cyberpunk-inspired web interfaces with geometric precision"
 background_image: "demo1.png"
 logo: "logo.png"
+cover: "demo1.png"
 images:
   - "demo1.png"
   - "demo2.png"

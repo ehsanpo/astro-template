@@ -4,7 +4,7 @@ date: "2020-01-14"
 status: publish
 permalink: pigpen-cipher
 author: Ehsan
-type: portfolio
+type: product
 agency: "Personal Project"
 category:
   - Mobile
