@@ -22,6 +22,7 @@ client: Open Source
 tagline: "Privacy-first family location sharing that actually works"
 onHome: false
 background_image: "cover.jpg"
+logo: "logo.png"
 images:
   - "1.png"
   - "22.png"
